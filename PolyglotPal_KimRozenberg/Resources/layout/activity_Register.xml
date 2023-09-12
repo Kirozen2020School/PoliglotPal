@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Creat account"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" 
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:text="First name:"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" 
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:id="@+id/etFirstName"
+        >
+    </EditText>
+    <TextView
+        android:layout_width="200sp"
+        android:layout_height="1sp"
+        android:background="#fff"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:text="Last name:"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" 
+        />
+        <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:id="@+id/etLastName"
+        >
+    </EditText>
+    <TextView
+        android:layout_width="200sp"
+        android:layout_height="1sp"
+        android:background="#fff"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:text="User name:"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" 
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:id="@+id/etUserName"
+        >
+    </EditText>
+    <TextView
+        android:layout_width="200sp"
+        android:layout_height="1sp"
+        android:background="#fff"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:text="Password:"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" 
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:id="@id/etPassword"
+        >
+    </EditText>
+    <TextView
+        android:layout_width="200sp"
+        android:layout_height="1sp"
+        android:background="#fff"/>
+    
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCreateNexAccount"
+            android:text="Create"
+            tools:ignore="HardcodedText" 
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
