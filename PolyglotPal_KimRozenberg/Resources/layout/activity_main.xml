@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_gravity="center"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" 
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Username: "
+        android:textColor="#fff"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" 
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etUsername"
+        android:textColor="#fff"
+        android:inputType="text"
+        />
+    <TextView
+        android:layout_width="200sp"
+        android:layout_height="1sp"
+        android:background="#fff"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Password: "
+        android:textColor="#fff"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" 
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etPassword"
+        android:textColor="#fff"
+        android:inputType="textPassword"
+        />
+    <TextView
+        android:layout_width="200sp"
+        android:layout_height="1sp"
+        android:background="#fff"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30sp"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Let's Play"
+            android:id="@+id/btnStart"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="30sp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create account"
+            android:id="@+id/btnCreateAccount"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+</LinearLayout>
