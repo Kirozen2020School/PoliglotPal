@@ -67,7 +67,7 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="30sp"/>
+        android:layout_height="50sp"/>
     
     <LinearLayout
         android:layout_width="match_parent"
@@ -79,6 +79,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Let's Play"
+            android:textColor="#fff"
+            android:textSize="20sp"
             android:id="@+id/btnStart"
             tools:ignore="HardcodedText" />
 
@@ -89,6 +91,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Create account"
+            android:textColor="#fff"
+            android:textSize="20sp"
             android:id="@+id/btnCreateAccount"
             tools:ignore="HardcodedText" />
 

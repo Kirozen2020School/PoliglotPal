@@ -122,6 +122,15 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\HatIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\OneToOneTranslateWord_HE_ENG.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_TaskWordToWord.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\SentenceToSentence_HE_ENG.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
     Other similar extension points exist, see Microsoft.Common.targets.
