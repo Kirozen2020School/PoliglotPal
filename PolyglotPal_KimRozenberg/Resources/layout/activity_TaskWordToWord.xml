@@ -144,7 +144,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/dtnNextLevel"
+        android:id="@+id/btnNextLevel"
         android:text="Continue"
         android:textColor="#fff"
         android:layout_gravity="center"

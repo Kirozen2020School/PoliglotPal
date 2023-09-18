@@ -3630,97 +3630,97 @@ namespace PolyglotPal_KimRozenberg
 			public const int btnHE4 = 2131230805;
 			
 			// aapt resource value: 0x7F080056
-			public const int btnStart = 2131230806;
+			public const int btnNextLevel = 2131230806;
 			
 			// aapt resource value: 0x7F080057
-			public const int button1 = 2131230807;
+			public const int btnStart = 2131230807;
 			
 			// aapt resource value: 0x7F080058
-			public const int button2 = 2131230808;
+			public const int button1 = 2131230808;
 			
 			// aapt resource value: 0x7F080059
-			public const int button3 = 2131230809;
+			public const int button2 = 2131230809;
 			
 			// aapt resource value: 0x7F08005A
-			public const int buttonPanel = 2131230810;
+			public const int button3 = 2131230810;
 			
 			// aapt resource value: 0x7F08005B
-			public const int center = 2131230811;
+			public const int buttonPanel = 2131230811;
 			
 			// aapt resource value: 0x7F08005C
-			public const int center_horizontal = 2131230812;
+			public const int center = 2131230812;
 			
 			// aapt resource value: 0x7F08005D
-			public const int center_vertical = 2131230813;
+			public const int center_horizontal = 2131230813;
 			
 			// aapt resource value: 0x7F08005E
-			public const int checkbox = 2131230814;
+			public const int center_vertical = 2131230814;
 			
 			// aapt resource value: 0x7F08005F
-			public const int @checked = 2131230815;
+			public const int checkbox = 2131230815;
 			
 			// aapt resource value: 0x7F080060
-			public const int chronometer = 2131230816;
+			public const int @checked = 2131230816;
 			
 			// aapt resource value: 0x7F080061
-			public const int clip_horizontal = 2131230817;
+			public const int chronometer = 2131230817;
 			
 			// aapt resource value: 0x7F080062
-			public const int clip_vertical = 2131230818;
+			public const int clip_horizontal = 2131230818;
 			
 			// aapt resource value: 0x7F080063
-			public const int collapseActionView = 2131230819;
+			public const int clip_vertical = 2131230819;
 			
 			// aapt resource value: 0x7F080064
-			public const int container = 2131230820;
+			public const int collapseActionView = 2131230820;
 			
 			// aapt resource value: 0x7F080065
-			public const int content = 2131230821;
+			public const int container = 2131230821;
 			
 			// aapt resource value: 0x7F080066
-			public const int contentPanel = 2131230822;
+			public const int content = 2131230822;
 			
 			// aapt resource value: 0x7F080067
-			public const int coordinator = 2131230823;
+			public const int contentPanel = 2131230823;
+			
+			// aapt resource value: 0x7F080068
+			public const int coordinator = 2131230824;
 			
 			// aapt resource value: 0x7F080002
 			public const int CTRL = 2131230722;
 			
-			// aapt resource value: 0x7F080068
-			public const int custom = 2131230824;
-			
 			// aapt resource value: 0x7F080069
-			public const int customPanel = 2131230825;
+			public const int custom = 2131230825;
 			
 			// aapt resource value: 0x7F08006A
-			public const int decor_content_parent = 2131230826;
+			public const int customPanel = 2131230826;
 			
 			// aapt resource value: 0x7F08006B
-			public const int default_activity_button = 2131230827;
+			public const int decor_content_parent = 2131230827;
 			
 			// aapt resource value: 0x7F08006C
-			public const int design_bottom_sheet = 2131230828;
+			public const int default_activity_button = 2131230828;
 			
 			// aapt resource value: 0x7F08006D
-			public const int design_menu_item_action_area = 2131230829;
+			public const int design_bottom_sheet = 2131230829;
 			
 			// aapt resource value: 0x7F08006E
-			public const int design_menu_item_action_area_stub = 2131230830;
+			public const int design_menu_item_action_area = 2131230830;
 			
 			// aapt resource value: 0x7F08006F
-			public const int design_menu_item_text = 2131230831;
+			public const int design_menu_item_action_area_stub = 2131230831;
 			
 			// aapt resource value: 0x7F080070
-			public const int design_navigation_view = 2131230832;
+			public const int design_menu_item_text = 2131230832;
 			
 			// aapt resource value: 0x7F080071
-			public const int dialog_button = 2131230833;
+			public const int design_navigation_view = 2131230833;
 			
 			// aapt resource value: 0x7F080072
-			public const int disableHome = 2131230834;
+			public const int dialog_button = 2131230834;
 			
 			// aapt resource value: 0x7F080073
-			public const int dtnNextLevel = 2131230835;
+			public const int disableHome = 2131230835;
 			
 			// aapt resource value: 0x7F080074
 			public const int edit_query = 2131230836;
