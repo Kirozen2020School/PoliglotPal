@@ -14,6 +14,7 @@ namespace PolyglotPal_KimRozenberg
     [Activity(Label = "activity_ProfilePage")]
     public class activity_ProfilePage : Activity
     {
+        Button btnGotToTaskPageFromProfilePage;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);

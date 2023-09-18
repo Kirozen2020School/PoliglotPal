@@ -60,6 +60,7 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs" />
     <Compile Include="activity_CreateTranslationToSentence.cs" />
     <Compile Include="activity_MainPage.cs" />
     <Compile Include="activity_ProfilePage.cs" />
