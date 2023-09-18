@@ -15,7 +15,7 @@ namespace PolyglotPal_KimRozenberg
     public class activity_CreateTranslationToSentence : Activity
     {
         TextView tvSentence;
-        Button btnCheck;
+        Button btnCheck, btnClearAns;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -29,8 +29,16 @@ namespace PolyglotPal_KimRozenberg
         {
             tvSentence = FindViewById<TextView>(Resource.Id.tvSentence);
 
+            btnClearAns = FindViewById<Button>(Resource.Id.btnClearAns);
             btnCheck = FindViewById<Button>(Resource.Id.btnCheck);
+
+            btnClearAns.Click += BtnClearAns_Click;
             btnCheck.Click += BtnCheck_Click;
+        }
+
+        private void BtnClearAns_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void BtnCheck_Click(object sender, EventArgs e)

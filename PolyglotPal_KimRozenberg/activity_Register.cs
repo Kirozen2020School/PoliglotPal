@@ -15,25 +15,33 @@ namespace PolyglotPal_KimRozenberg
     public class activity_Register : Activity
     {
         EditText etFirstName, etLastName, etUserName, etPassword;
-        Button btnCreatNewAccount;
+        Button btnCreatNewAccount, btnCencle;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.activity_Register);
+            SetContentView(Resource.Layout.activity_RegisterPage);
             // Create your application here
             InitViews();
         }
 
         private void InitViews()
         {
-            etFirstName = FindViewById<EditText>(Resource.Id.etFirstName);
-            etLastName = FindViewById<EditText>(Resource.Id.etLastName);
-            etUserName = FindViewById<EditText>(Resource.Id.etUsername);
-            etPassword = FindViewById<EditText>(Resource.Id.etPassword);
+            etFirstName = FindViewById<EditText>(Resource.Id.etFirstNameRegisterPage);
+            etLastName = FindViewById<EditText>(Resource.Id.etLastNameRegisterPage);
+            etUserName = FindViewById<EditText>(Resource.Id.etUserNameRegisterPage);
+            etPassword = FindViewById<EditText>(Resource.Id.etPasswordRegisterPage);
 
-            btnCreatNewAccount = FindViewById<Button>(Resource.Id.btnCreateNewAccount);
+            btnCreatNewAccount = FindViewById<Button>(Resource.Id.btnCreateNewAccountRegisterPage);
+            btnCencle = FindViewById<Button>(Resource.Id.btnCencleRegisterPage);
 
             btnCreatNewAccount.Click += BtnCreatNewAccount_Click;
+            btnCencle.Click += BtnCencle_Click;
+        }
+
+        private void BtnCencle_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(MainActivity));
+            StartActivity(intent);
         }
 
         private void BtnCreatNewAccount_Click(object sender, EventArgs e)

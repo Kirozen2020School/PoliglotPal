@@ -108,11 +108,6 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResourceAnalysisConfig Include="Resources\layout\activity_Register.xml">
-      <SubType>Designer</SubType>
-    </AndroidResourceAnalysisConfig>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_ProfilePage.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -140,6 +135,7 @@
     <AndroidResource Include="Resources\layout\activity_MainPage.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\activity_RegisterPage.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

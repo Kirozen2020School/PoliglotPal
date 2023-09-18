@@ -26,7 +26,14 @@ namespace PolyglotPal_KimRozenberg
 
         private void InitViews()
         {
-            
+            btnGoToProfilePageFromTaskPage = FindViewById<Button>(Resource.Id.btnGoToProfilePageFromTaskPage);
+            btnGoToProfilePageFromTaskPage.Click += BtnGoToProfilePageFromTaskPage_Click;
+        }
+
+        private void BtnGoToProfilePageFromTaskPage_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(activity_ProfilePage));
+            StartActivity(intent);
         }
     }
 }
