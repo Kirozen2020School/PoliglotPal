@@ -3,7 +3,7 @@
   <PropertyGroup>
     <SelectedDevice>VisualStudio_android-25_x86_phone</SelectedDevice>
     <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
-    <ActiveDebugProfile>VisualStudio_android-25_x86_phone %28Android 7.1 - API 25%29</ActiveDebugProfile>
+    <ActiveDebugProfile>VisualStudio_android-25_x86_phone</ActiveDebugProfile>
     <DefaultDevice>VisualStudio_android-25_x86_phone</DefaultDevice>
     <AndroidDesignerPreferredTheme>AppTheme</AndroidDesignerPreferredTheme>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>

@@ -20,6 +20,6 @@ namespace PolyglotPal_KimRozenberg
         public int totaltasks {  get; set; }
         public string datejoining { get; set; }
         public string prorfilepic { get; set; }
-        public string backgroundpic { get; set; }
+        public string backgroundcolor { get; set; }
     }
 }

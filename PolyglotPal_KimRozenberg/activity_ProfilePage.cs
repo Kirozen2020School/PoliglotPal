@@ -14,12 +14,37 @@ namespace PolyglotPal_KimRozenberg
     [Activity(Label = "activity_ProfilePage")]
     public class activity_ProfilePage : Activity
     {
-        Button btnGotToTaskPageFromProfilePage;
+        ImageButton btnGotToTaskPageFromProfilePage;
+        ImageView ivProfilePic;
+        TextView tvUserName, tvFullUserName, tvJoiningDate;
+        TextView tvTotalEX, tvTotalTaskDone;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_ProfilePage);
             // Create your application here
+            InitViews();
+        }
+
+        private void InitViews()
+        {
+            btnGotToTaskPageFromProfilePage = FindViewById<ImageButton>(Resource.Id.btnGoToTaskPageFromProfilePage);
+
+            ivProfilePic = FindViewById<ImageView>(Resource.Id.ivProfilePic);
+
+            tvUserName = FindViewById<TextView>(Resource.Id.tvUserNameProfilePage);
+            tvFullUserName = FindViewById<TextView>(Resource.Id.tvFullNameProfilePage);
+            tvJoiningDate = FindViewById<TextView>(Resource.Id.tvDateJoiningProfilePage);
+            tvTotalEX = FindViewById<TextView>(Resource.Id.tvTotalPointsProfilePage);
+            tvTotalTaskDone = FindViewById<TextView>(Resource.Id.tvTotalTasksProfilePage);
+
+            btnGotToTaskPageFromProfilePage.Click += BtnGotToTaskPageFromProfilePage_Click;
+        }
+
+        private void BtnGotToTaskPageFromProfilePage_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(activity_MainPage));
+            StartActivity(intent);
         }
     }
 }
