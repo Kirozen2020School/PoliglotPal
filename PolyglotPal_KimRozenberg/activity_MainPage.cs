@@ -17,6 +17,7 @@ namespace PolyglotPal_KimRozenberg
         ImageButton btnGoToProfilePageFromTaskPage;
         Button btnTask1, btnTask2, btnTask3, btnTask4, btnTask5, btnTask6, btnTask7, btnTask8, btnTask9;
         ImageButton btnInfo;
+        TextView tvHiUsernameHomePage, tvTotalPointsHomePage;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -28,6 +29,9 @@ namespace PolyglotPal_KimRozenberg
 
         private void InitViews()
         {
+            tvHiUsernameHomePage = FindViewById<TextView>(Resource.Id.tvHiUsernameHomePage);
+            tvTotalPointsHomePage = FindViewById<TextView>(Resource.Id.tvTotalPointsHomePage);
+
             btnInfo = FindViewById<ImageButton>(Resource.Id.btnInfoMainPage);
             btnInfo.Click += BtnInfo_Click;
             btnGoToProfilePageFromTaskPage = FindViewById<ImageButton>(Resource.Id.btnGoToProfilePageFromTaskPage);
