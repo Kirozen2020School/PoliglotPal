@@ -33,8 +33,8 @@
         android:textColor="#fff"
         android:textStyle="bold"
         android:id="@+id/etFirstName"
-        >
-    </EditText>
+        />
+    
     <TextView
         android:layout_width="200sp"
         android:layout_height="1sp"
@@ -48,7 +48,7 @@
         android:textSize="20sp"
         tools:ignore="HardcodedText" 
         />
-        <EditText
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
@@ -120,7 +120,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnCreateNexAccount"
+            android:id="@+id/btnCreateNewAccount"
             android:text="Create"
             tools:ignore="HardcodedText" 
             />

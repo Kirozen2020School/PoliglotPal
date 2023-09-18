@@ -27,6 +27,8 @@ namespace PolyglotPal_KimRozenberg
 
             InitViews();
             InitWords();
+
+
         }
 
         private void InitWords()

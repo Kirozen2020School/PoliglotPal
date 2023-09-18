@@ -113,7 +113,7 @@
             android:layout_height="50sp"
             android:id="@+id/btnGoToTaskPageFromProfilePage"
             android:src="@drawable/haticon"
-            android:background=""
+            android:background="#E79300"
             android:scaleType="fitXY"
             tools:ignore="ContentDescription" 
             />
@@ -126,7 +126,7 @@
             android:layout_width="50sp"
             android:layout_height="50sp"
             android:src="@drawable/profileicon"
-            android:background=""
+            android:background="#E79300"
             android:scaleType="fitXY"
             tools:ignore="ContentDescription" 
             />
