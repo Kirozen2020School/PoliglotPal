@@ -61,18 +61,38 @@ namespace PolyglotPal_KimRozenberg
 
         private void BtnTask_Click(object sender, EventArgs e)
         {
+            Random random = new Random();
+            int id = random.Next(0, 1);
 
+            if (id == 0)
+            {
+
+                Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
+                StartActivity(intent);
+                Finish();
+            }
+            else if (id == 1)
+            {
+
+                Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
+                StartActivity(intent);
+                Finish();
+            }
         }
 
         private void BtnInfo_Click(object sender, EventArgs e)
         {
             //pop up window for rulse and minimum manual for the user
+            Intent intent = new Intent(this, typeof(activity_InfoPage));
+            StartActivity(intent);
+            Finish();
         }
 
         private void BtnGoToProfilePageFromTaskPage_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(activity_ProfilePage));
             StartActivity(intent);
+            Finish();
         }
     }
 }

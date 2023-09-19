@@ -45,6 +45,7 @@ namespace PolyglotPal_KimRozenberg
         {
             Intent intent = new Intent(this, typeof(activity_MainPage));
             StartActivity(intent);
+            Finish();
         }
     }
 }

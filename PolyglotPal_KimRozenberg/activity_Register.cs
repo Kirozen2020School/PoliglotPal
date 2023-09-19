@@ -42,6 +42,7 @@ namespace PolyglotPal_KimRozenberg
         {
             Intent intent = new Intent(this, typeof(MainActivity));
             StartActivity(intent);
+            Finish();
         }
 
         private void BtnCreatNewAccount_Click(object sender, EventArgs e)
@@ -54,6 +55,7 @@ namespace PolyglotPal_KimRozenberg
 
             Intent intent = new Intent(this, typeof(activity_MainPage));
             StartActivity(intent);
+            Finish();
         }
     }
 }

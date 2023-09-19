@@ -16,6 +16,7 @@ namespace PolyglotPal_KimRozenberg
     {
         TextView tvSentence;
         Button btnCheck, btnClearAns;
+        ImageButton btnExitLevel;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -23,6 +24,13 @@ namespace PolyglotPal_KimRozenberg
             // Create your application here
 
             InitViews();
+            InitLevel();
+        }
+
+        private void InitLevel()
+        {
+            Random rnd = new Random();
+            
         }
 
         private void InitViews()
@@ -34,6 +42,16 @@ namespace PolyglotPal_KimRozenberg
 
             btnClearAns.Click += BtnClearAns_Click;
             btnCheck.Click += BtnCheck_Click;
+
+            btnExitLevel = FindViewById<ImageButton>(Resource.Id.btnExitFromTranslateSentence);
+            btnExitLevel.Click += BtnExitLevel_Click;
+        }
+
+        private void BtnExitLevel_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(activity_MainPage));
+            StartActivity(intent);
+            Finish();
         }
 
         private void BtnClearAns_Click(object sender, EventArgs e)
@@ -43,7 +61,53 @@ namespace PolyglotPal_KimRozenberg
 
         private void BtnCheck_Click(object sender, EventArgs e)
         {
-            
+            if (CheckLevel())
+            {
+                Random random = new Random();
+                int id = random.Next(0, 1);
+
+                if (id == 0)
+                {
+
+                    Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
+                    StartActivity(intent);
+                    Finish();
+                }
+                else if (id == 1)
+                {
+
+                    Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
+                    StartActivity(intent);
+                    Finish();
+                }
+            }
+            else
+            {
+                Random random = new Random();
+                int id = random.Next(0, 1);
+
+                if (id == 0)
+                {
+
+                    Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
+                    StartActivity(intent);
+                    Finish();
+                }
+                else if (id == 1)
+                {
+
+                    Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
+                    StartActivity(intent);
+                    Finish();
+                }
+            }
+        }
+
+        private bool CheckLevel()
+        {
+            /*need to add check*/
+
+            return false;
         }
     }
 }

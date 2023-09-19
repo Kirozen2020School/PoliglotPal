@@ -40,6 +40,7 @@ namespace PolyglotPal_KimRozenberg
         {
             Intent intent = new Intent(this, typeof(activity_Register));
             StartActivity(intent);
+            Finish();
         }
 
         private void BtnStart_Click(object sender, EventArgs e)
@@ -52,6 +53,7 @@ namespace PolyglotPal_KimRozenberg
 
             Intent intent = new Intent(this, typeof(activity_MainPage));
             StartActivity(intent);
+            Finish();
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
