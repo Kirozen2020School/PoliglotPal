@@ -28,7 +28,16 @@ namespace PolyglotPal_KimRozenberg
 
         private void UpdateInfoText()
         {
-            tvInfo.Text = "";
+            tvInfo.Text = "# About PolyglotPal - Your Language Learning Game\r\n\r\n" +
+                "Welcome to PolyglotPal - where language learning meets gaming!\r\n\r\n" +
+                "**Our Mission**: Transform language learning into an engaging adventure, making it enjoyable and educational for everyone.\r\n\r\n" +
+                "**How It Works**: Play interactive mini-games to improve your vocabulary, listening, and speaking skills. Earn XP to track your progress.\r\n\r\n" +
+                "**Meet Our Team**: We're a team of language enthusiasts and game developers dedicated to your language success.\r\n\r\n" +
+                "**Get Started**: Join our global community of language learners. Download PolyglotPal and enjoy learning through play!\r\n\r\n" +
+                "Thank you for choosing PolyglotPal for your language learning journey. Happy learning and gaming!";
+
+            tvInfo.TextSize = 20;
+            
         }
 
         private void InitViews()

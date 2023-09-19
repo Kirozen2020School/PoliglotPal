@@ -103,11 +103,14 @@
             android:textStyle="bold"
             tools:ignore="HardcodedText" 
             />
+        <TextView
+            android:layout_width="30sp"
+            android:layout_height="1sp"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btnCencleRegisterPage"
-            android:text="Cencle"
+            android:text="Cancel"
             android:textStyle="bold"
             tools:ignore="HardcodedText" 
             />

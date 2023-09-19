@@ -44,6 +44,8 @@
         android:textStyle="bold"
         android:id="@+id/tvInfo"
         tools:ignore="HardcodedText" 
+        android:layout_marginTop="5sp"
+        android:layout_marginLeft="5sp"
     />
 
 </LinearLayout>

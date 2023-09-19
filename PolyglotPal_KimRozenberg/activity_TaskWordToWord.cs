@@ -20,30 +20,82 @@ namespace PolyglotPal_KimRozenberg
         ImageButton btnExitLevel;
 
         List<ENG_HE_Words> words;
+        int xp;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_TaskWordToWord);
             // Create your application here
 
+            if(Intent.Extras != null)
+            {
+                xp = Intent.GetIntExtra("XP", 0);
+            }
+
             InitViews();
             InitWords();
 
+            InitButtons();
+        }
 
+        private void InitButtons()
+        {
+            Random random = new Random();
+
+            List<string> ENGwords = new List<string>();
+            List<string> HEwords = new List<string>();
+
+            int[] id = new int[4] { (random.Next(0, 50)), (random.Next(50, 100)), (random.Next(100, 150)), (random.Next(150, 200)) };
+
+            for (int i = 0; i < id.Length; i++)
+            {
+                ENGwords.Add(words[id[i]].ENGword);
+                HEwords.Add(words[id[i]].HEword);
+            }
+
+            Random rng = new Random();
+            //random order
+            int n = ENGwords.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                string value = ENGwords[k];
+                ENGwords[k] = ENGwords[n];
+                ENGwords[n] = value;
+            }
+            n = HEwords.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                string value = HEwords[k];
+                HEwords[k] = HEwords[n];
+                HEwords[n] = value;
+            }
+
+            btnENG1.Text = ENGwords[0];
+            btnENG2.Text = ENGwords[1];
+            btnENG3.Text = ENGwords[2];
+            btnENG4.Text = ENGwords[3];
+            btnHE1.Text = HEwords[0];
+            btnHE2.Text = HEwords[1];
+            btnHE3.Text = HEwords[2];
+            btnHE4.Text = HEwords[3];
         }
 
         private void InitWords()
         {
             words = new List<ENG_HE_Words>();
             ENG_HE_Words temp;
-            using (var reader = new StreamReader(@"\Resources\OneToOneTranslateWord_HE_ENG.txt"))
-            {
-                while(reader.EndOfStream == false)
-                {
-                    var line = reader.ReadLine().Split(' ');
-                    temp = new ENG_HE_Words(line[0], line[1]);
-                }
-            }
+            //using (var reader = new StreamReader(@"\ENGandHEwords.txt"))
+            //{
+            //    while (reader.EndOfStream == false)
+            //    {
+            //        var line = reader.ReadLine().Split(' ');
+            //        temp = new ENG_HE_Words(line[0], line[1]);
+            //    }
+            //}
         }
 
         private void InitViews()
@@ -81,6 +133,7 @@ namespace PolyglotPal_KimRozenberg
             {
 
                 Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
+                intent.PutExtra("XP", xp + 10);
                 StartActivity(intent);
                 Finish();
             }

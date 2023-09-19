@@ -43,12 +43,14 @@
     </LinearLayout>
 
     <ImageButton
-        android:layout_width="50sp"
-        android:layout_height="50sp"
-        android:src="@drawable/info"
-        android:scaleType="fitXY"
-        android:id="@+id/btnInfoMainPage"
+        android:layout_width="30sp"
+        android:layout_height="40sp"
+        android:src="@drawable/abc_ic_menu_overflow_material"
+        android:id="@+id/btnPopMenu"
         tools:ignore="ContentDescription" 
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
         />
 
     <TextView

@@ -17,11 +17,18 @@ namespace PolyglotPal_KimRozenberg
         TextView tvSentence;
         Button btnCheck, btnClearAns;
         ImageButton btnExitLevel;
+
+        int xp;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_CreateTranslationToASentence);
             // Create your application here
+
+            if (Intent.Extras != null)
+            {
+                xp = Intent.GetIntExtra("XP", 0);
+            }
 
             InitViews();
             InitLevel();
@@ -68,8 +75,8 @@ namespace PolyglotPal_KimRozenberg
 
                 if (id == 0)
                 {
-
                     Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
+                    intent.PutExtra("XP", xp + 10);
                     StartActivity(intent);
                     Finish();
                 }
@@ -77,6 +84,7 @@ namespace PolyglotPal_KimRozenberg
                 {
 
                     Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
+                    intent.PutExtra("XP", xp + 10);
                     StartActivity(intent);
                     Finish();
                 }
@@ -90,6 +98,7 @@ namespace PolyglotPal_KimRozenberg
                 {
 
                     Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
+                    intent.PutExtra("XP", xp);
                     StartActivity(intent);
                     Finish();
                 }
@@ -97,6 +106,7 @@ namespace PolyglotPal_KimRozenberg
                 {
 
                     Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
+                    intent.PutExtra("XP", xp);
                     StartActivity(intent);
                     Finish();
                 }
