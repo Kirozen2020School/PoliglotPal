@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Info Page"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10sp"
+            />
+        <TextView
+            android:layout_width="180sp"
+            android:layout_height="1sp"/>
+        <Button
+            android:layout_width="60sp"
+            android:layout_height="wrap_content"
+            android:text="Exit"
+            android:id="@+id/btnExitFromInfoPage"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Every time..."
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:id="@+id/tvInfo"
+    />
+
+</LinearLayout>

@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Account.cs" />
     <Compile Include="activity_CreateTranslationToSentence.cs" />
+    <Compile Include="activity_InfoPage.cs" />
     <Compile Include="activity_MainPage.cs" />
     <Compile Include="activity_ProfilePage.cs" />
     <Compile Include="activity_Register.cs" />
@@ -137,6 +138,9 @@
     </AndroidResource>
     <AndroidResource Include="Resources\layout\activity_RegisterPage.xml" />
     <AndroidResource Include="Resources\drawable\info.png" />
+    <AndroidResource Include="Resources\layout\activity_InfoPage.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
