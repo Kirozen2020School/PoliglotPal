@@ -67,6 +67,7 @@
     <Compile Include="activity_ProfilePage.cs" />
     <Compile Include="activity_Register.cs" />
     <Compile Include="activity_TaskWordToWord.cs" />
+    <Compile Include="ENG_HE_Sentence.cs" />
     <Compile Include="ENG_HE_Words.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
