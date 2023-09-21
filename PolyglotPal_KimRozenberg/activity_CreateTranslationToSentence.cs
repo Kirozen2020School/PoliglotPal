@@ -70,6 +70,17 @@ namespace PolyglotPal_KimRozenberg
         {
             if (CheckLevel())
             {
+                if (Intent.Extras != null)
+                {
+                    if (Intent.GetIntExtra("Round", -1) >= 10)
+                    {
+                        Intent intent = new Intent(this, typeof(activity_LevelFinish));
+                        intent.PutExtra("XP", this.xp + 10);
+                        StartActivity(intent);
+                        Finish();
+                    }
+                }
+
                 Random random = new Random();
                 int id = random.Next(0, 1);
 
@@ -77,6 +88,7 @@ namespace PolyglotPal_KimRozenberg
                 {
                     Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
                     intent.PutExtra("XP", xp + 10);
+                    intent.PutExtra("Round", Intent.GetIntExtra("Round", -1) + 1);
                     StartActivity(intent);
                     Finish();
                 }
@@ -85,6 +97,7 @@ namespace PolyglotPal_KimRozenberg
 
                     Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
                     intent.PutExtra("XP", xp + 10);
+                    intent.PutExtra("Round", Intent.GetIntExtra("Round", -1) + 1);
                     StartActivity(intent);
                     Finish();
                 }

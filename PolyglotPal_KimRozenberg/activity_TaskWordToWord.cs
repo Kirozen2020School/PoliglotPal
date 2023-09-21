@@ -33,9 +33,9 @@ namespace PolyglotPal_KimRozenberg
             }
 
             InitViews();
-            InitWords();
+            //InitWords();
 
-            InitButtons();
+            //InitButtons();
         }
 
         private void InitButtons()
@@ -45,7 +45,7 @@ namespace PolyglotPal_KimRozenberg
             List<string> ENGwords = new List<string>();
             List<string> HEwords = new List<string>();
 
-            int[] id = new int[4] { (random.Next(0, 50)), (random.Next(50, 100)), (random.Next(100, 150)), (random.Next(150, 200)) };
+            int[] id = new int[4] { (random.Next(0, 50)), (random.Next(50, 100)), (random.Next(100, 150)), (random.Next(150, 199)) };
 
             for (int i = 0; i < id.Length; i++)
             {
@@ -87,14 +87,23 @@ namespace PolyglotPal_KimRozenberg
         private void InitWords()
         {
             words = new List<ENG_HE_Words>();
-            ENG_HE_Words temp;
-            //using (var reader = new StreamReader(@"\ENGandHEwords.txt"))
+            //ENG_HE_Words temp;
+            string filePath = Path.Combine(Android.OS.Environment.ExternalStorageDirectory.AbsolutePath, "ENGandHEwords.txt");
+            string test = @"C:\Users\rozen\OneDrive\Рабочий стол\PoliglotPal\PolyglotPal_KimRozenberg\ENGandHEwords.txt";
+            using (var reader = new StreamReader(test))
+            {
+                while (reader.EndOfStream == false)
+                {
+                    var line = reader.ReadLine().Split(' ');
+                    words.Add(new ENG_HE_Words(line[0], line[1]));
+                }
+            }
+            //try
             //{
-            //    while (reader.EndOfStream == false)
-            //    {
-            //        var line = reader.ReadLine().Split(' ');
-            //        temp = new ENG_HE_Words(line[0], line[1]);
-            //    }
+                
+            //}
+            //catch {
+            //    Console.WriteLine("error");
             //}
         }
 
@@ -127,13 +136,14 @@ namespace PolyglotPal_KimRozenberg
         private void BtnNextLevel_Click(object sender, EventArgs e)
         {
             Random random = new Random();
-            int id = random.Next(0, 1);
+            int id = random.Next(0, 2);
 
             if (id == 0)
             {
 
                 Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
                 intent.PutExtra("XP", xp + 10);
+                intent.PutExtra("Round", Intent.GetIntExtra("Round", -1) + 1);
                 StartActivity(intent);
                 Finish();
             }
@@ -141,6 +151,8 @@ namespace PolyglotPal_KimRozenberg
             {
 
                 Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
+                intent.PutExtra("XP", xp + 10);
+                intent.PutExtra("Round", Intent.GetIntExtra("Round", -1) + 1);
                 StartActivity(intent);
                 Finish();
             }

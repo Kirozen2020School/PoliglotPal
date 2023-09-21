@@ -186,7 +186,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#E79300">
+        android:background="#E79300"
+        android:id="@+id/lyBottomLine">
 
         <ImageButton
             android:layout_width="50sp"

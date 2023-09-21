@@ -64,6 +64,9 @@ namespace PolyglotPal_KimRozenberg
 
         private void BtnTask_Click(object sender, EventArgs e)
         {
+            Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
+            StartActivity(intent);
+            Finish();
             //Random random = new Random();
             //int id = random.Next(0, 1);
 
