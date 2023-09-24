@@ -9,6 +9,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Web;
+using System.Net;
 
 namespace PolyglotPal_KimRozenberg
 {
@@ -18,6 +20,7 @@ namespace PolyglotPal_KimRozenberg
         Button btnENG1, btnENG2, btnENG3, btnENG4, btnHE1, btnHE2, btnHE3, btnHE4;
         Button btnNextLevel;
         ImageButton btnExitLevel;
+        Android.App.AlertDialog d;
 
         List<ENG_HE_Words> words;
         int xp;
@@ -87,7 +90,6 @@ namespace PolyglotPal_KimRozenberg
         private void InitWords()
         {
             words = new List<ENG_HE_Words>();
-            //ENG_HE_Words temp;
             string filePath = Path.Combine(Android.OS.Environment.ExternalStorageDirectory.AbsolutePath, "ENGandHEwords.txt");
             string test = @"C:\Users\rozen\OneDrive\Рабочий стол\PoliglotPal\PolyglotPal_KimRozenberg\ENGandHEwords.txt";
             using (var reader = new StreamReader(test))
@@ -98,13 +100,6 @@ namespace PolyglotPal_KimRozenberg
                     words.Add(new ENG_HE_Words(line[0], line[1]));
                 }
             }
-            //try
-            //{
-                
-            //}
-            //catch {
-            //    Console.WriteLine("error");
-            //}
         }
 
         private void InitViews()
@@ -128,6 +123,23 @@ namespace PolyglotPal_KimRozenberg
 
         private void BtnExitLevel_Click(object sender, EventArgs e)
         {
+            Android.App.AlertDialog.Builder builder = new Android.App.AlertDialog.Builder(this);
+            builder.SetTitle("Exit from Level?");
+            builder.SetMessage("If you exit this level you will lose all your XP\nStill exit?");
+            builder.SetCancelable(true);
+            builder.SetPositiveButton("yes", OkAction);
+            builder.SetNegativeButton("cancel", CancelAction);
+            d = builder.Create();
+            d.Show();
+        }
+
+        private void CancelAction(object sender, DialogClickEventArgs e)
+        {
+            Toast.MakeText(this, "Task continues", ToastLength.Long).Show();
+        }
+
+        private void OkAction(object sender, DialogClickEventArgs e)
+        {
             Intent intent = new Intent(this, typeof(activity_MainPage));
             StartActivity(intent);
             Finish();
@@ -137,6 +149,15 @@ namespace PolyglotPal_KimRozenberg
         {
             Random random = new Random();
             int id = random.Next(0, 2);
+
+            int round = Intent.GetIntExtra("Round", -1);
+            if(round >= 10)
+            {
+                Intent intent = new Intent(this, typeof(activity_LevelFinish));
+                intent.PutExtra("XP", xp + 10);
+                StartActivity(intent);
+                Finish();
+            }
 
             if (id == 0)
             {

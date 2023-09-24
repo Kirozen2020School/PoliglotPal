@@ -4,6 +4,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Org.Apache.Http.Conn;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace PolyglotPal_KimRozenberg
         TextView tvSentence;
         Button btnCheck, btnClearAns;
         ImageButton btnExitLevel;
+        Android.App.AlertDialog d;
 
         int xp;
         protected override void OnCreate(Bundle savedInstanceState)
@@ -37,7 +39,9 @@ namespace PolyglotPal_KimRozenberg
         private void InitLevel()
         {
             Random rnd = new Random();
-            
+            ENG_HE_Sentence task;
+
+            //tvSentence.Text = ""+task.instructions;
         }
 
         private void InitViews()
@@ -55,6 +59,23 @@ namespace PolyglotPal_KimRozenberg
         }
 
         private void BtnExitLevel_Click(object sender, EventArgs e)
+        {
+            Android.App.AlertDialog.Builder builder = new Android.App.AlertDialog.Builder(this);
+            builder.SetTitle("Exit from Level?");
+            builder.SetMessage("If you exit this level you will lose all your XP\nStill exit?");
+            builder.SetCancelable(true);
+            builder.SetPositiveButton("yes", OkAction);
+            builder.SetNegativeButton("cancel", CancelAction);
+            d = builder.Create();
+            d.Show();
+        }
+
+        private void CancelAction(object sender, DialogClickEventArgs e)
+        {
+            Toast.MakeText(this, "Task continues" ,ToastLength.Long).Show();
+        }
+
+        private void OkAction(object sender, DialogClickEventArgs e)
         {
             Intent intent = new Intent(this, typeof(activity_MainPage));
             StartActivity(intent);
@@ -112,6 +133,7 @@ namespace PolyglotPal_KimRozenberg
 
                     Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
                     intent.PutExtra("XP", xp);
+                    intent.PutExtra("Round", Intent.GetIntExtra("Round", -1) + 1);
                     StartActivity(intent);
                     Finish();
                 }
@@ -120,6 +142,7 @@ namespace PolyglotPal_KimRozenberg
 
                     Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
                     intent.PutExtra("XP", xp);
+                    intent.PutExtra("Round", Intent.GetIntExtra("Round", -1) + 1);
                     StartActivity(intent);
                     Finish();
                 }

@@ -15,6 +15,7 @@ namespace PolyglotPal_KimRozenberg
     public class activity_LevelFinish : Activity
     {
         Button btnExitFromFinishLevelPage;
+        TextView tvXP;
         int xp;
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -30,7 +31,11 @@ namespace PolyglotPal_KimRozenberg
 
         private void InitViews()
         {
+            btnExitFromFinishLevelPage = FindViewById<Button>(Resource.Id.btnExitFromFinishLevelPage);
             btnExitFromFinishLevelPage.Click += BtnExitFromFinishLevelPage_Click;
+
+            tvXP = FindViewById<TextView>(Resource.Id.tvTotalXPFinishLevelPage);
+            tvXP.Text = $"Xp colected: {Intent.GetIntExtra("XP", -1)}";
         }
 
         private void BtnExitFromFinishLevelPage_Click(object sender, EventArgs e)
