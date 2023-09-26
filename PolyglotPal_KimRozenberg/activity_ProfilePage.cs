@@ -6,6 +6,8 @@ using Android.Views;
 using Android.Widget;
 using System;
 using System.Collections.Generic;
+using Android.Graphics;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -46,6 +48,15 @@ namespace PolyglotPal_KimRozenberg
             Intent intent = new Intent(this, typeof(activity_MainPage));
             StartActivity(intent);
             Finish();
+        }
+
+        public byte[] ConvertBitmapToByteArray(Bitmap bm)
+        {
+            byte[] bytes;
+            var stream = new MemoryStream();
+            bm.Compress(Bitmap.CompressFormat.Png, 0, stream);
+            bytes = stream.ToArray();
+            return bytes;
         }
     }
 }
