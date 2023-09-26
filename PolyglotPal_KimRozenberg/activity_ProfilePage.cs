@@ -82,11 +82,12 @@ namespace PolyglotPal_KimRozenberg
             builder.SetTitle("Enter HTML code of a color");
             userinput = new EditText(this);
             builder.SetView(userinput);
-            builder.SetPositiveButton("OK", (sender, args) =>
+            builder.SetPositiveButton("OK", async (sender, args) =>
             {
                 string inputText = userinput.Text;
                 this.user.backgroundcolor = inputText;
                 lyProfilePageBackgroundColor.SetBackgroundColor(Android.Graphics.Color.ParseColor(inputText));
+                await firebase.UpdateBackgroundColor(this.user.username, this.user.backgroundcolor);
             });
             builder.SetNegativeButton("Cancel", (sender, args) =>
             {
@@ -138,7 +139,7 @@ namespace PolyglotPal_KimRozenberg
             bytes = stream.ToArray();
             return bytes;
         }
-        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        protected override async void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
 
@@ -148,7 +149,7 @@ namespace PolyglotPal_KimRozenberg
 
                 ivProfilePic.SetImageBitmap(bitmap);
                 this.user.profilepic = ConvertBitmapToByteArray(((BitmapDrawable)ivProfilePic.Drawable).Bitmap);
-
+                await firebase.UpdateProfilePic(this.user.username, this.user.profilepic);
             }
 
             if (resultCode == Result.Ok && requestCode == 1)
@@ -160,6 +161,7 @@ namespace PolyglotPal_KimRozenberg
 
                 ivProfilePic.SetImageBitmap(bitmap);
                 this.user.profilepic = ConvertBitmapToByteArray(((BitmapDrawable)ivProfilePic.Drawable).Bitmap);
+                await firebase.UpdateProfilePic(this.user.username, this.user.profilepic);
             }
         }
 

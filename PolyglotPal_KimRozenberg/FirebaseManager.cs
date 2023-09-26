@@ -46,5 +46,43 @@ namespace PolyglotPal_KimRozenberg
             await firebase.Child("Account").Child(username).PutAsync(updatedAccount);
         }
 
+        public async Task UpdateProfilePic(string username, byte[] prifePic)
+        {
+            var account = await GetAccount(username);
+
+            if (account != null)
+            {
+                // Update the first name
+                account.profilepic = prifePic;
+
+                // Update the account in Firebase
+                await firebase.Child("Account").Child(username).PutAsync(account);
+            }
+            else
+            {
+                // Handle case where the account with the provided username does not exist
+
+
+            }
+        }
+        public async Task UpdateBackgroundColor(string username, string backgroundColor)
+        {
+            var account = await GetAccount(username);
+
+            if (account != null)
+            {
+                // Update the first name
+                account.backgroundcolor = backgroundColor;
+
+                // Update the account in Firebase
+                await firebase.Child("Account").Child(username).PutAsync(account);
+            }
+            else
+            {
+                // Handle case where the account with the provided username does not exist
+
+
+            }
+        }
     }
 }
