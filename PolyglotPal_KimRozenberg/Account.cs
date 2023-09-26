@@ -20,12 +20,12 @@ namespace PolyglotPal_KimRozenberg
         public int totalxp {  get; set; }
         public int totaltasks {  get; set; }
         public string datejoining { get; set; }
-        public string profilepic { get; set; }
+        public byte[] profilepic { get; set; }
         public string backgroundcolor { get; set; }
 
         public Account(string username, string lastname, string firstname, string password, 
             int totalxp, int totaltasks, string datejoining, 
-            string profilepic, string backgroundcolor)
+            byte[] profilepic, string backgroundcolor)
         {
             this.username = username;
             this.lastname = lastname;

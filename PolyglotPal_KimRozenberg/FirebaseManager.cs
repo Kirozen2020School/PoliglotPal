@@ -9,7 +9,7 @@ namespace PolyglotPal_KimRozenberg
     internal class FirebaseManager
     {
         FirebaseClient firebase = new FirebaseClient("https://polyglotpal-firebase-default-rtdb.europe-west1.firebasedatabase.app");
-
+        
         public async Task AddAccount(Account account)
         {
             await firebase.Child("Accout").Child(account.username).PutAsync<Account>(account);
@@ -40,5 +40,11 @@ namespace PolyglotPal_KimRozenberg
         {
             await firebase.Child("Account").Child(username).DeleteAsync();
         }
+
+        public async Task ReplaceAccount(string username, Account updatedAccount)
+        {
+            await firebase.Child("Account").Child(username).PutAsync(updatedAccount);
+        }
+
     }
 }

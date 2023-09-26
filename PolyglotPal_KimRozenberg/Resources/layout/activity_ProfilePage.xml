@@ -12,6 +12,7 @@
         android:layout_height="100sp"
         android:orientation="horizontal"
         android:background="#13A90A"
+        android:id="@+id/lyProfilePageBackgroundColor"
         >
         <TextView
             android:layout_width="20sp"
