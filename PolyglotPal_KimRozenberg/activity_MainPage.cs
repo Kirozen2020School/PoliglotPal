@@ -20,6 +20,10 @@ namespace PolyglotPal_KimRozenberg
         Button btnTask1, btnTask2, btnTask3, btnTask4, btnTask5, btnTask6, btnTask7, btnTask8, btnTask9;
         ImageButton btnPopupMenu;
         TextView tvHiUsernameHomePage, tvTotalPointsHomePage;
+
+        string username;
+        Account user;
+        FirebaseManager firebase;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -27,6 +31,18 @@ namespace PolyglotPal_KimRozenberg
             // Create your application here
 
             InitViews();
+            if (Intent.Extras != null)
+            {
+                this.username = Intent.GetStringExtra("Username");
+            }
+            UpdateViews();
+        }
+
+        async private void UpdateViews()
+        {
+            user = await firebase.GetAccount(this.username);
+            tvHiUsernameHomePage.Text = "Hi " + this.user.username;
+            tvTotalPointsHomePage.Text = "Total points: " + this.user.totalxp;
         }
 
         private void InitViews()
@@ -95,6 +111,7 @@ namespace PolyglotPal_KimRozenberg
         private void BtnGoToProfilePageFromTaskPage_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(activity_ProfilePage));
+            intent.PutExtra("Username", this.username);
             StartActivity(intent);
             Finish();
         }

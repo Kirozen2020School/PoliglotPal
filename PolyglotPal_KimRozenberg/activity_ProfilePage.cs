@@ -20,12 +20,32 @@ namespace PolyglotPal_KimRozenberg
         ImageView ivProfilePic;
         TextView tvUserName, tvFullUserName, tvJoiningDate;
         TextView tvTotalEX, tvTotalTaskDone;
+
+        string username;
+        Account user;
+        FirebaseManager firebase;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_ProfilePage);
             // Create your application here
             InitViews();
+            if(Intent.Extras != null)
+            {
+                this.username = Intent.GetStringExtra("Username");
+            }
+            UpdateViews();
+        }
+
+        async private void UpdateViews()
+        {
+            this.user = await firebase.GetAccount(this.username);
+
+            tvUserName.Text = this.username;
+            tvFullUserName.Text = this.user.firstname + " " + this.user.lastname;
+            tvJoiningDate.Text = this.user.datejoining;
+            tvTotalEX.Text = "Total points:\n"+this.user.totalxp;
+            tvTotalTaskDone.Text = "Total tasks:\n"+this.user.totaltasks;
         }
 
         private void InitViews()
