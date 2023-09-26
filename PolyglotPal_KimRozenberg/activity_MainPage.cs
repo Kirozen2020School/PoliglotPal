@@ -64,26 +64,32 @@ namespace PolyglotPal_KimRozenberg
 
         private void BtnTask_Click(object sender, EventArgs e)
         {
-            Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
-            StartActivity(intent);
-            Finish();
-            //Random random = new Random();
-            //int id = random.Next(0, 1);
+            //Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
+            //intent.PutExtra("XP", 0);
+            //intent.PutExtra("Round", 1);
+            //StartActivity(intent);
+            //Finish();
+            Random random = new Random();
+            int id = random.Next(0, 1);
 
-            //if (id == 0)
-            //{
+            if (id == 0)
+            {
 
-            //    Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
-            //    StartActivity(intent);
-            //    Finish();
-            //}
-            //else if (id == 1)
-            //{
+                Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
+                intent.PutExtra("XP", 0);
+                intent.PutExtra("Round", 1);
+                StartActivity(intent);
+                Finish();
+            }
+            else if (id == 1)
+            {
 
-            //    Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
-            //    StartActivity(intent);
-            //    Finish();
-            //}
+                Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
+                intent.PutExtra("XP", 0);
+                intent.PutExtra("Round", 1);
+                StartActivity(intent);
+                Finish();
+            }
         }
 
         private void BtnGoToProfilePageFromTaskPage_Click(object sender, EventArgs e)
@@ -111,7 +117,6 @@ namespace PolyglotPal_KimRozenberg
         {
             if (item.ItemId == Resource.Id.action_about)
             {
-                //pop up window for rulse and minimum manual for the user
                 Intent intent = new Intent(this, typeof(activity_InfoPage));
                 StartActivity(intent);
                 return true;

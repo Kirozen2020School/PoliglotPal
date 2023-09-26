@@ -5,6 +5,7 @@ using Android.Runtime;
 using Android.Widget;
 using AndroidX.AppCompat.App;
 using System;
+using System.Collections.Generic;
 
 namespace PolyglotPal_KimRozenberg
 {
@@ -14,6 +15,9 @@ namespace PolyglotPal_KimRozenberg
         EditText etUserName, etPassword;
         Button btnStart, btnCreateAccount;
 
+        FirebaseManager firebase;
+        List<Account> accounts;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -22,10 +26,16 @@ namespace PolyglotPal_KimRozenberg
             SetContentView(Resource.Layout.activity_Login);
 
             InitViews();
+
+            
         }
 
-        private void InitViews()
+        async private void InitViews()
         {
+            firebase = new FirebaseManager();
+
+            accounts = await firebase.GetAllUsers();
+
             etUserName = FindViewById<EditText>(Resource.Id.etUsername);
             etPassword = FindViewById<EditText>(Resource.Id.etPassword);
 
@@ -45,13 +55,35 @@ namespace PolyglotPal_KimRozenberg
 
         private void BtnStart_Click(object sender, EventArgs e)
         {
-            /*
-             
-            Check if there is an acoount in the firebase 
+            //Check if there is an acoount in the firebase 
+            foreach (var account in accounts)
+            {
+                if(etUserName.Text.Equals(account.username) && etPassword.Text.Equals(account.password))
+                {
+                    Intent intent = new Intent(this, typeof(activity_MainPage));
+                    StartActivity(intent);
+                    Finish();
+                }
+            }
+            //Toast.MakeText(this, "The Password / Username are incorect or ", ToastLength.Long).Show();
+            Android.App.AlertDialog.Builder builder = new Android.App.AlertDialog.Builder(this);
+            builder.SetTitle("Login");
+            builder.SetMessage("The Username or Password are incorect or not writen in our system\n" +
+                "Do you want to register or try again");
+            builder.SetCancelable(true);
+            builder.SetPositiveButton("Register", Register);
+            builder.SetNegativeButton("TryAgain", TryAgain);
+        }
 
-             */
+        private void TryAgain(object sender, DialogClickEventArgs e)
+        {
+            etPassword.Text = "";
+            etUserName.Text = "";
+        }
 
-            Intent intent = new Intent(this, typeof(activity_MainPage));
+        private void Register(object sender, DialogClickEventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(activity_Register));
             StartActivity(intent);
             Finish();
         }
