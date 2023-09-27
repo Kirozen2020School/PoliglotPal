@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using Android.Graphics.Drawables;
 using Android.Provider;
+using System.Text.RegularExpressions;
 
 namespace PolyglotPal_KimRozenberg
 {
@@ -85,18 +86,32 @@ namespace PolyglotPal_KimRozenberg
             builder.SetPositiveButton("OK", async (sender, args) =>
             {
                 string inputText = userinput.Text;
-                this.user.backgroundcolor = inputText;
-                lyProfilePageBackgroundColor.SetBackgroundColor(Android.Graphics.Color.ParseColor(inputText));
-                await firebase.UpdateBackgroundColor(this.user.username, this.user.backgroundcolor);
+                if (IsHtmlColor(inputText))
+                {
+                    this.user.backgroundcolor = inputText;
+                    lyProfilePageBackgroundColor.SetBackgroundColor(Android.Graphics.Color.ParseColor(inputText));
+                    await firebase.UpdateBackgroundColor(this.user.username, this.user.backgroundcolor);
+                }
+                else
+                {
+                    Toast.MakeText(this, "The format is incorect, enter in this format: #RRGGBB", ToastLength.Long).Show();
+                }
+                
             });
             builder.SetNegativeButton("Cancel", (sender, args) =>
             {
-                Toast.MakeText(this, "You did not change the bacground color", ToastLength.Long).Show();
+                Toast.MakeText(this, "You did not change the background color", ToastLength.Long).Show();
             });
 
             AlertDialog dialog = builder.Create();
             dialog.Show();
             
+        }
+
+        public static bool IsHtmlColor(string colorCode)
+        {
+            Regex hexColorRegex = new Regex("^#[0-9a-fA-F]{6}$");
+            return hexColorRegex.IsMatch(colorCode);
         }
 
         private void IvProfilePic_Click(object sender, EventArgs e)
