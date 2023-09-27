@@ -61,6 +61,7 @@ namespace PolyglotPal_KimRozenberg
                 if(etUserName.Text.Equals(account.username) && etPassword.Text.Equals(account.password))
                 {
                     Intent intent = new Intent(this, typeof(activity_MainPage));
+                    intent.PutExtra("Username", etUserName.Text);
                     StartActivity(intent);
                     Finish();
                 }

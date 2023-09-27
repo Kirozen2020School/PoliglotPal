@@ -80,7 +80,7 @@ namespace PolyglotPal_KimRozenberg
             EditText userinput;
 
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.SetTitle("Enter HTML code of a color");
+            builder.SetTitle("Enter HTML code of a color, format: #RRGGBB");
             userinput = new EditText(this);
             builder.SetView(userinput);
             builder.SetPositiveButton("OK", async (sender, args) =>
