@@ -24,6 +24,8 @@ namespace PolyglotPal_KimRozenberg
         string username;
         Account user;
         FirebaseManager firebase;
+
+        int xpAdded = -1;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -34,19 +36,28 @@ namespace PolyglotPal_KimRozenberg
             if (Intent.Extras != null)
             {
                 this.username = Intent.GetStringExtra("Username");
+                this.xpAdded = Intent.GetIntExtra("XP", -1);
             }
             UpdateViews();
         }
 
-        async private void UpdateViews()
+        private void UpdateViews()
         {
-            user = await firebase.GetAccount(this.username);
+            if (this.xpAdded != -1)
+            {
+                this.user.totalxp += this.xpAdded;
+                this.user.totaltasks++;
+            }
+
             tvHiUsernameHomePage.Text = "Hi " + this.user.username;
             tvTotalPointsHomePage.Text = "Total points: " + this.user.totalxp;
         }
 
-        private void InitViews()
+        async private void InitViews()
         {
+            firebase = new FirebaseManager();
+            user = await firebase.GetAccount(this.username);
+
             tvHiUsernameHomePage = FindViewById<TextView>(Resource.Id.tvHiUsernameHomePage);
             tvTotalPointsHomePage = FindViewById<TextView>(Resource.Id.tvTotalPointsHomePage);
 
@@ -80,11 +91,6 @@ namespace PolyglotPal_KimRozenberg
 
         private void BtnTask_Click(object sender, EventArgs e)
         {
-            //Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
-            //intent.PutExtra("XP", 0);
-            //intent.PutExtra("Round", 1);
-            //StartActivity(intent);
-            //Finish();
             Random random = new Random();
             int id = random.Next(0, 1);
 
@@ -92,6 +98,7 @@ namespace PolyglotPal_KimRozenberg
             {
 
                 Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
+                intent.PutExtra("Username", this.username);
                 intent.PutExtra("XP", 0);
                 intent.PutExtra("Round", 1);
                 StartActivity(intent);
@@ -101,6 +108,7 @@ namespace PolyglotPal_KimRozenberg
             {
 
                 Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
+                intent.PutExtra("Username", this.username);
                 intent.PutExtra("XP", 0);
                 intent.PutExtra("Round", 1);
                 StartActivity(intent);
@@ -135,6 +143,7 @@ namespace PolyglotPal_KimRozenberg
             if (item.ItemId == Resource.Id.action_about)
             {
                 Intent intent = new Intent(this, typeof(activity_InfoPage));
+                intent.PutExtra("Username", this.username);
                 StartActivity(intent);
                 return true;
             }
@@ -148,6 +157,7 @@ namespace PolyglotPal_KimRozenberg
             if (item.ItemId == Resource.Id.action_profile)
             {
                 Intent intent = new Intent(this, typeof(activity_ProfilePage));
+                intent.PutExtra("Username", this.username);
                 StartActivity(intent);
                 Finish();
                 return true;

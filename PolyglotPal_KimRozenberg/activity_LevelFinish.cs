@@ -41,6 +41,7 @@ namespace PolyglotPal_KimRozenberg
         private void BtnExitFromFinishLevelPage_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(activity_MainPage));
+            intent.PutExtra("Username", Intent.GetStringExtra("Username"));
             intent.PutExtra("XP", this.xp);
             StartActivity(intent);
             Finish();

@@ -90,6 +90,7 @@ namespace PolyglotPal_KimRozenberg
                 {
                     this.user.backgroundcolor = inputText;
                     lyProfilePageBackgroundColor.SetBackgroundColor(Android.Graphics.Color.ParseColor(inputText));
+                    ivProfilePic.SetBackgroundColor(Android.Graphics.Color.ParseColor(inputText));
                     await firebase.UpdateBackgroundColor(this.user.username, this.user.backgroundcolor);
                 }
                 else

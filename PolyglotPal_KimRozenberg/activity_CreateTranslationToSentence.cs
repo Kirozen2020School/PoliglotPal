@@ -18,9 +18,11 @@ namespace PolyglotPal_KimRozenberg
         TextView tvSentence;
         Button btnCheck, btnClearAns;
         ImageButton btnExitLevel;
+        EditText etAnswer;
         Android.App.AlertDialog d;
 
         int xp;
+        string correct_answer;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -38,10 +40,7 @@ namespace PolyglotPal_KimRozenberg
 
         private void InitLevel()
         {
-            Random rnd = new Random();
-            ENG_HE_Sentence task;
 
-            //tvSentence.Text = ""+task.instructions;
         }
 
         private void InitViews()
@@ -56,6 +55,8 @@ namespace PolyglotPal_KimRozenberg
 
             btnExitLevel = FindViewById<ImageButton>(Resource.Id.btnExitFromTranslateSentence);
             btnExitLevel.Click += BtnExitLevel_Click;
+
+            etAnswer = FindViewById<EditText>(Resource.Id.etAnswer);
         }
 
         private void BtnExitLevel_Click(object sender, EventArgs e)
@@ -78,24 +79,28 @@ namespace PolyglotPal_KimRozenberg
         private void OkAction(object sender, DialogClickEventArgs e)
         {
             Intent intent = new Intent(this, typeof(activity_MainPage));
+            intent.PutExtra("Username", Intent.GetStringExtra("Username"));
             StartActivity(intent);
             Finish();
         }
 
         private void BtnClearAns_Click(object sender, EventArgs e)
         {
-            
+            etAnswer.Text = string.Empty;
         }
 
         private void BtnCheck_Click(object sender, EventArgs e)
         {
-            if (CheckLevel())
+            if (this.correct_answer.Equals(etAnswer.Text))
             {
+                Toast.MakeText(this, "You are correct!", ToastLength.Long).Show();
+
                 if (Intent.Extras != null)
                 {
                     if (Intent.GetIntExtra("Round", -1) >= 10)
                     {
                         Intent intent = new Intent(this, typeof(activity_LevelFinish));
+                        intent.PutExtra("Username", Intent.GetStringExtra("Username"));
                         intent.PutExtra("XP", this.xp + 10);
                         StartActivity(intent);
                         Finish();
@@ -108,6 +113,7 @@ namespace PolyglotPal_KimRozenberg
                 if (id == 0)
                 {
                     Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
+                    intent.PutExtra("Username", Intent.GetStringExtra("Username"));
                     intent.PutExtra("XP", xp + 10);
                     intent.PutExtra("Round", Intent.GetIntExtra("Round", -1) + 1);
                     StartActivity(intent);
@@ -117,6 +123,7 @@ namespace PolyglotPal_KimRozenberg
                 {
 
                     Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
+                    intent.PutExtra("Username", Intent.GetStringExtra("Username"));
                     intent.PutExtra("XP", xp + 10);
                     intent.PutExtra("Round", Intent.GetIntExtra("Round", -1) + 1);
                     StartActivity(intent);
@@ -125,6 +132,15 @@ namespace PolyglotPal_KimRozenberg
             }
             else
             {
+
+                Android.App.AlertDialog.Builder builder = new Android.App.AlertDialog.Builder(this);
+                builder.SetTitle("Level info");
+                builder.SetMessage("Your answer was wrong\nThe correct answer is:"+this.correct_answer);
+                builder.SetCancelable(true);
+                builder.SetPositiveButton("Ok", NullFunction);
+                d = builder.Create();
+                d.Show();
+
                 Random random = new Random();
                 int id = random.Next(0, 1);
 
@@ -132,6 +148,7 @@ namespace PolyglotPal_KimRozenberg
                 {
 
                     Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
+                    intent.PutExtra("Username", Intent.GetStringExtra("Username"));
                     intent.PutExtra("XP", xp);
                     intent.PutExtra("Round", Intent.GetIntExtra("Round", -1) + 1);
                     StartActivity(intent);
@@ -141,6 +158,7 @@ namespace PolyglotPal_KimRozenberg
                 {
 
                     Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
+                    intent.PutExtra("Username", Intent.GetStringExtra("Username"));
                     intent.PutExtra("XP", xp);
                     intent.PutExtra("Round", Intent.GetIntExtra("Round", -1) + 1);
                     StartActivity(intent);
@@ -149,11 +167,6 @@ namespace PolyglotPal_KimRozenberg
             }
         }
 
-        private bool CheckLevel()
-        {
-            /*need to add check*/
-
-            return false;
-        }
+        private void NullFunction(object sender, DialogClickEventArgs e) { }
     }
 }

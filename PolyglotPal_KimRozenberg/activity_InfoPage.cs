@@ -51,6 +51,7 @@ namespace PolyglotPal_KimRozenberg
         private void BtnExitInfoPage_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(activity_MainPage));
+            intent.PutExtra("Username", Intent.GetStringExtra("Username"));
             StartActivity(intent);
             Finish();
         }

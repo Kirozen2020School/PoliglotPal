@@ -141,6 +141,7 @@ namespace PolyglotPal_KimRozenberg
         private void OkAction(object sender, DialogClickEventArgs e)
         {
             Intent intent = new Intent(this, typeof(activity_MainPage));
+            intent.PutExtra("Username", Intent.GetStringExtra("Username"));
             StartActivity(intent);
             Finish();
         }
@@ -154,6 +155,7 @@ namespace PolyglotPal_KimRozenberg
             if(round >= 10)
             {
                 Intent intent = new Intent(this, typeof(activity_LevelFinish));
+                intent.PutExtra("Username", Intent.GetStringExtra("Username"));
                 intent.PutExtra("XP", xp + 10);
                 StartActivity(intent);
                 Finish();
@@ -163,6 +165,7 @@ namespace PolyglotPal_KimRozenberg
             {
 
                 Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
+                intent.PutExtra("Username", Intent.GetStringExtra("Username"));
                 intent.PutExtra("XP", xp + 10);
                 intent.PutExtra("Round", Intent.GetIntExtra("Round", -1) + 1);
                 StartActivity(intent);
@@ -172,6 +175,7 @@ namespace PolyglotPal_KimRozenberg
             {
 
                 Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
+                intent.PutExtra("Username", Intent.GetStringExtra("Username"));
                 intent.PutExtra("XP", xp + 10);
                 intent.PutExtra("Round", Intent.GetIntExtra("Round", -1) + 1);
                 StartActivity(intent);
