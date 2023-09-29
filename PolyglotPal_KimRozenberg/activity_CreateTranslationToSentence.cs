@@ -7,6 +7,7 @@ using Android.Widget;
 using Org.Apache.Http.Conn;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -20,6 +21,7 @@ namespace PolyglotPal_KimRozenberg
         ImageButton btnExitLevel;
         EditText etAnswer;
         Android.App.AlertDialog d;
+        List<Tuple<string, string>> sentences;
 
         int xp;
         string correct_answer;
@@ -40,7 +42,30 @@ namespace PolyglotPal_KimRozenberg
 
         private void InitLevel()
         {
+            sentences = new List<Tuple<string, string>>();
+            string filePath = Path.Combine(System.Environment.CurrentDirectory, "ENGtoHEsentence.txt");
+            if (File.Exists(filePath))
+            {
+                try
+                {
+                    string[] lines = File.ReadAllLines(filePath);
+                    for (int i = 0; i < lines.Length; i += 2)
+                    {
+                        string englishSentence = lines[i];
+                        string hebrewTranslation = lines[i + 1];
+                        sentences.Add(new Tuple<string, string>(englishSentence, hebrewTranslation));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                }
 
+                Random random = new Random();
+                int id = random.Next(0, sentences.Count);
+                this.correct_answer = sentences[id].Item2;
+                tvSentence.Text = "Translate \"" + sentences[id].Item1 + "\" to hebrew: ";
+            }
         }
 
         private void InitViews()

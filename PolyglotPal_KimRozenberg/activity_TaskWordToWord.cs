@@ -22,8 +22,12 @@ namespace PolyglotPal_KimRozenberg
         ImageButton btnExitLevel;
         Android.App.AlertDialog d;
 
-        List<ENG_HE_Words> words;
+        List<Tuple<string, string>> words;
         int xp;
+
+        Button lastClickedButtonEng = null;
+        Button lastClickedButtonHeb = null;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -36,70 +40,65 @@ namespace PolyglotPal_KimRozenberg
             }
 
             InitViews();
-            //InitWords();
-
-            //InitButtons();
+            InitWords();
+            InitButtons();
         }
 
         private void InitButtons()
         {
             Random random = new Random();
+            HashSet<int> selectedIndices = new HashSet<int>();
+            int numberOfCouples = 4;
 
-            List<string> ENGwords = new List<string>();
-            List<string> HEwords = new List<string>();
+            List<Tuple<string, string>> selectedCouples = new List<Tuple<string, string>>();
 
-            int[] id = new int[4] { (random.Next(0, 50)), (random.Next(50, 100)), (random.Next(100, 150)), (random.Next(150, 199)) };
-
-            for (int i = 0; i < id.Length; i++)
+            while (selectedCouples.Count < numberOfCouples)
             {
-                ENGwords.Add(words[id[i]].ENGword);
-                HEwords.Add(words[id[i]].HEword);
+                int randomIndex = random.Next(words.Count);
+
+                if (!selectedIndices.Contains(randomIndex))
+                {
+                    selectedIndices.Add(randomIndex);
+                    selectedCouples.Add(words[randomIndex]);
+                }
             }
 
-            Random rng = new Random();
-            //random order
-            int n = ENGwords.Count;
-            while (n > 1)
-            {
-                n--;
-                int k = rng.Next(n + 1);
-                string value = ENGwords[k];
-                ENGwords[k] = ENGwords[n];
-                ENGwords[n] = value;
-            }
-            n = HEwords.Count;
-            while (n > 1)
-            {
-                n--;
-                int k = rng.Next(n + 1);
-                string value = HEwords[k];
-                HEwords[k] = HEwords[n];
-                HEwords[n] = value;
-            }
-
-            btnENG1.Text = ENGwords[0];
-            btnENG2.Text = ENGwords[1];
-            btnENG3.Text = ENGwords[2];
-            btnENG4.Text = ENGwords[3];
-            btnHE1.Text = HEwords[0];
-            btnHE2.Text = HEwords[1];
-            btnHE3.Text = HEwords[2];
-            btnHE4.Text = HEwords[3];
+            btnENG1.Text = selectedCouples[0].Item1;
+            btnHE1.Text = selectedCouples[2].Item2;
+            btnENG2.Text = selectedCouples[1].Item1;
+            btnHE2.Text = selectedCouples[0].Item2;
+            btnENG3.Text = selectedCouples[2].Item1;
+            btnHE3.Text = selectedCouples[3].Item2;
+            btnENG4.Text = selectedCouples[3].Item1;
+            btnHE4.Text = selectedCouples[1].Item2;
         }
 
         private void InitWords()
         {
-            words = new List<ENG_HE_Words>();
-            string filePath = Path.Combine(Android.OS.Environment.ExternalStorageDirectory.AbsolutePath, "ENGandHEwords.txt");
-            string test = @"C:\Users\rozen\OneDrive\Рабочий стол\PoliglotPal\PolyglotPal_KimRozenberg\ENGandHEwords.txt";
-            using (var reader = new StreamReader(test))
+            words = new List<Tuple<string, string>>();
+            string filePath = Path.Combine(System.Environment.CurrentDirectory, "ENGandHEwords.txt");
+            if (File.Exists(filePath))
             {
-                while (reader.EndOfStream == false)
+                try
                 {
-                    var line = reader.ReadLine().Split(' ');
-                    words.Add(new ENG_HE_Words(line[0], line[1]));
+                    string[] lines = File.ReadAllLines(filePath);
+                    foreach (string line in lines)
+                    {
+                        string[] parts = line.Split(' ');
+                        if (parts.Length == 2)
+                        {
+                            string englishWord = parts[0];
+                            string hebrewTranslation = parts[1];
+                            words.Add(new Tuple<string, string>(englishWord, hebrewTranslation));
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
                 }
             }
+            
         }
 
         private void InitViews()
@@ -118,7 +117,60 @@ namespace PolyglotPal_KimRozenberg
 
             btnExitLevel = FindViewById<ImageButton>(Resource.Id.btnExitFromPairsPage);
             btnExitLevel.Click += BtnExitLevel_Click;
-            
+
+            btnENG1.Click += BtnENG_Click;
+            btnENG2.Click += BtnENG_Click;
+            btnENG3.Click += BtnENG_Click;
+            btnENG4.Click += BtnENG_Click;
+
+            btnHE1.Click += BtnHE_Click;
+            btnHE2.Click += BtnHE_Click;
+            btnHE3.Click += BtnHE_Click;
+            btnHE4.Click += BtnHE_Click;
+        }
+
+        private void BtnENG_Click(object sender, EventArgs e)
+        {
+            Button clickedButton = (Button)sender;
+
+            if (lastClickedButtonHeb != null)
+            {
+                foreach (var item in words)
+                {
+                    if(item.Item1.Equals(clickedButton.Text) && item.Item2.Equals(lastClickedButtonHeb.Text))
+                    {
+                        Toast.MakeText(this, "Translations match!", ToastLength.Short).Show();
+                    }
+                }
+                
+                lastClickedButtonHeb = null;
+            }
+            else
+            {
+                lastClickedButtonEng = clickedButton;
+            }
+        }
+
+        private void BtnHE_Click(object sender, EventArgs e)
+        {
+            Button clickedButton = (Button)sender;
+
+            if (lastClickedButtonEng != null)
+            {
+                foreach (var item in words)
+                {
+                    if (item.Item1.Equals(lastClickedButtonEng.Text) && item.Item2.Equals(clickedButton.Text))
+                    {
+                        Toast.MakeText(this, "Translations match!", ToastLength.Short).Show();
+                    }
+                }
+                
+                lastClickedButtonEng = null;
+            }
+            else
+            {
+                lastClickedButtonHeb = clickedButton;
+            }
         }
 
         private void BtnExitLevel_Click(object sender, EventArgs e)
@@ -151,8 +203,7 @@ namespace PolyglotPal_KimRozenberg
             Random random = new Random();
             int id = random.Next(0, 2);
 
-            int round = Intent.GetIntExtra("Round", -1);
-            if(round >= 10)
+            if(Intent.GetIntExtra("Round", -1) >= 10)
             {
                 Intent intent = new Intent(this, typeof(activity_LevelFinish));
                 intent.PutExtra("Username", Intent.GetStringExtra("Username"));
