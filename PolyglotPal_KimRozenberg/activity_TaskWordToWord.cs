@@ -40,8 +40,8 @@ namespace PolyglotPal_KimRozenberg
             }
 
             InitViews();
-            InitWords();
-            InitButtons();
+            //InitWords();
+            //InitButtons();
         }
 
         private void InitButtons()

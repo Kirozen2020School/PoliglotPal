@@ -37,7 +37,7 @@ namespace PolyglotPal_KimRozenberg
             }
 
             InitViews();
-            InitLevel();
+            //InitLevel();
         }
 
         private void InitLevel()
