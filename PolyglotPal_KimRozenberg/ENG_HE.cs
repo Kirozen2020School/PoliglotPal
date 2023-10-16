@@ -11,16 +11,15 @@ using System.Text;
 
 namespace PolyglotPal_KimRozenberg
 {
-    internal class ENG_HE_Words
+    internal class ENG_HE
     {
-        public string ENGword { get; set; }
-        public string HEword {  get; set; }
+        public string HE { get; set; }
+        public string ENG { get; set; }
 
-        public ENG_HE_Words(string eNGword, string hEword)
+        public ENG_HE(string hE, string eNG)
         {
-            ENGword = eNGword;
-            HEword = hEword;
+            HE = hE;
+            ENG = eNG;
         }
-
     }
 }

@@ -22,7 +22,8 @@ namespace PolyglotPal_KimRozenberg
         ImageButton btnExitLevel;
         Android.App.AlertDialog d;
 
-        List<Tuple<string, string>> words;
+        //List<Tuple<string, string>> words;
+        List<ENG_HE> words;
         int xp;
 
         Button lastClickedButtonEng = null;
@@ -50,7 +51,8 @@ namespace PolyglotPal_KimRozenberg
             HashSet<int> selectedIndices = new HashSet<int>();
             int numberOfCouples = 4;
 
-            List<Tuple<string, string>> selectedCouples = new List<Tuple<string, string>>();
+            //List<Tuple<string, string>> selectedCouples = new List<Tuple<string, string>>();
+            List<ENG_HE> selectedCouples = new List<ENG_HE>();
 
             while (selectedCouples.Count < numberOfCouples)
             {
@@ -63,19 +65,20 @@ namespace PolyglotPal_KimRozenberg
                 }
             }
 
-            btnENG1.Text = selectedCouples[0].Item1;
-            btnHE1.Text = selectedCouples[2].Item2;
-            btnENG2.Text = selectedCouples[1].Item1;
-            btnHE2.Text = selectedCouples[0].Item2;
-            btnENG3.Text = selectedCouples[2].Item1;
-            btnHE3.Text = selectedCouples[3].Item2;
-            btnENG4.Text = selectedCouples[3].Item1;
-            btnHE4.Text = selectedCouples[1].Item2;
+            btnENG1.Text = selectedCouples[0].ENG;
+            btnHE1.Text = selectedCouples[2].HE;
+            btnENG2.Text = selectedCouples[1].ENG;
+            btnHE2.Text = selectedCouples[0].HE;
+            btnENG3.Text = selectedCouples[2].ENG;
+            btnHE3.Text = selectedCouples[3].HE;
+            btnENG4.Text = selectedCouples[3].ENG;
+            btnHE4.Text = selectedCouples[1].HE;
         }
 
         private void InitWords()
         {
-            words = new List<Tuple<string, string>>();
+            //words = new List<Tuple<string, string>>();
+            words = new List<ENG_HE>();
             string filePath = Path.Combine(System.Environment.CurrentDirectory, "ENGandHEwords.txt");
             if (File.Exists(filePath))
             {
@@ -89,7 +92,8 @@ namespace PolyglotPal_KimRozenberg
                         {
                             string englishWord = parts[0];
                             string hebrewTranslation = parts[1];
-                            words.Add(new Tuple<string, string>(englishWord, hebrewTranslation));
+                            //words.Add(new Tuple<string, string>(englishWord, hebrewTranslation));
+                            words.Add(new ENG_HE(hebrewTranslation, englishWord));
                         }
                     }
                 }
@@ -137,7 +141,7 @@ namespace PolyglotPal_KimRozenberg
             {
                 foreach (var item in words)
                 {
-                    if(item.Item1.Equals(clickedButton.Text) && item.Item2.Equals(lastClickedButtonHeb.Text))
+                    if(item.ENG.Equals(clickedButton.Text) && item.HE.Equals(lastClickedButtonHeb.Text))
                     {
                         Toast.MakeText(this, "Translations match!", ToastLength.Short).Show();
                     }
@@ -159,7 +163,7 @@ namespace PolyglotPal_KimRozenberg
             {
                 foreach (var item in words)
                 {
-                    if (item.Item1.Equals(lastClickedButtonEng.Text) && item.Item2.Equals(clickedButton.Text))
+                    if (item.ENG.Equals(lastClickedButtonEng.Text) && item.HE.Equals(clickedButton.Text))
                     {
                         Toast.MakeText(this, "Translations match!", ToastLength.Short).Show();
                     }
