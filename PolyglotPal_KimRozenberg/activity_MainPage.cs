@@ -26,18 +26,22 @@ namespace PolyglotPal_KimRozenberg
         FirebaseManager firebase;
 
         int xpAdded = -1;
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected override async void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_MainPage);
             // Create your application here
 
-            InitViews();
             if (Intent.Extras != null)
             {
                 this.username = Intent.GetStringExtra("Username");
                 this.xpAdded = Intent.GetIntExtra("XP", -1);
             }
+
+            firebase = new FirebaseManager();
+            user = await firebase.GetAccount(this.username);
+
+            InitViews();
             UpdateViews();
         }
 
@@ -53,11 +57,8 @@ namespace PolyglotPal_KimRozenberg
             tvTotalPointsHomePage.Text = "Total points: " + this.user.totalxp;
         }
 
-        async private void InitViews()
+        private void InitViews()
         {
-            firebase = new FirebaseManager();
-            user = await firebase.GetAccount(this.username);
-
             tvHiUsernameHomePage = FindViewById<TextView>(Resource.Id.tvHiUsernameHomePage);
             tvTotalPointsHomePage = FindViewById<TextView>(Resource.Id.tvTotalPointsHomePage);
 

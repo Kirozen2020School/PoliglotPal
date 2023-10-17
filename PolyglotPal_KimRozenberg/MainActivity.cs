@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace PolyglotPal_KimRozenberg
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "PolyglotPal", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
         EditText etUserName, etPassword;

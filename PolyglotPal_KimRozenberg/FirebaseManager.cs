@@ -12,7 +12,7 @@ namespace PolyglotPal_KimRozenberg
         
         public async Task AddAccount(Account account)
         {
-            await firebase.Child("Accout").Child(account.username).PutAsync<Account>(account);
+            await firebase.Child("Account").Child(account.username).PutAsync<Account>(account);
         }
 
         public async Task<Account> GetAccount(string username)
@@ -24,9 +24,9 @@ namespace PolyglotPal_KimRozenberg
         {
             return (await firebase.Child("Account").OnceAsync<Account>()).Select(item => new Account(
                 item.Object.username,
-                item.Object.password,
                 item.Object.lastname,
                 item.Object.firstname,
+                item.Object.password,
                 item.Object.totalxp,
                 item.Object.totaltasks,
                 item.Object.datejoining,

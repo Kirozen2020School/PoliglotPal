@@ -37,5 +37,18 @@ namespace PolyglotPal_KimRozenberg
             this.profilepic = profilepic;
             this.backgroundcolor = backgroundcolor;
         }
+
+        public Account(string username, string lastname, string firstname, string password,
+            int totalxp, int totaltasks, string datejoining, string backgroundcolor)
+        {
+            this.username = username;
+            this.lastname = lastname;
+            this.firstname = firstname;
+            this.password = password;
+            this.totalxp = totalxp;
+            this.totaltasks = totaltasks;
+            this.datejoining = datejoining;
+            this.backgroundcolor = backgroundcolor;
+        }
     }
 }

@@ -16,12 +16,14 @@ namespace PolyglotPal_KimRozenberg
         Button btnCreatNewAccount, btnCencle;
 
         FirebaseManager firebase;
-        protected override void OnCreate(Bundle savedInstanceState)
+        List<Account> accounts;
+        protected override async void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_RegisterPage);
             // Create your application here
             InitViews();
+            accounts = await firebase.GetAllUsers();
         }
 
         private void InitViews()
@@ -50,7 +52,6 @@ namespace PolyglotPal_KimRozenberg
         async private void BtnCreatNewAccount_Click(object sender, EventArgs e)
         {
             bool flag = true;
-            List<Account> accounts = await firebase.GetAllUsers();
 
             if(accounts != null && accounts.Count > 0)
             {
@@ -68,9 +69,23 @@ namespace PolyglotPal_KimRozenberg
                 string imageName = "ProfileIcon";
                 int resourceId = Resources.GetIdentifier(imageName, "drawable", PackageName);
                 Bitmap bitmap = BitmapFactory.DecodeResource(Resources, resourceId);
-
-                Account user = new Account(etUserName.Text, etLastName.Text, etFirstName.Text, etPassword.Text, 0,0, DateTime.Now.ToString("d MMMM yyyy"), ConvertBitmapToByteArray(bitmap), "#13A90A");
-                await firebase.AddAccount(user);
+                string date = DateTime.Now.ToString("d MMMM yyyy");
+                //byte[] pic = ConvertBitmapToByteArray(bitmap);
+                //Account user = new Account(etUserName.Text,
+                //    etLastName.Text,
+                //    etFirstName.Text,
+                //    etPassword.Text,
+                //    0,0, date,
+                //    pic ,
+                //    "#13A90A");
+                Account usernopic = new Account(etUserName.Text,
+                    etLastName.Text,
+                    etFirstName.Text,
+                    etPassword.Text,
+                    0, 0, date,
+                    new byte[] {0,0},
+                    "#13A90A");
+                await firebase.AddAccount(usernopic);
 
 
                 Intent intent = new Intent(this, typeof(activity_MainPage));

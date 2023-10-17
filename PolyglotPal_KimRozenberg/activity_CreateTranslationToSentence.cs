@@ -21,7 +21,7 @@ namespace PolyglotPal_KimRozenberg
         ImageButton btnExitLevel;
         EditText etAnswer;
         Android.App.AlertDialog d;
-        //List<Tuple<string, string>> sentences;
+
         List<ENG_HE> sentences;
 
         int xp;
@@ -43,7 +43,6 @@ namespace PolyglotPal_KimRozenberg
 
         private void InitLevel()
         {
-            //sentences = new List<Tuple<string, string>>();
             sentences = new List<ENG_HE>();
             string filePath = Path.Combine(System.Environment.CurrentDirectory, "ENGtoHEsentence.txt");
             if (File.Exists(filePath))
@@ -55,7 +54,6 @@ namespace PolyglotPal_KimRozenberg
                     {
                         string englishSentence = lines[i];
                         string hebrewTranslation = lines[i + 1];
-                        //sentences.Add(new Tuple<string, string>(englishSentence, hebrewTranslation));
                         sentences.Add(new ENG_HE(hebrewTranslation,englishSentence));
                     }
                 }

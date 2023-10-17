@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Web;
 using System.Net;
+using static Android.Provider.UserDictionary;
 
 namespace PolyglotPal_KimRozenberg
 {
@@ -22,7 +23,6 @@ namespace PolyglotPal_KimRozenberg
         ImageButton btnExitLevel;
         Android.App.AlertDialog d;
 
-        //List<Tuple<string, string>> words;
         List<ENG_HE> words;
         int xp;
 
@@ -51,7 +51,6 @@ namespace PolyglotPal_KimRozenberg
             HashSet<int> selectedIndices = new HashSet<int>();
             int numberOfCouples = 4;
 
-            //List<Tuple<string, string>> selectedCouples = new List<Tuple<string, string>>();
             List<ENG_HE> selectedCouples = new List<ENG_HE>();
 
             while (selectedCouples.Count < numberOfCouples)
@@ -77,7 +76,6 @@ namespace PolyglotPal_KimRozenberg
 
         private void InitWords()
         {
-            //words = new List<Tuple<string, string>>();
             words = new List<ENG_HE>();
             string filePath = Path.Combine(System.Environment.CurrentDirectory, "ENGandHEwords.txt");
             if (File.Exists(filePath))
@@ -92,17 +90,30 @@ namespace PolyglotPal_KimRozenberg
                         {
                             string englishWord = parts[0];
                             string hebrewTranslation = parts[1];
-                            //words.Add(new Tuple<string, string>(englishWord, hebrewTranslation));
                             words.Add(new ENG_HE(hebrewTranslation, englishWord));
                         }
                     }
+                    /*
+                    using(StreamReader sr = new StreamReader(filePath))
+                    {
+                        while (!sr.EndOfStream)
+                        {
+                            string line = sr.ReadLine();
+                            string[] parts = line.Split(' ');
+
+                            if (parts.Length == 2)
+                            {
+                                words.Add(new ENG_HE(parts[1], parts[0]));
+                            }
+                        }
+                    }
+                    */
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine("Error: " + ex.Message);
                 }
             }
-            
         }
 
         private void InitViews()

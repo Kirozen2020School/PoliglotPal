@@ -31,16 +31,13 @@
         tools:ignore="HardcodedText" 
         />
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etUsername"
         android:textColor="#fff"
         android:inputType="text"
         />
-    <TextView
-        android:layout_width="200sp"
-        android:layout_height="1sp"
-        android:background="#fff"/>
+    
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="30sp"/>
@@ -54,16 +51,13 @@
         tools:ignore="HardcodedText" 
         />
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etPassword"
         android:textColor="#fff"
         android:inputType="textPassword"
         />
-    <TextView
-        android:layout_width="200sp"
-        android:layout_height="1sp"
-        android:background="#fff"/>
+    
 
     <TextView
         android:layout_width="wrap_content"
