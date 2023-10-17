@@ -1,21 +1,14 @@
 ﻿using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Web;
-using System.Net;
-using static Android.Provider.UserDictionary;
 
 namespace PolyglotPal_KimRozenberg
 {
-    [Activity(Label = "activity_TaskWordToWord")]
+    [Activity(Label = "PolyglotPal")]
     public class activity_TaskWordToWord : Activity
     {
         Button btnENG1, btnENG2, btnENG3, btnENG4, btnHE1, btnHE2, btnHE3, btnHE4;

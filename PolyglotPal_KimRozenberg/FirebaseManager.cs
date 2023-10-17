@@ -1,7 +1,6 @@
 ﻿using Firebase.Database;
 using Firebase.Database.Query;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace PolyglotPal_KimRozenberg
@@ -24,19 +23,6 @@ namespace PolyglotPal_KimRozenberg
 
         public async Task<List<Account>> GetAllUsers()
         {
-            //return (await firebase.Child(name).OnceAsync<Account>()).Select(item => new Account(
-            //    item.Object.username,
-            //    item.Object.lastname,
-            //    item.Object.firstname,
-            //    item.Object.password,
-            //    item.Object.totalxp,
-            //    item.Object.totaltasks,
-            //    item.Object.datejoining,
-            //    item.Object.profilepic,
-            //    item.Object.backgroundcolor
-            //    )
-            //).ToList();
-
             var response = await firebase.Child(name).OnceAsync<Account>();
             List<Account> accounts = new List<Account>();
 

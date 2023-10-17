@@ -37,7 +37,7 @@ namespace PolyglotPal_KimRozenberg
             }
             catch (Exception ex)
             {
-                Toast.MakeText(this, "Reading data from firebase error", ToastLength.Long);
+                Toast.MakeText(this, "Reading data from firebase error", ToastLength.Long).Show();
                 
             }
             
@@ -61,6 +61,7 @@ namespace PolyglotPal_KimRozenberg
 
         private void BtnStart_Click(object sender, EventArgs e)
         {
+            bool flag = false;
             //Check if there is an acoount in the firebase 
             if(accounts != null)
             {
@@ -68,6 +69,7 @@ namespace PolyglotPal_KimRozenberg
                 {
                     if (etUserName.Text.Equals(account.username) && etPassword.Text.Equals(account.password))
                     {
+                        flag = true;
                         Intent intent = new Intent(this, typeof(activity_MainPage));
                         intent.PutExtra("Username", etUserName.Text);
                         StartActivity(intent);
@@ -75,22 +77,24 @@ namespace PolyglotPal_KimRozenberg
                     }
                 }
             }
-            
-            //Toast.MakeText(this, "The Password / Username are incorect or ", ToastLength.Long).Show();
-            Android.App.AlertDialog.Builder builder = new Android.App.AlertDialog.Builder(this);
-            builder.SetTitle("Login");
-            builder.SetMessage("The Username or Password are incorect or not writen in our system\n" +
-                "Do you want to register or try again");
-            builder.SetCancelable(true);
-            builder.SetPositiveButton("Register", Register);
-            builder.SetNegativeButton("Try again", TryAgain);
-            builder.Show();
+
+            if (!flag)
+            {
+                Android.App.AlertDialog.Builder builder = new Android.App.AlertDialog.Builder(this);
+                builder.SetTitle("Login");
+                builder.SetMessage("The Username or Password are incorect or not writen in our system\n" +
+                    "Do you want to register or try again");
+                builder.SetCancelable(true);
+                builder.SetPositiveButton("Register", Register);
+                builder.SetNegativeButton("Try again", TryAgain);
+                builder.Show();
+            }
         }
 
         private void TryAgain(object sender, DialogClickEventArgs e)
         {
             etPassword.Text = "";
-            etUserName.Text = "";
+            //etUserName.Text = "";
         }
 
         private void Register(object sender, DialogClickEventArgs e)

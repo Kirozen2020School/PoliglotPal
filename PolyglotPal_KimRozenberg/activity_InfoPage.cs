@@ -1,17 +1,12 @@
 ﻿using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace PolyglotPal_KimRozenberg
 {
-    [Activity(Label = "activity_InfoPage")]
+    [Activity(Label = "PolyglotPal")]
     public class activity_InfoPage : Activity
     {
         Button btnExitInfoPage;

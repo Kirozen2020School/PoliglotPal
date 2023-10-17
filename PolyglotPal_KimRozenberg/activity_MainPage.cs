@@ -9,7 +9,7 @@ using static Android.Views.View;
 
 namespace PolyglotPal_KimRozenberg
 {
-    [Activity(Label = "activity_MainPage")]
+    [Activity(Label = "PolyglotPal")]
     public class activity_MainPage : AppCompatActivity, IOnClickListener, PopupMenu.IOnMenuItemClickListener
     {
         ImageButton btnGoToProfilePageFromTaskPage;

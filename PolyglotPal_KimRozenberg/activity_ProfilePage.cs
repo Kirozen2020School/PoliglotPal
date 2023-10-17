@@ -5,13 +5,12 @@ using Android.Widget;
 using System;
 using Android.Graphics;
 using System.IO;
-using Android.Graphics.Drawables;
 using Android.Provider;
 using System.Text.RegularExpressions;
 
 namespace PolyglotPal_KimRozenberg
 {
-    [Activity(Label = "activity_ProfilePage")]
+    [Activity(Label = "PolyglotPal")]
     public class activity_ProfilePage : Activity
     {
         ImageButton btnGotToTaskPageFromProfilePage;
@@ -23,12 +22,14 @@ namespace PolyglotPal_KimRozenberg
         string username;
         Account user;
         FirebaseManager firebase;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_ProfilePage);
             // Create your application here
             InitViews();
+            firebase = new FirebaseManager();
             if(Intent.Extras != null)
             {
                 this.username = Intent.GetStringExtra("Username");
@@ -38,18 +39,29 @@ namespace PolyglotPal_KimRozenberg
 
         async private void UpdateViews()
         {
-            this.user = await firebase.GetAccount(this.username);
+            try
+            {
+                this.user = await firebase.GetAccount(this.username);
+            }
+            catch(Exception e)
+            {
+                Toast.MakeText(this, "User not found in firebase", ToastLength.Long).Show();
+            }
+            
+            if(this.user != null)
+            {
+                tvUserName.Text = this.username;
+                tvFullUserName.Text = this.user.firstname + " " + this.user.lastname;
+                tvJoiningDate.Text = this.user.datejoining;
+                tvTotalEX.Text = "Total points:\n" + this.user.totalxp;
+                tvTotalTaskDone.Text = "Total tasks:\n" + this.user.totaltasks;
 
-            tvUserName.Text = this.username;
-            tvFullUserName.Text = this.user.firstname + " " + this.user.lastname;
-            tvJoiningDate.Text = this.user.datejoining;
-            tvTotalEX.Text = "Total points:\n"+this.user.totalxp;
-            tvTotalTaskDone.Text = "Total tasks:\n"+this.user.totaltasks;
+                Bitmap bitmap = ConvertByteArrayToBitmap(this.user.profilepic);
+                ivProfilePic.SetImageBitmap(bitmap);
 
-            Bitmap bitmap = ConvertByteArrayToBitmap(this.user.profilepic);
-            ivProfilePic.SetImageBitmap(bitmap);
-
-            lyProfilePageBackgroundColor.SetBackgroundColor(Android.Graphics.Color.ParseColor(this.user.backgroundcolor));
+                lyProfilePageBackgroundColor.SetBackgroundColor(Android.Graphics.Color.ParseColor(this.user.backgroundcolor));
+                ivProfilePic.SetBackgroundColor(Android.Graphics.Color.ParseColor(this.user.backgroundcolor));
+            }
         }
 
         private void InitViews()
@@ -83,6 +95,11 @@ namespace PolyglotPal_KimRozenberg
                 string inputText = userinput.Text;
                 if (IsHtmlColor(inputText))
                 {
+                    if (!inputText.Contains("#"))
+                    {
+                        inputText = "#" + inputText;
+                    }
+
                     this.user.backgroundcolor = inputText;
                     lyProfilePageBackgroundColor.SetBackgroundColor(Android.Graphics.Color.ParseColor(inputText));
                     ivProfilePic.SetBackgroundColor(Android.Graphics.Color.ParseColor(inputText));
@@ -106,7 +123,7 @@ namespace PolyglotPal_KimRozenberg
 
         public static bool IsHtmlColor(string colorCode)
         {
-            Regex hexColorRegex = new Regex("^#[0-9a-fA-F]{6}$");
+            Regex hexColorRegex = new Regex("^#?[0-9a-fA-F]{6}$");
             return hexColorRegex.IsMatch(colorCode);
         }
 
@@ -116,20 +133,26 @@ namespace PolyglotPal_KimRozenberg
             builder.SetTitle("From here you want to get the new profile pic?");
             builder.SetPositiveButton("Camera", (sender, args) =>
             {
-                Intent intent = new Intent(Android.Provider.MediaStore.ActionImageCapture);
-                StartActivityForResult(intent, 0);
+                if(CheckSelfPermission(Android.Manifest.Permission.Camera) == Android.Content.PM.Permission.Granted)
+                {
+                    Intent intent = new Intent(Android.Provider.MediaStore.ActionImageCapture);
+                    StartActivityForResult(intent, 0);
+                }
+                else
+                {
+                    RequestPermissions(new string[] { Android.Manifest.Permission.Camera }, 1001);
+                }
 
             });
-            builder.SetNeutralButton("Galary", (sender, args) =>
+            builder.SetNeutralButton("Cancel", (sender, args) =>
+            {
+                Toast.MakeText(this, "You did not change your profile image", ToastLength.Long).Show();
+            });
+            builder.SetNegativeButton("Galary", (sender, args) =>
             {
                 Intent intent = new Intent(Intent.ActionPick);
                 intent.SetType("image/*");
                 StartActivityForResult(intent, 1);
-
-            });
-            builder.SetNegativeButton("Cancel", (sender, args) =>
-            {
-                Toast.MakeText(this, "You did not change your profile image", ToastLength.Long).Show();
             });
             AlertDialog dialog = builder.Create();
             dialog.Show();
@@ -138,17 +161,13 @@ namespace PolyglotPal_KimRozenberg
         private void BtnGotToTaskPageFromProfilePage_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(activity_MainPage));
+            intent.PutExtra("Username", this.username);
             StartActivity(intent);
             Finish();
         }
 
         public byte[] ConvertBitmapToByteArray(Bitmap bm)
         {
-            //byte[] bytes;
-            //var stream = new MemoryStream();
-            //bm.Compress(Bitmap.CompressFormat.Png, 0, stream);
-            //bytes = stream.ToArray();
-            //return bytes;
             using (MemoryStream stream = new MemoryStream())
             {
                 bm.Compress(Bitmap.CompressFormat.Png, 0, stream); // PNG format, quality 0 (max compression)
@@ -173,7 +192,7 @@ namespace PolyglotPal_KimRozenberg
                 Bitmap bitmap = (Bitmap)data.Extras.Get("data");
 
                 ivProfilePic.SetImageBitmap(bitmap);
-                this.user.profilepic = ConvertBitmapToByteArray(((BitmapDrawable)ivProfilePic.Drawable).Bitmap);
+                this.user.profilepic = ConvertBitmapToByteArray(bitmap);
                 await firebase.UpdateProfilePic(this.user.username, this.user.profilepic);
             }
 
@@ -185,7 +204,7 @@ namespace PolyglotPal_KimRozenberg
                 Bitmap bitmap = MediaStore.Images.Media.GetBitmap(ContentResolver, uri);
 
                 ivProfilePic.SetImageBitmap(bitmap);
-                this.user.profilepic = ConvertBitmapToByteArray(((BitmapDrawable)ivProfilePic.Drawable).Bitmap);
+                this.user.profilepic = ConvertBitmapToByteArray(bitmap);
                 await firebase.UpdateProfilePic(this.user.username, this.user.profilepic);
             }
         }

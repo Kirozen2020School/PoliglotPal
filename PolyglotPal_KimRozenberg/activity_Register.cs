@@ -7,12 +7,11 @@ using System.Collections.Generic;
 using System.IO;
 using Android.Graphics;
 using Android.Content.Res;
-using Android.Graphics;
 using Android.Graphics.Drawables;
 
 namespace PolyglotPal_KimRozenberg
 {
-    [Activity(Label = "activity_Register")]
+    [Activity(Label = "PolyglotPal")]
     public class activity_Register : Activity
     {
         EditText etFirstName, etLastName, etUserName, etPassword;
@@ -26,7 +25,16 @@ namespace PolyglotPal_KimRozenberg
             SetContentView(Resource.Layout.activity_RegisterPage);
             // Create your application here
             InitViews();
-            accounts = await firebase.GetAllUsers();
+
+            try
+            {
+                accounts = await firebase.GetAllUsers();
+            }
+            catch (Exception ex)
+            {
+                Toast.MakeText(this, "Reading data from firebase error", ToastLength.Long);
+
+            }
         }
 
         private void InitViews()

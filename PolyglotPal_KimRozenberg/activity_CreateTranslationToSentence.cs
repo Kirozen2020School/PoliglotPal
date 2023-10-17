@@ -1,19 +1,14 @@
 ﻿using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
-using Org.Apache.Http.Conn;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 
 namespace PolyglotPal_KimRozenberg
 {
-    [Activity(Label = "activity_CreateTranslationToSentence")]
+    [Activity(Label = "PolyglotPal")]
     public class activity_CreateTranslationToSentence : Activity
     {
         TextView tvSentence;
