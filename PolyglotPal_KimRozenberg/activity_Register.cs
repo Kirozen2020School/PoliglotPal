@@ -1,11 +1,14 @@
 ﻿using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Graphics;
 using Android.Widget;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Android.Graphics;
+using Android.Content.Res;
+using Android.Graphics;
+using Android.Graphics.Drawables;
 
 namespace PolyglotPal_KimRozenberg
 {
@@ -66,26 +69,20 @@ namespace PolyglotPal_KimRozenberg
             }
             if(flag)
             {
-                string imageName = "ProfileIcon";
-                int resourceId = Resources.GetIdentifier(imageName, "drawable", PackageName);
-                Bitmap bitmap = BitmapFactory.DecodeResource(Resources, resourceId);
+                Drawable drawable = Resources.GetDrawable(Resource.Drawable.ProfileIcon);
+                Bitmap bitmap = ((BitmapDrawable)drawable).Bitmap;
                 string date = DateTime.Now.ToString("d MMMM yyyy");
-                //byte[] pic = ConvertBitmapToByteArray(bitmap);
-                //Account user = new Account(etUserName.Text,
-                //    etLastName.Text,
-                //    etFirstName.Text,
-                //    etPassword.Text,
-                //    0,0, date,
-                //    pic ,
-                //    "#13A90A");
-                Account usernopic = new Account(etUserName.Text,
+                byte[] pic = ConvertBitmapToByteArray(bitmap);
+
+                Account user = new Account(etUserName.Text,
                     etLastName.Text,
                     etFirstName.Text,
                     etPassword.Text,
                     0, 0, date,
-                    new byte[] {0,0},
+                    pic,
                     "#13A90A");
-                await firebase.AddAccount(usernopic);
+
+                await firebase.AddAccount(user);
 
 
                 Intent intent = new Intent(this, typeof(activity_MainPage));
@@ -97,11 +94,11 @@ namespace PolyglotPal_KimRozenberg
 
         private static byte[] ConvertBitmapToByteArray(Bitmap bm)
         {
-            byte[] bytes;
-            var stream = new MemoryStream();
-            bm.Compress(Bitmap.CompressFormat.Png, 0, stream);
-            bytes = stream.ToArray();
-            return bytes;
+            using (MemoryStream stream = new MemoryStream())
+            {
+                bm.Compress(Bitmap.CompressFormat.Png, 0, stream); // PNG format, quality 0 (max compression)
+                return stream.ToArray();
+            }
         }
     }
 }

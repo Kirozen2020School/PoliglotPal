@@ -1,15 +1,10 @@
 ﻿using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using System;
-using System.Collections.Generic;
 using Android.Graphics;
 using System.IO;
-using System.Linq;
-using System.Text;
 using Android.Graphics.Drawables;
 using Android.Provider;
 using System.Text.RegularExpressions;
@@ -51,7 +46,7 @@ namespace PolyglotPal_KimRozenberg
             tvTotalEX.Text = "Total points:\n"+this.user.totalxp;
             tvTotalTaskDone.Text = "Total tasks:\n"+this.user.totaltasks;
 
-            Bitmap bitmap = BitmapFactory.DecodeByteArray(this.user.profilepic,0,this.user.profilepic.Length);
+            Bitmap bitmap = ConvertByteArrayToBitmap(this.user.profilepic);
             ivProfilePic.SetImageBitmap(bitmap);
 
             lyProfilePageBackgroundColor.SetBackgroundColor(Android.Graphics.Color.ParseColor(this.user.backgroundcolor));
@@ -149,12 +144,26 @@ namespace PolyglotPal_KimRozenberg
 
         public byte[] ConvertBitmapToByteArray(Bitmap bm)
         {
-            byte[] bytes;
-            var stream = new MemoryStream();
-            bm.Compress(Bitmap.CompressFormat.Png, 0, stream);
-            bytes = stream.ToArray();
-            return bytes;
+            //byte[] bytes;
+            //var stream = new MemoryStream();
+            //bm.Compress(Bitmap.CompressFormat.Png, 0, stream);
+            //bytes = stream.ToArray();
+            //return bytes;
+            using (MemoryStream stream = new MemoryStream())
+            {
+                bm.Compress(Bitmap.CompressFormat.Png, 0, stream); // PNG format, quality 0 (max compression)
+                return stream.ToArray();
+            }
         }
+
+        public Bitmap ConvertByteArrayToBitmap(byte[] bytes)
+        {
+            using (MemoryStream stream = new MemoryStream(bytes))
+            {
+                return BitmapFactory.DecodeStream(stream);
+            }
+        }
+
         protected override async void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);

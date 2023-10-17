@@ -9,41 +9,54 @@ namespace PolyglotPal_KimRozenberg
     internal class FirebaseManager
     {
         FirebaseClient firebase = new FirebaseClient("https://polyglotpal-firebase-default-rtdb.europe-west1.firebasedatabase.app");
-        
+
+        private string name = "Account";
+
         public async Task AddAccount(Account account)
         {
-            await firebase.Child("Account").Child(account.username).PutAsync<Account>(account);
+            await firebase.Child(name).Child(account.username).PutAsync<Account>(account);
         }
 
         public async Task<Account> GetAccount(string username)
         {
-            return await firebase.Child("Account").Child(username).OnceSingleAsync<Account>();
+            return await firebase.Child(name).Child(username).OnceSingleAsync<Account>();
         }
 
         public async Task<List<Account>> GetAllUsers()
         {
-            return (await firebase.Child("Account").OnceAsync<Account>()).Select(item => new Account(
-                item.Object.username,
-                item.Object.lastname,
-                item.Object.firstname,
-                item.Object.password,
-                item.Object.totalxp,
-                item.Object.totaltasks,
-                item.Object.datejoining,
-                item.Object.profilepic,
-                item.Object.backgroundcolor
-                )
-            ).ToList();
+            //return (await firebase.Child(name).OnceAsync<Account>()).Select(item => new Account(
+            //    item.Object.username,
+            //    item.Object.lastname,
+            //    item.Object.firstname,
+            //    item.Object.password,
+            //    item.Object.totalxp,
+            //    item.Object.totaltasks,
+            //    item.Object.datejoining,
+            //    item.Object.profilepic,
+            //    item.Object.backgroundcolor
+            //    )
+            //).ToList();
+
+            var response = await firebase.Child(name).OnceAsync<Account>();
+            List<Account> accounts = new List<Account>();
+
+            foreach (var child in response)
+            {
+                Account account = child.Object;
+                accounts.Add(account);
+            }
+
+            return accounts;
         }
 
         public async Task DeleteAccount(string username)
         {
-            await firebase.Child("Account").Child(username).DeleteAsync();
+            await firebase.Child(name).Child(username).DeleteAsync();
         }
 
         public async Task ReplaceAccount(string username, Account updatedAccount)
         {
-            await firebase.Child("Account").Child(username).PutAsync(updatedAccount);
+            await firebase.Child(name).Child(username).PutAsync(updatedAccount);
         }
 
         public async Task UpdateProfilePic(string username, byte[] prifePic)
@@ -56,7 +69,7 @@ namespace PolyglotPal_KimRozenberg
                 account.profilepic = prifePic;
 
                 // Update the account in Firebase
-                await firebase.Child("Account").Child(username).PutAsync(account);
+                await firebase.Child(name).Child(username).PutAsync(account);
             }
             else
             {
@@ -75,7 +88,7 @@ namespace PolyglotPal_KimRozenberg
                 account.backgroundcolor = backgroundColor;
 
                 // Update the account in Firebase
-                await firebase.Child("Account").Child(username).PutAsync(account);
+                await firebase.Child(name).Child(username).PutAsync(account);
             }
             else
             {

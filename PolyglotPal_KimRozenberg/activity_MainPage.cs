@@ -1,14 +1,10 @@
 ﻿using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using AndroidX.AppCompat.App;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using static Android.Views.View;
 
 namespace PolyglotPal_KimRozenberg
@@ -87,7 +83,6 @@ namespace PolyglotPal_KimRozenberg
             btnTask7.Click += BtnTask_Click;
             btnTask8.Click += BtnTask_Click;
             btnTask9.Click += BtnTask_Click;
-
         }
 
         private void BtnTask_Click(object sender, EventArgs e)
@@ -97,7 +92,6 @@ namespace PolyglotPal_KimRozenberg
 
             if (id == 0)
             {
-
                 Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
                 intent.PutExtra("Username", this.username);
                 intent.PutExtra("XP", 0);
@@ -107,7 +101,6 @@ namespace PolyglotPal_KimRozenberg
             }
             else if (id == 1)
             {
-
                 Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
                 intent.PutExtra("Username", this.username);
                 intent.PutExtra("XP", 0);

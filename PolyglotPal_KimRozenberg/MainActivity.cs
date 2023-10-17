@@ -26,15 +26,21 @@ namespace PolyglotPal_KimRozenberg
             SetContentView(Resource.Layout.activity_Login);
 
             InitViews();
-
-            
         }
 
         async private void InitViews()
         {
             firebase = new FirebaseManager();
-
-            accounts = await firebase.GetAllUsers();
+            try
+            {
+                accounts = await firebase.GetAllUsers();
+            }
+            catch (Exception ex)
+            {
+                Toast.MakeText(this, "Reading data from firebase error", ToastLength.Long);
+                
+            }
+            
 
             etUserName = FindViewById<EditText>(Resource.Id.etUsername);
             etPassword = FindViewById<EditText>(Resource.Id.etPassword);
@@ -56,16 +62,20 @@ namespace PolyglotPal_KimRozenberg
         private void BtnStart_Click(object sender, EventArgs e)
         {
             //Check if there is an acoount in the firebase 
-            foreach (var account in accounts)
+            if(accounts != null)
             {
-                if(etUserName.Text.Equals(account.username) && etPassword.Text.Equals(account.password))
+                foreach (var account in accounts)
                 {
-                    Intent intent = new Intent(this, typeof(activity_MainPage));
-                    intent.PutExtra("Username", etUserName.Text);
-                    StartActivity(intent);
-                    Finish();
+                    if (etUserName.Text.Equals(account.username) && etPassword.Text.Equals(account.password))
+                    {
+                        Intent intent = new Intent(this, typeof(activity_MainPage));
+                        intent.PutExtra("Username", etUserName.Text);
+                        StartActivity(intent);
+                        Finish();
+                    }
                 }
             }
+            
             //Toast.MakeText(this, "The Password / Username are incorect or ", ToastLength.Long).Show();
             Android.App.AlertDialog.Builder builder = new Android.App.AlertDialog.Builder(this);
             builder.SetTitle("Login");
@@ -73,7 +83,8 @@ namespace PolyglotPal_KimRozenberg
                 "Do you want to register or try again");
             builder.SetCancelable(true);
             builder.SetPositiveButton("Register", Register);
-            builder.SetNegativeButton("TryAgain", TryAgain);
+            builder.SetNegativeButton("Try again", TryAgain);
+            builder.Show();
         }
 
         private void TryAgain(object sender, DialogClickEventArgs e)
