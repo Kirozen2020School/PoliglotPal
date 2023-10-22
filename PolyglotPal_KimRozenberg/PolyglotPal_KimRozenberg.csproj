@@ -141,8 +141,9 @@
     <AndroidResource Include="Resources\layout\activity_CreateTranslationToASentence.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ENGandHEwords.txt" />
-    <Content Include="ENGtoHEsentence.txt" />
+    <EmbeddedResource Include="Assets\ENGtoHEsentence.txt" />
+    <EmbeddedResource Include="ENGandHEwords.txt" />
+    <EmbeddedResource Include="ENGtoHEsentence.txt" />
     <AndroidResource Include="Resources\layout\activity_MainPage.xml">
       <SubType>Designer</SubType>
     </AndroidResource>

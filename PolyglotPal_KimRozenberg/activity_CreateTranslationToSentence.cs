@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Content;
+using Android.Content.Res;
 using Android.OS;
 using Android.Widget;
 using System;
@@ -33,35 +34,73 @@ namespace PolyglotPal_KimRozenberg
             }
 
             InitViews();
-            //InitLevel();
+            InitLevel();
         }
 
         private void InitLevel()
         {
             sentences = new List<ENG_HE>();
-            string filePath = Path.Combine(System.Environment.CurrentDirectory, "ENGtoHEsentence.txt");
-            if (File.Exists(filePath))
-            {
-                try
-                {
-                    string[] lines = File.ReadAllLines(filePath);
-                    for (int i = 0; i < lines.Length; i += 2)
-                    {
-                        string englishSentence = lines[i];
-                        string hebrewTranslation = lines[i + 1];
-                        sentences.Add(new ENG_HE(hebrewTranslation,englishSentence));
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Toast.MakeText(this, ex.Message, ToastLength.Long).Show();
-                }
 
+            var tmp = System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(activity_CreateTranslationToSentence)).Assembly;
+
+            System.IO.Stream s = tmp.GetManifestResourceStream("PolyglotPal_KimRozenberg.ENGtoHEsentence.txt");
+            System.IO.StreamReader sr = new System.IO.StreamReader(s);
+            string[] lines = sr.ReadToEnd().Split('\n');
+
+            if(lines.Length > 0)
+            {
+                for (int i = 0; i < lines.Length; i+=3)
+                {
+                    string eng = lines[i];
+                    string he = lines[i + 1];
+                    sentences.Add(new ENG_HE(he, eng));
+                }
+            }
+
+            if(sentences.Count > 0)
+            {
                 Random random = new Random();
                 int id = random.Next(0, sentences.Count);
                 this.correct_answer = sentences[id].HE;
                 tvSentence.Text = "Translate \"" + sentences[id].ENG + "\" to hebrew: ";
             }
+            /*
+            //AssetManager asset = this.Assets;
+            //using(StreamReader sr = new StreamReader(asset.Open("ENGtoHEsentence.txt")))
+            //{
+            //    string[] lines = sr.ReadToEnd().Split('\n');
+            //    for (int i = 0; i < lines.Length; i += 2)
+            //    {
+            //        string englishSentence = lines[i];
+            //        string hebrewTranslation = lines[i + 1];
+            //        sentences.Add(new ENG_HE(hebrewTranslation, englishSentence));
+            //    }
+            //}
+
+            //string filePath = Path.Combine(System.Environment.CurrentDirectory, "ENGtoHEsentence.txt");
+            //if (File.Exists(filePath))
+            //{
+            //    try
+            //    {
+            //        string[] lines = File.ReadAllLines(filePath);
+            //        for (int i = 0; i < lines.Length; i += 2)
+            //        {
+            //            string englishSentence = lines[i];
+            //            string hebrewTranslation = lines[i + 1];
+            //            sentences.Add(new ENG_HE(hebrewTranslation,englishSentence));
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        Toast.MakeText(this, ex.Message, ToastLength.Long).Show();
+            //    }
+
+            //Random random = new Random();
+            //int id = random.Next(0, sentences.Count);
+            //this.correct_answer = sentences[id].HE;
+            //tvSentence.Text = "Translate \"" + sentences[id].ENG + "\" to hebrew: ";
+            //}
+            */
         }
 
         private void InitViews()
@@ -156,38 +195,39 @@ namespace PolyglotPal_KimRozenberg
 
                 Android.App.AlertDialog.Builder builder = new Android.App.AlertDialog.Builder(this);
                 builder.SetTitle("Level info");
-                builder.SetMessage("Your answer was wrong\nThe correct answer is:"+this.correct_answer);
+                builder.SetMessage("Your answer was wrong\nThe correct answer is:\n"+this.correct_answer);
                 builder.SetCancelable(true);
                 builder.SetPositiveButton("Ok", NullFunction);
                 d = builder.Create();
                 d.Show();
-
-                Random random = new Random();
-                int id = random.Next(0, 1);
-
-                if (id == 0)
-                {
-
-                    Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
-                    intent.PutExtra("Username", Intent.GetStringExtra("Username"));
-                    intent.PutExtra("XP", xp);
-                    intent.PutExtra("Round", Intent.GetIntExtra("Round", -1) + 1);
-                    StartActivity(intent);
-                    Finish();
-                }
-                else if (id == 1)
-                {
-
-                    Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
-                    intent.PutExtra("Username", Intent.GetStringExtra("Username"));
-                    intent.PutExtra("XP", xp);
-                    intent.PutExtra("Round", Intent.GetIntExtra("Round", -1) + 1);
-                    StartActivity(intent);
-                    Finish();
-                }
             }
         }
 
-        private void NullFunction(object sender, DialogClickEventArgs e) { }
+        private void NullFunction(object sender, DialogClickEventArgs e)
+        {
+            Random random = new Random();
+            int id = random.Next(0, 1);
+
+            if (id == 0)
+            {
+
+                Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
+                intent.PutExtra("Username", Intent.GetStringExtra("Username"));
+                intent.PutExtra("XP", xp);
+                intent.PutExtra("Round", Intent.GetIntExtra("Round", -1) + 1);
+                StartActivity(intent);
+                Finish();
+            }
+            else if (id == 1)
+            {
+
+                Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
+                intent.PutExtra("Username", Intent.GetStringExtra("Username"));
+                intent.PutExtra("XP", xp);
+                intent.PutExtra("Round", Intent.GetIntExtra("Round", -1) + 1);
+                StartActivity(intent);
+                Finish();
+            }
+        }
     }
 }

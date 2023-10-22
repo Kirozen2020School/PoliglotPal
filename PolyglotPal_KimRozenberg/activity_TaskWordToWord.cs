@@ -34,8 +34,8 @@ namespace PolyglotPal_KimRozenberg
             }
 
             InitViews();
-            //InitWords();
-            //InitButtons();
+            InitWords();
+            InitButtons();
         }
 
         private void InitButtons()
@@ -70,6 +70,28 @@ namespace PolyglotPal_KimRozenberg
         private void InitWords()
         {
             words = new List<ENG_HE>();
+
+            var tmp = System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(activity_TaskWordToWord)).Assembly;
+
+            System.IO.Stream s = tmp.GetManifestResourceStream("PolyglotPal_KimRozenberg.ENGandHEwords.txt");
+            System.IO.StreamReader sr = new System.IO.StreamReader(s);
+            string[] lines = sr.ReadToEnd().Split('\n');
+
+            if(lines.Length > 0)
+            {
+                foreach(string line in lines)
+                {
+                    string[] parts = line.Split(' ');
+                    if (parts.Length == 2)
+                    {
+                        string englishWord = parts[0];
+                        string hebrewTranslation = parts[1];
+                        words.Add(new ENG_HE(hebrewTranslation, englishWord));
+                    }
+                }
+            }
+
+            /*
             string filePath = Path.Combine(System.Environment.CurrentDirectory, "ENGandHEwords.txt");
             if (File.Exists(filePath))
             {
@@ -86,7 +108,7 @@ namespace PolyglotPal_KimRozenberg
                             words.Add(new ENG_HE(hebrewTranslation, englishWord));
                         }
                     }
-                    /*
+                    
                     using(StreamReader sr = new StreamReader(filePath))
                     {
                         while (!sr.EndOfStream)
@@ -100,13 +122,14 @@ namespace PolyglotPal_KimRozenberg
                             }
                         }
                     }
-                    */
+                    
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine("Error: " + ex.Message);
                 }
             }
+            */
         }
 
         private void InitViews()
@@ -170,6 +193,7 @@ namespace PolyglotPal_KimRozenberg
                     if (item.ENG.Equals(lastClickedButtonEng.Text) && item.HE.Equals(clickedButton.Text))
                     {
                         Toast.MakeText(this, "Translations match!", ToastLength.Short).Show();
+
                     }
                 }
                 
