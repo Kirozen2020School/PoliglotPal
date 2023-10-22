@@ -35,20 +35,18 @@ namespace PolyglotPal_KimRozenberg
             }
 
             firebase = new FirebaseManager();
+            if(this.xpAdded != -1)
+            {
+                await firebase.UpdateXP(username, this.xpAdded);
+            }
             user = await firebase.GetAccount(this.username);
-
+            
             InitViews();
             UpdateViews();
         }
 
         private void UpdateViews()
         {
-            if (this.xpAdded != -1)
-            {
-                this.user.totalxp += this.xpAdded;
-                this.user.totaltasks++;
-            }
-
             tvHiUsernameHomePage.Text = "Hi " + this.user.username;
             tvTotalPointsHomePage.Text = "Total points: " + this.user.totalxp;
         }

@@ -171,10 +171,12 @@ namespace PolyglotPal_KimRozenberg
                     if(item.ENG.Equals(clickedButton.Text) && item.HE.Equals(lastClickedButtonHeb.Text))
                     {
                         Toast.MakeText(this, "Translations match!", ToastLength.Short).Show();
+                        break;
                     }
                 }
                 
                 lastClickedButtonHeb = null;
+                lastClickedButtonEng = null;
             }
             else
             {
@@ -193,11 +195,12 @@ namespace PolyglotPal_KimRozenberg
                     if (item.ENG.Equals(lastClickedButtonEng.Text) && item.HE.Equals(clickedButton.Text))
                     {
                         Toast.MakeText(this, "Translations match!", ToastLength.Short).Show();
-
+                        break;
                     }
                 }
                 
                 lastClickedButtonEng = null;
+                lastClickedButtonHeb = null;
             }
             else
             {
@@ -232,10 +235,8 @@ namespace PolyglotPal_KimRozenberg
 
         private void BtnNextLevel_Click(object sender, EventArgs e)
         {
-            Random random = new Random();
-            int id = random.Next(0, 2);
-
-            if(Intent.GetIntExtra("Round", -1) >= 10)
+            int round = Intent.GetIntExtra("Round", -1);
+            if (round >= 10)
             {
                 Intent intent = new Intent(this, typeof(activity_LevelFinish));
                 intent.PutExtra("Username", Intent.GetStringExtra("Username"));
@@ -243,26 +244,31 @@ namespace PolyglotPal_KimRozenberg
                 StartActivity(intent);
                 Finish();
             }
-
-            if (id == 0)
+            else
             {
+                Random random = new Random();
+                int id = random.Next(0, 2);
 
-                Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
-                intent.PutExtra("Username", Intent.GetStringExtra("Username"));
-                intent.PutExtra("XP", xp + 10);
-                intent.PutExtra("Round", Intent.GetIntExtra("Round", -1) + 1);
-                StartActivity(intent);
-                Finish();
-            }
-            else if (id == 1)
-            {
+                if (id == 0)
+                {
 
-                Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
-                intent.PutExtra("Username", Intent.GetStringExtra("Username"));
-                intent.PutExtra("XP", xp + 10);
-                intent.PutExtra("Round", Intent.GetIntExtra("Round", -1) + 1);
-                StartActivity(intent);
-                Finish();
+                    Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
+                    intent.PutExtra("Username", Intent.GetStringExtra("Username"));
+                    intent.PutExtra("XP", xp + 10);
+                    intent.PutExtra("Round", round + 1);
+                    StartActivity(intent);
+                    Finish();
+                }
+                else if (id == 1)
+                {
+
+                    Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
+                    intent.PutExtra("Username", Intent.GetStringExtra("Username"));
+                    intent.PutExtra("XP", xp + 10);
+                    intent.PutExtra("Round", round + 1);
+                    StartActivity(intent);
+                    Finish();
+                }
             }
         }
     }

@@ -149,24 +149,79 @@ namespace PolyglotPal_KimRozenberg
             etAnswer.Text = string.Empty;
         }
 
+        private bool CompareStrings(string str1, string str2)
+        {
+            str1 = System.Text.RegularExpressions.Regex.Replace(str1, @"\s+", " ").Trim();
+            str2 = System.Text.RegularExpressions.Regex.Replace(str2, @"\s+", " ").Trim();
+
+            return str1.Equals(str2);
+        }
+
         private void BtnCheck_Click(object sender, EventArgs e)
         {
-            if (this.correct_answer.Equals(etAnswer.Text))
+            if (CompareStrings(this.correct_answer, etAnswer.Text))
             {
                 Toast.MakeText(this, "You are correct!", ToastLength.Long).Show();
 
-                if (Intent.Extras != null)
+                int round = Intent.GetIntExtra("Round", -1);
+                if (round >= 10)
                 {
-                    if (Intent.GetIntExtra("Round", -1) >= 10)
+                    Intent intent = new Intent(this, typeof(activity_LevelFinish));
+                    intent.PutExtra("Username", Intent.GetStringExtra("Username"));
+                    intent.PutExtra("XP", xp + 10);
+                    StartActivity(intent);
+                    Finish();
+                }
+                else
+                {
+                    Random random = new Random();
+                    int id = random.Next(0, 1);
+
+                    if (id == 0)
                     {
-                        Intent intent = new Intent(this, typeof(activity_LevelFinish));
+                        Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
                         intent.PutExtra("Username", Intent.GetStringExtra("Username"));
-                        intent.PutExtra("XP", this.xp + 10);
+                        intent.PutExtra("XP", xp);
+                        intent.PutExtra("Round", round + 1);
+                        StartActivity(intent);
+                        Finish();
+                    }
+                    else if (id == 1)
+                    {
+                        Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
+                        intent.PutExtra("Username", Intent.GetStringExtra("Username"));
+                        intent.PutExtra("XP", xp);
+                        intent.PutExtra("Round", round + 1);
                         StartActivity(intent);
                         Finish();
                     }
                 }
+            }
+            else
+            {
+                Android.App.AlertDialog.Builder builder = new Android.App.AlertDialog.Builder(this);
+                builder.SetTitle("Level info");
+                builder.SetMessage("Your answer was wrong\nThe correct answer is:\n"+this.correct_answer);
+                builder.SetCancelable(true);
+                builder.SetPositiveButton("Ok", NextLevel);
+                d = builder.Create();
+                d.Show();
+            }
+        }
 
+        private void NextLevel(object sender, DialogClickEventArgs e)
+        {
+            int round = Intent.GetIntExtra("Round", -1);
+            if(round >= 10)
+            {
+                Intent intent = new Intent(this, typeof(activity_LevelFinish));
+                intent.PutExtra("Username", Intent.GetStringExtra("Username"));
+                intent.PutExtra("XP", xp + 10);
+                StartActivity(intent);
+                Finish();
+            }
+            else
+            {
                 Random random = new Random();
                 int id = random.Next(0, 1);
 
@@ -174,59 +229,20 @@ namespace PolyglotPal_KimRozenberg
                 {
                     Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
                     intent.PutExtra("Username", Intent.GetStringExtra("Username"));
-                    intent.PutExtra("XP", xp + 10);
-                    intent.PutExtra("Round", Intent.GetIntExtra("Round", -1) + 1);
+                    intent.PutExtra("XP", xp);
+                    intent.PutExtra("Round", round + 1);
                     StartActivity(intent);
                     Finish();
                 }
                 else if (id == 1)
                 {
-
                     Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
                     intent.PutExtra("Username", Intent.GetStringExtra("Username"));
-                    intent.PutExtra("XP", xp + 10);
-                    intent.PutExtra("Round", Intent.GetIntExtra("Round", -1) + 1);
+                    intent.PutExtra("XP", xp);
+                    intent.PutExtra("Round", round + 1);
                     StartActivity(intent);
                     Finish();
                 }
-            }
-            else
-            {
-
-                Android.App.AlertDialog.Builder builder = new Android.App.AlertDialog.Builder(this);
-                builder.SetTitle("Level info");
-                builder.SetMessage("Your answer was wrong\nThe correct answer is:\n"+this.correct_answer);
-                builder.SetCancelable(true);
-                builder.SetPositiveButton("Ok", NullFunction);
-                d = builder.Create();
-                d.Show();
-            }
-        }
-
-        private void NullFunction(object sender, DialogClickEventArgs e)
-        {
-            Random random = new Random();
-            int id = random.Next(0, 1);
-
-            if (id == 0)
-            {
-
-                Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
-                intent.PutExtra("Username", Intent.GetStringExtra("Username"));
-                intent.PutExtra("XP", xp);
-                intent.PutExtra("Round", Intent.GetIntExtra("Round", -1) + 1);
-                StartActivity(intent);
-                Finish();
-            }
-            else if (id == 1)
-            {
-
-                Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
-                intent.PutExtra("Username", Intent.GetStringExtra("Username"));
-                intent.PutExtra("XP", xp);
-                intent.PutExtra("Round", Intent.GetIntExtra("Round", -1) + 1);
-                StartActivity(intent);
-                Finish();
             }
         }
     }
