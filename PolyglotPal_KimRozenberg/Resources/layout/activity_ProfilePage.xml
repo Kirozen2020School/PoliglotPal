@@ -100,15 +100,15 @@
     </LinearLayout>
 
     <TextView
-        android:layout_width="1sp"
-        android:layout_height="192sp"/>
+        android:layout_width="match_parent"
+        android:layout_height="430sp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="#E79300">
-
+        
         <ImageButton
             android:layout_width="50sp"
             android:layout_height="50sp"

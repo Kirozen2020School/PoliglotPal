@@ -54,7 +54,7 @@ namespace PolyglotPal_KimRozenberg
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error: " + ex.Message);
+                    Toast.MakeText(this, ex.Message, ToastLength.Long).Show();
                 }
 
                 Random random = new Random();
