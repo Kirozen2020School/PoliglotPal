@@ -77,7 +77,7 @@ namespace PolyglotPal_KimRozenberg
             }
             if(flag)
             {
-                Drawable drawable = Resources.GetDrawable(Resource.Drawable.ProfileIcon);
+                Drawable drawable = Resources.GetDrawable(Resource.Drawable.blackprofile);
                 Bitmap bitmap = ((BitmapDrawable)drawable).Bitmap;
                 string date = DateTime.Now.ToString("d MMMM yyyy");
                 byte[] pic = ConvertBitmapToByteArray(bitmap);

@@ -28,7 +28,7 @@
             android:layout_width="40sp"
             android:layout_height="40sp"
             android:id="@+id/btnExitFromTranslateSentence"
-            android:src="@drawable/xicon"
+            android:src="@drawable/exit"
             android:scaleType="centerCrop"
             android:layout_marginTop="17sp"
             android:layout_marginLeft="10sp"
@@ -62,7 +62,7 @@
 
     <EditText
         android:layout_width="372sp"
-        android:layout_height="wrap_content"
+        android:layout_height="35sp"
         android:textSize="15sp"
         android:textColor="#fff"
         android:layout_marginTop="10sp"

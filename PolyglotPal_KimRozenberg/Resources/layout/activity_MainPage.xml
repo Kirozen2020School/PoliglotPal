@@ -186,14 +186,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#E79300"
+        android:background="#7A7A7A"
         android:id="@+id/lyBottomLine">
 
         <ImageButton
             android:layout_width="50sp"
             android:layout_height="50sp"
-            android:src="@drawable/haticon"
-            android:background="#E79300"
+            android:src="@drawable/hat"
+            android:background="#7A7A7A"
             android:scaleType="fitXY"
             tools:ignore="ContentDescription" 
             />
@@ -205,9 +205,9 @@
         <ImageButton
             android:layout_width="50sp"
             android:layout_height="50sp"
-            android:src="@drawable/profileicon"
+            android:src="@drawable/blackprofile"
             android:id="@+id/btnGoToProfilePageFromTaskPage"
-            android:background="#E79300"
+            android:background="#7A7A7A"
             android:scaleType="fitXY"
             tools:ignore="ContentDescription" 
             />

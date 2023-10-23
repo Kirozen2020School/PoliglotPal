@@ -21,7 +21,7 @@
             android:id="@+id/ivProfilePic"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/profileicon"
+            android:src="@drawable/blackprofile"
             android:background="#13A90A"
             android:clickable="true"
             android:focusable="true"
@@ -107,14 +107,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#E79300">
+        android:background="#7A7A7A">
         
         <ImageButton
             android:layout_width="50sp"
             android:layout_height="50sp"
             android:id="@+id/btnGoToTaskPageFromProfilePage"
-            android:src="@drawable/haticon"
-            android:background="#E79300"
+            android:src="@drawable/hat"
+            android:background="#7A7A7A"
             android:scaleType="fitXY"
             tools:ignore="ContentDescription" 
             />
@@ -126,8 +126,8 @@
         <ImageButton
             android:layout_width="50sp"
             android:layout_height="50sp"
-            android:src="@drawable/profileicon"
-            android:background="#E79300"
+            android:src="@drawable/blackprofile"
+            android:background="#7A7A7A"
             android:scaleType="fitXY"
             tools:ignore="ContentDescription" 
             />
