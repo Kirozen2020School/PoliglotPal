@@ -18,6 +18,8 @@
         tools:ignore="HardcodedText" 
         />
 
+    
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,12 +27,14 @@
         android:text="First name:"
         android:textSize="20sp"
         tools:ignore="HardcodedText" 
+        android:paddingLeft="7sp"
         />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
         android:textColor="#fff"
+        android:backgroundTint="#fff"
         android:textStyle="bold"
         android:id="@+id/etFirstNameRegisterPage"
         />
@@ -42,12 +46,14 @@
         android:text="Last name:"
         android:textSize="20sp"
         tools:ignore="HardcodedText" 
+        android:paddingLeft="7sp"
         />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
         android:textColor="#fff"
+        android:backgroundTint="#fff"
         android:textStyle="bold"
         android:id="@+id/etLastNameRegisterPage"
         >
@@ -60,12 +66,14 @@
         android:text="User name:"
         android:textSize="20sp"
         tools:ignore="HardcodedText" 
+        android:paddingLeft="7sp"
         />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
         android:textColor="#fff"
+        android:backgroundTint="#fff"
         android:textStyle="bold"
         android:id="@+id/etUserNameRegisterPage"
         >
@@ -78,12 +86,14 @@
         android:text="Password:"
         android:textSize="20sp"
         tools:ignore="HardcodedText" 
+        android:paddingLeft="7sp"
         />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:textColor="#fff"
+        android:backgroundTint="#fff"
         android:textStyle="bold"
         android:id="@+id/etPasswordRegisterPage"
         >

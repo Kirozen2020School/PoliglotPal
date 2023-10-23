@@ -141,7 +141,6 @@
     <AndroidResource Include="Resources\layout\activity_CreateTranslationToASentence.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Assets\ENGtoHEsentence.txt" />
     <EmbeddedResource Include="ENGandHEwords.txt" />
     <EmbeddedResource Include="ENGtoHEsentence.txt" />
     <AndroidResource Include="Resources\layout\activity_MainPage.xml">
@@ -164,6 +163,24 @@
     <AndroidResourceAnalysisConfig Include="Resources\drawable\custom_button.xml">
       <SubType>Designer</SubType>
     </AndroidResourceAnalysisConfig>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\blacklock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\blackprofile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\netofusers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\whitelock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\whiteprofile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\whitenetofusers.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

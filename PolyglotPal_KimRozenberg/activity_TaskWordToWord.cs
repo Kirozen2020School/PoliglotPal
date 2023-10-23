@@ -49,7 +49,6 @@ namespace PolyglotPal_KimRozenberg
         private void InitButtons()
         {
             Random random = new Random();
-            HashSet<int> selectedIndices = new HashSet<int>();
             int numberOfCouples = 4;
 
             List<ENG_HE> selectedCouples = new List<ENG_HE>();
@@ -57,11 +56,12 @@ namespace PolyglotPal_KimRozenberg
             while (selectedCouples.Count < numberOfCouples)
             {
                 int randomIndex = random.Next(words.Count);
+                ENG_HE selectedCouple = words[randomIndex];
 
-                if (!selectedIndices.Contains(randomIndex))
+                // Check if the selected couple is not already in the list
+                if (!selectedCouples.Contains(selectedCouple))
                 {
-                    selectedIndices.Add(randomIndex);
-                    selectedCouples.Add(words[randomIndex]);
+                    selectedCouples.Add(selectedCouple);
                 }
             }
 

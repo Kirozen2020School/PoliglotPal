@@ -5,90 +5,104 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#000">
+    android:background="#000"
+    android:gravity="center">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Login"
+    
+    <ImageView
+        android:layout_width="100sp"
+        android:layout_height="100sp"
         android:layout_gravity="center"
-        android:textSize="40sp"
-        android:gravity="center"
-        android:textColor="#fff"
-        android:textStyle="bold"
-        tools:ignore="HardcodedText" 
+        android:src="@drawable/whitenetofusers"
         />
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="30sp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" Username: "
-        android:textColor="#fff"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        tools:ignore="HardcodedText" 
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/etUsername"
-        android:textColor="#fff"
-        android:inputType="text"
-        />
-    
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="30sp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" Password: "
-        android:textColor="#fff"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        tools:ignore="HardcodedText" 
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/etPassword"
-        android:textColor="#fff"
-        android:inputType="textPassword"
-        />
-    
+        android:layout_height="20sp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="50sp"/>
-    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Let's Play"
-            android:textColor="#fff"
-            android:textSize="20sp"
-            android:id="@+id/btnStart"
-            tools:ignore="HardcodedText" />
-
-        <TextView
-            android:layout_width="30sp"
-            android:layout_height="wrap_content"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Create account"
-            android:textColor="#fff"
-            android:textSize="20sp"
-            android:id="@+id/btnCreateAccount"
-            tools:ignore="HardcodedText" />
-
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:src="@drawable/whiteprofile"
+            android:background="#404040"/>
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="200sp"
+            android:layout_height="60sp"
+            android:background="#5C5C5C"
+            android:textColor="#A7A7A7"
+            android:hint="Username"
+            android:padding="10sp"
+            android:inputType="text"
+            />
     </LinearLayout>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:src="@drawable/whitelock"
+            android:background="#404040"/>
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="200sp"
+            android:layout_height="60sp"
+            android:background="#5C5C5C"
+            android:textColor="#A7A7A7"
+            android:hint="Password"
+            android:padding="10sp"
+            android:inputType="numberPassword"
+            />
+    </LinearLayout>
+    
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30sp"/>
+    
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="260sp"
+        android:layout_height="60sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="Login"
+        android:textSize="20sp"
+        android:backgroundTint="#9C9C9C"/>
+
+    <TextView
+        android:layout_width="200sp"
+        android:layout_height="15sp"/>
+    <TextView
+        android:layout_width="200sp"
+        android:layout_height="2sp"
+        android:layout_gravity="center"
+        android:background="#fff"/>
+    <TextView
+        android:layout_width="200sp"
+        android:layout_height="15sp"/>
+
+    <Button
+        android:id="@+id/btnCreateAccount"
+        android:layout_width="260sp"
+        android:layout_height="60sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="Register"
+        android:textSize="20sp"
+        android:backgroundTint="#9C9C9C"/>
+    
 </LinearLayout>
