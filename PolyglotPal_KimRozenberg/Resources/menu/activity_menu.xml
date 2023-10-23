@@ -15,5 +15,10 @@
 		android:orderInCategory="300"
 		
        />
+	<item android:id="@+id/action_delete"
+		android:title="Delete account"
+		android:orderInCategory="300"
+		
+       />
 
 </menu>

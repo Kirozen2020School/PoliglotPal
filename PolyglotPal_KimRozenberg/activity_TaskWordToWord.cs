@@ -1,5 +1,7 @@
 ﻿using Android.App;
 using Android.Content;
+using Android.Content.Res;
+using Android.Graphics;
 using Android.OS;
 using Android.Widget;
 using System;
@@ -16,11 +18,17 @@ namespace PolyglotPal_KimRozenberg
         ImageButton btnExitLevel;
         Android.App.AlertDialog d;
 
+        List<Button> buttons;
         List<ENG_HE> words;
         int xp;
 
         Button lastClickedButtonEng = null;
         Button lastClickedButtonHeb = null;
+
+        string higthlight = "#27FF00";
+        string goodColor = "#0FA70A";
+        string badColor = "#629C60";
+        string badColorText = "#575757";
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -143,6 +151,10 @@ namespace PolyglotPal_KimRozenberg
             btnHE3 = FindViewById<Button>(Resource.Id.btnHE3);
             btnHE4 = FindViewById<Button>(Resource.Id.btnHE4);
 
+            buttons = new List<Button>();
+            this.buttons.Add(btnENG1); this.buttons.Add(btnENG2); this.buttons.Add(btnENG3); this.buttons.Add(btnENG4);
+            this.buttons.Add(btnHE1); this.buttons.Add(btnHE2); this.buttons.Add(btnHE3); this.buttons.Add(btnHE4);
+
             btnNextLevel = FindViewById<Button>(Resource.Id.btnNextLevel);
             btnNextLevel.Click += BtnNextLevel_Click;
 
@@ -163,6 +175,13 @@ namespace PolyglotPal_KimRozenberg
         private void BtnENG_Click(object sender, EventArgs e)
         {
             Button clickedButton = (Button)sender;
+            bool flag = true;
+            if(lastClickedButtonEng != null)
+            {
+                lastClickedButtonEng.BackgroundTintList = ColorStateList.ValueOf(Color.ParseColor(goodColor));
+                lastClickedButtonEng = null;
+            }
+            clickedButton.BackgroundTintList = ColorStateList.ValueOf(Color.ParseColor(higthlight));
 
             if (lastClickedButtonHeb != null)
             {
@@ -170,9 +189,40 @@ namespace PolyglotPal_KimRozenberg
                 {
                     if(item.ENG.Equals(clickedButton.Text) && item.HE.Equals(lastClickedButtonHeb.Text))
                     {
+                        flag = false;
                         Toast.MakeText(this, "Translations match!", ToastLength.Short).Show();
+                        foreach (Button button in buttons)
+                        {
+                            if (button.Equals(clickedButton))
+                            {
+                                button.Enabled = false;
+                                ColorStateList colorStateList = ColorStateList.ValueOf(Color.ParseColor(badColor));
+                                button.BackgroundTintList = colorStateList;
+                                button.SetTextColor(Color.ParseColor(badColorText));
+                            }
+                            if (button.Equals(lastClickedButtonHeb))
+                            {
+                                button.Enabled = false;
+                                ColorStateList colorStateList = ColorStateList.ValueOf(Color.ParseColor(badColor));
+                                button.BackgroundTintList = colorStateList;
+                                button.SetTextColor(Color.ParseColor(badColorText));
+                            }
+                        }
+                        CheckIfEndLevel();
                         break;
                     }
+                }
+                if (flag)
+                {
+                    if(lastClickedButtonHeb != null)
+                    {
+                        lastClickedButtonHeb.BackgroundTintList = ColorStateList.ValueOf(Color.ParseColor(goodColor));
+                    }
+                    if(lastClickedButtonEng != null)
+                    {
+                        lastClickedButtonEng.BackgroundTintList = ColorStateList.ValueOf(Color.ParseColor(goodColor));
+                    }
+                    clickedButton.BackgroundTintList = ColorStateList.ValueOf(Color.ParseColor(goodColor));
                 }
                 
                 lastClickedButtonHeb = null;
@@ -187,6 +237,13 @@ namespace PolyglotPal_KimRozenberg
         private void BtnHE_Click(object sender, EventArgs e)
         {
             Button clickedButton = (Button)sender;
+            bool flag = true;
+            if(lastClickedButtonHeb != null)
+            {
+                lastClickedButtonHeb.BackgroundTintList = ColorStateList.ValueOf(Color.ParseColor(goodColor));
+                lastClickedButtonHeb = null;
+            }
+            clickedButton.BackgroundTintList = ColorStateList.ValueOf(Color.ParseColor(higthlight));
 
             if (lastClickedButtonEng != null)
             {
@@ -194,11 +251,41 @@ namespace PolyglotPal_KimRozenberg
                 {
                     if (item.ENG.Equals(lastClickedButtonEng.Text) && item.HE.Equals(clickedButton.Text))
                     {
+                        flag = false;
                         Toast.MakeText(this, "Translations match!", ToastLength.Short).Show();
+                        foreach (Button button in buttons)
+                        {
+                            if (button.Equals(clickedButton))
+                            {
+                                button.Enabled = false;
+                                ColorStateList colorStateList = ColorStateList.ValueOf(Color.ParseColor(badColor));
+                                button.BackgroundTintList = colorStateList;
+                                button.SetTextColor(Color.ParseColor(badColorText));
+                            }
+                            if (button.Equals(lastClickedButtonEng))
+                            {
+                                button.Enabled = false;
+                                ColorStateList colorStateList = ColorStateList.ValueOf(Color.ParseColor(badColor));
+                                button.BackgroundTintList = colorStateList;
+                                button.SetTextColor(Color.ParseColor(badColorText));
+                            }
+                        }
+                        CheckIfEndLevel();
                         break;
                     }
                 }
-                
+                if (flag)
+                {
+                    if (lastClickedButtonHeb != null)
+                    {
+                        lastClickedButtonHeb.BackgroundTintList = ColorStateList.ValueOf(Color.ParseColor(goodColor));
+                    }
+                    if (lastClickedButtonEng != null)
+                    {
+                        lastClickedButtonEng.BackgroundTintList = ColorStateList.ValueOf(Color.ParseColor(goodColor));
+                    }
+                    clickedButton.BackgroundTintList = ColorStateList.ValueOf(Color.ParseColor(goodColor));
+                }
                 lastClickedButtonEng = null;
                 lastClickedButtonHeb = null;
             }
@@ -269,6 +356,24 @@ namespace PolyglotPal_KimRozenberg
                     StartActivity(intent);
                     Finish();
                 }
+            }
+        }
+        private void CheckIfEndLevel()
+        {
+            bool flag = true;
+            foreach (Button btn in buttons)
+            {
+                if (btn.Enabled == true)
+                {
+                    flag = false;
+                }
+            }
+            if (flag)
+            {
+                btnNextLevel.Enabled = true;
+                ColorStateList colorStateList = ColorStateList.ValueOf(Color.ParseColor(goodColor));
+                btnNextLevel.BackgroundTintList = colorStateList;
+                btnNextLevel.SetTextColor(Color.ParseColor("#000000"));
             }
         }
     }

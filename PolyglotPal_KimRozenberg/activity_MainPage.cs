@@ -16,6 +16,7 @@ namespace PolyglotPal_KimRozenberg
         Button btnTask1, btnTask2, btnTask3, btnTask4, btnTask5, btnTask6, btnTask7, btnTask8, btnTask9;
         ImageButton btnPopupMenu;
         TextView tvHiUsernameHomePage, tvTotalPointsHomePage;
+        Android.App.AlertDialog d;
 
         string username;
         Account user;
@@ -154,8 +155,33 @@ namespace PolyglotPal_KimRozenberg
                 Finish();
                 return true;
             }
+            if (item.ItemId == Resource.Id.action_delete)
+            {
+                Android.App.AlertDialog.Builder builder = new Android.App.AlertDialog.Builder(this);
+                builder.SetTitle("Delete");
+                builder.SetMessage("You want to delete your account?");
+                builder.SetCancelable(true);
+                builder.SetPositiveButton("yes", OkAction);
+                builder.SetNegativeButton("cancel", CancelAction);
+                d = builder.Create();
+                d.Show();
+                return true;
+            }
 
             return false;
+        }
+        private void CancelAction(object sender, DialogClickEventArgs e)
+        {
+
+        }
+
+        private async void OkAction(object sender, DialogClickEventArgs e)
+        {
+            await firebase.DeleteAccount(this.username);
+            Intent intent = new Intent(this, typeof(MainActivity));
+            StartActivity(intent);
+            Finish();
+            return;
         }
     }
 }
