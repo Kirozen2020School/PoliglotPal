@@ -124,11 +124,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResourceAnalysisConfig Include="Resources\drawable\circle_shape.xml">
-      <SubType>Designer</SubType>
-    </AndroidResourceAnalysisConfig>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\ProfileIcon.png" />
   </ItemGroup>
   <ItemGroup>
@@ -160,11 +155,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResourceAnalysisConfig Include="Resources\drawable\custom_button.xml">
-      <SubType>Designer</SubType>
-    </AndroidResourceAnalysisConfig>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\blacklock.png" />
   </ItemGroup>
   <ItemGroup>
@@ -181,6 +171,15 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\whitenetofusers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\PolyglotPal_Logo.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\exit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
