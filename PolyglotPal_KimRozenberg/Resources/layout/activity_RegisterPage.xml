@@ -87,7 +87,7 @@
         android:padding="10sp"
         android:background="#5c5c5c"
         android:textColor="#a7a7a7"
-        android:inputType="textPassword"
+        android:inputType="numberPassword"
         tools:ignore="HardcodedText" />
 
     <TextView

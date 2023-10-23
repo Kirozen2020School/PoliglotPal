@@ -16,6 +16,7 @@ namespace PolyglotPal_KimRozenberg
     {
         EditText etFirstName, etLastName, etUserName, etPassword;
         Button btnCreatNewAccount, btnCencle;
+        Android.App.AlertDialog d;
 
         FirebaseManager firebase;
         List<Account> accounts;
@@ -64,41 +65,56 @@ namespace PolyglotPal_KimRozenberg
         {
             bool flag = true;
 
-            if(accounts != null && accounts.Count > 0)
+            if (etUserName.Text.Length > 0 && etFirstName.Text.Length > 0 && etLastName.Text.Length > 0 && etPassword.Text.Length > 0)
             {
-                foreach(Account account in accounts)
+                if (accounts != null && accounts.Count > 0)
                 {
-                    if (account.username.Equals(etUserName.Text))
+                    foreach (Account account in accounts)
                     {
-                        Toast.MakeText(this, "The username is already in use, choose another one", ToastLength.Long).Show();
-                        flag = false;
+                        if (account.username.Equals(etUserName.Text))
+                        {
+                            Toast.MakeText(this, "The username is already in use, choose another one", ToastLength.Long).Show();
+                            flag = false;
+                        }
                     }
                 }
+                if (flag)
+                {
+                    Drawable drawable = Resources.GetDrawable(Resource.Drawable.blackprofile);
+                    Bitmap bitmap = ((BitmapDrawable)drawable).Bitmap;
+                    string date = DateTime.Now.ToString("d MMMM yyyy");
+                    byte[] pic = ConvertBitmapToByteArray(bitmap);
+
+                    Account user = new Account(etUserName.Text,
+                        etLastName.Text,
+                        etFirstName.Text,
+                        etPassword.Text,
+                        0, 0, date,
+                        pic,
+                        "#13A90A");
+
+                    await firebase.AddAccount(user);
+
+
+                    Intent intent = new Intent(this, typeof(activity_MainPage));
+                    intent.PutExtra("Username", etUserName.Text);
+                    StartActivity(intent);
+                    Finish();
+                }
             }
-            if(flag)
+            else
             {
-                Drawable drawable = Resources.GetDrawable(Resource.Drawable.blackprofile);
-                Bitmap bitmap = ((BitmapDrawable)drawable).Bitmap;
-                string date = DateTime.Now.ToString("d MMMM yyyy");
-                byte[] pic = ConvertBitmapToByteArray(bitmap);
-
-                Account user = new Account(etUserName.Text,
-                    etLastName.Text,
-                    etFirstName.Text,
-                    etPassword.Text,
-                    0, 0, date,
-                    pic,
-                    "#13A90A");
-
-                await firebase.AddAccount(user);
-
-
-                Intent intent = new Intent(this, typeof(activity_MainPage));
-                intent.PutExtra("Username", etUserName.Text);
-                StartActivity(intent);
-                Finish();
+                Android.App.AlertDialog.Builder builder = new Android.App.AlertDialog.Builder(this);
+                builder.SetTitle("Account creation");
+                builder.SetMessage("For creating account you need to fill every parametar");
+                builder.SetCancelable(true);
+                builder.SetPositiveButton("Ok", OkAction);
+                d = builder.Create();
+                d.Show();
             }
         }
+
+        private void OkAction(object sender, DialogClickEventArgs e) { }
 
         private static byte[] ConvertBitmapToByteArray(Bitmap bm)
         {
