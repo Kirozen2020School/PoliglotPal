@@ -143,12 +143,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\whitelock.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\whiteprofile.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\logo.png" />
   </ItemGroup>
   <ItemGroup>
@@ -162,61 +156,85 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DailyActivity.txt" />
-    <AndroidResource Include="Resources\drawable\whitebed.png" />
-    <AndroidResource Include="Resources\drawable\whiteaid.png" />
-    <AndroidResource Include="Resources\drawable\whitecar.png" />
-    <AndroidResource Include="Resources\drawable\whitefamily.png" />
-    <AndroidResource Include="Resources\drawable\whiteski.png" />
     <EmbeddedResource Include="Family.txt" />
     <EmbeddedResource Include="Health.txt" />
     <EmbeddedResource Include="Hobbies.txt" />
     <EmbeddedResource Include="Travel.txt" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\whitecoin.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Business.txt" />
     <EmbeddedResource Include="Education.txt" />
-    <AndroidResource Include="Resources\drawable\whiteeducetion.png" />
-    <AndroidResource Include="Resources\drawable\whitecake.png" />
     <EmbeddedResource Include="Food.txt" />
-    <AndroidResource Include="Resources\drawable\whiteguitar.png" />
     <EmbeddedResource Include="Music.txt" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\whitecat.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Animals.txt" />
-    <AndroidResource Include="Resources\drawable\whitesofa.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Furniture.txt" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\whitepace.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Emotions.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\whiteflag.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Countries.txt" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\whitetools.png" />
+    <EmbeddedResource Include="Tools.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tools.txt" />
+    <EmbeddedResource Include="Clothing.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\whiteaid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\whitebed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\whitecake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\whitecar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\whitecat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\whitecoin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\whiteeducetion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\whitefamily.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\whiteflag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\whiteguitar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\whitelock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\whitepace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\whiteprofile.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\whiteshurt.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Clothing.txt" />
+    <AndroidResource Include="Resources\drawable\whiteski.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\whitesofa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\whitetools.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
