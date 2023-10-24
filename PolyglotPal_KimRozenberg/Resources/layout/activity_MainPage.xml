@@ -142,19 +142,7 @@
                     tools:ignore="HardcodedText" 
                     android:id="@+id/btnHealth"
                     />
-                <TextView
-                    android:layout_width="30sp"
-                    android:layout_height="30sp"/>
-                <ImageButton
-                    android:layout_width="90sp"
-                    android:layout_height="90sp"
-                    android:src="@drawable/whitecake"
-                    android:scaleType="fitXY"
-                    android:background="#000000"
-                    android:contentDescription="description"
-                    tools:ignore="HardcodedText" 
-                    android:id="@+id/btnFood"
-                    />
+                
             </LinearLayout>
 
             <TextView
@@ -202,6 +190,124 @@
                     android:contentDescription="description"
                     tools:ignore="HardcodedText" 
                     android:id="@+id/btnMusic"
+                    />
+            </LinearLayout>
+            
+            <TextView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageButton
+                    android:layout_width="90sp"
+                    android:layout_height="90sp"
+                    android:src="@drawable/whitecat"
+                    android:scaleType="fitXY"
+                    android:background="#000000"
+                    android:contentDescription="description"
+                    tools:ignore="HardcodedText" 
+                    android:id="@+id/btnAnimals"
+                    />
+                <TextView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"/>
+                <ImageButton
+                    android:layout_width="90sp"
+                    android:layout_height="90sp"
+                    android:src="@drawable/whitecake"
+                    android:scaleType="fitXY"
+                    android:background="#000000"
+                    android:contentDescription="description"
+                    tools:ignore="HardcodedText" 
+                    android:id="@+id/btnFood"
+                    />
+            </LinearLayout>
+            
+            <TextView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageButton
+                    android:layout_width="90sp"
+                    android:layout_height="90sp"
+                    android:src="@drawable/whitesofa"
+                    android:scaleType="fitXY"
+                    android:background="#000000"
+                    android:contentDescription="description"
+                    tools:ignore="HardcodedText" 
+                    android:id="@+id/btnFurniture"
+                    />
+                <TextView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"/>
+                <ImageButton
+                    android:layout_width="90sp"
+                    android:layout_height="90sp"
+                    android:src="@drawable/whitepace"
+                    android:scaleType="fitXY"
+                    android:background="#000000"
+                    android:contentDescription="description"
+                    tools:ignore="HardcodedText" 
+                    android:id="@+id/btnEmotions"
+                    />
+                <TextView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"/>
+                <ImageButton
+                    android:layout_width="90sp"
+                    android:layout_height="90sp"
+                    android:src="@drawable/whiteflag"
+                    android:scaleType="fitXY"
+                    android:background="#000000"
+                    android:contentDescription="description"
+                    tools:ignore="HardcodedText" 
+                    android:id="@+id/btnCountries"
+                    />
+            </LinearLayout>
+            
+            <TextView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageButton
+                    android:layout_width="90sp"
+                    android:layout_height="90sp"
+                    android:src="@drawable/whitetools"
+                    android:scaleType="fitXY"
+                    android:background="#000000"
+                    android:contentDescription="description"
+                    tools:ignore="HardcodedText" 
+                    android:id="@+id/btnTools"
+                    />
+                <TextView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"/>
+                <ImageButton
+                    android:layout_width="90sp"
+                    android:layout_height="90sp"
+                    android:src="@drawable/whiteshurt"
+                    android:scaleType="fitXY"
+                    android:background="#000000"
+                    android:contentDescription="description"
+                    tools:ignore="HardcodedText" 
+                    android:id="@+id/btnClothing"
                     />
             </LinearLayout>
         </LinearLayout>

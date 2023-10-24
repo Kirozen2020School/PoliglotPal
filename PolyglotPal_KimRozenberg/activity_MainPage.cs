@@ -14,7 +14,8 @@ namespace PolyglotPal_KimRozenberg
     public class activity_MainPage : AppCompatActivity, IOnClickListener, PopupMenu.IOnMenuItemClickListener
     {
         ImageButton btnGoToProfilePageFromTaskPage;
-        ImageButton btnDailyActivity, btnTravel, btnHealth, btnHobbies, btnFamily, btnBusiness, btnEducation, btnFood, btnMusic;
+        ImageButton btnDailyActivity, btnTravel, btnHealth, btnHobbies, btnFamily, btnBusiness, btnEducation,
+            btnFood, btnMusic, btnAnimals, btnFurniture, btnEmotions, btnCountries, btnTools, btnClothing;
         List<Tuple<ImageButton, string>> buttons;
         ImageButton btnPopupMenu;
         TextView tvHiUsernameHomePage, tvTotalPointsHomePage;
@@ -84,6 +85,18 @@ namespace PolyglotPal_KimRozenberg
             buttons.Add(new Tuple<ImageButton, string>(btnFood, "Food"));
             btnMusic = FindViewById<ImageButton>(Resource.Id.btnMusic);
             buttons.Add(new Tuple<ImageButton, string>(btnMusic, "Music"));
+            btnAnimals = FindViewById<ImageButton>(Resource.Id.btnAnimals);
+            buttons.Add(new Tuple<ImageButton, string>(btnAnimals, "Animals"));
+            btnFurniture = FindViewById<ImageButton>(Resource.Id.btnFurniture);
+            buttons.Add(new Tuple<ImageButton, string>(btnFurniture, "Furniture"));
+            btnEmotions = FindViewById<ImageButton>(Resource.Id.btnEmotions);
+            buttons.Add(new Tuple<ImageButton, string>(btnEmotions, "Emotions"));
+            btnCountries = FindViewById<ImageButton>(Resource.Id.btnCountries);
+            buttons.Add(new Tuple<ImageButton, string>(btnCountries, "Countries"));
+            btnTools = FindViewById<ImageButton>(Resource.Id.btnTools);
+            buttons.Add(new Tuple<ImageButton, string>(btnTools, "Tools"));
+            btnClothing = FindViewById<ImageButton>(Resource.Id.btnClothing);
+            buttons.Add(new Tuple<ImageButton, string>(btnClothing, "Clothing"));
 
 
             foreach (var button in buttons)
@@ -103,30 +116,16 @@ namespace PolyglotPal_KimRozenberg
                     mood = tuple.Item2;
                 }
             }
-            Toast.MakeText(this, mood, ToastLength.Short).Show();
-            Random random = new Random();
-            int id = random.Next(0, 1);
 
-            if (id == 0)
-            {
-                Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
-                intent.PutExtra("Username", this.username);
-                intent.PutExtra("XP", 0);
-                intent.PutExtra("Round", 1);
-                intent.PutExtra("Mood", mood);
-                StartActivity(intent);
-                Finish();
-            }
-            else if (id == 1)
-            {
-                Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
-                intent.PutExtra("Username", this.username);
-                intent.PutExtra("XP", 0);
-                intent.PutExtra("Round", 1);
-                intent.PutExtra("Mood", mood);
-                StartActivity(intent);
-                Finish();
-            }
+            Toast.MakeText(this, "Theme: "+mood, ToastLength.Short).Show();
+
+            Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
+            intent.PutExtra("Username", this.username);
+            intent.PutExtra("XP", 0);
+            intent.PutExtra("Round", 1);
+            intent.PutExtra("Mood", mood);
+            StartActivity(intent);
+            Finish();
         }
 
         private void BtnGoToProfilePageFromTaskPage_Click(object sender, EventArgs e)

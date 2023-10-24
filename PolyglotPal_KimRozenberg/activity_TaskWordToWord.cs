@@ -21,6 +21,7 @@ namespace PolyglotPal_KimRozenberg
         List<Button> buttons;
         List<ENG_HE> words;
         int xp;
+        int addXP = 10;
         string mood;
 
         Button lastClickedButtonEng = null;
@@ -108,6 +109,24 @@ namespace PolyglotPal_KimRozenberg
                     break;
                 case "Music":
                     name = "Music";
+                    break;
+                case "Animals":
+                    name = "Animals";
+                    break;
+                case "Furniture":
+                    name = "Furniture";
+                    break;
+                case "Emotions":
+                    name = "Emotions";
+                    break;
+                case "Countries":
+                    name = "Countries";
+                    break;
+                case "Tools":
+                    name = "Tools";
+                    break;
+                case "Clothing":
+                    name = "Clothing";
                     break;
             }
             words = new List<ENG_HE>();
@@ -269,6 +288,7 @@ namespace PolyglotPal_KimRozenberg
                 }
                 if (flag)
                 {
+                    addXP--;
                     if (lastClickedButtonHeb != null)
                     {
                         lastClickedButtonHeb.BackgroundTintList = ColorStateList.ValueOf(Color.ParseColor(goodColor));
@@ -316,41 +336,23 @@ namespace PolyglotPal_KimRozenberg
         private void BtnNextLevel_Click(object sender, EventArgs e)
         {
             int round = Intent.GetIntExtra("Round", -1);
-            if (round >= 10)
+            if (round >= 7)//number of screens during one task
             {
                 Intent intent = new Intent(this, typeof(activity_LevelFinish));
                 intent.PutExtra("Username", Intent.GetStringExtra("Username"));
-                intent.PutExtra("XP", xp + 10);
+                intent.PutExtra("XP", xp + addXP);
                 StartActivity(intent);
                 Finish();
             }
             else
             {
-                Random random = new Random();
-                int id = random.Next(0, 2);
-
-                if (id == 0)
-                {
-
-                    Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
-                    intent.PutExtra("Username", Intent.GetStringExtra("Username"));
-                    intent.PutExtra("XP", xp + 10);
-                    intent.PutExtra("Round", round + 1);
-                    intent.PutExtra("Mood", mood);
-                    StartActivity(intent);
-                    Finish();
-                }
-                else if (id == 1)
-                {
-
-                    Intent intent = new Intent(this, typeof(activity_CreateTranslationToSentence));
-                    intent.PutExtra("Username", Intent.GetStringExtra("Username"));
-                    intent.PutExtra("XP", xp + 10);
-                    intent.PutExtra("Round", round + 1);
-                    intent.PutExtra("Mood", mood);
-                    StartActivity(intent);
-                    Finish();
-                }
+                Intent intent = new Intent(this, typeof(activity_TaskWordToWord));
+                intent.PutExtra("Username", Intent.GetStringExtra("Username"));
+                intent.PutExtra("XP", xp + addXP);
+                intent.PutExtra("Round", round + 1);
+                intent.PutExtra("Mood", mood);
+                StartActivity(intent);
+                Finish();
             }
         }
         private void CheckIfEndLevel()

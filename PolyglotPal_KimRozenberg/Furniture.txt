@@ -1,0 +1,34 @@
+﻿Furniture - רהיטים
+Chair - כיסא
+Table - שולחן
+Couch/Sofa - ספה
+Bed - מיטה
+Wardrobe - ארון בגדים
+Dresser - שידה
+Bookshelf - מדף ספרים
+Desk - שולחן עבודה
+Shelves - מדפים
+Cabinet - ארון
+Drawer - מגירה
+Mirror - מראה
+Lamp - מנורה
+Lighting - תאורה
+Rug - שטיח
+Carpet - שטיח
+Curtains - וילונות
+Blinds - תריסים
+Sofa bed - ספה-מיטה
+Coffee table - שולחן קפה
+End table - שולחן סופה
+Nightstand - שידת ליד מיטה
+Dining table - שולחן אוכל
+Dining chairs - כסאות אוכל
+Barstool - כסא בר
+Benches - מזרנים
+Ottoman - אוטומן
+Rocking chair - כיסא נדנדה
+Cushion - כר
+Pouf - פוף
+Cupboard - ארון ספלים
+Hanging shelf - מדף תלוי
+Filing cabinet - ארון מסמכים

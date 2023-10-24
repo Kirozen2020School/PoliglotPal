@@ -66,7 +66,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs" />
-    <Compile Include="activity_CreateTranslationToSentence.cs" />
     <Compile Include="activity_InfoPage.cs" />
     <Compile Include="activity_LevelFinish.cs" />
     <Compile Include="activity_MainPage.cs" />
@@ -127,11 +126,7 @@
     <AndroidResource Include="Resources\layout\activity_TaskWordToWord.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\activity_CreateTranslationToASentence.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="ENGandHEwords.txt" />
-    <EmbeddedResource Include="ENGtoHEsentence.txt" />
     <AndroidResource Include="Resources\layout\activity_MainPage.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -181,13 +176,47 @@
     <AndroidResource Include="Resources\drawable\whitecoin.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Business.txt" />
-    <Content Include="Education.txt" />
+    <EmbeddedResource Include="Business.txt" />
+    <EmbeddedResource Include="Education.txt" />
     <AndroidResource Include="Resources\drawable\whiteeducetion.png" />
     <AndroidResource Include="Resources\drawable\whitecake.png" />
-    <Content Include="Food.txt" />
+    <EmbeddedResource Include="Food.txt" />
     <AndroidResource Include="Resources\drawable\whiteguitar.png" />
-    <Content Include="Music.txt" />
+    <EmbeddedResource Include="Music.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\whitecat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Animals.txt" />
+    <AndroidResource Include="Resources\drawable\whitesofa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Furniture.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\whitepace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Emotions.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\whiteflag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Countries.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\whitetools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tools.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\whiteshurt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Clothing.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
