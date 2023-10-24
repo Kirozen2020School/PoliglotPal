@@ -14,7 +14,7 @@ namespace PolyglotPal_KimRozenberg
     public class activity_MainPage : AppCompatActivity, IOnClickListener, PopupMenu.IOnMenuItemClickListener
     {
         ImageButton btnGoToProfilePageFromTaskPage;
-        ImageButton btnDailyActivity, btnTravel, btnHealth, btnHobbies, btnFamily;
+        ImageButton btnDailyActivity, btnTravel, btnHealth, btnHobbies, btnFamily, btnBusiness, btnEducation, btnFood, btnMusic;
         List<Tuple<ImageButton, string>> buttons;
         ImageButton btnPopupMenu;
         TextView tvHiUsernameHomePage, tvTotalPointsHomePage;
@@ -76,8 +76,17 @@ namespace PolyglotPal_KimRozenberg
             buttons.Add(new Tuple<ImageButton, string>(btnHobbies, "Hoddies"));
             btnTravel = FindViewById<ImageButton>(Resource.Id.btnTravel);
             buttons.Add(new Tuple<ImageButton, string>(btnTravel, "Travel"));
+            btnBusiness = FindViewById<ImageButton>(Resource.Id.btnBusiness);
+            buttons.Add(new Tuple<ImageButton, string>(btnBusiness, "Business"));
+            btnEducation = FindViewById<ImageButton>(Resource.Id.btnEducation);
+            buttons.Add(new Tuple<ImageButton, string>(btnEducation, "Education"));
+            btnFood = FindViewById<ImageButton>(Resource.Id.btnFood);
+            buttons.Add(new Tuple<ImageButton, string>(btnFood, "Food"));
+            btnMusic = FindViewById<ImageButton>(Resource.Id.btnMusic);
+            buttons.Add(new Tuple<ImageButton, string>(btnMusic, "Music"));
 
-            foreach(var button in buttons)
+
+            foreach (var button in buttons)
             {
                 button.Item1.Click += BtnClick;
             }

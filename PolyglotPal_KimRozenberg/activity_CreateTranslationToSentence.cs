@@ -22,6 +22,7 @@ namespace PolyglotPal_KimRozenberg
 
         int xp;
         string correct_answer;
+        string mood;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -31,6 +32,7 @@ namespace PolyglotPal_KimRozenberg
             if (Intent.Extras != null)
             {
                 xp = Intent.GetIntExtra("XP", 0);
+                mood = Intent.GetStringExtra("Mood");
             }
 
             InitViews();
@@ -183,6 +185,7 @@ namespace PolyglotPal_KimRozenberg
                         intent.PutExtra("Username", Intent.GetStringExtra("Username"));
                         intent.PutExtra("XP", xp);
                         intent.PutExtra("Round", round + 1);
+                        intent.PutExtra("Mood", mood);
                         StartActivity(intent);
                         Finish();
                     }
@@ -192,6 +195,7 @@ namespace PolyglotPal_KimRozenberg
                         intent.PutExtra("Username", Intent.GetStringExtra("Username"));
                         intent.PutExtra("XP", xp);
                         intent.PutExtra("Round", round + 1);
+                        intent.PutExtra("Mood", mood);
                         StartActivity(intent);
                         Finish();
                     }
@@ -231,6 +235,7 @@ namespace PolyglotPal_KimRozenberg
                     intent.PutExtra("Username", Intent.GetStringExtra("Username"));
                     intent.PutExtra("XP", xp);
                     intent.PutExtra("Round", round + 1);
+                    intent.PutExtra("Mood", mood);
                     StartActivity(intent);
                     Finish();
                 }
@@ -240,6 +245,7 @@ namespace PolyglotPal_KimRozenberg
                     intent.PutExtra("Username", Intent.GetStringExtra("Username"));
                     intent.PutExtra("XP", xp);
                     intent.PutExtra("Round", round + 1);
+                    intent.PutExtra("Mood", mood);
                     StartActivity(intent);
                     Finish();
                 }

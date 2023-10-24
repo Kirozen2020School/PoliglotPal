@@ -1,0 +1,43 @@
+﻿Food - אוכל
+Meal - ארוחה
+Breakfast - ארוחת בוקר
+Lunch - ארוחת צהריים
+Dinner - ארוחת ערב
+Snack - נשנוש
+Appetizer - מנה קטנה
+Main course - מנה עיקרית
+Dessert - קינוח
+Beverage - משקה
+Water - מים
+Juice - מיץ
+Tea - תה
+Coffee - קפה
+Milk - חלב
+Bread - לחם
+Rice - אורז
+Pasta - פסטה
+Meat - בשר
+Chicken - עוף
+Fish - דג
+Vegetables - ירקות
+Fruits - פירות
+Salad - סלט
+Sandwich - כרטיס עם רכיבים
+Pizza - פיצה
+Burger - המבורגר
+Fries - צ'יפס
+Soup - מרק
+Cheese - גבינה
+Eggs - ביצים
+Butter - חמאה
+Sugar - סוכר
+Salt - מלח
+Pepper - פלפל
+Spices - תבלינים
+Olive oil - שמן זית
+Vinegar - חומר חומצי
+Honey - דבש
+Jam - ריבה
+Ketchup - קטשופ
+Mustard - חרדל
+Mayonnaise - מיונז

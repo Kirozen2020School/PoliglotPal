@@ -21,6 +21,7 @@ namespace PolyglotPal_KimRozenberg
         List<Button> buttons;
         List<ENG_HE> words;
         int xp;
+        string mood;
 
         Button lastClickedButtonEng = null;
         Button lastClickedButtonHeb = null;
@@ -39,6 +40,7 @@ namespace PolyglotPal_KimRozenberg
             if(Intent.Extras != null)
             {
                 xp = Intent.GetIntExtra("XP", 0);
+                mood = Intent.GetStringExtra("Mood");
             }
 
             InitViews();
@@ -77,11 +79,42 @@ namespace PolyglotPal_KimRozenberg
 
         private void InitWords()
         {
+            string name = "";
+            switch (mood)
+            {
+                case "Daily":
+                    name = "DailyActivity";
+                    break;
+                case "Family":
+                    name = "Family";
+                    break;
+                case "Health":
+                    name = "Health";
+                    break;
+                case "Hoodies":
+                    name = "Hobbies";
+                    break;
+                case "Travel":
+                    name = "Travel";
+                    break;
+                case "Business":
+                    name = "Business";
+                    break;
+                case "Education":
+                    name = "Education";
+                    break;
+                case "Food":
+                    name = "Food";
+                    break;
+                case "Music":
+                    name = "Music";
+                    break;
+            }
             words = new List<ENG_HE>();
 
             var tmp = System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(activity_TaskWordToWord)).Assembly;
 
-            System.IO.Stream s = tmp.GetManifestResourceStream("PolyglotPal_KimRozenberg.ENGandHEwords.txt");
+            System.IO.Stream s = tmp.GetManifestResourceStream($"PolyglotPal_KimRozenberg.{name}.txt");
             System.IO.StreamReader sr = new System.IO.StreamReader(s);
             string[] lines = sr.ReadToEnd().Split('\n');
 
@@ -89,7 +122,7 @@ namespace PolyglotPal_KimRozenberg
             {
                 foreach(string line in lines)
                 {
-                    string[] parts = line.Split(' ');
+                    string[] parts = line.Split('-');
                     if (parts.Length == 2)
                     {
                         string englishWord = parts[0];
@@ -98,46 +131,6 @@ namespace PolyglotPal_KimRozenberg
                     }
                 }
             }
-
-            /*
-            string filePath = Path.Combine(System.Environment.CurrentDirectory, "ENGandHEwords.txt");
-            if (File.Exists(filePath))
-            {
-                try
-                {
-                    string[] lines = File.ReadAllLines(filePath);
-                    foreach (string line in lines)
-                    {
-                        string[] parts = line.Split(' ');
-                        if (parts.Length == 2)
-                        {
-                            string englishWord = parts[0];
-                            string hebrewTranslation = parts[1];
-                            words.Add(new ENG_HE(hebrewTranslation, englishWord));
-                        }
-                    }
-                    
-                    using(StreamReader sr = new StreamReader(filePath))
-                    {
-                        while (!sr.EndOfStream)
-                        {
-                            string line = sr.ReadLine();
-                            string[] parts = line.Split(' ');
-
-                            if (parts.Length == 2)
-                            {
-                                words.Add(new ENG_HE(parts[1], parts[0]));
-                            }
-                        }
-                    }
-                    
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Error: " + ex.Message);
-                }
-            }
-            */
         }
 
         private void InitViews()
@@ -343,6 +336,7 @@ namespace PolyglotPal_KimRozenberg
                     intent.PutExtra("Username", Intent.GetStringExtra("Username"));
                     intent.PutExtra("XP", xp + 10);
                     intent.PutExtra("Round", round + 1);
+                    intent.PutExtra("Mood", mood);
                     StartActivity(intent);
                     Finish();
                 }
@@ -353,6 +347,7 @@ namespace PolyglotPal_KimRozenberg
                     intent.PutExtra("Username", Intent.GetStringExtra("Username"));
                     intent.PutExtra("XP", xp + 10);
                     intent.PutExtra("Round", round + 1);
+                    intent.PutExtra("Mood", mood);
                     StartActivity(intent);
                     Finish();
                 }
