@@ -1,0 +1,50 @@
+﻿Wake up - להתעורר
+Brush teeth - לשטוף שיניים
+Take a shower - לקחת מקלחת
+Get dressed - להתלבש
+Have breakfast - לאכול ארוחת בוקר
+Go to work - ללכת לעבודה
+Take a break - לקחת הפסקה
+Have lunch - לאכול צהרון
+Go back to work - לחזור לעבודה
+Finish work - לסיים את העבודה
+Exercise - להתעמל
+Cook dinner - לבשל ארוחת ערב
+Eat dinner - לאכול ארוחת ערב
+Watch TV - לצפות בטלוויזיה
+Relax - להירגע
+Read a book - לקרוא ספר
+Go to bed - ללכת לישון
+Fall asleep - להירדם
+Dream - לחלום
+Set an alarm - לקבוע מעורר
+Hit snooze - ללחוץ על הסנוז
+Wake someone up - להעיר מישהו
+Make the bed - לסדר את המיטה
+Clean the house - לנקות את הבית
+Vacuum - לשאוב אבק
+Do laundry - לכבס כביסה
+Iron clothes - לגלגל בגדים
+Plan the day - לתכנן את היום
+Make a to-do list - לכתוב רשימת משימות
+Go for a walk - לצאת לטיול רגלי
+Drive to work - לנהוג לעבודה
+Take the bus - לקחת אוטובוס
+Ride a bike - לרכב על אופניים
+Meet friends - לפגוש חברים
+Go shopping - לקנות בסופרמרקט
+Pay bills - לשלם חשבונות
+Attend a meeting - להשתתף בפגישה
+Answer emails - לענות על אימיילים
+Cook lunch - לבשל ארוחת צהריים
+Water plants - להשקות צמחים
+Feed pets - להאכיל בעלי חיים
+Check messages - לבדוק הודעות
+Listen to music - להקשיב למוזיקה
+Meditate - להתבודד
+Go for a run - לרוץ
+Take a nap - לישון נאה
+Write in a journal - לכתוב ביומן
+Study - ללמוד
+Learn something new - ללמוד משהו חדש
+Reflect on the day - להתבונן ביום

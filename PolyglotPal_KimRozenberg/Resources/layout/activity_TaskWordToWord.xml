@@ -29,6 +29,7 @@
             android:layout_height="40sp"
             android:id="@+id/btnExitFromPairsPage"
             android:src="@drawable/exit"
+            android:background="#000000"
             android:scaleType="centerCrop"
             android:layout_marginTop="22sp"
             android:layout_marginLeft="10sp"

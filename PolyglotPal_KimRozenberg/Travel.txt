@@ -1,0 +1,40 @@
+﻿Book a flight - להזמין טיסה
+Pack a suitcase - לארוז מזוודה
+Check-in at the airport - לערוך צ'ק-אין בשדה התעופה
+Board the plane - לעלות למטוס
+Take off - להמריא
+Land - לנחות
+Collect luggage - לאסוף את המזוודות
+Hail a taxi - לקרוא למונית
+Book a hotel - להזמין מלון
+Check-in at the hotel - לערוך צ'ק-אין במלון
+Unpack - לפנות את המזוודות
+Explore the city - לסיור בעיר
+Visit tourist attractions - לבקר באתרי תיירות
+Take photos - לצלם תמונות
+Try local food - לטעום אוכל מקומי
+Ask for directions - לשאול על הכיוון
+Buy souvenirs - לקנות זכרונות
+Learn basic phrases - ללמוד ביטויים בסיסיים
+Exchange currency - להחליף מטבע
+Reserve a table - להזמין שולחן
+Enjoy the beach - ליהנות בחוף הים
+Go for a swim - לשחות
+Relax by the pool - להירגע ליד הבריכה
+Go sightseeing - לראות את האתרים
+Take a guided tour - לקחת סיור מודרך
+Board a cruise - לעלות לספינת תיירות
+Visit a museum - לבקר במוזיאון
+Explore the nightlife - לפגוש את החיי לילה
+Experience local culture - לחוות את התרבות המקומית
+Admire the architecture - להעריך את האדריכלות
+Go on an adventure - לצאת להרפתקה
+Visit historical sites - לבקר באתרים היסטוריים
+Take a scenic drive - לטפס בנסיעה עם נופים
+Get a travel guide - לקבל מדריך תיירות
+Reserve a rental car - להזמין רכב להשכרה
+Ask for recommendations - לשאול ליועץ
+Visit a national park - לבקר בפארק לאומי
+Go on a hike - ללכת לטיול רגלי
+Explore local markets - לסיור בשווקים מקומיים
+Try street food - לטעום אוכל רחוב

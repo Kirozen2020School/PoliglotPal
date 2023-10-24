@@ -1,0 +1,40 @@
+﻿Hobby - תחביב
+Interest - עניין
+Read - לקרוא
+Write - לכתוב
+Draw - לצייר
+Paint - לצבוע
+Cook - לבשל
+Bake - לאפות
+Sew - לתפור
+Knit - לסרוג
+Garden - לגידול צמחים
+Photograph - לצלם
+Play an instrument - לנגן כלי נגינה
+Sing - לשיר
+Dance - לרקוד
+Exercise - להתעמל
+Play sports - לשחק בספורט
+Play video games - לשחק במשחקי וידאו
+Watch movies - לצפות בסרטים
+Listen to music - להקשיב למוזיקה
+Travel - לטייל
+Hike - לטפס
+Climb - לטפס על הרים
+Camp - לחנות
+Fish - לדוג
+Collect - לאסוף
+Sculpt - לפסל
+Craft - ליצור אמנות יד
+Gamble - להימר
+Play board games - לשחק במשחקי לוח
+Solve puzzles - לפתור פאזלים
+Build models - לבנות מודלים
+Do yoga - לעשות יוגה
+Meditate - להתבודד
+Read comics - לקרוא קומיקס
+Write poetry - לכתוב שירה
+Learn a new language - ללמוד שפה חדשה
+Play chess - לשחק בשחמט
+Play cards - לשחק בקלפים
+Surf the internet - לגלוש ברשת

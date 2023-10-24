@@ -1,0 +1,44 @@
+﻿Health - בריאות
+Wellness - טובת הבריאות
+Exercise - תרגול
+Workout - אימון
+Fitness - לוחמה גופנית
+Nutrition - תזונה
+Healthy - בריא
+Unhealthy - לא בריא
+Diet - דיאטה
+Weight - משקל
+Stress - לחץ
+Relaxation - הרפיה
+Mental health - בריאות נפשית
+Physical health - בריאות פיזית
+Sleep - שינה
+Rest - מנוחה
+Energy - אנרגיה
+Vitamins - ויטמינים
+Hydration - התייבשות
+Medicine - תרופה
+Doctor - רופא
+Nurse - אחות
+Hospital - בית חולים
+Appointment - פגישה
+Check-up - בדיקה רפואית
+Therapist - טיפולן
+Massage - מסאז'
+Yoga - יוגה
+Meditation - מדיטציה
+Gym - חדר כושר
+Sickness - מחלה
+Pain - כאב
+Allergy - אלרגיה
+Flu - שפעת
+Cold - קור
+Headache - כאב ראש
+Heart - לב
+Lungs - ריאות
+Stomach - בטן
+Back - גב
+Leg - רגל
+Arm - יד
+Hand - יד
+Foot - רגל

@@ -165,6 +165,18 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\blackprofile.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="DailyActivity.txt" />
+    <AndroidResource Include="Resources\drawable\whitebed.png" />
+    <AndroidResource Include="Resources\drawable\whiteaid.png" />
+    <AndroidResource Include="Resources\drawable\whitecar.png" />
+    <AndroidResource Include="Resources\drawable\whitefamily.png" />
+    <AndroidResource Include="Resources\drawable\whiteski.png" />
+    <Content Include="Family.txt" />
+    <Content Include="Health.txt" />
+    <Content Include="Hobbies.txt" />
+    <Content Include="Travel.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
     Other similar extension points exist, see Microsoft.Common.targets.

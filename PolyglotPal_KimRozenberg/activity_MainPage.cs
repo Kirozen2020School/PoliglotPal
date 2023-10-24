@@ -5,6 +5,7 @@ using Android.Views;
 using Android.Widget;
 using AndroidX.AppCompat.App;
 using System;
+using System.Collections.Generic;
 using static Android.Views.View;
 
 namespace PolyglotPal_KimRozenberg
@@ -13,7 +14,8 @@ namespace PolyglotPal_KimRozenberg
     public class activity_MainPage : AppCompatActivity, IOnClickListener, PopupMenu.IOnMenuItemClickListener
     {
         ImageButton btnGoToProfilePageFromTaskPage;
-        Button btnTask1, btnTask2, btnTask3, btnTask4, btnTask5, btnTask6, btnTask7, btnTask8, btnTask9;
+        ImageButton btnDailyActivity, btnTravel, btnHealth, btnHobbies, btnFamily;
+        List<Tuple<ImageButton, string>> buttons;
         ImageButton btnPopupMenu;
         TextView tvHiUsernameHomePage, tvTotalPointsHomePage;
         Android.App.AlertDialog d;
@@ -63,29 +65,36 @@ namespace PolyglotPal_KimRozenberg
             btnGoToProfilePageFromTaskPage = FindViewById<ImageButton>(Resource.Id.btnGoToProfilePageFromTaskPage);
             btnGoToProfilePageFromTaskPage.Click += BtnGoToProfilePageFromTaskPage_Click;
 
-            btnTask1 = FindViewById<Button>(Resource.Id.btnTask1);
-            btnTask2 = FindViewById<Button>(Resource.Id.btnTask2);
-            btnTask3 = FindViewById<Button>(Resource.Id.btnTask3);
-            btnTask4 = FindViewById<Button>(Resource.Id.btnTask4);
-            btnTask5 = FindViewById<Button>(Resource.Id.btnTask5);
-            btnTask6 = FindViewById<Button>(Resource.Id.btnTask6);
-            btnTask7 = FindViewById<Button>(Resource.Id.btnTask7);
-            btnTask8 = FindViewById<Button>(Resource.Id.btnTask8);
-            btnTask9 = FindViewById<Button>(Resource.Id.btnTask9);
+            buttons = new List<Tuple<ImageButton, string>>();
+            btnDailyActivity = FindViewById<ImageButton>(Resource.Id.btnDailyActivity);
+            buttons.Add(new Tuple<ImageButton, string>(btnDailyActivity, "Daily"));
+            btnFamily = FindViewById<ImageButton>(Resource.Id.btnfamily);
+            buttons.Add(new Tuple<ImageButton, string>(btnFamily, "Family"));
+            btnHealth = FindViewById<ImageButton>(Resource.Id.btnHealth);
+            buttons.Add(new Tuple<ImageButton, string>(btnHealth, "Health"));
+            btnHobbies = FindViewById<ImageButton>(Resource.Id.btnHoobies);
+            buttons.Add(new Tuple<ImageButton, string>(btnHobbies, "Hoddies"));
+            btnTravel = FindViewById<ImageButton>(Resource.Id.btnTravel);
+            buttons.Add(new Tuple<ImageButton, string>(btnTravel, "Travel"));
 
-            btnTask1.Click += BtnTask_Click;
-            btnTask2.Click += BtnTask_Click;
-            btnTask3.Click += BtnTask_Click;
-            btnTask4.Click += BtnTask_Click;
-            btnTask5.Click += BtnTask_Click;
-            btnTask6.Click += BtnTask_Click;
-            btnTask7.Click += BtnTask_Click;
-            btnTask8.Click += BtnTask_Click;
-            btnTask9.Click += BtnTask_Click;
+            foreach(var button in buttons)
+            {
+                button.Item1.Click += BtnClick;
+            }
         }
 
-        private void BtnTask_Click(object sender, EventArgs e)
+        private void BtnClick(object sender, EventArgs e)
         {
+            ImageButton button = (ImageButton)sender;
+            string mood = "";
+            foreach(var tuple in buttons)
+            {
+                if (button.Equals(tuple.Item1))
+                {
+                    mood = tuple.Item2;
+                }
+            }
+            Toast.MakeText(this, mood, ToastLength.Short).Show();
             Random random = new Random();
             int id = random.Next(0, 1);
 
@@ -95,6 +104,7 @@ namespace PolyglotPal_KimRozenberg
                 intent.PutExtra("Username", this.username);
                 intent.PutExtra("XP", 0);
                 intent.PutExtra("Round", 1);
+                intent.PutExtra("Mood", mood);
                 StartActivity(intent);
                 Finish();
             }
@@ -104,6 +114,7 @@ namespace PolyglotPal_KimRozenberg
                 intent.PutExtra("Username", this.username);
                 intent.PutExtra("XP", 0);
                 intent.PutExtra("Round", 1);
+                intent.PutExtra("Mood", mood);
                 StartActivity(intent);
                 Finish();
             }
@@ -159,7 +170,7 @@ namespace PolyglotPal_KimRozenberg
             {
                 Android.App.AlertDialog.Builder builder = new Android.App.AlertDialog.Builder(this);
                 builder.SetTitle("Delete");
-                builder.SetMessage("You want to delete your account?");
+                builder.SetMessage("You want to delete your account?\nThere is mo way back after that");
                 builder.SetCancelable(true);
                 builder.SetPositiveButton("yes", OkAction);
                 builder.SetNegativeButton("cancel", CancelAction);

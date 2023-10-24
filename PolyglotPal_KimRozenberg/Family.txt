@@ -1,0 +1,40 @@
+﻿Family - משפחה
+Parents - הורים
+Mother - אם
+Father - אב
+Child - ילד
+Son - בן
+Daughter - בת
+Siblings - אחים/אחיות
+Brother - אח
+Sister - אחות
+Grandparents - סבא וסבתא
+Grandfather - סבא
+Grandmother - סבתא
+Uncle - דוד
+Aunt - דודה
+Cousin - דוד/דודה דרג ראשון
+Nephew - בן-אח של אח
+Niece - בת-אח של אח
+Spouse - בן/בת זוג
+Husband - חבר/בעל
+Wife - חברה/אישה
+Fiancé - פוסט-פיענסה
+Fiancée - פוסט-פיענסה
+Boyfriend - חבר זכר
+Girlfriend - חברה נקבה
+In-laws - משפחת הזויים
+Father-in-law - חמי
+Mother-in-law - חמות
+Brother-in-law - גידול
+Sister-in-law - גידולה
+Son-in-law - חתן
+Daughter-in-law - כלה
+Stepfather - אב חורג
+Stepmother - אם חורגת
+Stepson - בן חורג
+Stepdaughter - בת חורגת
+Half-brother - אח חצי
+Half-sister - אחות חצי
+Adoptive parents - הורים אומנים
+Foster parents - הורים מאומנים
