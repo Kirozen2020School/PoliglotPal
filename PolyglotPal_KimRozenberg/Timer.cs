@@ -60,5 +60,10 @@ namespace PolyglotPal_KimRozenberg
             _isRunning = false;
             _timer?.Change(Timeout.Infinite, Timeout.Infinite);
         }
+        public string GetCurrentTimeString()
+        {
+            return $"{_currentTime.Minutes:D2}:{_currentTime.Seconds:D2}";
+            //return $"{(int)_currentTime.TotalHours:D2}:{_currentTime.Minutes:D2}:{_currentTime.Seconds:D2}";
+        }
     }
 }

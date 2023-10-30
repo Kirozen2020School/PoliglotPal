@@ -10,8 +10,9 @@ namespace PolyglotPal_KimRozenberg
     public class activity_LevelFinish : Activity
     {
         Button btnExitFromFinishLevelPage;
-        TextView tvXP;
+        TextView tvXP, tvTimer;
         int xp;
+        Timer timer;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -21,6 +22,12 @@ namespace PolyglotPal_KimRozenberg
             {
                 this.xp = Intent.GetIntExtra("XP", -1);
             }
+            
+            long savedTicks = Intent.GetLongExtra("current_time", 0);
+            TimeSpan savedTime = TimeSpan.FromTicks(savedTicks);
+
+            timer = new Timer(TimeSpan.FromSeconds(1));
+            timer.Start(savedTime);
             InitViews();
         }
 
@@ -31,6 +38,12 @@ namespace PolyglotPal_KimRozenberg
 
             tvXP = FindViewById<TextView>(Resource.Id.tvTotalXPFinishLevelPage);
             tvXP.Text = $"Xp colected: {Intent.GetIntExtra("XP", -1)}";
+
+            tvTimer = FindViewById<TextView>(Resource.Id.tvTimer);
+            
+            string time = this.timer.GetCurrentTimeString();
+
+            tvTimer.Text = "Time: " + time;
         }
 
         private void BtnExitFromFinishLevelPage_Click(object sender, EventArgs e)

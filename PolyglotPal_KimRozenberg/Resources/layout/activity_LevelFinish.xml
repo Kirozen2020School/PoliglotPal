@@ -34,6 +34,16 @@
         tools:ignore="HardcodedText" 
         />
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time: "
+        android:textColor="#fff"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:id="@+id/tvTimer"
+        tools:ignore="HardcodedText" 
+        />
+    <TextView
         android:layout_width="1sp"
         android:layout_height="30sp"/>
 

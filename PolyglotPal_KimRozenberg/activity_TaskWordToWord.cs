@@ -60,7 +60,7 @@ namespace PolyglotPal_KimRozenberg
             {
                 long savedTicks = Intent.GetLongExtra("current_time", 0);
                 TimeSpan savedTime = TimeSpan.FromTicks(savedTicks);
-
+                
                 time = new Timer(TimeSpan.FromSeconds(1));
                 time.Start(savedTime);
             }
