@@ -1,0 +1,128 @@
+﻿using Android.App;
+using Android.Content;
+using Android.OS;
+using Android.Widget;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using Android.Graphics;
+using Android.Content.Res;
+using Android.Graphics.Drawables;
+
+namespace PolyglotPal_KimRozenberg
+{
+    [Activity(Label = "PolyglotPal")]
+    public class activity_Register : Activity
+    {
+        EditText etFirstName, etLastName, etUserName, etPassword;
+        Button btnCreatNewAccount, btnCencle;
+        Android.App.AlertDialog d;
+
+        FirebaseManager firebase;
+        List<Account> accounts;
+        protected override async void OnCreate(Bundle savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
+            SetContentView(Resource.Layout.activity_RegisterPage);
+            // Create your application here
+            InitViews();
+
+            try
+            {
+                accounts = await firebase.GetAllUsers();
+            }
+            catch (Exception ex)
+            {
+                Toast.MakeText(this, "Reading data from firebase error", ToastLength.Long);
+
+            }
+        }
+
+        private void InitViews()
+        {
+            firebase = new FirebaseManager();
+
+            etFirstName = FindViewById<EditText>(Resource.Id.etFirstNameRegisterPage);
+            etLastName = FindViewById<EditText>(Resource.Id.etLastNameRegisterPage);
+            etUserName = FindViewById<EditText>(Resource.Id.etUserNameRegisterPage);
+            etPassword = FindViewById<EditText>(Resource.Id.etPasswordRegisterPage);
+
+            btnCreatNewAccount = FindViewById<Button>(Resource.Id.btnCreateNewAccountRegisterPage);
+            btnCencle = FindViewById<Button>(Resource.Id.btnCencleRegisterPage);
+
+            btnCreatNewAccount.Click += BtnCreatNewAccount_Click;
+            btnCencle.Click += BtnCencle_Click;
+        }
+
+        private void BtnCencle_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(MainActivity));
+            StartActivity(intent);
+            Finish();
+        }
+
+        async private void BtnCreatNewAccount_Click(object sender, EventArgs e)
+        {
+            bool flag = true;
+
+            if (etUserName.Text.Length > 0 && etFirstName.Text.Length > 0 && etLastName.Text.Length > 0 && etPassword.Text.Length > 0)
+            {
+                if (accounts != null && accounts.Count > 0)
+                {
+                    foreach (Account account in accounts)
+                    {
+                        if (account.username.Equals(etUserName.Text))
+                        {
+                            Toast.MakeText(this, "The username is already in use, choose another one", ToastLength.Long).Show();
+                            flag = false;
+                        }
+                    }
+                }
+                if (flag)
+                {
+                    Drawable drawable = Resources.GetDrawable(Resource.Drawable.blackprofile);
+                    Bitmap bitmap = ((BitmapDrawable)drawable).Bitmap;
+                    string date = DateTime.Now.ToString("d MMMM yyyy");
+                    byte[] pic = ConvertBitmapToByteArray(bitmap);
+
+                    Account user = new Account(etUserName.Text,
+                        etLastName.Text,
+                        etFirstName.Text,
+                        etPassword.Text,
+                        0, 0, date,
+                        pic,
+                        "#13A90A");
+
+                    await firebase.AddAccount(user);
+
+
+                    Intent intent = new Intent(this, typeof(activity_MainPage));
+                    intent.PutExtra("Username", etUserName.Text);
+                    StartActivity(intent);
+                    Finish();
+                }
+            }
+            else
+            {
+                Android.App.AlertDialog.Builder builder = new Android.App.AlertDialog.Builder(this);
+                builder.SetTitle("Account creation");
+                builder.SetMessage("For creating account you need to fill every parametar");
+                builder.SetCancelable(true);
+                builder.SetPositiveButton("Ok", OkAction);
+                d = builder.Create();
+                d.Show();
+            }
+        }
+
+        private void OkAction(object sender, DialogClickEventArgs e) { }
+
+        private static byte[] ConvertBitmapToByteArray(Bitmap bm)
+        {
+            using (MemoryStream stream = new MemoryStream())
+            {
+                bm.Compress(Bitmap.CompressFormat.Png, 0, stream); // PNG format, quality 0 (max compression)
+                return stream.ToArray();
+            }
+        }
+    }
+}

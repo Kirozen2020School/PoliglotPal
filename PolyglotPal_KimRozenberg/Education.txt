@@ -1,0 +1,44 @@
+﻿Education - חינוך
+School - בית ספר
+Classroom - כיתה
+Teacher - מורה
+Student - תלמיד
+Principal - מנהל
+Curriculum - מגמה
+Subject - נושא
+Lesson - שיעור
+Homework - שעות בית
+Assignment - משימה
+Exam - מבחן
+Test - מבחן קטן
+Grade - ציון
+Report card - דוח ציונים
+Textbook - ספר לימוד
+Library - ספרייה
+Research - מחקר
+Project - פרויקט
+Essay - מאמר
+Classmate - חבר כיתה
+Group work - עבודת קבוצה
+Lecture - הרצאה
+Seminar - סמינר
+Degree - תואר
+Diploma - תעודה
+Graduation - טקס סיום
+College - תואר ראשון
+University - אוניברסיטה
+Major - מגמה ראשית
+Minor - מגמה משנית
+Class schedule - מערכת שעות
+Student ID - תעודת זהות תלמיד
+Backpack - תיק גב
+Notebook - מחברת
+Pencil - עפרון
+Pen - עט
+Paper - נייר
+Projector - מקרן
+Whiteboard - לוח לבן
+Marker - מחיק
+Computer lab - מעבדה מחשבים
+Online learning - למידה מקוונת
+Distance education - למידה חוץ קמפוס

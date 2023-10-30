@@ -1,0 +1,33 @@
+﻿Tools - כלים
+Hammer - פטיש
+Screwdriver - מברג
+Wrench - מזון
+Pliers - מסמרות
+Tape measure - סרט מדידה
+Drill - מקדח
+Saw - מסור
+Nail - מסמר
+Screw - מסמרת
+Level - מישוש
+Chisel - מיסוך
+Trowel - מטרטר
+Sander - משוור
+Saw blade - להב מסור
+Clamp - מחזיק
+Carpenter's square - משקולת
+Cordless drill - מקדח אלחוטי
+Paintbrush - מברשת
+Roller brush - מברשת גלר
+Bucket - דלי
+Sponge - ספוג
+Ladder - סולם
+Gloves - כפפות
+Safety glasses - משקפי בטיחות
+Helmet - קסדה
+Sawhorse - סוס חריצה
+Stapler - מחזיק
+Tape - סרט הדבקה
+Glue - דבק
+Screwdriver set - מסמרות שונות
+Wrench set - מזונים שונים
+Toolbox - קופסת כלים

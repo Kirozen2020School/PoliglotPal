@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Creat account"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:layout_marginBottom="20sp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" 
+        />
+    <ImageView
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo"
+        android:layout_marginBottom="10sp"/>
+    <EditText
+        android:layout_width="310sp"
+        android:layout_height="60sp"
+        android:id="@+id/etUserNameRegisterPage"
+        android:hint="Username / Nickname"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="10sp"
+        android:background="#5c5c5c"
+        android:textColor="#a7a7a7"
+        android:inputType="text"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <EditText
+            android:layout_width="150sp"
+            android:layout_height="60sp"
+            android:id="@+id/etFirstNameRegisterPage"
+            android:hint="First name"
+            android:padding="10sp"
+            android:background="#5c5c5c"
+            android:textColor="#a7a7a7"
+            android:inputType="text"
+            tools:ignore="HardcodedText" 
+            />
+        <TextView
+            android:layout_width="10sp"
+            android:layout_height="60sp"/>
+        <EditText
+            android:layout_width="150sp"
+            android:layout_height="60sp"
+            android:id="@+id/etLastNameRegisterPage"
+            android:hint="Last name"
+            android:padding="10sp"
+            android:background="#5c5c5c"
+            android:textColor="#a7a7a7"
+            android:inputType="text"
+            tools:ignore="HardcodedText" 
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10sp"/>
+    <EditText
+        android:layout_width="310sp"
+        android:layout_height="60sp"
+        android:id="@+id/etPasswordRegisterPage"
+        android:hint="Password"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="10sp"
+        android:background="#5c5c5c"
+        android:textColor="#a7a7a7"
+        android:inputType="numberPassword"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="240sp"
+            android:layout_height="60sp"
+            android:id="@+id/btnCreateNewAccountRegisterPage"
+            android:text="Create"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:backgroundTint="#9c9c9c"
+            tools:ignore="HardcodedText" 
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10sp"/>
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="1sp"
+            android:background="#fff"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10sp"/>
+
+        <Button
+            android:layout_width="240sp"
+            android:layout_height="60sp"
+            android:id="@+id/btnCencleRegisterPage"
+            android:textSize="20sp"
+            android:text="Cancel"
+            android:textStyle="bold"
+            android:backgroundTint="#9c9c9c"
+            tools:ignore="HardcodedText" 
+            />
+    </LinearLayout>
+</LinearLayout>

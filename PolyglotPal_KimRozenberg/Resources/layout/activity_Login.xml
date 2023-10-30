@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000"
+    android:gravity="center">
+
+
+    <ImageView
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo"
+        android:contentDescription="description"
+        tools:ignore="HardcodedText" 
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:src="@drawable/whiteprofile"
+            android:background="#404040"
+            android:contentDescription="description"
+            tools:ignore="HardcodedText" />
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="200sp"
+            android:layout_height="60sp"
+            android:background="#5C5C5C"
+            android:textColor="#A7A7A7"
+            android:hint="Username"
+            android:padding="10sp"
+            android:inputType="text"
+            tools:ignore="HardcodedText" 
+            />
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:src="@drawable/whitelock"
+            android:background="#404040"
+            android:contentDescription="description"
+            tools:ignore="HardcodedText" />
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="200sp"
+            android:layout_height="60sp"
+            android:background="#5C5C5C"
+            android:textColor="#A7A7A7"
+            android:hint="Password"
+            android:padding="10sp"
+            android:inputType="numberPassword"
+            tools:ignore="HardcodedText" 
+            />
+    </LinearLayout>
+    
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30sp"/>
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="260sp"
+        android:layout_height="60sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="Login"
+        android:textSize="20sp"
+        android:backgroundTint="#9C9C9C"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="200sp"
+        android:layout_height="15sp"/>
+    <TextView
+        android:layout_width="200sp"
+        android:layout_height="2sp"
+        android:layout_gravity="center"
+        android:background="#fff"/>
+    <TextView
+        android:layout_width="200sp"
+        android:layout_height="15sp"/>
+
+    <Button
+        android:id="@+id/btnCreateAccount"
+        android:layout_width="260sp"
+        android:layout_height="60sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="Register"
+        android:textSize="20sp"
+        android:backgroundTint="#9C9C9C"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100sp"/>
+    
+</LinearLayout>

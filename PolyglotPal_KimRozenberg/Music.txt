@@ -1,0 +1,29 @@
+﻿Musical Instruments - כלי נגינה
+Piano - פסנתר
+Guitar - גיטרה
+Violin - כינור
+Flute - חליל
+Trumpet - חצוצרה
+Saxophone - סקסופון
+Drums - תופים
+Bass guitar - גיטרה בס
+Harp - נבל
+Clarinet - קלרינט
+Trombone - טרומבון
+Oboe - אבוב
+Cello - צ'לו
+Accordion - אקורדיון
+Banjo - בנג'ו
+Horn - קרן
+Keyboard - מקלדות
+Organ - אורגן
+Bagpipes - חמישה
+Harpischord - הרפסיך
+Mandolin - מנדולינה
+Xylophone - קסילופון
+Triangle - משולש
+Castanets - קסטניואטות
+Cymbals - נבלים
+Gong - גונג
+Maracas - מרקס
+Tambourine - תוף עגל

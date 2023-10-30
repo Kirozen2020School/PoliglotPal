@@ -1,0 +1,44 @@
+﻿Business - עסק
+Company - חברה
+Entrepreneur - יזם
+Startup - סטארטאפ
+Small business - עסק קטן
+Corporation - תאגיד
+CEO (Chief Executive Officer) - מנכ"ל
+Manager - מנהל
+Employee - עובד
+Team - צוות
+Office - משרד
+Meeting - פגישה
+Presentation - הצגה
+Client - לקוח
+Customer - לקוח
+Product - מוצר
+Service - שירות
+Marketing - שיווק
+Sales - מכירות
+Revenue - הכנסות
+Profit - רווח
+Loss - הפסד
+Budget - תקציב
+Investment - השקעה
+Finance - כלכלה
+Accounting - חשבונאות
+Invoice - חשבונית
+Payment - תשלום
+Contract - חוזה
+Negotiation - מו"מ
+Deal - עסקה
+Partnership - שותפות
+Collaboration - שיתוף פעולה
+Strategy - אסטרטגיה
+Planning - תכנון
+Market research - מחקר שוק
+Competition - תחרות
+Innovation - חדשנות
+Technology - טכנולוגיה
+Digital - דיגיטלי
+E-commerce - מסחר אלקטרוני
+Networking - רשתות
+Customer service - שירות לקוחות
+Feedback - משוב

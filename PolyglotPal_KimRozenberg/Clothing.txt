@@ -1,0 +1,32 @@
+﻿Clothing - בגדים
+Shirt - חולצה
+Blouse - בלוזה
+T-shirt - חולצת טי-שירט
+Sweater - סוודר
+Jacket - ז'קט
+Coat - מעיל
+Dress - שמלה
+Skirt - חצאית
+Pants/Trousers - מכנסיים
+Jeans - ג'ינס
+Shorts - חצאות
+Hat - כובע
+Cap - קסקט
+Scarf - צעיף
+Gloves - כפפות
+Socks - גרביים
+Shoes - נעליים
+Boots - מגפיים
+Sandals - סנדלים
+Slippers - פנימיות
+Belt - חגורה
+Tie - עניבה
+Bow tie - עניבת קשת
+Suit - חליפה
+Tuxedo - חליפת ערב
+Pajamas - פיג'מות
+Underwear - בגדי תחתון
+Swimsuit - מציאות
+Bikini - ביקיני
+Raincoat - מעיל גשם
+Umbrella - מטריה

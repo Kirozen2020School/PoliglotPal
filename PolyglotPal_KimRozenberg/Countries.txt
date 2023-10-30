@@ -1,0 +1,45 @@
+﻿Countries - מדינות
+United States - ארצות הברית
+Canada - קנדה
+United Kingdom - הממלכה המאוחדת
+France - צרפת
+Germany - גרמניה
+Spain - ספרד
+Italy - איטליה
+Australia - אוסטרליה
+Japan - יפן
+China - סין
+India - הודו
+Brazil - ברזיל
+Mexico - מקסיקו
+Argentina - ארגנטינה
+Russia - רוסיה
+South Africa - דרום אפריקה
+Egypt - מצרים
+Israel - ישראל
+Saudi Arabia - ערב הסעודית
+United Arab Emirates - איחוד האמירויות הערביות
+Turkey - טורקיה
+Greece - יוון
+South Korea - דרום קוריאה
+North Korea - צפון קוריאה
+Canada - קנדה
+Colombia - קולומביה
+Chile - צ'ילה
+Peru - פרו
+New Zealand - ניו זילנד
+Thailand - תאילנד
+Indonesia - אינדונזיה
+Malaysia - מלזיה
+Vietnam - וייטנאם
+Philippines - הפיליפינים
+Pakistan - פקיסטן
+Nigeria - ניגריה
+South Korea - דרום קוריאה
+North Korea - צפון קוריאה
+Morocco - מרוקו
+Tunisia - תוניסיה
+Algeria - אלג'יריה
+Libya - לוב
+Ethiopia - אתיופיה
+Kenya - קניה
