@@ -33,6 +33,8 @@ namespace PolyglotPal_KimRozenberg
         string badColor = "#629C60";
         string badColorText = "#575757";
 
+        Timer time;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -48,6 +50,20 @@ namespace PolyglotPal_KimRozenberg
             InitViews();
             InitWords();
             InitButtons();
+
+            if((Intent.GetIntExtra("Round", -1) == 1))
+            {
+                time = new Timer(TimeSpan.FromSeconds(1));
+                time.Start();
+            }
+            else if (Intent.GetIntExtra("Round", -1) > 1)
+            {
+                long savedTicks = Intent.GetLongExtra("current_time", 0);
+                TimeSpan savedTime = TimeSpan.FromTicks(savedTicks);
+
+                time = new Timer(TimeSpan.FromSeconds(1));
+                time.Start(savedTime);
+            }
         }
 
         private void InitButtons()
@@ -353,6 +369,7 @@ namespace PolyglotPal_KimRozenberg
                 Intent intent = new Intent(this, typeof(activity_LevelFinish));
                 intent.PutExtra("Username", Intent.GetStringExtra("Username"));
                 intent.PutExtra("XP", xp + addXP);
+                intent.PutExtra("current_time", this.time.GetCurrentTime().Ticks);
                 StartActivity(intent);
                 Finish();
             }
@@ -363,6 +380,7 @@ namespace PolyglotPal_KimRozenberg
                 intent.PutExtra("XP", xp + addXP);
                 intent.PutExtra("Round", round + 1);
                 intent.PutExtra("Mood", mood);
+                intent.PutExtra("current_time", this.time.GetCurrentTime().Ticks);
                 StartActivity(intent);
                 Finish();
             }
