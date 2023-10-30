@@ -17,6 +17,7 @@ namespace PolyglotPal_KimRozenberg
         Button btnNextLevel;
         ImageButton btnExitLevel;
         Android.App.AlertDialog d;
+        ProgressBar progressBar;
 
         List<Button> buttons;
         List<ENG_HE> words;
@@ -182,6 +183,11 @@ namespace PolyglotPal_KimRozenberg
             btnHE2.Click += BtnHE_Click;
             btnHE3.Click += BtnHE_Click;
             btnHE4.Click += BtnHE_Click;
+
+            progressBar = FindViewById<ProgressBar>(Resource.Id.progress);
+            int progress = ((Intent.GetIntExtra("Round", -1)-1)*100);
+            Toast.MakeText(this, "progres: "+ progress, ToastLength.Short).Show();
+            progressBar.Progress = progress;
         }
 
         private void BtnENG_Click(object sender, EventArgs e)
