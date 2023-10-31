@@ -4266,67 +4266,70 @@ namespace PolyglotPal_KimRozenberg
 			public const int transition_transform = 2131230992;
 			
 			// aapt resource value: 0x7F080111
-			public const int tvDateJoiningProfilePage = 2131230993;
+			public const int tvAccoracy = 2131230993;
 			
 			// aapt resource value: 0x7F080112
-			public const int tvFullNameProfilePage = 2131230994;
+			public const int tvDateJoiningProfilePage = 2131230994;
 			
 			// aapt resource value: 0x7F080113
-			public const int tvHiUsernameHomePage = 2131230995;
+			public const int tvFullNameProfilePage = 2131230995;
 			
 			// aapt resource value: 0x7F080114
-			public const int tvInfo = 2131230996;
+			public const int tvHiUsernameHomePage = 2131230996;
 			
 			// aapt resource value: 0x7F080115
-			public const int tvTimer = 2131230997;
+			public const int tvInfo = 2131230997;
 			
 			// aapt resource value: 0x7F080116
-			public const int tvTotalPointsHomePage = 2131230998;
+			public const int tvTimer = 2131230998;
 			
 			// aapt resource value: 0x7F080117
-			public const int tvTotalPointsProfilePage = 2131230999;
+			public const int tvTotalPointsHomePage = 2131230999;
 			
 			// aapt resource value: 0x7F080118
-			public const int tvTotalTasksProfilePage = 2131231000;
+			public const int tvTotalPointsProfilePage = 2131231000;
 			
 			// aapt resource value: 0x7F080119
-			public const int tvTotalXPFinishLevelPage = 2131231001;
+			public const int tvTotalTasksProfilePage = 2131231001;
 			
 			// aapt resource value: 0x7F08011A
-			public const int tvUserNameProfilePage = 2131231002;
+			public const int tvTotalXPFinishLevelPage = 2131231002;
 			
 			// aapt resource value: 0x7F08011B
-			public const int @unchecked = 2131231003;
+			public const int tvUserNameProfilePage = 2131231003;
 			
 			// aapt resource value: 0x7F08011C
-			public const int uniform = 2131231004;
+			public const int @unchecked = 2131231004;
 			
 			// aapt resource value: 0x7F08011D
-			public const int unlabeled = 2131231005;
+			public const int uniform = 2131231005;
 			
 			// aapt resource value: 0x7F08011E
-			public const int up = 2131231006;
+			public const int unlabeled = 2131231006;
 			
 			// aapt resource value: 0x7F08011F
-			public const int useLogo = 2131231007;
+			public const int up = 2131231007;
 			
 			// aapt resource value: 0x7F080120
-			public const int view_offset_helper = 2131231008;
+			public const int useLogo = 2131231008;
 			
 			// aapt resource value: 0x7F080121
-			public const int view_tree_saved_state_registry_owner = 2131231009;
+			public const int view_offset_helper = 2131231009;
 			
 			// aapt resource value: 0x7F080122
-			public const int visible = 2131231010;
+			public const int view_tree_saved_state_registry_owner = 2131231010;
 			
 			// aapt resource value: 0x7F080123
-			public const int visible_removing_fragment_view_tag = 2131231011;
+			public const int visible = 2131231011;
 			
 			// aapt resource value: 0x7F080124
-			public const int withText = 2131231012;
+			public const int visible_removing_fragment_view_tag = 2131231012;
 			
 			// aapt resource value: 0x7F080125
-			public const int wrap_content = 2131231013;
+			public const int withText = 2131231013;
+			
+			// aapt resource value: 0x7F080126
+			public const int wrap_content = 2131231014;
 			
 			static Id()
 			{

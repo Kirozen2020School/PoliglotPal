@@ -24,6 +24,7 @@ namespace PolyglotPal_KimRozenberg
         int xp;
         int addXP = 10;
         string mood;
+        double errors;
 
         Button lastClickedButtonEng = null;
         Button lastClickedButtonHeb = null;
@@ -45,6 +46,7 @@ namespace PolyglotPal_KimRozenberg
             {
                 xp = Intent.GetIntExtra("XP", 0);
                 mood = Intent.GetStringExtra("Mood");
+                errors = Intent.GetDoubleExtra("errors", 0);
             }
 
             InitViews();
@@ -257,6 +259,7 @@ namespace PolyglotPal_KimRozenberg
                         lastClickedButtonEng.BackgroundTintList = ColorStateList.ValueOf(Color.ParseColor(goodColor));
                     }
                     clickedButton.BackgroundTintList = ColorStateList.ValueOf(Color.ParseColor(goodColor));
+                    this.errors++;
                 }
                 
                 lastClickedButtonHeb = null;
@@ -320,6 +323,7 @@ namespace PolyglotPal_KimRozenberg
                         lastClickedButtonEng.BackgroundTintList = ColorStateList.ValueOf(Color.ParseColor(goodColor));
                     }
                     clickedButton.BackgroundTintList = ColorStateList.ValueOf(Color.ParseColor(goodColor));
+                    this.errors++;
                 }
                 lastClickedButtonEng = null;
                 lastClickedButtonHeb = null;
@@ -370,6 +374,7 @@ namespace PolyglotPal_KimRozenberg
                 intent.PutExtra("Username", Intent.GetStringExtra("Username"));
                 intent.PutExtra("XP", xp + addXP);
                 intent.PutExtra("current_time", this.time.GetCurrentTime().Ticks);
+                intent.PutExtra("errors", this.errors);
                 StartActivity(intent);
                 Finish();
             }
@@ -381,6 +386,7 @@ namespace PolyglotPal_KimRozenberg
                 intent.PutExtra("Round", round + 1);
                 intent.PutExtra("Mood", mood);
                 intent.PutExtra("current_time", this.time.GetCurrentTime().Ticks);
+                intent.PutExtra("errors", this.errors);
                 StartActivity(intent);
                 Finish();
             }

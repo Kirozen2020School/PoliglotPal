@@ -10,7 +10,7 @@ namespace PolyglotPal_KimRozenberg
     public class activity_LevelFinish : Activity
     {
         Button btnExitFromFinishLevelPage;
-        TextView tvXP, tvTimer;
+        TextView tvXP, tvTimer, tvAccuracy;
         int xp;
         Timer timer;
         protected override void OnCreate(Bundle savedInstanceState)
@@ -37,13 +37,14 @@ namespace PolyglotPal_KimRozenberg
             btnExitFromFinishLevelPage.Click += BtnExitFromFinishLevelPage_Click;
 
             tvXP = FindViewById<TextView>(Resource.Id.tvTotalXPFinishLevelPage);
-            tvXP.Text = $"Xp colected: {Intent.GetIntExtra("XP", -1)}";
+            tvXP.Text = $"Xp:\n{Intent.GetIntExtra("XP", -1)}";
 
             tvTimer = FindViewById<TextView>(Resource.Id.tvTimer);
-            
-            string time = this.timer.GetCurrentTimeString();
+            tvTimer.Text = "Time:\n" + this.timer.GetCurrentTimeString();
 
-            tvTimer.Text = "Time: " + time;
+            tvAccuracy = FindViewById<TextView>(Resource.Id.tvAccoracy);
+            double prosent = (1-(Intent.GetDoubleExtra("errors", 0)/(7 * 4)*1.0)) * 100;
+            tvAccuracy.Text = $"accuracy\n{prosent}%";
         }
 
         private void BtnExitFromFinishLevelPage_Click(object sender, EventArgs e)

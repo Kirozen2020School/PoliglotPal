@@ -22,27 +22,54 @@
     <TextView
         android:layout_width="1sp"
         android:layout_height="10sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Xp colected: "
-        android:textColor="#fff"
-        android:textSize="23sp"
-        android:textStyle="bold"
-        android:id="@+id/tvTotalXPFinishLevelPage"
-        tools:ignore="HardcodedText" 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xp:\n20"
+            android:textColor="#fff"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:id="@+id/tvTotalXPFinishLevelPage"
+            tools:ignore="HardcodedText"
         />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Time: "
-        android:textColor="#fff"
-        android:textSize="23sp"
-        android:textStyle="bold"
-        android:id="@+id/tvTimer"
-        tools:ignore="HardcodedText" 
+        <TextView
+            android:layout_width="50sp"
+            android:layout_height="30sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accuracy:\n100%"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:id="@+id/tvAccoracy"
+            tools:ignore="HardcodedText" 
+            />
+        <TextView
+            android:layout_width="50sp"
+            android:layout_height="30sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time:\n02:30"
+            android:textColor="#fff"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:id="@+id/tvTimer"
+            tools:ignore="HardcodedText" 
         />
+
+    </LinearLayout>
+    
     <TextView
         android:layout_width="1sp"
         android:layout_height="30sp"/>
