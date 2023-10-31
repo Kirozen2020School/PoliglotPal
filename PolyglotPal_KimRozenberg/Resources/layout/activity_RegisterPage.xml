@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#000"
     android:gravity="center">
-
+    
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,7 +24,9 @@
         android:layout_height="200sp"
         android:layout_gravity="center"
         android:src="@drawable/logo"
-        android:layout_marginBottom="10sp"/>
+        android:layout_marginBottom="10sp"
+        android:contentDescription="description"
+        tools:ignore="HardcodedText" />
     <EditText
         android:layout_width="310sp"
         android:layout_height="60sp"

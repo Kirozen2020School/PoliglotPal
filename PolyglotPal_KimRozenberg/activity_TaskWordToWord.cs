@@ -36,6 +36,7 @@ namespace PolyglotPal_KimRozenberg
 
         Timer time;
 
+        [Obsolete]
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -171,6 +172,7 @@ namespace PolyglotPal_KimRozenberg
             }
         }
 
+        [Obsolete]
         private void InitViews()
         {
             btnENG1 = FindViewById<Button>(Resource.Id.btnENG1);
@@ -359,6 +361,7 @@ namespace PolyglotPal_KimRozenberg
             Finish();
         }
 
+        [Obsolete]
         private void BtnNextLevel_Click(object sender, EventArgs e)
         {
             Vibrator vibrator = (Vibrator)GetSystemService(VibratorService);

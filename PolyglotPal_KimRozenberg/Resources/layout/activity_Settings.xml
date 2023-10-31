@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings page"
+            android:textColor="#fff"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:paddingLeft="10sp"
+            tools:ignore="HardcodedText" 
+        />
+        <TextView
+            android:layout_width="80sp"
+            android:layout_height="10sp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exit"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:id="@+id/btnExitFromSettingsPage"
+            tools:ignore="HardcodedText" 
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30sp"/>
+    <Switch
+        android:id="@+id/swMusic"
+        android:layout_width="200sp"
+        android:layout_height="20sp"
+        android:text="Background music "
+        android:layout_margin="8dp"
+        android:checked="false"
+        android:switchMinWidth="48dp"
+        android:thumbTextPadding="8dp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_gravity="center"
+        tools:ignore="HardcodedText" 
+    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30sp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Username"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/btnChangeUsername"
+        tools:ignore="HardcodedText" 
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30sp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Theme"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/btnChangeTheme"
+        tools:ignore="HardcodedText" 
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30sp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete account"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/btnDeleteAccountSettings"
+        tools:ignore="HardcodedText" 
+        />
+
+</LinearLayout>

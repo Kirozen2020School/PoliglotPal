@@ -71,6 +71,7 @@
     <Compile Include="activity_MainPage.cs" />
     <Compile Include="activity_ProfilePage.cs" />
     <Compile Include="activity_Register.cs" />
+    <Compile Include="activity_Settings.cs" />
     <Compile Include="activity_TaskWordToWord.cs" />
     <Compile Include="ENG_HE.cs" />
     <Compile Include="FirebaseManager.cs" />
@@ -236,6 +237,15 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\whitetools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_Settings.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\raw\background.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

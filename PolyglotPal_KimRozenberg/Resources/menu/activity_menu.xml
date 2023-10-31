@@ -15,8 +15,8 @@
 		android:orderInCategory="300"
 		
        />
-	<item android:id="@+id/action_delete"
-		android:title="Delete account"
+	<item android:id="@+id/action_settings"
+		android:title="Settings"
 		android:orderInCategory="300"
 		
        />

@@ -17,7 +17,8 @@
             android:layout_height="20sp"
             android:text="Start"
             android:textColor="#fff"
-            android:paddingRight="30sp"/>
+            android:paddingRight="30sp"
+            tools:ignore="HardcodedText" />
         <ProgressBar
                 android:layout_width="200sp"
                 android:layout_height="20sp"
@@ -30,7 +31,8 @@
             android:layout_height="20sp"
             android:text="End"
             android:textColor="#fff"
-            android:paddingLeft="30sp"/>
+            android:paddingLeft="30sp"
+            tools:ignore="HardcodedText" />
     </LinearLayout>
 
     <LinearLayout

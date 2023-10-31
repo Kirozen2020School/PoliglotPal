@@ -43,7 +43,7 @@ namespace PolyglotPal_KimRozenberg
             {
                 this.user = await firebase.GetAccount(this.username);
             }
-            catch(Exception e)
+            catch (Exception)
             {
                 Toast.MakeText(this, "User not found in firebase", ToastLength.Long).Show();
             }
@@ -130,7 +130,7 @@ namespace PolyglotPal_KimRozenberg
         private void IvProfilePic_Click(object sender, EventArgs e)
         {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.SetTitle("From here you want to get the new profile pic?");
+            builder.SetTitle("From where you want to get the new profile pic?");
             builder.SetPositiveButton("Camera", (sender, args) =>
             {
                 if(CheckSelfPermission(Android.Manifest.Permission.Camera) == Android.Content.PM.Permission.Granted)
@@ -183,6 +183,7 @@ namespace PolyglotPal_KimRozenberg
             }
         }
 
+        [Obsolete]
         protected override async void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
