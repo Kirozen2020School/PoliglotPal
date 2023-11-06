@@ -95,5 +95,19 @@ namespace PolyglotPal_KimRozenberg
                 await firebase.Child(name).Child(account.username).PutAsync(account);
             }
         }
+
+        public async Task UpdateTheme(string username, string theme)
+        {
+            var account = await GetAccount(username);
+
+            if (account != null)
+            {
+                account.theme = theme;
+
+                await DeleteAccount(username);
+
+                await firebase.Child(name).Child(account.username).PutAsync(account);
+            }
+        }
     }
 }

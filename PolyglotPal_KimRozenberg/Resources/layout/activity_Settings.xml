@@ -73,18 +73,14 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="30sp"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Change Theme"
-        android:textColor="#fff"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_gravity="center"
+    
+    <Spinner
+        android:layout_width="180sp"
+        android:layout_height="30sp"
+        android:background="#fff"
         android:gravity="center"
-        android:id="@+id/btnChangeTheme"
-        tools:ignore="HardcodedText" 
-        />
+        android:layout_gravity="center"
+        android:id="@+id/spThemeSelector"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="30sp"/>

@@ -3,6 +3,7 @@ using Android.Content;
 using Android.Media;
 using Android.OS;
 using Android.Runtime;
+using Android.Speech.Tts;
 using Android.Views;
 using Android.Widget;
 using System;
@@ -16,8 +17,9 @@ namespace PolyglotPal_KimRozenberg
     [Activity(Label = "activity_Settings")]
     public class activity_Settings : Activity
     {
-        Button btnExitFromSettingPage, btnChangeTheme, btnChangeUsername, btnDeleteAccount;
+        Button btnExitFromSettingPage, btnChangeUsername, btnDeleteAccount;
         Switch swMusicBackground;
+        Spinner spThemeSelector;
 
         Account user;
         string username;
@@ -46,17 +48,48 @@ namespace PolyglotPal_KimRozenberg
             firebase = new FirebaseManager();
             user = await firebase.GetAccount(this.username);
 
-            btnChangeTheme = FindViewById<Button>(Resource.Id.btnChangeTheme);
             btnExitFromSettingPage = FindViewById<Button>(Resource.Id.btnExitFromSettingsPage);
             btnChangeUsername = FindViewById<Button>(Resource.Id.btnChangeUsername);
             btnDeleteAccount = FindViewById<Button>(Resource.Id.btnDeleteAccountSettings);
             btnChangeUsername.Click += BtnChangeUsername_Click;
             btnExitFromSettingPage.Click += BtnExitFromSettingPage_Click;
-            btnChangeTheme.Click += BtnChangeTheme_Click;
             btnDeleteAccount.Click += BtnDeleteAccount_Click;
 
             swMusicBackground = FindViewById<Switch>(Resource.Id.swMusic);
             swMusicBackground.CheckedChange += SwMusicBackground_CheckedChange;
+
+            spThemeSelector = FindViewById<Spinner>(Resource.Id.spThemeSelector);
+            spThemeSelector.ItemSelected += SpThemeSelector_ItemSelected;
+            var adapter = ArrayAdapter.CreateFromResource(this, Resource.Array.ThemeSelector, Android.Resource.Layout.SimpleSpinnerItem);
+            adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+            spThemeSelector.Adapter = adapter;
+        }
+
+        private async void SpThemeSelector_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            var sp = (Spinner)sender;
+            string theme = sp.GetItemAtPosition(e.Position).ToString();
+
+            switch (theme)
+            {
+                case "Light Pink":
+                    await firebase.UpdateTheme(this.user.username, "softPink");
+                    break;
+                case "Light Blue":
+                    await firebase.UpdateTheme(this.user.username, "softBlue");
+                    break;
+                case "Red And Black":
+                    await firebase.UpdateTheme(this.user.username, "blackRed");
+                    break;
+                case "Navy":
+                    await firebase.UpdateTheme(this.user.username, "navy");
+                    break;
+                case "Dark":
+                    await firebase.UpdateTheme(this.user.username, "");
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void BtnDeleteAccount_Click(object sender, EventArgs e)
@@ -96,11 +129,6 @@ namespace PolyglotPal_KimRozenberg
                 player.Stop();
                 this.backMusic = false;
             }
-        }
-
-        private void BtnChangeTheme_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void BtnExitFromSettingPage_Click(object sender, EventArgs e)

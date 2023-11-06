@@ -73,6 +73,7 @@
     <Compile Include="activity_Register.cs" />
     <Compile Include="activity_Settings.cs" />
     <Compile Include="activity_TaskWordToWord.cs" />
+    <Compile Include="ColorsClass.cs" />
     <Compile Include="ENG_HE.cs" />
     <Compile Include="FirebaseManager.cs" />
     <Compile Include="MainActivity.cs" />

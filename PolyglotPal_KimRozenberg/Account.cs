@@ -12,10 +12,11 @@ namespace PolyglotPal_KimRozenberg
         public string datejoining { get; set; }
         public byte[] profilepic { get; set; }
         public string backgroundcolor { get; set; }
+        public string theme {  get; set; }
 
         public Account(string username, string lastname, string firstname, string password, 
             int totalxp, int totaltasks, string datejoining, 
-            byte[] profilepic, string backgroundcolor)
+            byte[] profilepic, string backgroundcolor, string theme)
         {
             this.username = username;
             this.lastname = lastname;
@@ -26,6 +27,7 @@ namespace PolyglotPal_KimRozenberg
             this.datejoining = datejoining;
             this.profilepic = profilepic;
             this.backgroundcolor = backgroundcolor;
+            this.theme = theme;
         }
     }
 }

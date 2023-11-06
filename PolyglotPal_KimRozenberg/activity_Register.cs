@@ -91,7 +91,7 @@ namespace PolyglotPal_KimRozenberg
                         etPassword.Text,
                         0, 0, date,
                         pic,
-                        "#13A90A");
+                        "#13A90A", "");
 
                     await firebase.AddAccount(user);
 

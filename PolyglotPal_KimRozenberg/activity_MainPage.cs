@@ -13,16 +13,18 @@ namespace PolyglotPal_KimRozenberg
     [Activity(Label = "PolyglotPal")]
     public class activity_MainPage : AppCompatActivity, IOnClickListener, PopupMenu.IOnMenuItemClickListener
     {
-        ImageButton btnGoToProfilePageFromTaskPage;
+        ImageButton btnGoToProfilePageFromTaskPage, btnTask;
         ImageButton btnDailyActivity, btnTravel, btnHealth, btnHobbies, btnFamily, btnBusiness, btnEducation,
             btnFood, btnMusic, btnAnimals, btnFurniture, btnEmotions, btnCountries, btnTools, btnClothing;
         List<Tuple<ImageButton, string>> buttons;
         ImageButton btnPopupMenu;
         TextView tvHiUsernameHomePage, tvTotalPointsHomePage;
+        LinearLayout lyInfoMainPage, lyButtomMenuMainPage, lyBackgroundMainPage;
 
         string username;
         Account user;
         FirebaseManager firebase;
+        ColorsClass colors = new ColorsClass();
 
         int xpAdded = -1;
         protected override async void OnCreate(Bundle savedInstanceState)
@@ -46,6 +48,11 @@ namespace PolyglotPal_KimRozenberg
             
             InitViews();
             UpdateViews();
+            if(this.user != null)
+            {
+                UpdateColors();
+            }
+            
         }
 
         private void UpdateViews()
@@ -53,12 +60,74 @@ namespace PolyglotPal_KimRozenberg
             tvHiUsernameHomePage.Text = "Hi " + this.user.username;
             tvTotalPointsHomePage.Text = "Total points: " + this.user.totalxp;
         }
+        private void UpdateColors()
+        {
+            switch (this.user.theme.ToString())
+            {
+                case "softBlue":
+                    lyInfoMainPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[2]));
+                    lyButtomMenuMainPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[3]));
+                    lyBackgroundMainPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[1]));
+
+                    btnTask.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[3]));
+                    btnGoToProfilePageFromTaskPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[3]));
+                    foreach(var btn in this.buttons)
+                    {
+                        btn.Item1.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[1]));
+                    }
+                    break;
+                case "softPink":
+                    lyInfoMainPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[0]));
+                    lyButtomMenuMainPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[1]));
+                    lyBackgroundMainPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[2]));
+
+                    btnTask.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[1]));
+                    btnGoToProfilePageFromTaskPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[1]));
+                    foreach (var btn in this.buttons)
+                    {
+                        btn.Item1.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[2]));
+                    }
+                    break;
+                case "blackRed":
+                    lyInfoMainPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[1]));
+                    lyButtomMenuMainPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[2]));
+                    lyBackgroundMainPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[0]));
+
+                    btnTask.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[2]));
+                    btnGoToProfilePageFromTaskPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[2]));
+                    foreach (var btn in this.buttons)
+                    {
+                        btn.Item1.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[0]));
+                    }
+                    break;
+                case "navy":
+                    lyInfoMainPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[1]));
+                    lyButtomMenuMainPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[2]));
+                    lyBackgroundMainPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[0]));
+
+                    btnTask.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[2]));
+                    btnGoToProfilePageFromTaskPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[2]));
+                    foreach (var btn in this.buttons)
+                    {
+                        btn.Item1.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[0]));
+                    }
+                    break;
+                default:
+
+                    break;
+            }
+        }
 
         private void InitViews()
         {
+            lyButtomMenuMainPage = FindViewById<LinearLayout>(Resource.Id.lyBottomLine);
+            lyInfoMainPage = FindViewById<LinearLayout>(Resource.Id.lyInfoMainPage);
+            lyBackgroundMainPage = FindViewById<LinearLayout>(Resource.Id.lyBackgroundMainPage);
+
             tvHiUsernameHomePage = FindViewById<TextView>(Resource.Id.tvHiUsernameHomePage);
             tvTotalPointsHomePage = FindViewById<TextView>(Resource.Id.tvTotalPointsHomePage);
 
+            btnTask = FindViewById<ImageButton>(Resource.Id.btnGoToTaskPageFromTaskPage);
             btnPopupMenu = FindViewById<ImageButton>(Resource.Id.btnPopMenu);
             btnPopupMenu.SetOnClickListener(this);
 
