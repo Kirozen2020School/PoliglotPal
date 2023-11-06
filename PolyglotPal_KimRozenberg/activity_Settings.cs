@@ -20,6 +20,7 @@ namespace PolyglotPal_KimRozenberg
         Button btnExitFromSettingPage, btnChangeUsername, btnDeleteAccount;
         Switch swMusicBackground;
         Spinner spThemeSelector;
+        LinearLayout ly, lyTopic;
 
         Account user;
         string username;
@@ -27,6 +28,8 @@ namespace PolyglotPal_KimRozenberg
 
         private MediaPlayer player;
         private ISharedPreferences sp;
+
+        ColorsClass colors = new ColorsClass();
 
         FirebaseManager firebase;
         protected override void OnCreate(Bundle savedInstanceState)
@@ -41,6 +44,7 @@ namespace PolyglotPal_KimRozenberg
 
             // Create your application here
             InitViews();
+
         }
 
         private async void InitViews()
@@ -63,6 +67,9 @@ namespace PolyglotPal_KimRozenberg
             var adapter = ArrayAdapter.CreateFromResource(this, Resource.Array.ThemeSelector, Android.Resource.Layout.SimpleSpinnerItem);
             adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             spThemeSelector.Adapter = adapter;
+
+            ly = FindViewById<LinearLayout>(Resource.Id.lyBackgroundSettingsPage);
+            lyTopic = FindViewById<LinearLayout>(Resource.Id.lySettingsTopic);
         }
 
         private async void SpThemeSelector_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
@@ -74,18 +81,28 @@ namespace PolyglotPal_KimRozenberg
             {
                 case "Light Pink":
                     await firebase.UpdateTheme(this.user.username, "softPink");
+                    lyTopic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[0]));
+                    ly.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[2]));
                     break;
                 case "Light Blue":
                     await firebase.UpdateTheme(this.user.username, "softBlue");
+                    lyTopic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[2]));
+                    ly.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[1]));
                     break;
                 case "Red And Black":
                     await firebase.UpdateTheme(this.user.username, "blackRed");
+                    lyTopic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[1]));
+                    ly.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[0]));
                     break;
                 case "Navy":
                     await firebase.UpdateTheme(this.user.username, "navy");
+                    lyTopic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[1]));
+                    ly.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[0]));
                     break;
                 case "Dark":
                     await firebase.UpdateTheme(this.user.username, "");
+                    lyTopic.SetBackgroundColor(Android.Graphics.Color.ParseColor("#000"));
+                    ly.SetBackgroundColor(Android.Graphics.Color.ParseColor("#000"));
                     break;
                 default:
                     break;
