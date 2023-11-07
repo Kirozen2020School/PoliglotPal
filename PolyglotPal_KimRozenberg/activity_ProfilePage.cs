@@ -61,6 +61,13 @@ namespace PolyglotPal_KimRozenberg
 
                     btnGotToTaskPageFromProfilePage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[1]));
                     btnProfile.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[1]));
+
+                    /*----------------*/
+                    tvUserName.SetTextColor(Android.Graphics.Color.ParseColor("#000000"));
+                    tvFullUserName.SetTextColor(Android.Graphics.Color.ParseColor("#000000"));
+                    tvJoiningDate.SetTextColor(Android.Graphics.Color.ParseColor("#000000"));
+                    tvTotalEX.SetTextColor(Android.Graphics.Color.ParseColor("#000000"));
+                    tvTotalTaskDone.SetTextColor(Android.Graphics.Color.ParseColor("#000000"));
                     break;
 
                 case "blackRed":
