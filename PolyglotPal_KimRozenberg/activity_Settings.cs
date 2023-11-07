@@ -25,6 +25,7 @@ namespace PolyglotPal_KimRozenberg
         Account user;
         string username;
         bool backMusic;
+        string theme;
 
         private MediaPlayer player;
         private ISharedPreferences sp;
@@ -44,7 +45,11 @@ namespace PolyglotPal_KimRozenberg
 
             // Create your application here
             InitViews();
-
+            if(this.user != null)
+            {
+                this.theme = this.user.theme;
+            }
+            UpdateColors();
         }
 
         private async void InitViews()
@@ -71,12 +76,8 @@ namespace PolyglotPal_KimRozenberg
             ly = FindViewById<LinearLayout>(Resource.Id.lyBackgroundSettingsPage);
             lyTopic = FindViewById<LinearLayout>(Resource.Id.lySettingsTopic);
         }
-
-        private async void SpThemeSelector_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        private async void UpdateColors()
         {
-            var sp = (Spinner)sender;
-            string theme = sp.GetItemAtPosition(e.Position).ToString();
-
             switch (theme)
             {
                 case "Light Pink":
@@ -101,12 +102,29 @@ namespace PolyglotPal_KimRozenberg
                     break;
                 case "Dark":
                     await firebase.UpdateTheme(this.user.username, "");
-                    lyTopic.SetBackgroundColor(Android.Graphics.Color.ParseColor("#000"));
-                    ly.SetBackgroundColor(Android.Graphics.Color.ParseColor("#000"));
+                    lyTopic.SetBackgroundColor(Android.Graphics.Color.ParseColor("#000000"));
+                    ly.SetBackgroundColor(Android.Graphics.Color.ParseColor("#000000"));
                     break;
                 default:
                     break;
             }
+        }
+        private void SpThemeSelector_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            var sp = (Spinner)sender;
+            string temp = sp.GetItemAtPosition(e.Position).ToString();
+            if(temp.Length > 0)
+            {
+                this.theme = temp;
+            }
+            else
+            {
+            if(this.user != null)
+                {
+                    this.theme = this.user.theme;
+                }
+            }
+            UpdateColors();
         }
 
         private void BtnDeleteAccount_Click(object sender, EventArgs e)

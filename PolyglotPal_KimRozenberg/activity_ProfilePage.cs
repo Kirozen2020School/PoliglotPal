@@ -13,11 +13,11 @@ namespace PolyglotPal_KimRozenberg
     [Activity(Label = "PolyglotPal")]
     public class activity_ProfilePage : Activity
     {
-        ImageButton btnGotToTaskPageFromProfilePage;
-        ImageView ivProfilePic;
+        ImageButton btnGotToTaskPageFromProfilePage, btnProfile;
+        ImageView ivProfilePic, btnSettings;
         TextView tvUserName, tvFullUserName, tvJoiningDate;
         TextView tvTotalEX, tvTotalTaskDone;
-        LinearLayout lyProfilePageBackgroundColor;
+        LinearLayout lyProfilePageBackgroundColor, lybackground, lyButtom;
 
         string username;
         Account user;
@@ -35,6 +35,60 @@ namespace PolyglotPal_KimRozenberg
                 this.username = Intent.GetStringExtra("Username");
             }
             UpdateViews();
+        }
+        private void UpdateColors()
+        {
+            ColorsClass colors = new ColorsClass();
+            switch (this.user.theme.ToString())
+            {
+                case "softBlue":
+                    lyProfilePageBackgroundColor.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[2]));
+                    ivProfilePic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[2]));
+                    btnSettings.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[2]));
+                    lyButtom.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[3]));
+                    lybackground.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[1]));
+
+                    btnGotToTaskPageFromProfilePage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[3]));
+                    btnProfile.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[3]));
+                    break;
+
+                case "softPink":
+                    lyProfilePageBackgroundColor.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[0]));
+                    btnSettings.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[0]));
+                    ivProfilePic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[0]));
+                    lyButtom.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[1]));
+                    lybackground.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[2]));
+
+                    btnGotToTaskPageFromProfilePage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[1]));
+                    btnProfile.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[1]));
+                    break;
+
+                case "blackRed":
+                    lyProfilePageBackgroundColor.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[1]));
+                    btnSettings.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[1]));
+                    ivProfilePic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[1]));
+                    lyButtom.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[2]));
+                    lybackground.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[0]));
+
+                    btnGotToTaskPageFromProfilePage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[2]));
+                    btnProfile.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[2]));
+                    break;
+
+                case "navy":
+                    lyProfilePageBackgroundColor.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[1]));
+                    btnSettings.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[1]));
+                    ivProfilePic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[1]));
+                    lyButtom.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[2]));
+                    lybackground.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[0]));
+
+                    btnGotToTaskPageFromProfilePage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[2]));
+                    btnProfile.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[2]));
+                    break;
+
+                default:
+
+                    break;
+            }
         }
 
         async private void UpdateViews()
@@ -59,8 +113,7 @@ namespace PolyglotPal_KimRozenberg
                 Bitmap bitmap = ConvertByteArrayToBitmap(this.user.profilepic);
                 ivProfilePic.SetImageBitmap(bitmap);
 
-                lyProfilePageBackgroundColor.SetBackgroundColor(Android.Graphics.Color.ParseColor(this.user.backgroundcolor));
-                ivProfilePic.SetBackgroundColor(Android.Graphics.Color.ParseColor(this.user.backgroundcolor));
+                UpdateColors();
             }
         }
 
@@ -68,6 +121,9 @@ namespace PolyglotPal_KimRozenberg
         {
             btnGotToTaskPageFromProfilePage = FindViewById<ImageButton>(Resource.Id.btnGoToTaskPageFromProfilePage);
             btnGotToTaskPageFromProfilePage.Click += BtnGotToTaskPageFromProfilePage_Click;
+
+            btnSettings = FindViewById<ImageButton>(Resource.Id.btnSettingsFromProfilePage);
+            btnSettings.Click += BtnSettings_Click;
 
             ivProfilePic = FindViewById<ImageView>(Resource.Id.ivProfilePic);
             ivProfilePic.Click += IvProfilePic_Click;
@@ -79,9 +135,21 @@ namespace PolyglotPal_KimRozenberg
             tvTotalTaskDone = FindViewById<TextView>(Resource.Id.tvTotalTasksProfilePage);
 
             lyProfilePageBackgroundColor = FindViewById<LinearLayout>(Resource.Id.lyProfilePageBackgroundColor);
-            lyProfilePageBackgroundColor.Click += LyProfilePageBackgroundColor_Click;
+
+            btnProfile = FindViewById<ImageButton>(Resource.Id.btnProfileToProfile);
+            lybackground = FindViewById<LinearLayout>(Resource.Id.lyBackgroundProfilePage);
+            lyButtom = FindViewById<LinearLayout>(Resource.Id.lyButtomProfilePage);
         }
 
+        private void BtnSettings_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(activity_Settings));
+            intent.PutExtra("Username", this.username);
+            StartActivity(intent);
+            Finish();
+        }
+
+        /*
         private void LyProfilePageBackgroundColor_Click(object sender, EventArgs e)
         {
             EditText userinput;
@@ -119,7 +187,7 @@ namespace PolyglotPal_KimRozenberg
             AlertDialog dialog = builder.Create();
             dialog.Show();
             
-        }
+        }*/
 
         public static bool IsHtmlColor(string colorCode)
         {

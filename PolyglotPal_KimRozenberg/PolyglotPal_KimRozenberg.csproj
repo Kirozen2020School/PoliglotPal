@@ -244,7 +244,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\settings.png" />
+  </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\raw\background.mp3" />
   </ItemGroup>
