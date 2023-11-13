@@ -26,6 +26,10 @@ namespace PolyglotPal_KimRozenberg
         FirebaseManager firebase;
         ColorsClass colors = new ColorsClass();
 
+        bool isPlaying;
+        ISharedPreferences sp;
+        Intent music;
+
         int xpAdded = -1;
         protected override async void OnCreate(Bundle savedInstanceState)
         {
@@ -51,10 +55,21 @@ namespace PolyglotPal_KimRozenberg
             if(this.user != null)
             {
                 UpdateColors();
+                InitMusic();
             }
             
         }
-
+        private void InitMusic()
+        {
+            music = new Intent(this, typeof(MusicService));
+            sp = this.GetSharedPreferences("details", FileCreationMode.Private);
+            //isPlaying = Intent.GetBooleanExtra("music", false);
+            isPlaying = this.user.isPlaying;
+            if (isPlaying)
+            {
+                StartService(music);
+            }
+        }
         private void UpdateViews()
         {
             tvHiUsernameHomePage.Text = "Hi " + this.user.username;

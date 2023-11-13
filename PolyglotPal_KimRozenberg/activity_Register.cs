@@ -31,10 +31,9 @@ namespace PolyglotPal_KimRozenberg
             {
                 accounts = await firebase.GetAllUsers();
             }
-            catch (Exception ex)
+            catch
             {
                 Toast.MakeText(this, "Reading data from firebase error", ToastLength.Long);
-
             }
         }
 
@@ -90,8 +89,7 @@ namespace PolyglotPal_KimRozenberg
                         etFirstName.Text,
                         etPassword.Text,
                         0, 0, date,
-                        pic,
-                        "#13A90A", "");
+                        pic, "", false);
 
                     await firebase.AddAccount(user);
 

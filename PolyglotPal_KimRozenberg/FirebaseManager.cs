@@ -70,17 +70,7 @@ namespace PolyglotPal_KimRozenberg
             }
         }
 
-        public async Task UpdateBackgroundColor(string username, string backgroundColor)
-        {
-            var account = await GetAccount(username);
-
-            if (account != null)
-            {
-                account.backgroundcolor = backgroundColor;
-
-                await firebase.Child(name).Child(username).PutAsync(account);
-            }
-        }
+        
 
         public async Task UpdateUsername(string username, string newname)
         {
@@ -104,6 +94,20 @@ namespace PolyglotPal_KimRozenberg
             {
                 account.theme = theme;
 
+                await DeleteAccount(username);
+
+                await firebase.Child(name).Child(account.username).PutAsync(account);
+            }
+        }
+
+        public async Task UpdateMusicValue(string username, bool isPlaying)
+        {
+            var account = await GetAccount(username);
+
+            if (account != null)
+            {
+                account.isPlaying = isPlaying;
+                
                 await DeleteAccount(username);
 
                 await firebase.Child(name).Child(account.username).PutAsync(account);

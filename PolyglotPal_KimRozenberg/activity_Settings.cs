@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
+using static Android.Telecom.Call;
 
 namespace PolyglotPal_KimRozenberg
 {
@@ -25,11 +26,11 @@ namespace PolyglotPal_KimRozenberg
 
         Account user;
         string username;
-        bool backMusic;
         string theme;
 
-        private MediaPlayer player;
-        private ISharedPreferences sp;
+        bool isPlaying;
+        ISharedPreferences sp;
+        Intent music;
 
         ColorsClass colors = new ColorsClass();
 
@@ -44,16 +45,25 @@ namespace PolyglotPal_KimRozenberg
                 this.username = Intent.GetStringExtra("Username");
             }
 
-            // Create your application here
+
             InitViews();
             if(this.user != null)
             {
                 this.theme = this.user.theme;
             }
             SetColor();
-            //UpdateColors();
         }
-
+        private void InitMusic()
+        {
+            music = new Intent(this, typeof(MusicService));
+            sp = this.GetSharedPreferences("details", FileCreationMode.Private);
+            isPlaying = Intent.GetBooleanExtra("music", false);
+            swMusicBackground.Checked = isPlaying;
+            if (isPlaying)
+            {
+                StartService(music);
+            }
+        }
         private async void InitViews()
         {
             firebase = new FirebaseManager();
@@ -68,6 +78,7 @@ namespace PolyglotPal_KimRozenberg
 
             swMusicBackground = FindViewById<Switch>(Resource.Id.swMusic);
             swMusicBackground.CheckedChange += SwMusicBackground_CheckedChange;
+            InitMusic();
 
             spThemeSelector = FindViewById<Spinner>(Resource.Id.spThemeSelector);
             spThemeSelector.ItemSelected += SpThemeSelector_ItemSelected;
@@ -170,23 +181,24 @@ namespace PolyglotPal_KimRozenberg
         private void SwMusicBackground_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
         {
             Switch sw = (Switch)sender;
-            if (sw.Checked)
+            isPlaying = sw.Checked;
+            if (isPlaying)
             {
-                player = MediaPlayer.Create(this, Resource.Raw.background);
-                player.Looping = true;
-                player.SetVolume(100, 100);
-                sp = this.GetSharedPreferences("details", FileCreationMode.Private);
-                this.backMusic = true;
+                StartService(music);
             }
             else
             {
-                player.Stop();
-                this.backMusic = false;
+                StopService(music);
             }
+            ISharedPreferencesEditor editor = sp.Edit();
+            editor.PutBoolean("IsPlaying", isPlaying);
+            editor.Commit();
         }
 
-        private void BtnExitFromSettingPage_Click(object sender, EventArgs e)
+        private async void BtnExitFromSettingPage_Click(object sender, EventArgs e)
         {
+            await firebase.UpdateMusicValue(this.user.username, isPlaying);
+            StopService(music);
             Intent intent = new Intent(this, typeof(activity_MainPage));
             intent.PutExtra("Username", this.username);
             StartActivity(intent);
@@ -243,6 +255,21 @@ namespace PolyglotPal_KimRozenberg
 
             AlertDialog dialog = builder.Create();
             dialog.Show();
+        }
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+        {
+            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode,
+            permissions, grantResults);
+            base.OnRequestPermissionsResult(requestCode,
+            permissions, grantResults);
+        }
+        protected override void OnDestroy()
+        {
+            ISharedPreferencesEditor editor = sp.Edit();
+            editor.PutBoolean("IsPlaying", false);
+            editor.Commit();
+            base.OnDestroy();
         }
     }
 }

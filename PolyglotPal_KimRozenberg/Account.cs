@@ -1,4 +1,6 @@
 ﻿
+using AndroidX.Annotations;
+
 namespace PolyglotPal_KimRozenberg
 {
     internal class Account
@@ -11,12 +13,12 @@ namespace PolyglotPal_KimRozenberg
         public int totaltasks {  get; set; }
         public string datejoining { get; set; }
         public byte[] profilepic { get; set; }
-        public string backgroundcolor { get; set; }
-        public string theme {  get; set; }
+        public string theme { get; set; }
+        public bool isPlaying { get; set; }
 
         public Account(string username, string lastname, string firstname, string password, 
             int totalxp, int totaltasks, string datejoining, 
-            byte[] profilepic, string backgroundcolor, string theme)
+            byte[] profilepic, string theme, bool isPlaying)
         {
             this.username = username;
             this.lastname = lastname;
@@ -26,8 +28,8 @@ namespace PolyglotPal_KimRozenberg
             this.totaltasks = totaltasks;
             this.datejoining = datejoining;
             this.profilepic = profilepic;
-            this.backgroundcolor = backgroundcolor;
             this.theme = theme;
+            this.isPlaying = isPlaying;
         }
     }
 }
