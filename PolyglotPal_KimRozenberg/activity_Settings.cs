@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Essentials;
 
 namespace PolyglotPal_KimRozenberg
@@ -49,7 +50,8 @@ namespace PolyglotPal_KimRozenberg
             {
                 this.theme = this.user.theme;
             }
-            UpdateColors();
+            SetColor();
+            //UpdateColors();
         }
 
         private async void InitViews()
@@ -78,29 +80,35 @@ namespace PolyglotPal_KimRozenberg
         }
         private async void UpdateColors()
         {
-            switch (theme)
+            string temp = "";
+            if(this.theme != null)
             {
-                case "Light Pink":
+                temp = this.theme.ToUpper();
+            }
+            switch (temp)
+            {
+                case "LIGHT PINK":
                     await firebase.UpdateTheme(this.user.username, "softPink");
                     lyTopic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[0]));
                     ly.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[2]));
                     break;
-                case "Light Blue":
+                case "LIGHT BLUE":
                     await firebase.UpdateTheme(this.user.username, "softBlue");
                     lyTopic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[2]));
                     ly.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[1]));
                     break;
-                case "Red And Black":
+                case "BLACKRED":
+                case "RED AND BLACK":
                     await firebase.UpdateTheme(this.user.username, "blackRed");
                     lyTopic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[1]));
                     ly.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[0]));
                     break;
-                case "Navy":
+                case "NAVY":
                     await firebase.UpdateTheme(this.user.username, "navy");
                     lyTopic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[1]));
                     ly.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[0]));
                     break;
-                case "Dark":
+                case "DARK":
                     await firebase.UpdateTheme(this.user.username, "");
                     lyTopic.SetBackgroundColor(Android.Graphics.Color.ParseColor("#000000"));
                     ly.SetBackgroundColor(Android.Graphics.Color.ParseColor("#000000"));
@@ -108,6 +116,17 @@ namespace PolyglotPal_KimRozenberg
                 default:
                     break;
             }
+        }
+        private async void SetColor()
+        {
+            ProgressDialog p = new ProgressDialog(this);
+            p.SetTitle("Updating Data");
+            p.SetMessage("Please wait...");
+            p.SetCancelable(false);
+            p.Show();
+            UpdateColors();
+            await Task.Delay(1000);
+            p.Dismiss();
         }
         private void SpThemeSelector_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
@@ -119,12 +138,12 @@ namespace PolyglotPal_KimRozenberg
             }
             else
             {
-            if(this.user != null)
+                if(this.user != null)
                 {
                     this.theme = this.user.theme;
                 }
             }
-            UpdateColors();
+            SetColor();
         }
 
         private void BtnDeleteAccount_Click(object sender, EventArgs e)
