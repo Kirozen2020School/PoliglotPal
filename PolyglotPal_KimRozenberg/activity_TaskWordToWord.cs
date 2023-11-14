@@ -6,7 +6,6 @@ using Android.OS;
 using Android.Widget;
 using System;
 using System.Collections.Generic;
-using System.IO;
 
 namespace PolyglotPal_KimRozenberg
 {
@@ -35,6 +34,11 @@ namespace PolyglotPal_KimRozenberg
         string badColorText = "#575757";
 
         Timer time;
+
+        bool isPlaying;
+        ISharedPreferences sp;
+        Intent music;
+
 
         [Obsolete]
         protected override void OnCreate(Bundle savedInstanceState)
@@ -206,7 +210,6 @@ namespace PolyglotPal_KimRozenberg
 
             progressBar = FindViewById<ProgressBar>(Resource.Id.progress);
             int progress = ((Intent.GetIntExtra("Round", -1)-1)*100);
-            Toast.MakeText(this, "progres: "+ progress, ToastLength.Short).Show();
             progressBar.Progress = progress;
         }
 

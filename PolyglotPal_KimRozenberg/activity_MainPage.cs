@@ -61,10 +61,9 @@ namespace PolyglotPal_KimRozenberg
         }
         private void InitMusic()
         {
-            music = new Intent(this, typeof(MusicService));
-            sp = this.GetSharedPreferences("details", FileCreationMode.Private);
-            //isPlaying = Intent.GetBooleanExtra("music", false);
-            isPlaying = this.user.isPlaying;
+            this.music = new Intent(this, typeof(MusicService));
+            this.sp = this.GetSharedPreferences("details", FileCreationMode.Private);
+            this.isPlaying = this.user.isPlaying;
             if (isPlaying)
             {
                 StartService(music);
@@ -208,6 +207,7 @@ namespace PolyglotPal_KimRozenberg
             intent.PutExtra("Round", 1);
             intent.PutExtra("Mood", mood);
             StartActivity(intent);
+            StopService(this.music);
             Finish();
         }
 
@@ -216,7 +216,7 @@ namespace PolyglotPal_KimRozenberg
             Intent intent = new Intent(this, typeof(activity_ProfilePage));
             intent.PutExtra("Username", this.username);
             StartActivity(intent);
-            Finish();
+            //Finish();
         }
 
         public void OnClick(View v)
@@ -244,6 +244,7 @@ namespace PolyglotPal_KimRozenberg
             }
             if (item.ItemId == Resource.Id.action_logout)
             {
+                StopService(this.music);
                 Intent intent = new Intent(this, typeof(MainActivity));
                 StartActivity(intent);
                 Finish();
@@ -254,7 +255,7 @@ namespace PolyglotPal_KimRozenberg
                 Intent intent = new Intent(this, typeof(activity_ProfilePage));
                 intent.PutExtra("Username", this.username);
                 StartActivity(intent);
-                Finish();
+                //Finish();
                 return true;
             }
             if (item.ItemId == Resource.Id.action_settings)
@@ -262,7 +263,7 @@ namespace PolyglotPal_KimRozenberg
                 Intent intent = new Intent(this, typeof(activity_Settings));
                 intent.PutExtra("Username", this.username);
                 StartActivity(intent);
-                Finish();
+                //Finish();
                 return true;
             }
 

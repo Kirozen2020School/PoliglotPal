@@ -55,14 +55,15 @@ namespace PolyglotPal_KimRozenberg
         }
         private void InitMusic()
         {
-            music = new Intent(this, typeof(MusicService));
-            sp = this.GetSharedPreferences("details", FileCreationMode.Private);
-            isPlaying = Intent.GetBooleanExtra("music", false);
+            this.music = new Intent(this, typeof(MusicService));
+            this.sp = this.GetSharedPreferences("details", FileCreationMode.Private);
+            //isPlaying = Intent.GetBooleanExtra("music", false);
+            this.isPlaying = this.user.isPlaying;
             swMusicBackground.Checked = isPlaying;
-            if (isPlaying)
-            {
-                StartService(music);
-            }
+            //if (isPlaying)
+            //{
+            //    StartService(music);
+            //}
         }
         private async void InitViews()
         {
@@ -77,8 +78,9 @@ namespace PolyglotPal_KimRozenberg
             btnDeleteAccount.Click += BtnDeleteAccount_Click;
 
             swMusicBackground = FindViewById<Switch>(Resource.Id.swMusic);
-            swMusicBackground.CheckedChange += SwMusicBackground_CheckedChange;
             InitMusic();
+            swMusicBackground.CheckedChange += SwMusicBackground_CheckedChange;
+            
 
             spThemeSelector = FindViewById<Spinner>(Resource.Id.spThemeSelector);
             spThemeSelector.ItemSelected += SpThemeSelector_ItemSelected;
@@ -178,7 +180,7 @@ namespace PolyglotPal_KimRozenberg
             dialog.Show();
         }
 
-        private void SwMusicBackground_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
+        private async void SwMusicBackground_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
         {
             Switch sw = (Switch)sender;
             isPlaying = sw.Checked;
@@ -193,15 +195,15 @@ namespace PolyglotPal_KimRozenberg
             ISharedPreferencesEditor editor = sp.Edit();
             editor.PutBoolean("IsPlaying", isPlaying);
             editor.Commit();
+            await firebase.UpdateMusicValue(this.user.username, isPlaying);
         }
 
-        private async void BtnExitFromSettingPage_Click(object sender, EventArgs e)
+        private void BtnExitFromSettingPage_Click(object sender, EventArgs e)
         {
-            await firebase.UpdateMusicValue(this.user.username, isPlaying);
-            StopService(music);
-            Intent intent = new Intent(this, typeof(activity_MainPage));
-            intent.PutExtra("Username", this.username);
-            StartActivity(intent);
+            //StopService(music);
+            //Intent intent = new Intent(this, typeof(activity_MainPage));
+            //intent.PutExtra("Username", this.username);
+            //StartActivity(intent);
             Finish();
         }
 
@@ -214,7 +216,6 @@ namespace PolyglotPal_KimRozenberg
             userinput = new EditText(this);
             userinput.InputType = Android.Text.InputTypes.NumberVariationPassword;
             builder.SetView(userinput);
-            //builder.SetPositiveButton("Ok", ChangePassword(userinput.Text));
             builder.SetPositiveButton("OK", async (sender, args) =>
             {
                 string inputText = userinput.Text;

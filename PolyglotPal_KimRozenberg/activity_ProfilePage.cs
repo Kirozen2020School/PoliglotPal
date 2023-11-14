@@ -156,52 +156,7 @@ namespace PolyglotPal_KimRozenberg
             Finish();
         }
 
-        /*
-        private void LyProfilePageBackgroundColor_Click(object sender, EventArgs e)
-        {
-            EditText userinput;
-
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.SetTitle("Enter HTML code of a color, format: #RRGGBB");
-            userinput = new EditText(this);
-            builder.SetView(userinput);
-            builder.SetPositiveButton("OK", async (sender, args) =>
-            {
-                string inputText = userinput.Text;
-                if (IsHtmlColor(inputText))
-                {
-                    if (!inputText.Contains("#"))
-                    {
-                        inputText = "#" + inputText;
-                    }
-
-                    this.user.backgroundcolor = inputText;
-                    lyProfilePageBackgroundColor.SetBackgroundColor(Android.Graphics.Color.ParseColor(inputText));
-                    ivProfilePic.SetBackgroundColor(Android.Graphics.Color.ParseColor(inputText));
-                    await firebase.UpdateBackgroundColor(this.user.username, this.user.backgroundcolor);
-                }
-                else
-                {
-                    Toast.MakeText(this, "The format is incorect, enter in this format: #RRGGBB", ToastLength.Long).Show();
-                }
-                
-            });
-            builder.SetNegativeButton("Cancel", (sender, args) =>
-            {
-                Toast.MakeText(this, "You did not change the background color", ToastLength.Long).Show();
-            });
-
-            AlertDialog dialog = builder.Create();
-            dialog.Show();
-            
-        }*/
-
-        public static bool IsHtmlColor(string colorCode)
-        {
-            Regex hexColorRegex = new Regex("^#?[0-9a-fA-F]{6}$");
-            return hexColorRegex.IsMatch(colorCode);
-        }
-
+        
         private void IvProfilePic_Click(object sender, EventArgs e)
         {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -235,9 +190,9 @@ namespace PolyglotPal_KimRozenberg
 
         private void BtnGotToTaskPageFromProfilePage_Click(object sender, EventArgs e)
         {
-            Intent intent = new Intent(this, typeof(activity_MainPage));
-            intent.PutExtra("Username", this.username);
-            StartActivity(intent);
+            //Intent intent = new Intent(this, typeof(activity_MainPage));
+            //intent.PutExtra("Username", this.username);
+            //StartActivity(intent);
             Finish();
         }
 
