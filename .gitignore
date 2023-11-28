@@ -1,6 +1,15 @@
-C:\Users\user\Downloads\Prog-20230912T073525Z-001\Prog\PolyglotPal_KimRozenberg\PolyglotPal_KimRozenberg\bin
-C:\Users\user\Downloads\Prog-20230912T073525Z-001\Prog\PolyglotPal_KimRozenberg\PolyglotPal_KimRozenberg\obj
-C:\Users\user\Downloads\Prog-20230912T073525Z-001\Prog\PolyglotPal_KimRozenberg\vs.
+PolyglotPal_KimRozenberg\PolyglotPal_KimRozenberg\bin
+PolyglotPal_KimRozenberg\PolyglotPal_KimRozenberg\obj
+PolyglotPal_KimRozenberg\vs.
 
 .vs/
+PolyglotPal_KimRozenberg/obj/*
 PolyglotPal_KimRozenberg/obj/
+
+PolyglotPal_KimRozenberg/bin/*
+PolyglotPal_KimRozenberg/bin/
+
+# specific files
+
+ PolyglotPal_KimRozenberg/bin/Debug/PolyglotPal_KimRozenberg.dll
+ PolyglotPal_KimRozenberg/bin/Debug/PolyglotPal_KimRozenberg.pdb
