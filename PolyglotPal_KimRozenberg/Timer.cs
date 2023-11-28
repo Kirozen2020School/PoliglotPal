@@ -9,12 +9,18 @@ namespace PolyglotPal_KimRozenberg
         private TimeSpan _interval;
         private TimeSpan _currentTime;
         private bool _isRunning;
+        private int intervalInMilliseconds;
 
         public Timer(TimeSpan interval)
         {
             _interval = interval;
             _currentTime = TimeSpan.Zero;
             _isRunning = false;
+        }
+
+        public Timer(int intervalInMilliseconds)
+        {
+            this.intervalInMilliseconds = intervalInMilliseconds;
         }
 
         public void Start()

@@ -12103,6 +12103,9 @@ namespace PolyglotPal_KimRozenberg
 			// aapt resource value: 0x7F110000
 			public const int background = 2131820544;
 			
+			// aapt resource value: 0x7F110001
+			public const int background2 = 2131820545;
+			
 			static Raw()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

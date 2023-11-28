@@ -57,8 +57,8 @@ namespace PolyglotPal_KimRozenberg
                 UpdateColors();
                 InitMusic();
             }
-            
         }
+
         private void InitMusic()
         {
             this.music = new Intent(this, typeof(MusicService));
@@ -71,6 +71,7 @@ namespace PolyglotPal_KimRozenberg
         }
         private void UpdateViews()
         {
+            UpdateColors();
             tvHiUsernameHomePage.Text = "Hi " + this.user.username;
             tvTotalPointsHomePage.Text = "Total points: " + this.user.totalxp;
         }

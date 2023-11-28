@@ -27,7 +27,7 @@ namespace PolyglotPal_KimRozenberg
 
             InitViews();
         }
-
+        
         async private void InitViews()
         {
             firebase = new FirebaseManager();
@@ -35,7 +35,7 @@ namespace PolyglotPal_KimRozenberg
             {
                 accounts = await firebase.GetAllUsers();
             }
-            catch (Exception ex)
+            catch
             {
                 Toast.MakeText(this, "Reading data from firebase error", ToastLength.Long).Show();
                 
@@ -94,7 +94,6 @@ namespace PolyglotPal_KimRozenberg
         private void TryAgain(object sender, DialogClickEventArgs e)
         {
             etPassword.Text = "";
-            //etUserName.Text = "";
         }
 
         private void Register(object sender, DialogClickEventArgs e)

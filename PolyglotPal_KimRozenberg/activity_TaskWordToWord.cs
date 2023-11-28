@@ -6,6 +6,7 @@ using Android.OS;
 using Android.Widget;
 using System;
 using System.Collections.Generic;
+using Xamarin.Essentials;
 
 namespace PolyglotPal_KimRozenberg
 {
@@ -34,12 +35,7 @@ namespace PolyglotPal_KimRozenberg
         string badColorText = "#575757";
 
         Timer time;
-
-        bool isPlaying;
-        ISharedPreferences sp;
-        Intent music;
-
-
+        
         [Obsolete]
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -216,6 +212,7 @@ namespace PolyglotPal_KimRozenberg
         private void BtnENG_Click(object sender, EventArgs e)
         {
             Button clickedButton = (Button)sender;
+            TextToSpeak(clickedButton.Text);
             bool flag = true;
             if(lastClickedButtonEng != null)
             {
@@ -274,6 +271,11 @@ namespace PolyglotPal_KimRozenberg
             {
                 lastClickedButtonEng = clickedButton;
             }
+        }
+
+        private async void TextToSpeak(string text)
+        {
+            await TextToSpeech.SpeakAsync(text);
         }
 
         private void BtnHE_Click(object sender, EventArgs e)

@@ -20,6 +20,8 @@ namespace PolyglotPal_KimRozenberg
 
         FirebaseManager firebase;
         List<Account> accounts;
+
+        [Obsolete]
         protected override async void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -37,6 +39,7 @@ namespace PolyglotPal_KimRozenberg
             }
         }
 
+        [Obsolete]
         private void InitViews()
         {
             firebase = new FirebaseManager();
@@ -60,6 +63,7 @@ namespace PolyglotPal_KimRozenberg
             Finish();
         }
 
+        [Obsolete]
         async private void BtnCreatNewAccount_Click(object sender, EventArgs e)
         {
             bool flag = true;

@@ -35,6 +35,8 @@ namespace PolyglotPal_KimRozenberg
         ColorsClass colors = new ColorsClass();
 
         FirebaseManager firebase;
+
+        [Obsolete]
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -65,6 +67,8 @@ namespace PolyglotPal_KimRozenberg
             //    StartService(music);
             //}
         }
+
+        [Obsolete]
         private async void InitViews()
         {
             firebase = new FirebaseManager();
@@ -130,6 +134,8 @@ namespace PolyglotPal_KimRozenberg
                     break;
             }
         }
+
+        [Obsolete]
         private async void SetColor()
         {
             ProgressDialog p = new ProgressDialog(this);
@@ -141,6 +147,8 @@ namespace PolyglotPal_KimRozenberg
             await Task.Delay(1000);
             p.Dismiss();
         }
+
+        [Obsolete]
         private void SpThemeSelector_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
             var sp = (Spinner)sender;

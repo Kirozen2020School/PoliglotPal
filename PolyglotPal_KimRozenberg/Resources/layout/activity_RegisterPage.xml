@@ -23,7 +23,7 @@
         android:layout_width="200sp"
         android:layout_height="200sp"
         android:layout_gravity="center"
-        android:src="@drawable/logo"
+        android:src="@drawable/colorlogo"
         android:layout_marginBottom="10sp"
         android:contentDescription="description"
         tools:ignore="HardcodedText" />
@@ -59,6 +59,7 @@
             android:textColor="#a7a7a7"
             android:inputType="text"
             tools:ignore="HardcodedText" 
+            android:gravity="center"
             />
         <TextView
             android:layout_width="10sp"
@@ -73,6 +74,7 @@
             android:textColor="#a7a7a7"
             android:inputType="text"
             tools:ignore="HardcodedText" 
+            android:gravity="center"
             />
     </LinearLayout>
 

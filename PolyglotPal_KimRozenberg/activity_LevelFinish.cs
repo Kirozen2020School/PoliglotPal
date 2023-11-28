@@ -13,7 +13,6 @@ namespace PolyglotPal_KimRozenberg
         TextView tvXP, tvTimer, tvAccuracy;
         int xp;
         Timer timer;
-        ImageView img1;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -38,15 +37,15 @@ namespace PolyglotPal_KimRozenberg
             btnExitFromFinishLevelPage.Click += BtnExitFromFinishLevelPage_Click;
 
             tvXP = FindViewById<TextView>(Resource.Id.tvTotalXPFinishLevelPage);
-            //tvXP.Text = $"Xp:\n{Intent.GetIntExtra("XP", -1)}";
+            tvXP.Text = $"Xp:\n{Intent.GetIntExtra("XP", -1)}";
 
             tvTimer = FindViewById<TextView>(Resource.Id.tvTimer);
-            //tvTimer.Text = "Time:\n" + this.timer.GetCurrentTimeString();
+            tvTimer.Text = "Time:\n" + this.timer.GetCurrentTimeString();
 
             tvAccuracy = FindViewById<TextView>(Resource.Id.tvAccoracy);
             double prosent = (1-(Intent.GetDoubleExtra("errors", 0)/(7 * 4)*1.0)) * 100;
             int temp = (int)Math.Round(prosent);
-            //tvAccuracy.Text = $"Accuracy:\n{temp}%";
+            tvAccuracy.Text = $"Accuracy:\n{temp}%";
 
         }
 
