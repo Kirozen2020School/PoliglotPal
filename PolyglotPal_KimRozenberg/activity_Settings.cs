@@ -1,18 +1,11 @@
 ﻿using Android.App;
 using Android.Content;
-using Android.Media;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
-using Android.Speech.Tts;
-using Android.Views;
 using Android.Widget;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Essentials;
-using static Android.Telecom.Call;
 
 namespace PolyglotPal_KimRozenberg
 {
@@ -59,13 +52,8 @@ namespace PolyglotPal_KimRozenberg
         {
             this.music = new Intent(this, typeof(MusicService));
             this.sp = this.GetSharedPreferences("details", FileCreationMode.Private);
-            //isPlaying = Intent.GetBooleanExtra("music", false);
             this.isPlaying = this.user.isPlaying;
             swMusicBackground.Checked = isPlaying;
-            //if (isPlaying)
-            //{
-            //    StartService(music);
-            //}
         }
 
         [Obsolete]
@@ -91,10 +79,43 @@ namespace PolyglotPal_KimRozenberg
             var adapter = ArrayAdapter.CreateFromResource(this, Resource.Array.ThemeSelector, Android.Resource.Layout.SimpleSpinnerItem);
             adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             spThemeSelector.Adapter = adapter;
+            UpdateSpinnerSelection();
 
             ly = FindViewById<LinearLayout>(Resource.Id.lyBackgroundSettingsPage);
             lyTopic = FindViewById<LinearLayout>(Resource.Id.lySettingsTopic);
         }
+
+        private void UpdateSpinnerSelection()
+        {
+            string temp = "";
+            if (this.theme != null)
+            {
+                temp = this.theme.ToUpper();
+            }
+            switch (temp)
+            {
+                case "LIGHT PINK":
+                    spThemeSelector.SetSelection(1);
+                    break;
+                case "LIGHT BLUE":
+                    spThemeSelector.SetSelection(2);
+                    break;
+                case "BLACKRED":
+                case "RED AND BLACK":
+                    spThemeSelector.SetSelection(3);
+                    break;
+                case "NAVY":
+                    spThemeSelector.SetSelection(4);
+                    break;
+                case "DARK":
+                    spThemeSelector.SetSelection(0);
+                    break;
+                default:
+                    spThemeSelector.SetSelection(0);
+                    break;
+            }
+        }
+
         private async void UpdateColors()
         {
             string temp = "";
@@ -108,27 +129,49 @@ namespace PolyglotPal_KimRozenberg
                     await firebase.UpdateTheme(this.user.username, "softPink");
                     lyTopic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[0]));
                     ly.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[2]));
+
+                    swMusicBackground.SetTextColor(Color.ParseColor("#000000"));
+                    btnChangeUsername.SetTextColor(Color.ParseColor("#000000"));
+                    btnDeleteAccount.SetTextColor(Color.ParseColor("#000000"));
+
+                    spThemeSelector.SetSelection(1);
                     break;
                 case "LIGHT BLUE":
                     await firebase.UpdateTheme(this.user.username, "softBlue");
                     lyTopic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[2]));
                     ly.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[1]));
+
+                    swMusicBackground.SetTextColor(Color.ParseColor("#ffffff"));
+                    btnChangeUsername.SetTextColor(Color.ParseColor("#ffffff"));
+                    btnDeleteAccount.SetTextColor(Color.ParseColor("#ffffff"));
                     break;
                 case "BLACKRED":
                 case "RED AND BLACK":
                     await firebase.UpdateTheme(this.user.username, "blackRed");
                     lyTopic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[1]));
                     ly.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[0]));
+
+                    swMusicBackground.SetTextColor(Color.ParseColor("#ffffff"));
+                    btnChangeUsername.SetTextColor(Color.ParseColor("#ffffff"));
+                    btnDeleteAccount.SetTextColor(Color.ParseColor("#ffffff"));
                     break;
                 case "NAVY":
                     await firebase.UpdateTheme(this.user.username, "navy");
                     lyTopic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[1]));
                     ly.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[0]));
+
+                    swMusicBackground.SetTextColor(Color.ParseColor("#ffffff"));
+                    btnChangeUsername.SetTextColor(Color.ParseColor("#ffffff"));
+                    btnDeleteAccount.SetTextColor(Color.ParseColor("#ffffff"));
                     break;
                 case "DARK":
                     await firebase.UpdateTheme(this.user.username, "");
                     lyTopic.SetBackgroundColor(Android.Graphics.Color.ParseColor("#000000"));
                     ly.SetBackgroundColor(Android.Graphics.Color.ParseColor("#000000"));
+
+                    swMusicBackground.SetTextColor(Color.ParseColor("#ffffff"));
+                    btnChangeUsername.SetTextColor(Color.ParseColor("#ffffff"));
+                    btnDeleteAccount.SetTextColor(Color.ParseColor("#ffffff"));
                     break;
                 default:
                     break;

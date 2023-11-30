@@ -2,7 +2,6 @@
     <string name="app_name">PolyglotPal_KimRozenberg</string>
     <string name="action_settings">Settings</string>
 	<string-array name="ThemeSelector">
-		<item></item>
 		<item>Dark</item>
 		<item>Light Pink</item>
 		<item>Light Blue</item>
