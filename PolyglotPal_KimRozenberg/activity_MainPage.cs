@@ -13,7 +13,7 @@ namespace PolyglotPal_KimRozenberg
     [Activity(Label = "PolyglotPal")]
     public class activity_MainPage : AppCompatActivity, IOnClickListener, PopupMenu.IOnMenuItemClickListener
     {
-        ImageButton btnGoToProfilePageFromTaskPage, btnTask;
+        ImageButton btnGoToProfilePageFromTaskPage, btnTask, btnGoToLeaderboard;
         ImageButton btnDailyActivity, btnTravel, btnHealth, btnHobbies, btnFamily, btnBusiness, btnEducation,
             btnFood, btnMusic, btnAnimals, btnFurniture, btnEmotions, btnCountries, btnTools, btnClothing;
         List<Tuple<ImageButton, string>> buttons;
@@ -27,6 +27,7 @@ namespace PolyglotPal_KimRozenberg
         ColorsClass colors = new ColorsClass();
 
         bool isPlaying;
+        bool first;
         ISharedPreferences sp;
         Intent music;
 
@@ -41,6 +42,14 @@ namespace PolyglotPal_KimRozenberg
             {
                 this.username = Intent.GetStringExtra("Username");
                 this.xpAdded = Intent.GetIntExtra("XP", -1);
+                try
+                {
+                    this.first = Intent.GetBooleanExtra("First", false);
+                }
+                catch
+                {
+
+                }
             }
 
             firebase = new FirebaseManager();
@@ -66,7 +75,10 @@ namespace PolyglotPal_KimRozenberg
             this.isPlaying = this.user.isPlaying;
             if (isPlaying)
             {
-                StartService(music);
+                if(this.first)
+                {
+                    StartService(music);
+                }
             }
         }
         private void UpdateViews()
@@ -86,6 +98,7 @@ namespace PolyglotPal_KimRozenberg
 
                     btnTask.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[3]));
                     btnGoToProfilePageFromTaskPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[3]));
+                    btnGoToLeaderboard.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[3]));
                     foreach(var btn in this.buttons)
                     {
                         btn.Item1.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[1]));
@@ -98,6 +111,7 @@ namespace PolyglotPal_KimRozenberg
 
                     btnTask.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[1]));
                     btnGoToProfilePageFromTaskPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[1]));
+                    btnGoToLeaderboard.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[1]));
                     foreach (var btn in this.buttons)
                     {
                         btn.Item1.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[2]));
@@ -110,6 +124,7 @@ namespace PolyglotPal_KimRozenberg
 
                     btnTask.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[2]));
                     btnGoToProfilePageFromTaskPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[2]));
+                    btnGoToLeaderboard.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[2]));
                     foreach (var btn in this.buttons)
                     {
                         btn.Item1.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[0]));
@@ -122,6 +137,7 @@ namespace PolyglotPal_KimRozenberg
 
                     btnTask.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[2]));
                     btnGoToProfilePageFromTaskPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[2]));
+                    btnGoToLeaderboard.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[2]));
                     foreach (var btn in this.buttons)
                     {
                         btn.Item1.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[0]));
@@ -148,6 +164,8 @@ namespace PolyglotPal_KimRozenberg
 
             btnGoToProfilePageFromTaskPage = FindViewById<ImageButton>(Resource.Id.btnGoToProfilePageFromTaskPage);
             btnGoToProfilePageFromTaskPage.Click += BtnGoToProfilePageFromTaskPage_Click;
+            btnGoToLeaderboard = FindViewById<ImageButton>(Resource.Id.btnGoToLeaderBoardPageFromTaskPage);
+            btnGoToLeaderboard.Click += BtnGoToLeaderboard_Click;
 
             buttons = new List<Tuple<ImageButton, string>>();
             btnDailyActivity = FindViewById<ImageButton>(Resource.Id.btnDailyActivity);
@@ -188,6 +206,14 @@ namespace PolyglotPal_KimRozenberg
             }
         }
 
+        private void BtnGoToLeaderboard_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(activity_Leaderboard));
+            intent.PutExtra("Username", this.username);
+            StartActivity(intent);
+            Finish();
+        }
+
         private void BtnClick(object sender, EventArgs e)
         {
             ImageButton button = (ImageButton)sender;
@@ -217,7 +243,7 @@ namespace PolyglotPal_KimRozenberg
             Intent intent = new Intent(this, typeof(activity_ProfilePage));
             intent.PutExtra("Username", this.username);
             StartActivity(intent);
-            //Finish();
+            Finish();
         }
 
         public void OnClick(View v)
@@ -256,7 +282,7 @@ namespace PolyglotPal_KimRozenberg
                 Intent intent = new Intent(this, typeof(activity_ProfilePage));
                 intent.PutExtra("Username", this.username);
                 StartActivity(intent);
-                //Finish();
+                Finish();
                 return true;
             }
             if (item.ItemId == Resource.Id.action_settings)
@@ -264,7 +290,7 @@ namespace PolyglotPal_KimRozenberg
                 Intent intent = new Intent(this, typeof(activity_Settings));
                 intent.PutExtra("Username", this.username);
                 StartActivity(intent);
-                //Finish();
+                Finish();
                 return true;
             }
 

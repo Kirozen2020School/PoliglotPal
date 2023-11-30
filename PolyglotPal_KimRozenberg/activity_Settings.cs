@@ -209,9 +209,9 @@ namespace PolyglotPal_KimRozenberg
         private void BtnExitFromSettingPage_Click(object sender, EventArgs e)
         {
             //StopService(music);
-            //Intent intent = new Intent(this, typeof(activity_MainPage));
-            //intent.PutExtra("Username", this.username);
-            //StartActivity(intent);
+            Intent intent = new Intent(this, typeof(activity_MainPage));
+            intent.PutExtra("Username", this.username);
+            StartActivity(intent);
             Finish();
         }
 

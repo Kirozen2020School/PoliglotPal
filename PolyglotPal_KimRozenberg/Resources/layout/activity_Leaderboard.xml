@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/lyLeaderBoardBackground"
+    android:background="#000">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/lyTopLineLeaderBoardPage"
+        android:background="#13A90A"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi: *username*"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingLeft="10sp"
+            android:id="@+id/tvUserNameLeaderBoardPage"
+            />
+        <TextView
+            android:layout_width="80sp"
+            android:layout_height="10sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Points: 999"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:id="@+id/tvXPLeaderBoardPage"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#7A7A7A"
+        android:id="@+id/lyBottomLineLeaderBoardPage">
+
+        <ImageButton
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:src="@drawable/hat"
+            android:id="@+id/btnGoToTaskPageFromLeaderBoardsPage"
+            android:background="#7A7A7A"
+            android:scaleType="fitXY"
+            android:contentDescription="description"
+            tools:ignore="HardcodedText" 
+            />
+
+        <TextView
+            android:layout_width="115sp"
+            android:layout_height="50sp"/>
+
+        <ImageButton
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:src="@drawable/net"
+            android:id="@+id/btnGoToLeaderboardFromLeaderboardPage"
+            android:background="#7a7a7a"
+            android:scaleType="fitXY"
+            android:contentDescription="description"
+            tools:ignore="HardcodedText"
+            />
+
+        <TextView
+            android:layout_width="115sp"
+            android:layout_height="50sp"/>
+
+        <ImageButton
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:src="@drawable/blackprofile"
+            android:id="@+id/btnGoToProfilePageFromLeaderBoardsPage"
+            android:background="#7A7A7A"
+            android:scaleType="fitXY"
+            android:contentDescription="description"
+            tools:ignore="HardcodedText" 
+            />
+    </LinearLayout>
+
+</LinearLayout>

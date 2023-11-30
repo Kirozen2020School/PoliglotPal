@@ -13,7 +13,7 @@ namespace PolyglotPal_KimRozenberg
     [Activity(Label = "PolyglotPal")]
     public class activity_ProfilePage : Activity
     {
-        ImageButton btnGotToTaskPageFromProfilePage, btnProfile;
+        ImageButton btnGotToTaskPageFromProfilePage, btnProfile, btnGoToLeaderboardPage;
         ImageView ivProfilePic, btnSettings;
         TextView tvUserName, tvFullUserName, tvJoiningDate;
         TextView tvTotalEX, tvTotalTaskDone;
@@ -50,6 +50,7 @@ namespace PolyglotPal_KimRozenberg
 
                     btnGotToTaskPageFromProfilePage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[3]));
                     btnProfile.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[3]));
+                    btnGoToLeaderboardPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[3]));
                     break;
 
                 case "softPink":
@@ -61,6 +62,7 @@ namespace PolyglotPal_KimRozenberg
 
                     btnGotToTaskPageFromProfilePage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[1]));
                     btnProfile.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[1]));
+                    btnGoToLeaderboardPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[1]));
 
                     /*----------------*/
                     tvUserName.SetTextColor(Android.Graphics.Color.ParseColor("#000000"));
@@ -79,6 +81,7 @@ namespace PolyglotPal_KimRozenberg
 
                     btnGotToTaskPageFromProfilePage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[2]));
                     btnProfile.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[2]));
+                    btnGoToLeaderboardPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[2]));
                     break;
 
                 case "navy":
@@ -90,6 +93,7 @@ namespace PolyglotPal_KimRozenberg
 
                     btnGotToTaskPageFromProfilePage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[2]));
                     btnProfile.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[2]));
+                    btnGoToLeaderboardPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[2]));
                     break;
 
                 default:
@@ -132,6 +136,9 @@ namespace PolyglotPal_KimRozenberg
             btnSettings = FindViewById<ImageButton>(Resource.Id.btnSettingsFromProfilePage);
             btnSettings.Click += BtnSettings_Click;
 
+            btnGoToLeaderboardPage = FindViewById<ImageButton>(Resource.Id.btnGoToLeaderBoardPageFromProfilePage);
+            btnGoToLeaderboardPage.Click += BtnGoToLeaderboardPage_Click;
+
             ivProfilePic = FindViewById<ImageView>(Resource.Id.ivProfilePic);
             ivProfilePic.Click += IvProfilePic_Click;
 
@@ -146,6 +153,14 @@ namespace PolyglotPal_KimRozenberg
             btnProfile = FindViewById<ImageButton>(Resource.Id.btnProfileToProfile);
             lybackground = FindViewById<LinearLayout>(Resource.Id.lyBackgroundProfilePage);
             lyButtom = FindViewById<LinearLayout>(Resource.Id.lyButtomProfilePage);
+        }
+
+        private void BtnGoToLeaderboardPage_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(activity_Leaderboard));
+            intent.PutExtra("Username", this.username);
+            StartActivity(intent);
+            Finish();
         }
 
         private void BtnSettings_Click(object sender, EventArgs e)
@@ -190,9 +205,9 @@ namespace PolyglotPal_KimRozenberg
 
         private void BtnGotToTaskPageFromProfilePage_Click(object sender, EventArgs e)
         {
-            //Intent intent = new Intent(this, typeof(activity_MainPage));
-            //intent.PutExtra("Username", this.username);
-            //StartActivity(intent);
+            Intent intent = new Intent(this, typeof(activity_MainPage));
+            intent.PutExtra("Username", this.username);
+            StartActivity(intent);
             Finish();
         }
 

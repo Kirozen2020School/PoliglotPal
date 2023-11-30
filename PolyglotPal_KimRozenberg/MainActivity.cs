@@ -72,6 +72,7 @@ namespace PolyglotPal_KimRozenberg
                         flag = true;
                         Intent intent = new Intent(this, typeof(activity_MainPage));
                         intent.PutExtra("Username", etUserName.Text);
+                        intent.PutExtra("First", true);
                         StartActivity(intent);
                         Finish();
                     }

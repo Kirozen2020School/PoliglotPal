@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="Account.cs" />
     <Compile Include="activity_InfoPage.cs" />
+    <Compile Include="activity_Leaderboard.cs" />
     <Compile Include="activity_LevelFinish.cs" />
     <Compile Include="activity_MainPage.cs" />
     <Compile Include="activity_ProfilePage.cs" />
@@ -268,6 +269,14 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\raw\background2.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_Leaderboard.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Net.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

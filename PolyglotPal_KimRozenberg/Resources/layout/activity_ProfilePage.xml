@@ -36,7 +36,7 @@
         <ImageButton
             android:layout_width="50sp"
             android:layout_height="50sp"
-            android:background="#fff"
+            android:background="#13a90a"
             android:layout_marginTop="10sp"
             android:src="@drawable/settings"
             android:scaleType="fitXY"
@@ -134,8 +134,23 @@
             />
 
         <TextView
-            android:layout_width="280sp"
-            android:layout_height="1sp"/>
+            android:layout_width="115sp"
+            android:layout_height="50sp"/>
+
+        <ImageButton
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:src="@drawable/net"
+            android:id="@+id/btnGoToLeaderBoardPageFromProfilePage"
+            android:background="#7a7a7a"
+            android:scaleType="fitXY"
+            android:contentDescription="description"
+            tools:ignore="HardcodedText"
+            />
+
+        <TextView
+            android:layout_width="115sp"
+            android:layout_height="50sp"/>
 
         <ImageButton
             android:layout_width="50sp"

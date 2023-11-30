@@ -54,6 +54,7 @@ namespace PolyglotPal_KimRozenberg
             Intent intent = new Intent(this, typeof(activity_MainPage));
             intent.PutExtra("Username", Intent.GetStringExtra("Username"));
             intent.PutExtra("XP", this.xp);
+            intent.PutExtra("First", true);
             StartActivity(intent);
             Finish();
         }
