@@ -23,6 +23,7 @@
             android:textStyle="bold"
             android:paddingLeft="10sp"
             android:id="@+id/tvUserNameLeaderBoardPage"
+            tools:ignore="HardcodedText" 
             />
         <TextView
             android:layout_width="80sp"
@@ -35,10 +36,36 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:id="@+id/tvXPLeaderBoardPage"
+            tools:ignore="HardcodedText" 
             />
     </LinearLayout>
-
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:orientation="horizontal"
+        android:id="@+id/lyPlaceInLeaderboardPage"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You'r current position: X"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" 
+            />
+    </LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="635sp"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:id="@+id/lsLeaderboard"
+        >
+        
+    </ListView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -69,7 +96,7 @@
             android:background="#7a7a7a"
             android:scaleType="fitXY"
             android:contentDescription="description"
-            tools:ignore="HardcodedText"
+            tools:ignore="HardcodedText,UnresolvedResource"
             />
 
         <TextView

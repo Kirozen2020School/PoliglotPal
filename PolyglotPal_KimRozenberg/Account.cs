@@ -1,9 +1,7 @@
 ﻿
-using AndroidX.Annotations;
-
 namespace PolyglotPal_KimRozenberg
 {
-    internal class Account
+    public class Account
     {
         public string username {  get; set; }
         public string lastname {  get; set; }
