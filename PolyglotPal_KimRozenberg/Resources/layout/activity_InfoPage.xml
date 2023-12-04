@@ -24,16 +24,18 @@
             android:textStyle="bold"
             android:layout_marginLeft="10sp"
             tools:ignore="HardcodedText" 
+            android:layout_weight="1"
+            android:layout_gravity="start"
             />
         
         <Button
-            android:layout_width="60sp"
-            android:layout_height="wrap_content"
+            android:layout_width="80sp"
+            android:layout_height="60sp"
             android:text="Exit"
             android:id="@+id/btnExitFromInfoPage"
             android:textStyle="bold"
             tools:ignore="HardcodedText" 
-            android:layout_marginLeft="180dp"
+            android:layout_gravity="end"
             />
     </LinearLayout>
 

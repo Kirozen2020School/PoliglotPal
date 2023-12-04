@@ -24,10 +24,10 @@
             android:paddingLeft="10sp"
             android:id="@+id/tvUserNameLeaderBoardPage"
             tools:ignore="HardcodedText" 
+            android:layout_weight="1"
+            android:gravity="start"
             />
-        <TextView
-            android:layout_width="80sp"
-            android:layout_height="10sp"/>
+        
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,33 +37,31 @@
             android:textStyle="bold"
             android:id="@+id/tvXPLeaderBoardPage"
             tools:ignore="HardcodedText" 
+            android:layout_weight="1"
+            android:gravity="end"
+            android:paddingRight="10sp"
             />
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60sp"
-        android:orientation="horizontal"
-        android:id="@+id/lyPlaceInLeaderboardPage"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You'r current position: X"
+        android:id="@+id/tvCurrentPositionLeaderboard"
+        android:layout_gravity="center"
         android:gravity="center"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="You'r current position: X"
-            android:id="@+id/tvCurrentPositionLeaderboard"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText" 
-            />
-    </LinearLayout>
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" 
+        android:textColor="#fff"
+        android:padding="20sp"
+        />
     <ListView
         android:layout_width="match_parent"
         android:layout_height="635sp"
         android:orientation="vertical"
         android:layout_margin="10dp"
         android:id="@+id/lsLeaderboard"
+        android:layout_weight="1"
         >
         
     </ListView>
@@ -80,14 +78,13 @@
             android:src="@drawable/hat"
             android:id="@+id/btnGoToTaskPageFromLeaderBoardsPage"
             android:background="#7A7A7A"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
             android:contentDescription="description"
             tools:ignore="HardcodedText" 
+            android:layout_weight="1"
+            
             />
 
-        <TextView
-            android:layout_width="115sp"
-            android:layout_height="50sp"/>
 
         <ImageButton
             android:layout_width="50sp"
@@ -95,14 +92,12 @@
             android:src="@drawable/net"
             android:id="@+id/btnGoToLeaderboardFromLeaderboardPage"
             android:background="#7a7a7a"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
             android:contentDescription="description"
-            tools:ignore="HardcodedText,UnresolvedResource"
+            tools:ignore="HardcodedText"
+            android:layout_weight="1"
             />
 
-        <TextView
-            android:layout_width="115sp"
-            android:layout_height="50sp"/>
 
         <ImageButton
             android:layout_width="50sp"
@@ -110,9 +105,10 @@
             android:src="@drawable/blackprofile"
             android:id="@+id/btnGoToProfilePageFromLeaderBoardsPage"
             android:background="#7A7A7A"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
             android:contentDescription="description"
             tools:ignore="HardcodedText" 
+            android:layout_weight="1"
             />
     </LinearLayout>
 

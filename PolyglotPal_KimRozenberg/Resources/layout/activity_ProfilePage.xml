@@ -15,9 +15,6 @@
         android:background="#13A90A"
         android:id="@+id/lyProfilePageBackgroundColor"
         >
-        <TextView
-            android:layout_width="20sp"
-            android:layout_height="1sp"/>
         <ImageView
             android:id="@+id/ivProfilePic"
             android:layout_width="100dp"
@@ -26,102 +23,112 @@
             android:background="#13A90A"
             android:clickable="true"
             android:focusable="true"
-            android:layout_gravity="center"
+            android:layout_gravity="start"
             android:visibility="visible"
             tools:ignore="ContentDescription" 
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:paddingRight="100sp"
             />
-        <TextView
-            android:layout_width="220sp"
-            android:layout_height="10sp"/>
         <ImageButton
             android:layout_width="50sp"
             android:layout_height="50sp"
             android:background="#13a90a"
-            android:layout_marginTop="10sp"
+            android:paddingTop="10sp"
+            android:paddingLeft="50sp"
             android:src="@drawable/settings"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
+            android:layout_gravity="end"
+            android:layout_weight="1"
             android:id="@+id/btnSettingsFromProfilePage"
+            android:contentDescription="description"
+            tools:ignore="HardcodedText" 
             />
     </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvUserNameProfilePage"
-        android:text="User Name"
-        android:textColor="#fff"
-        android:textSize="30sp"
-        android:padding="10sp"
-        tools:ignore="HardcodedText" 
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvFullNameProfilePage"
-        android:text="First name + Last name"
-        android:textColor="#E7E7E7"
-        android:layout_marginLeft="10dp"
-        android:textSize="18sp"
-        tools:ignore="HardcodedText" 
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvDateJoiningProfilePage"
-        android:text="1 September 2023"
-        android:textColor="#E7E7E7"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp"
-        android:textSize="13sp"
-        tools:ignore="HardcodedText" 
-        />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50sp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-
+        android:orientation="vertical"
+        android:layout_weight="1"
+        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tvTotalPointsProfilePage"
-            android:text="Total points:\n999"
+            android:id="@+id/tvUserNameProfilePage"
+            android:text="User Name"
             android:textColor="#fff"
-            android:gravity="center"
-            android:textSize="20sp"
+            android:textSize="30sp"
+            android:padding="10sp"
             tools:ignore="HardcodedText" 
             />
-        <TextView
-            android:layout_width="25sp"
-            android:layout_height="1sp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tvTotalTasksProfilePage"
-            android:text="Task complited:\n999"
-            android:textColor="#fff"
-            android:gravity="center"
-            android:textSize="20sp"
+            android:id="@+id/tvFullNameProfilePage"
+            android:text="First name + Last name"
+            android:textColor="#E7E7E7"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" 
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDateJoiningProfilePage"
+            android:text="1 September 2023"
+            android:textColor="#E7E7E7"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="13sp"
             tools:ignore="HardcodedText" 
             />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTotalPointsProfilePage"
+                android:text="Total points:\n999"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" 
+                />
+            <TextView
+                android:layout_width="25sp"
+                android:layout_height="1sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTotalTasksProfilePage"
+                android:text="Task complited:\n999"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" 
+                />
+
+        </LinearLayout>
     </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="430sp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="#7A7A7A"
-        android:id="@+id/lyButtomProfilePage">
+        android:id="@+id/lyButtomProfilePage"
+        android:layout_gravity="bottom"
+        >
         
         <ImageButton
             android:layout_width="50sp"
@@ -129,13 +136,10 @@
             android:id="@+id/btnGoToTaskPageFromProfilePage"
             android:src="@drawable/hat"
             android:background="#7A7A7A"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
             tools:ignore="ContentDescription" 
+            android:layout_weight="1"
             />
-
-        <TextView
-            android:layout_width="115sp"
-            android:layout_height="50sp"/>
 
         <ImageButton
             android:layout_width="50sp"
@@ -143,14 +147,11 @@
             android:src="@drawable/net"
             android:id="@+id/btnGoToLeaderBoardPageFromProfilePage"
             android:background="#7a7a7a"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
             android:contentDescription="description"
             tools:ignore="HardcodedText"
+            android:layout_weight="1"
             />
-
-        <TextView
-            android:layout_width="115sp"
-            android:layout_height="50sp"/>
 
         <ImageButton
             android:layout_width="50sp"
@@ -158,8 +159,9 @@
             android:id="@+id/btnProfileToProfile"
             android:src="@drawable/blackprofile"
             android:background="#7A7A7A"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
             tools:ignore="ContentDescription" 
+            android:layout_weight="1"
             />
     </LinearLayout>
 </LinearLayout>

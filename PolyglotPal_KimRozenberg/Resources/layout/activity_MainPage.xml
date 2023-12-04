@@ -24,12 +24,12 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:id="@+id/tvHiUsernameHomePage"
-            android:layout_marginLeft="5sp"
+            android:layout_marginLeft="10sp"
             tools:ignore="HardcodedText" 
+            android:layout_weight="1"
+            android:gravity="start"
             />
-        <TextView
-            android:layout_width="80sp"
-            android:layout_height="20sp"/>
+        
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,6 +39,9 @@
             android:textSize="20sp"
             android:id="@+id/tvTotalPointsHomePage"
             tools:ignore="HardcodedText" 
+            android:layout_weight="1"
+            android:gravity="end"
+            android:paddingRight="10sp"
             />
 
 
@@ -53,6 +56,7 @@
         android:layout_gravity="right"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
+        android:layout_alignParentTop ="true"
         />
 
     <TextView
@@ -62,6 +66,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="500sp"
+        android:layout_weight="1"
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -334,13 +339,10 @@
             android:src="@drawable/hat"
             android:id="@+id/btnGoToTaskPageFromTaskPage"
             android:background="#7A7A7A"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
             tools:ignore="ContentDescription" 
+            android:layout_weight="1"
             />
-
-        <TextView
-            android:layout_width="115sp"
-            android:layout_height="50sp"/>
 
         <ImageButton
             android:layout_width="50sp"
@@ -348,14 +350,11 @@
             android:src="@drawable/net"
             android:id="@+id/btnGoToLeaderBoardPageFromTaskPage"
             android:background="#7a7a7a"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
             android:contentDescription="description"
             tools:ignore="HardcodedText"
+            android:layout_weight="1"
             />
-
-        <TextView
-            android:layout_width="115sp"
-            android:layout_height="50sp"/>
 
         <ImageButton
             android:layout_width="50sp"
@@ -363,8 +362,9 @@
             android:src="@drawable/blackprofile"
             android:id="@+id/btnGoToProfilePageFromTaskPage"
             android:background="#7A7A7A"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
             tools:ignore="ContentDescription" 
+            android:layout_weight="1"
             />
     </LinearLayout>
 </LinearLayout>
