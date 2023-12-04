@@ -15,7 +15,7 @@ namespace PolyglotPal_KimRozenberg
     public class activity_Leaderboard : Activity
     {
         ImageButton btnGoToTaskPage, btnGoToProfilePage, btnLeaderboard;
-        TextView tvUsername, tvTotalPonts;
+        TextView tvUsername, tvTotalPonts, tvCurrentPosition;
         LinearLayout lyBackground, lyTopLine, lyBottomLine;
         ListView lsLeaderboard;
 
@@ -59,110 +59,20 @@ namespace PolyglotPal_KimRozenberg
                 {
                     this.accounts = SortByXP(this.accounts);
 
-                    var customAdaptor = new CustomAdapter(this, this.accounts);
+                    foreach (var account in this.accounts)
+                    {
+                        if (account.username.Equals(this.username))
+                        {
+                            tvCurrentPosition.Text = "You'r current position: "+(this.accounts.IndexOf(account)+1);
+                        }
+                    }
+
+                    var customAdaptor = new CustomAdapter(this, this.accounts, theme);
                     lsLeaderboard.Adapter = customAdaptor;
 
 
-                    //int index = 1;
-                    //string background = "#000000";
-                    //var containerLayout = new LinearLayout(this)
-                    //{
-                    //    LayoutParameters = new LinearLayout.LayoutParams(
-                    //    ViewGroup.LayoutParams.MatchParent,
-                    //    ViewGroup.LayoutParams.WrapContent
-                    //    ),
-                    //    Orientation = Orientation.Vertical
-                    //};
-
-                    //foreach (var account in this.accounts)
-                    //{
-                    //    Bitmap pic = ConvertByteArrayToBitmap(account.profilepic);
-                    //    containerLayout.AddView(CreateCustomLinearLayout(account.username, account.totalxp, index, pic, background));
-                    //    index++;
-                    //}
-                    
                 }
             }
-        }
-
-        private LinearLayout CreateCustomLinearLayout(string username, int xp, int place, Bitmap pic, string background)
-        {
-            // Create the main LinearLayout
-            var mainLinearLayout = new LinearLayout(this)
-            {
-                LayoutParameters = new LinearLayout.LayoutParams(
-                ViewGroup.LayoutParams.MatchParent,
-                ViewGroup.LayoutParams.WrapContent
-            ),
-                Orientation = Orientation.Horizontal
-            };
-
-            // Set background color using SetBackgroundColor
-            mainLinearLayout.SetBackgroundColor(Android.Graphics.Color.ParseColor(background));
-
-
-            // Create the first TextView
-            var textView1 = new TextView(this)
-            {
-                Text = place+"",
-                LayoutParameters = new ViewGroup.LayoutParams(
-                    ViewGroup.LayoutParams.WrapContent,
-                    ViewGroup.LayoutParams.WrapContent
-                ),
-                Gravity = GravityFlags.Center,
-                TextSize = 20
-            };
-
-            // Create the ImageButton
-            var imageButton = new ImageButton(this)
-            {
-                LayoutParameters = new ViewGroup.LayoutParams(50, 50)
-            };
-
-            // Set margin for the ImageButton
-            //var layoutParams = (LinearLayout.LayoutParams)imageButton.LayoutParameters;
-            //layoutParams.SetMargins(0, 0, 10, 0); // 10 pixels right margin
-            //imageButton.LayoutParameters = layoutParams;
-
-            // Create a Bitmap (replace this with your own Bitmap creation logic)
-            //Bitmap bitmap = BitmapFactory.DecodeResource(Resources, Resource.Mipmap.Icon);
-
-            // Set the Bitmap to the ImageButton
-            imageButton.SetImageBitmap(pic);
-
-            // Create the nested LinearLayout
-            var nestedLinearLayout = new LinearLayout(this)
-            {
-                LayoutParameters = new LinearLayout.LayoutParams(
-                    ViewGroup.LayoutParams.WrapContent,
-                    ViewGroup.LayoutParams.WrapContent
-                ),
-                Orientation = Orientation.Vertical
-            };
-
-            // Create the second set of TextViews
-            var textView2 = new TextView(this)
-            {
-                Text = username,
-                Typeface = Typeface.DefaultBold,
-                TextSize = 18
-            };
-
-            var textView3 = new TextView(this)
-            {
-                Text = "Total xp: "+xp,
-                Typeface = Typeface.DefaultBold,
-                TextSize = 18
-            };
-
-            // Add the views to the appropriate layouts
-            mainLinearLayout.AddView(textView1);
-            mainLinearLayout.AddView(imageButton);
-            mainLinearLayout.AddView(nestedLinearLayout);
-            nestedLinearLayout.AddView(textView2);
-            nestedLinearLayout.AddView(textView3);
-
-            return mainLinearLayout;
         }
 
         private void UpdateColors()
@@ -171,46 +81,56 @@ namespace PolyglotPal_KimRozenberg
             switch (this.user.theme.ToString())
             {
                 case "softBlue":
-                    lyTopLine.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[2]));
-                    lyBottomLine.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[3]));
-                    lyBackground.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[1]));
+                    lyTopLine.SetBackgroundColor(Color.ParseColor(colors.softBlue[2]));
+                    lyBottomLine.SetBackgroundColor(Color.ParseColor(colors.softBlue[3]));
+                    lyBackground.SetBackgroundColor(Color.ParseColor(colors.softBlue[1]));
 
-                    btnGoToProfilePage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[3]));
-                    btnGoToTaskPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[3]));
-                    btnLeaderboard.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[3]));
+                    btnGoToProfilePage.SetBackgroundColor(Color.ParseColor(colors.softBlue[3]));
+                    btnGoToTaskPage.SetBackgroundColor(Color.ParseColor(colors.softBlue[3]));
+                    btnLeaderboard.SetBackgroundColor(Color.ParseColor(colors.softBlue[3]));
+
+                    tvCurrentPosition.SetTextColor(Color.ParseColor("#000000"));
 
                     break;
                 case "softPink":
-                    lyTopLine.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[0]));
-                    lyBottomLine.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[1]));
-                    lyBackground.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[2]));
+                    lyTopLine.SetBackgroundColor(Color.ParseColor(colors.softPink[0]));
+                    lyBottomLine.SetBackgroundColor(Color.ParseColor(colors.softPink[1]));
+                    lyBackground.SetBackgroundColor(Color.ParseColor(colors.softPink[2]));
 
-                    btnGoToProfilePage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[1]));
-                    btnGoToTaskPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[1]));
-                    btnLeaderboard.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[1]));
-                    
+                    btnGoToProfilePage.SetBackgroundColor(Color.ParseColor(colors.softPink[1]));
+                    btnGoToTaskPage.SetBackgroundColor(Color.ParseColor(colors.softPink[1]));
+                    btnLeaderboard.SetBackgroundColor(Color.ParseColor(colors.softPink[1]));
+
+                    tvCurrentPosition.SetTextColor(Color.ParseColor("#000000"));
+
                     break;
                 case "blackRed":
-                    lyTopLine.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[1]));
-                    lyBottomLine.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[2]));
-                    lyBackground.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[0]));
+                    lyTopLine.SetBackgroundColor(Color.ParseColor(colors.blackRed[1]));
+                    lyBottomLine.SetBackgroundColor(Color.ParseColor(colors.blackRed[2]));
+                    lyBackground.SetBackgroundColor(Color.ParseColor(colors.blackRed[0]));
 
-                    btnGoToProfilePage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[2]));
-                    btnGoToTaskPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[2]));
-                    btnLeaderboard.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[2]));
-                    
+                    btnGoToProfilePage.SetBackgroundColor(Color.ParseColor(colors.blackRed[2]));
+                    btnGoToTaskPage.SetBackgroundColor(Color.ParseColor(colors.blackRed[2]));
+                    btnLeaderboard.SetBackgroundColor(Color.ParseColor(colors.blackRed[2]));
+
+                    tvCurrentPosition.SetTextColor(Color.ParseColor("#ffffff"));
+
                     break;
                 case "navy":
-                    lyTopLine.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[1]));
-                    lyBottomLine.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[2]));
-                    lyBackground.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[0]));
+                    lyTopLine.SetBackgroundColor(Color.ParseColor(colors.navy[1]));
+                    lyBottomLine.SetBackgroundColor(Color.ParseColor(colors.navy[2]));
+                    lyBackground.SetBackgroundColor(Color.ParseColor(colors.navy[0]));
 
-                    btnGoToProfilePage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[2]));
-                    btnGoToTaskPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[2]));
-                    btnLeaderboard.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[2]));
-                    
+                    btnGoToProfilePage.SetBackgroundColor(Color.ParseColor(colors.navy[2]));
+                    btnGoToTaskPage.SetBackgroundColor(Color.ParseColor(colors.navy[2]));
+                    btnLeaderboard.SetBackgroundColor(Color.ParseColor(colors.navy[2]));
+
+                    tvCurrentPosition.SetTextColor(Color.ParseColor("#ffffff"));
+
+
                     break;
                 default:
+                    tvCurrentPosition.SetTextColor(Color.ParseColor("#ffffff"));
                     break;
             }
         }
@@ -225,6 +145,7 @@ namespace PolyglotPal_KimRozenberg
 
             tvUsername = FindViewById<TextView>(Resource.Id.tvUserNameLeaderBoardPage);
             tvTotalPonts = FindViewById<TextView>(Resource.Id.tvXPLeaderBoardPage);
+            tvCurrentPosition = FindViewById<TextView>(Resource.Id.tvCurrentPositionLeaderboard);
 
             lyBackground = FindViewById<LinearLayout>(Resource.Id.lyLeaderBoardBackground);
             lyTopLine = FindViewById<LinearLayout>(Resource.Id.lyTopLineLeaderBoardPage);

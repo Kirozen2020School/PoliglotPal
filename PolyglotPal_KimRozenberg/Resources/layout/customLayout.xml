@@ -7,6 +7,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:background="#f00"
+    android:id="@+id/lyBackgroundCustomLayout"
     >
     <TextView
         android:layout_width="wrap_content"
