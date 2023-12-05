@@ -6,7 +6,6 @@ using System;
 using Android.Graphics;
 using System.IO;
 using Android.Provider;
-using System.Text.RegularExpressions;
 
 namespace PolyglotPal_KimRozenberg
 {

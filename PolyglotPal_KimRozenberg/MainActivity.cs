@@ -37,8 +37,16 @@ namespace PolyglotPal_KimRozenberg
             }
             catch
             {
-                Toast.MakeText(this, "Reading data from firebase error", ToastLength.Long).Show();
-                
+                var d = new Android.App.AlertDialog.Builder(this);
+                d.SetTitle("Connection issue.");
+                d.SetMessage("It seems you're offline. Please try again when you're online.");
+                d.SetCancelable(false);
+                d.SetPositiveButton("OK", (sender, args) =>
+                {
+                    Finish();
+                });
+                var dialog = d.Create();
+                dialog.Show();
             }
             
 
@@ -61,6 +69,7 @@ namespace PolyglotPal_KimRozenberg
 
         private void BtnStart_Click(object sender, EventArgs e)
         {
+            
             bool flag = false;
             //Check if there is an acoount in the firebase 
             if(accounts != null)
@@ -90,6 +99,7 @@ namespace PolyglotPal_KimRozenberg
                 builder.SetNegativeButton("Try again", TryAgain);
                 builder.Show();
             }
+            
         }
 
         private void TryAgain(object sender, DialogClickEventArgs e)
