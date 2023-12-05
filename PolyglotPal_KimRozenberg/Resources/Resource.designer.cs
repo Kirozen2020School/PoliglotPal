@@ -11429,31 +11429,34 @@ namespace PolyglotPal_KimRozenberg
 			public const int visible_removing_fragment_view_tag = 2131296850;
 			
 			// aapt resource value: 0x7F090253
-			public const int west = 2131296851;
-			
-			// aapt resource value: 0x7F090256
-			public const int withinBounds = 2131296854;
+			public const int vvBackground = 2131296851;
 			
 			// aapt resource value: 0x7F090254
-			public const int withText = 2131296852;
-			
-			// aapt resource value: 0x7F090255
-			public const int with_icon = 2131296853;
+			public const int west = 2131296852;
 			
 			// aapt resource value: 0x7F090257
-			public const int wrap = 2131296855;
+			public const int withinBounds = 2131296855;
+			
+			// aapt resource value: 0x7F090255
+			public const int withText = 2131296853;
+			
+			// aapt resource value: 0x7F090256
+			public const int with_icon = 2131296854;
 			
 			// aapt resource value: 0x7F090258
-			public const int wrap_content = 2131296856;
+			public const int wrap = 2131296856;
 			
 			// aapt resource value: 0x7F090259
-			public const int wrap_content_constrained = 2131296857;
+			public const int wrap_content = 2131296857;
 			
 			// aapt resource value: 0x7F09025A
-			public const int x_left = 2131296858;
+			public const int wrap_content_constrained = 2131296858;
 			
 			// aapt resource value: 0x7F09025B
-			public const int x_right = 2131296859;
+			public const int x_left = 2131296859;
+			
+			// aapt resource value: 0x7F09025C
+			public const int x_right = 2131296860;
 			
 			static Id()
 			{
@@ -12165,6 +12168,9 @@ namespace PolyglotPal_KimRozenberg
 			
 			// aapt resource value: 0x7F110001
 			public const int background2 = 2131820545;
+			
+			// aapt resource value: 0x7F110002
+			public const int Firework = 2131820546;
 			
 			static Raw()
 			{

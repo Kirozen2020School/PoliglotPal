@@ -1,88 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000"
-    android:gravity="center"
-    
-    >
-    
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Level Finished"
-        android:textColor="#fff"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        tools:ignore="HardcodedText" 
-        />
-    <TextView
-        android:layout_width="1sp"
-        android:layout_height="10sp"/>
-    <LinearLayout
+    android:background="#000">
+    <VideoView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Xp:\n20"
-            android:textColor="#fff"
-            android:textSize="23sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:id="@+id/tvTotalXPFinishLevelPage"
-            tools:ignore="HardcodedText"
+        android:layout_height="match_parent"
+        android:id="@+id/vvBackground"
+        
+        android:layout_gravity="center"
+        android:fitsSystemWindows="true"
+        android:keepScreenOn="true"
+        
         />
-        <TextView
-            android:layout_width="50sp"
-            android:layout_height="30sp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+    
+        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Accuracy:\n100%"
-            android:gravity="center"
+            android:text="Level Finished"
             android:textColor="#fff"
-            android:textSize="23sp"
+            android:textSize="30sp"
             android:textStyle="bold"
-            android:id="@+id/tvAccoracy"
+            android:layout_margin="20sp"
             tools:ignore="HardcodedText" 
             />
-        <TextView
-            android:layout_width="50sp"
-            android:layout_height="30sp"/>
-        <TextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_margin="10sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xp:\n20"
+                android:textColor="#fff"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:id="@+id/tvTotalXPFinishLevelPage"
+                tools:ignore="HardcodedText" 
+            />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accuracy:\n100%"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:id="@+id/tvAccoracy"
+                tools:ignore="HardcodedText" 
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time:\n02:30"
+                android:textColor="#fff"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:id="@+id/tvTimer"
+                tools:ignore="HardcodedText" 
+            />
+
+        </LinearLayout>
+
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Time:\n02:30"
+            android:text="Exit"
             android:textColor="#fff"
-            android:textSize="23sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:id="@+id/tvTimer"
+            android:textSize="20sp"
+            android:layout_margin="20sp"
+            android:id="@+id/btnExitFromFinishLevelPage"
             tools:ignore="HardcodedText" 
-        />
+            />
+
 
     </LinearLayout>
-    
-    <TextView
-        android:layout_width="1sp"
-        android:layout_height="30sp"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Exit"
-        android:textColor="#fff"
-        android:textSize="20sp"
-        android:id="@+id/btnExitFromFinishLevelPage"
-        tools:ignore="HardcodedText" 
-        />
-    
-
-</LinearLayout>
+</FrameLayout>
