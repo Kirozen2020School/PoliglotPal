@@ -7,6 +7,6 @@
 	<!-- Background color of the button -->
 	<stroke
 		android:width="2dp"
-		android:color="#28DC00" />
+		android:color="#23BF00" />
 	<!-- Border color and width of the button -->
 </shape>

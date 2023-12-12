@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+<?xml version="1.0" encoding="utf-8" ?> 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -34,7 +34,7 @@
             style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
             android:max="600"
             android:progress="600"
-            android:id="@+id/progress"/>
+            android:id="@+id/progressSound"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -67,7 +67,7 @@
         <ImageButton
             android:layout_width="40sp"
             android:layout_height="40sp"
-            android:id="@+id/btnExitFromPairsPage"
+            android:id="@+id/btnExitFromSoundPage"
             android:background="#000000"
             android:src="@drawable/exit"
             android:scaleType="centerCrop"
@@ -88,44 +88,39 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center">
-
-        
-            <Button
-                android:layout_width="0dp"
+            android:gravity="center"
+            >
+            
+            <ImageButton
+                android:layout_width="0sp"
                 android:layout_height="50sp"
                 android:layout_weight="1"
-                android:background ="@drawable/round_buttons"
-                android:text="Customer service and more of the"
-                android:textColor="#000"
-                android:autoSizeMaxTextSize="15sp"
-                android:autoSizeTextType="uniform"
-                android:autoSizeStepGranularity="2sp"
+                android:background="@drawable/round_buttons"
+                android:src="@drawable/sound3"
+                android:scaleType="centerInside"
                 android:layout_marginLeft="10sp"
                 android:layout_margin="10sp"
-                android:id="@+id/btnENG1"
-                tools:ignore="HardcodedText" />
-
+                android:textColor="@android:color/transparent"
+                android:id="@+id/btnENG1Sound"
+                android:tag="it's a test string that might be invisable"
+                />
             <TextView
-                android:layout_width="20sp"
-                android:layout_height="1sp"/>
-
-
+                    android:layout_width="20sp"
+                    android:layout_height="1sp"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="50sp"
                 android:layout_weight="1"
                 android:background ="@drawable/round_buttons"
-                android:text="מסחר אלקטרוני ויש עוד הרבה דברים שונים"
+                android:text="pair 1 heb"
                 android:textColor="#000"
                 android:autoSizeMaxTextSize="15sp"
                 android:autoSizeTextType="uniform"
                 android:autoSizeStepGranularity="2sp"
                 android:layout_marginRight="15sp"
                 android:layout_margin="10sp"
-                android:id="@+id/btnHE1"
+                android:id="@+id/btnHE1Sound"
                 tools:ignore="HardcodedText" />
-
         </LinearLayout>
 
         <!-- Pair 2 -->
@@ -135,20 +130,19 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <Button
-                android:layout_width="0dp"
+            <ImageButton
+                android:layout_width="0sp"
                 android:layout_height="50sp"
                 android:layout_weight="1"
-                android:background ="@drawable/round_buttons"
-                android:text="pair 2 eng"
-                android:textColor="#000"
-                android:autoSizeMaxTextSize="15sp"
-                android:autoSizeTextType="uniform"
-                android:autoSizeStepGranularity="2sp"
+                android:background="@drawable/round_buttons"
+                android:src="@drawable/sound3"
+                android:scaleType="centerInside"
                 android:layout_marginLeft="10sp"
                 android:layout_margin="10sp"
-                android:id="@+id/btnENG2"
-                tools:ignore="HardcodedText" />
+                android:textColor="@android:color/transparent"
+                android:id="@+id/btnENG2Sound"
+                android:tag="it's a test string that might be invisable"
+                />
 
             <TextView
                 android:layout_width="20sp"
@@ -166,7 +160,7 @@
                 android:autoSizeStepGranularity="2sp"
                 android:layout_marginRight="15sp"
                 android:layout_margin="10sp"
-                android:id="@+id/btnHE2"
+                android:id="@+id/btnHE2Sound"
                 tools:ignore="HardcodedText" />
         </LinearLayout>
 
@@ -177,20 +171,19 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <Button
-                android:layout_width="0dp"
+            <ImageButton
+                android:layout_width="0sp"
                 android:layout_height="50sp"
                 android:layout_weight="1"
-                android:background ="@drawable/round_buttons"
-                android:text="pair 3 eng"
-                android:textColor="#000"
-                android:autoSizeMaxTextSize="15sp"
-                android:autoSizeTextType="uniform"
-                android:autoSizeStepGranularity="2sp"
+                android:background="@drawable/round_buttons"
+                android:src="@drawable/sound3"
+                android:scaleType="centerInside"
                 android:layout_marginLeft="10sp"
                 android:layout_margin="10sp"
-                android:id="@+id/btnENG3"
-                tools:ignore="HardcodedText" />
+                android:textColor="@android:color/transparent"
+                android:id="@+id/btnENG3Sound"
+                android:tag="it's a test string that might be invisable"
+                />
 
             <TextView
                 android:layout_width="20sp"
@@ -208,7 +201,7 @@
                 android:autoSizeStepGranularity="2sp"
                 android:layout_marginRight="15sp"
                 android:layout_margin="10sp"
-                android:id="@+id/btnHE3"
+                android:id="@+id/btnHE3Sound"
                 tools:ignore="HardcodedText" />
         </LinearLayout>
 
@@ -219,20 +212,19 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <Button
-                android:layout_width="0dp"
+            <ImageButton
+                android:layout_width="0sp"
                 android:layout_height="50sp"
                 android:layout_weight="1"
-                android:background ="@drawable/round_buttons"
-                android:text="pair 4 eng"
-                android:textColor="#000"
-                android:autoSizeMaxTextSize="15sp"
-                android:autoSizeTextType="uniform"
-                android:autoSizeStepGranularity="2sp"
+                android:background="@drawable/round_buttons"
+                android:src="@drawable/sound3"
+                android:scaleType="centerInside"
                 android:layout_marginLeft="10sp"
                 android:layout_margin="10sp"
-                android:id="@+id/btnENG4"
-                tools:ignore="HardcodedText" />
+                android:textColor="@android:color/transparent"
+                android:id="@+id/btnENG4Sound"
+                android:tag="it's a test string that might be invisable"
+                />
 
             <TextView
                 android:layout_width="20sp"
@@ -250,50 +242,49 @@
                 android:autoSizeStepGranularity="2sp"
                 android:layout_marginRight="15sp"
                 android:layout_margin="10sp"
-                android:id="@+id/btnHE4"
+                android:id="@+id/btnHE4Sound"
                 tools:ignore="HardcodedText" />
         </LinearLayout>
 
         <!-- Pair 5 -->
         <LinearLayout
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:orientation="horizontal"
-	        android:gravity="center">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
 
-	        <Button
-		        android:layout_width="0dp"
-		        android:layout_height="50sp"
-		        android:layout_weight="1"
-		        android:background ="@drawable/round_buttons"
-		        android:text="pair 5 eng"
-		        android:textColor="#000"
-		        android:autoSizeMaxTextSize="15sp"
-		        android:autoSizeTextType="uniform"
-		        android:autoSizeStepGranularity="2sp"
-		        android:layout_marginLeft="10sp"
-		        android:layout_margin="10sp"
-		        android:id="@+id/btnENG5"
-		        tools:ignore="HardcodedText" />
+            <ImageButton
+                android:layout_width="0sp"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:background="@drawable/round_buttons"
+                android:src="@drawable/sound3"
+                android:scaleType="centerInside"
+                android:layout_marginLeft="10sp"
+                android:layout_margin="10sp"
+                android:textColor="@android:color/transparent"
+                android:id="@+id/btnENG5Sound"
+                android:tag="it's a test string that might be invisable"
+                />
 
-	        <TextView
-		        android:layout_width="20sp"
-		        android:layout_height="1sp"/>
+            <TextView
+                android:layout_width="20sp"
+                android:layout_height="1sp"/>
 
-	        <Button
-		        android:layout_width="0dp"
-		        android:layout_height="50sp"
-		        android:layout_weight="1"
-		        android:background ="@drawable/round_buttons"
-		        android:text="pair 5 heb"
-		        android:textColor="#000"
-		        android:autoSizeMaxTextSize="15sp"
-		        android:autoSizeTextType="uniform"
-		        android:autoSizeStepGranularity="2sp"
-		        android:layout_marginRight="15sp"
-		        android:layout_margin="10sp"
-		        android:id="@+id/btnHE5"
-		        tools:ignore="HardcodedText" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:background ="@drawable/round_buttons"
+                android:text="pair 5 heb"
+                android:textColor="#000"
+                android:autoSizeMaxTextSize="15sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeStepGranularity="2sp"
+                android:layout_marginRight="15sp"
+                android:layout_margin="10sp"
+                android:id="@+id/btnHE5Sound"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
     </LinearLayout>
 
@@ -319,7 +310,7 @@
 		        android:layout_gravity="center"
                 android:background="@drawable/clicked_round_buttons"
 		        android:enabled="false"
-		        android:id="@+id/btnNextLevel"
+		        android:id="@+id/btnNextLevelSound"
 		        android:text="Continue"
 		        android:textColor="#404040"
 		        android:textSize="15sp"

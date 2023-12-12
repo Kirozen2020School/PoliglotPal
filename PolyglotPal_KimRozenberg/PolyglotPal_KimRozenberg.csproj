@@ -74,6 +74,7 @@
     <Compile Include="activity_Register.cs" />
     <Compile Include="activity_Settings.cs" />
     <Compile Include="activity_TaskWordToWord.cs" />
+    <Compile Include="activity_TaskWordToWordSound.cs" />
     <Compile Include="ColorsClass.cs" />
     <Compile Include="CustomAdaptor.cs" />
     <Compile Include="ENG_HE.cs" />
@@ -295,6 +296,20 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\active_round_buttons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_TaskWordToWordSound.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\sound1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\sound2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\sound3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
