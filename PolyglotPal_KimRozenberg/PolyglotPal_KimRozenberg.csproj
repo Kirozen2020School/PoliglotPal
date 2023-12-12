@@ -287,6 +287,15 @@
   <ItemGroup>
     <AndroidResource Include="Resources\raw\Firework.mp4" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\clicked_round_buttons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\round_buttons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\active_round_buttons.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
     Other similar extension points exist, see Microsoft.Common.targets.

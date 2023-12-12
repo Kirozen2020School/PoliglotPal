@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Widget;
 using System;
 using System.Threading.Tasks;
+using Android.Content.PM;
 
 namespace PolyglotPal_KimRozenberg
 {
@@ -34,7 +35,7 @@ namespace PolyglotPal_KimRozenberg
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_Settings);
-
+            RequestedOrientation = ScreenOrientation.Portrait;
             if (Intent.Extras != null)
             {
                 this.username = Intent.GetStringExtra("Username");

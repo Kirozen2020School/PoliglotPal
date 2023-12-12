@@ -13,7 +13,7 @@
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_gravity="center"
-        android:layout_marginTop="8sp"
+        android:layout_marginTop="15sp"
         >
 
         <TextView
@@ -53,7 +53,6 @@
         android:orientation="horizontal"
         android:layout_marginBottom="50sp"
         >
-
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -69,11 +68,11 @@
             android:layout_width="40sp"
             android:layout_height="40sp"
             android:id="@+id/btnExitFromPairsPage"
-            android:src="@drawable/exit"
             android:background="#000000"
+            android:src="@drawable/exit"
             android:scaleType="centerCrop"
             android:layout_marginTop="22sp"
-            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
             tools:ignore="ContentDescription" />
     </LinearLayout>
 
@@ -84,148 +83,177 @@
         android:orientation="vertical"
         android:layout_weight="10">
     
-    <!-- Pair 1 -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
+        <!-- Pair 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
 
         
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="100sp"
-            android:layout_weight="1"
-            android:backgroundTint="#0FA70A"
-            android:text="pair 1 eng"
-            android:textColor="#000"
-            android:textSize="20sp"
-            android:id="@+id/btnENG1"
-            tools:ignore="HardcodedText" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:background ="@drawable/round_buttons"
+                android:text="Customer service and more of the"
+                android:textColor="#000"
+                android:autoSizeMaxTextSize="15sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeStepGranularity="2sp"
+                android:layout_marginLeft="10sp"
+                android:layout_margin="10sp"
+                android:id="@+id/btnENG1"
+                tools:ignore="HardcodedText" />
 
-        <TextView
-            android:layout_width="20sp"
-            android:layout_height="1sp"/>
+            <TextView
+                android:layout_width="20sp"
+                android:layout_height="1sp"/>
 
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="100sp"
-            android:layout_weight="1"
-            android:backgroundTint="#0FA70A"
-            android:text="pair 1 eng"
-            android:textColor="#000"
-            android:textSize="20sp"
-            android:id="@+id/btnHE1"
-            tools:ignore="HardcodedText" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:background ="@drawable/round_buttons"
+                android:text="מסחר אלקטרוני ויש עוד הרבה דברים שונים"
+                android:textColor="#000"
+                android:autoSizeMaxTextSize="15sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeStepGranularity="2sp"
+                android:layout_marginRight="15sp"
+                android:layout_margin="10sp"
+                android:id="@+id/btnHE1"
+                tools:ignore="HardcodedText" />
 
+        </LinearLayout>
+
+        <!-- Pair 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:background ="@drawable/round_buttons"
+                android:text="pair 2 eng"
+                android:textColor="#000"
+                android:autoSizeMaxTextSize="15sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeStepGranularity="2sp"
+                android:layout_marginLeft="10sp"
+                android:layout_margin="10sp"
+                android:id="@+id/btnENG2"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="20sp"
+                android:layout_height="1sp"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:background ="@drawable/round_buttons"
+                android:text="pair 2 heb"
+                android:textColor="#000"
+                android:autoSizeMaxTextSize="15sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeStepGranularity="2sp"
+                android:layout_marginRight="15sp"
+                android:layout_margin="10sp"
+                android:id="@+id/btnHE2"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <!-- Pair 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:background ="@drawable/round_buttons"
+                android:text="pair 3 eng"
+                android:textColor="#000"
+                android:autoSizeMaxTextSize="15sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeStepGranularity="2sp"
+                android:layout_marginLeft="10sp"
+                android:layout_margin="10sp"
+                android:id="@+id/btnENG3"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="20sp"
+                android:layout_height="1sp"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:background ="@drawable/round_buttons"
+                android:text="pair 3 heb"
+                android:textColor="#000"
+                android:autoSizeMaxTextSize="15sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeStepGranularity="2sp"
+                android:layout_marginRight="15sp"
+                android:layout_margin="10sp"
+                android:id="@+id/btnHE3"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <!-- Pair 4 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:background ="@drawable/round_buttons"
+                android:text="pair 4 eng"
+                android:textColor="#000"
+                android:autoSizeMaxTextSize="15sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeStepGranularity="2sp"
+                android:layout_marginLeft="10sp"
+                android:layout_margin="10sp"
+                android:id="@+id/btnENG4"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="20sp"
+                android:layout_height="1sp"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:background ="@drawable/round_buttons"
+                android:text="pair 4 heb"
+                android:textColor="#000"
+                android:autoSizeMaxTextSize="15sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeStepGranularity="2sp"
+                android:layout_marginRight="15sp"
+                android:layout_margin="10sp"
+                android:id="@+id/btnHE4"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
     </LinearLayout>
-
-    <!-- Pair 2 -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="100sp"
-            android:layout_weight="1"
-            android:backgroundTint="#0FA70A"
-            android:text="pair 2 eng"
-            android:textColor="#000"
-            android:textSize="20sp"
-            android:id="@+id/btnENG2"
-            tools:ignore="HardcodedText" />
-
-        <TextView
-            android:layout_width="20sp"
-            android:layout_height="1sp"/>
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="100sp"
-            android:layout_weight="1"
-            android:backgroundTint="#0FA70A"
-            android:text="pair 2 heb"
-            android:textColor="#000"
-            android:textSize="20sp"
-            android:id="@+id/btnHE2"
-            tools:ignore="HardcodedText" />
-    </LinearLayout>
-
-    <!-- Pair 3 -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="100sp"
-            android:layout_weight="1"
-            android:backgroundTint="#0FA70A"
-            android:text="pair 3 eng"
-            android:textColor="#000"
-            android:textSize="20sp"
-            android:id="@+id/btnENG3"
-            tools:ignore="HardcodedText" />
-
-        <TextView
-            android:layout_width="20sp"
-            android:layout_height="1sp"/>
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="100sp"
-            android:layout_weight="1"
-            android:backgroundTint="#0FA70A"
-            android:text="pair 3 heb"
-            android:textColor="#000"
-            android:textSize="20sp"
-            android:id="@+id/btnHE3"
-            tools:ignore="HardcodedText" />
-    </LinearLayout>
-
-    <!-- Pair 4 -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="100sp"
-            android:layout_weight="1"
-            android:backgroundTint="#0FA70A"
-            android:text="pair 4 eng"
-            android:textColor="#000"
-            android:textSize="20sp"
-            android:id="@+id/btnENG4"
-            tools:ignore="HardcodedText" />
-
-        <TextView
-            android:layout_width="20sp"
-            android:layout_height="1sp"/>
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="100sp"
-            android:layout_weight="1"
-            android:backgroundTint="#0FA70A"
-            android:text="pair 4 heb"
-            android:textColor="#000"
-            android:textSize="20sp"
-            android:id="@+id/btnHE4"
-            tools:ignore="HardcodedText" />
-    </LinearLayout>
-    </LinearLayout>
-
-    
-
 
 
     <!-- Continue button -->
@@ -235,19 +263,29 @@
         android:orientation="vertical"
         android:layout_weight="1">
 
-         <Button
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:backgroundTint="#629C60"
-            android:enabled="false"
-            android:id="@+id/btnNextLevel"
-            android:text="Continue"
-            android:textColor="#575757"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginTop="20sp"
-            tools:ignore="HardcodedText" />
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="3"
+            >
+	        <Button
+		        android:layout_width="0dp"
+		        android:layout_height="50sp"
+		        android:layout_weight="2"
+		        android:layout_gravity="center"
+                android:background="@drawable/clicked_round_buttons"
+		        android:enabled="false"
+		        android:id="@+id/btnNextLevel"
+		        android:text="Continue"
+		        android:textColor="#404040"
+		        android:textSize="15sp"
+		        android:textStyle="bold"
+                android:layout_margin="20sp"
+		        tools:ignore="HardcodedText" />
+
+        </LinearLayout>
     </LinearLayout>
    
 

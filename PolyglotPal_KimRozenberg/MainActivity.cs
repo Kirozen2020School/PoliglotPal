@@ -6,6 +6,7 @@ using Android.Widget;
 using AndroidX.AppCompat.App;
 using System;
 using System.Collections.Generic;
+using Android.Content.PM;
 
 namespace PolyglotPal_KimRozenberg
 {
@@ -24,7 +25,7 @@ namespace PolyglotPal_KimRozenberg
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_Login);
-
+            RequestedOrientation = ScreenOrientation.Portrait;
             InitViews();
         }
         

@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Android.Content.PM;
 
 namespace PolyglotPal_KimRozenberg
 {
@@ -28,6 +29,7 @@ namespace PolyglotPal_KimRozenberg
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_Leaderboard);
             // Create your application here
+            RequestedOrientation = ScreenOrientation.Portrait;
             this.firebaseManager = new FirebaseManager();
             if(Intent.Extras != null)
             {

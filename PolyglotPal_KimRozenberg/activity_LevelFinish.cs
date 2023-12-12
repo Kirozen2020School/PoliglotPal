@@ -3,9 +3,8 @@ using Android.Content;
 using Android.Media;
 using Android.OS;
 using Android.Widget;
-using AndroidX.Activity.ContextAware;
 using System;
-using static Android.Media.MediaPlayer;
+using Android.Content.PM;
 
 namespace PolyglotPal_KimRozenberg
 {
@@ -22,13 +21,14 @@ namespace PolyglotPal_KimRozenberg
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_LevelFinish);
             // Create your application here
+            RequestedOrientation = ScreenOrientation.Portrait;
             if (Intent.Extras != null)
             {
                 this.xp = Intent.GetIntExtra("XP", -1);
             }
             
-            long savedTicks = Intent.GetLongExtra("current_time", 0);
-            TimeSpan savedTime = TimeSpan.FromTicks(savedTicks);
+            var savedTicks = Intent.GetLongExtra("current_time", 0);
+            var savedTime = TimeSpan.FromTicks(savedTicks);
 
             timer = new Timer(TimeSpan.FromSeconds(1));
             timer.Start(savedTime);
@@ -38,19 +38,19 @@ namespace PolyglotPal_KimRozenberg
         private void InitViews()
         {
             InitVideo();
-            //btnExitFromFinishLevelPage = FindViewById<Button>(Resource.Id.btnExitFromFinishLevelPage);
-            //btnExitFromFinishLevelPage.Click += BtnExitFromFinishLevelPage_Click;
+            btnExitFromFinishLevelPage = FindViewById<Button>(Resource.Id.btnExitFromFinishLevelPage);
+            btnExitFromFinishLevelPage.Click += BtnExitFromFinishLevelPage_Click;
 
-            //tvXP = FindViewById<TextView>(Resource.Id.tvTotalXPFinishLevelPage);
-            //tvXP.Text = $"Xp:\n{Intent.GetIntExtra("XP", -1)}";
+            tvXP = FindViewById<TextView>(Resource.Id.tvTotalXPFinishLevelPage);
+            tvXP.Text = $"Xp:\n{this.xp}";
 
-            //tvTimer = FindViewById<TextView>(Resource.Id.tvTimer);
-            //tvTimer.Text = "Time:\n" + this.timer.GetCurrentTimeString();
+            tvTimer = FindViewById<TextView>(Resource.Id.tvTimer);
+            tvTimer.Text = "Time:\n" + this.timer.GetCurrentTimeString();
 
-            //tvAccuracy = FindViewById<TextView>(Resource.Id.tvAccoracy);
-            //double prosent = (1-(Intent.GetDoubleExtra("errors", 0)/(7 * 4)*1.0)) * 100;
-            //int temp = (int)Math.Round(prosent);
-            //tvAccuracy.Text = $"Accuracy:\n{temp}%";
+            tvAccuracy = FindViewById<TextView>(Resource.Id.tvAccoracy);
+            var percent = (1 - (Intent.GetDoubleExtra("errors", 0) / (7 * 4) * 1.0)) * 100;
+            var temp = (int)Math.Round(percent);
+            tvAccuracy.Text = $"Accuracy:\n{temp}%";
 
         }
 
@@ -75,7 +75,7 @@ namespace PolyglotPal_KimRozenberg
 
         private void BtnExitFromFinishLevelPage_Click(object sender, EventArgs e)
         {
-            Intent intent = new Intent(this, typeof(activity_MainPage));
+            var intent = new Intent(this, typeof(activity_MainPage));
             intent.PutExtra("Username", Intent.GetStringExtra("Username"));
             intent.PutExtra("XP", this.xp);
             intent.PutExtra("First", true);

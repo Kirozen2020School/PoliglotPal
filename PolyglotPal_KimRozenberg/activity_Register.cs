@@ -5,6 +5,7 @@ using Android.Widget;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Android.Content.PM;
 using Android.Graphics;
 using Android.Content.Res;
 using Android.Graphics.Drawables;
@@ -27,6 +28,7 @@ namespace PolyglotPal_KimRozenberg
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_RegisterPage);
             // Create your application here
+            RequestedOrientation = ScreenOrientation.Portrait;
             InitViews();
 
             try

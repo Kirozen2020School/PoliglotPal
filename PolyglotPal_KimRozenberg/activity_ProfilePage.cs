@@ -5,6 +5,7 @@ using Android.Widget;
 using System;
 using Android.Graphics;
 using System.IO;
+using Android.Content.PM;
 using Android.Provider;
 
 namespace PolyglotPal_KimRozenberg
@@ -27,6 +28,7 @@ namespace PolyglotPal_KimRozenberg
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_ProfilePage);
             // Create your application here
+            RequestedOrientation = ScreenOrientation.Portrait;
             InitViews();
             firebase = new FirebaseManager();
             if(Intent.Extras != null)
