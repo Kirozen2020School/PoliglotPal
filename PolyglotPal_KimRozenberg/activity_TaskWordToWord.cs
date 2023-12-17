@@ -43,7 +43,7 @@ namespace PolyglotPal_KimRozenberg
             {
                 xp = Intent.GetIntExtra("XP", 0);
                 mood = Intent.GetStringExtra("Mood");
-                //language = Intent.GetStringExtra("Language");
+                language = Intent.GetStringExtra("Language");
                 errors = Intent.GetDoubleExtra("errors", 0);
             }
 
@@ -151,8 +151,8 @@ namespace PolyglotPal_KimRozenberg
             words = new List<ENG_HE>();
 
             var tmp = System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(activity_TaskWordToWord)).Assembly;
-            //if(language == "Russian") { name += "Ru"; }
-            //if(language == "Ukrainian") { name += "Uk"; }
+            if(language == "Russian") { name += "Ru"; }
+            if(language == "Ukrainian") { name += "Uk"; }
             System.IO.Stream s = tmp.GetManifestResourceStream($"PolyglotPal_KimRozenberg.{name}.txt");
             System.IO.StreamReader sr = new System.IO.StreamReader(s);
             string[] lines = sr.ReadToEnd().Split('\n');

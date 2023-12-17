@@ -95,7 +95,7 @@ namespace PolyglotPal_KimRozenberg
                         etFirstName.Text,
                         etPassword.Text,
                         0, 0, date,
-                        pic, "", false);
+                        pic, "", false, "Hebrow");
 
                     await firebase.AddAccount(user);
 

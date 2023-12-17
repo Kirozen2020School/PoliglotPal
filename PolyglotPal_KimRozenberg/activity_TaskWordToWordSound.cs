@@ -34,7 +34,7 @@ namespace PolyglotPal_KimRozenberg
         private List<ENG_HE> words;
         private int xp;
         private int addXP = 10;
-        private string mood;
+        private string mood, language;
         private double errors;
 
         private ImageButton lastClickedButtonEng = null;
@@ -52,6 +52,7 @@ namespace PolyglotPal_KimRozenberg
             {
                 xp = Intent.GetIntExtra("XP", 0);
                 mood = Intent.GetStringExtra("Mood");
+                language = Intent.GetStringExtra("Language");
                 errors = Intent.GetDoubleExtra("errors", 0);
             }
 
@@ -284,6 +285,7 @@ namespace PolyglotPal_KimRozenberg
                     intent.PutExtra("Mood", mood);
                     intent.PutExtra("current_time", this.time.GetCurrentTime().Ticks);
                     intent.PutExtra("errors", this.errors);
+                    intent.PutExtra("Language", language);
                     StartActivity(intent);
                     Finish();
                 }
@@ -296,6 +298,7 @@ namespace PolyglotPal_KimRozenberg
                     intent.PutExtra("Mood", mood);
                     intent.PutExtra("current_time", this.time.GetCurrentTime().Ticks);
                     intent.PutExtra("errors", this.errors);
+                    intent.PutExtra("Language", language);
                     StartActivity(intent);
                     Finish();
                 }
@@ -356,7 +359,8 @@ namespace PolyglotPal_KimRozenberg
             words = new List<ENG_HE>();
 
             var tmp = System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(activity_TaskWordToWord)).Assembly;
-
+            if (language == "Russian") { name += "Ru"; }
+            if (language == "Ukrainian") { name += "Uk"; }
             System.IO.Stream s = tmp.GetManifestResourceStream($"PolyglotPal_KimRozenberg.{name}.txt");
             System.IO.StreamReader sr = new System.IO.StreamReader(s);
             string[] lines = sr.ReadToEnd().Split('\n');

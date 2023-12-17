@@ -14,7 +14,7 @@ namespace PolyglotPal_KimRozenberg
     [Activity(Label = "PolyglotPal")]
     public class activity_MainPage : AppCompatActivity, IOnClickListener, PopupMenu.IOnMenuItemClickListener
     {
-        ImageButton btnGoToProfilePageFromTaskPage, btnTask, btnGoToLeaderboard;
+        ImageButton btnGoToProfilePageFromTaskPage, btnTask, btnGoToLeaderboard, btnSelectLanguage;
         ImageButton btnDailyActivity, btnTravel, btnHealth, btnHobbies, btnFamily, btnBusiness, btnEducation,
             btnFood, btnMusic, btnAnimals, btnFurniture, btnEmotions, btnCountries, btnTools, btnClothing;
         List<Tuple<ImageButton, string>> buttons;
@@ -31,6 +31,8 @@ namespace PolyglotPal_KimRozenberg
         bool first;
         ISharedPreferences sp;
         Intent music;
+
+        PopupWindow popupWindow;
 
         int xpAdded = -1;
         protected override async void OnCreate(Bundle savedInstanceState)
@@ -87,6 +89,18 @@ namespace PolyglotPal_KimRozenberg
             UpdateColors();
             tvHiUsernameHomePage.Text = "Hi " + this.user.username;
             tvTotalPointsHomePage.Text = "Total points: " + this.user.totalxp;
+            switch (this.user.language)
+            {
+                case "Ukrainian":
+                    btnSelectLanguage.SetImageResource(Resource.Drawable.ukraine);
+                    break;
+                case "Russian":
+                    btnSelectLanguage.SetImageResource(Resource.Drawable.russia);
+                    break;
+                case "Hebrew":
+                    btnSelectLanguage.SetImageResource(Resource.Drawable.israel);
+                    break;
+            }
         }
         private void UpdateColors()
         {
@@ -167,6 +181,8 @@ namespace PolyglotPal_KimRozenberg
             btnGoToProfilePageFromTaskPage.Click += BtnGoToProfilePageFromTaskPage_Click;
             btnGoToLeaderboard = FindViewById<ImageButton>(Resource.Id.btnGoToLeaderBoardPageFromTaskPage);
             btnGoToLeaderboard.Click += BtnGoToLeaderboard_Click;
+            btnSelectLanguage = FindViewById<ImageButton>(Resource.Id.btnSelecteLanguage);
+            btnSelectLanguage.Click += BtnGoToLeaderboard_Click1;
 
             buttons = new List<Tuple<ImageButton, string>>();
             btnDailyActivity = FindViewById<ImageButton>(Resource.Id.btnDailyActivity);
@@ -207,6 +223,82 @@ namespace PolyglotPal_KimRozenberg
             }
         }
 
+        private void BtnGoToLeaderboard_Click1(object sender, EventArgs e)
+        {
+            View selectLanguage = LayoutInflater.Inflate(Resource.Layout.activity_SelectLanguage, null);
+
+            this.popupWindow = new PopupWindow(
+                selectLanguage,
+                ViewGroup.LayoutParams.WrapContent,
+                ViewGroup.LayoutParams.WrapContent,
+                true
+                );
+
+            ImageButton btnSelectedHebrow = selectLanguage.FindViewById<ImageButton>(Resource.Id.btnSelectIsraelImage);
+            TextView tvSelectedHewrow = selectLanguage.FindViewById<TextView>(Resource.Id.btnSelectIsraelText);
+            btnSelectedHebrow.Click += SelectedHebrow;
+            tvSelectedHewrow.Click += SelectedHebrow;
+
+            ImageButton btnSelectedRussian = selectLanguage.FindViewById<ImageButton>(Resource.Id.btnSelectRussiaImage);
+            TextView tvSelectedRussian = selectLanguage.FindViewById<TextView>(Resource.Id.btnSelectRussiaText);
+            btnSelectedRussian.Click += SelectedRussian;
+            tvSelectedRussian .Click += SelectedRussian;
+
+            ImageButton btnSelectedUkranian = selectLanguage.FindViewById<ImageButton>(Resource.Id.btnSelectUkranianImage);
+            TextView tvSelectedUkranian = selectLanguage.FindViewById<TextView>(Resource.Id.btnSelectUkranianText);
+            btnSelectedUkranian.Click += SelectedUkranian;
+            tvSelectedUkranian.Click += SelectedUkranian;
+
+            Button btnCancel = selectLanguage.FindViewById<Button>(Resource.Id.btnCancelSelectionLanguage);
+            btnCancel.Click += BtnCancel_Click;
+
+            popupWindow.ShowAtLocation(this.Window.DecorView.RootView, GravityFlags.Center,0,0);
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            if(popupWindow != null && popupWindow.IsShowing)
+            {
+                popupWindow.Dismiss();
+            }
+        }
+
+        private async void SelectedUkranian(object sender, EventArgs e)
+        {
+            await firebase.UpdateLanguage(username, "Ukrainian");
+
+            if (popupWindow != null && popupWindow.IsShowing)
+            {
+                popupWindow.Dismiss();
+            }
+
+            btnSelectLanguage.SetImageResource(Resource.Drawable.ukraine);
+        }
+
+        private async void SelectedRussian(object sender, EventArgs e)
+        {
+            await firebase.UpdateLanguage(username, "Russian");
+
+            if (popupWindow != null && popupWindow.IsShowing)
+            {
+                popupWindow.Dismiss();
+            }
+
+            btnSelectLanguage.SetImageResource(Resource.Drawable.russia);
+        }
+
+        private async void SelectedHebrow(object sender, EventArgs e)
+        {
+            await firebase.UpdateLanguage(username, "Hebrew");
+
+            if (popupWindow != null && popupWindow.IsShowing)
+            {
+                popupWindow.Dismiss();
+            }
+
+            btnSelectLanguage.SetImageResource(Resource.Drawable.israel);
+        }
+
         private void BtnGoToLeaderboard_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(activity_Leaderboard));
@@ -234,6 +326,7 @@ namespace PolyglotPal_KimRozenberg
             intent.PutExtra("XP", 0);
             intent.PutExtra("Round", 1);
             intent.PutExtra("Mood", mood);
+            intent.PutExtra("Language", this.user.language);
             StartActivity(intent);
             StopService(this.music);
             Finish();
@@ -259,6 +352,7 @@ namespace PolyglotPal_KimRozenberg
                 
                 popup.Show();
             }
+            
         }
 
         public bool OnMenuItemClick(IMenuItem item)

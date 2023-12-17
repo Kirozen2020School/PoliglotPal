@@ -100,6 +100,20 @@ namespace PolyglotPal_KimRozenberg
             }
         }
 
+        public async Task UpdateLanguage(string username, string language)
+        {
+            var account = await GetAccount(username);
+
+            if(account != null)
+            {
+                account.language = language;
+                
+                await DeleteAccount(username);
+
+                await firebase.Child(name).Child(account.username).PutAsync(account);
+            }
+        }
+
         public async Task UpdateMusicValue(string username, bool isPlaying)
         {
             var account = await GetAccount(username);

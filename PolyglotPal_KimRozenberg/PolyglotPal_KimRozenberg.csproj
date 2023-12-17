@@ -142,7 +142,6 @@
     <AndroidResource Include="Resources\layout\activity_TaskWordToWord.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ENGandHEwords.txt" />
     <AndroidResource Include="Resources\layout\activity_MainPage.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -338,21 +337,29 @@
     <EmbeddedResource Include="TravelRu.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AnimalsUk.txt" />
-    <Content Include="BusinessUk.txt" />
-    <Content Include="ClothingUk.txt" />
-    <Content Include="CountriesUk.txt" />
-    <Content Include="DailyActivityUk.txt" />
-    <Content Include="EducationUk.txt" />
-    <Content Include="EmotionsUk.txt" />
-    <Content Include="FamilyUk.txt" />
-    <Content Include="FoodUk.txt" />
-    <Content Include="FurnitureUk.txt" />
-    <Content Include="HealthUk.txt" />
-    <Content Include="HobbiesUk.txt" />
-    <Content Include="MusicUk.txt" />
-    <Content Include="ToolsUk.txt" />
-    <Content Include="TravelUk.txt" />
+    <EmbeddedResource Include="AnimalsUk.txt" />
+    <EmbeddedResource Include="BusinessUk.txt" />
+    <EmbeddedResource Include="ClothingUk.txt" />
+    <EmbeddedResource Include="CountriesUk.txt" />
+    <EmbeddedResource Include="DailyActivityUk.txt" />
+    <EmbeddedResource Include="EducationUk.txt" />
+    <EmbeddedResource Include="EmotionsUk.txt" />
+    <EmbeddedResource Include="FamilyUk.txt" />
+    <EmbeddedResource Include="FoodUk.txt" />
+    <EmbeddedResource Include="FurnitureUk.txt" />
+    <EmbeddedResource Include="HealthUk.txt" />
+    <EmbeddedResource Include="HobbiesUk.txt" />
+    <EmbeddedResource Include="MusicUk.txt" />
+    <EmbeddedResource Include="ToolsUk.txt" />
+    <EmbeddedResource Include="TravelUk.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_SelectLanguage.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\round_LinearLayout.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

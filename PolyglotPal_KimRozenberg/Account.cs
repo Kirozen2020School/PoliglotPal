@@ -13,10 +13,11 @@ namespace PolyglotPal_KimRozenberg
         public byte[] profilepic { get; set; }
         public string theme { get; set; }
         public bool isPlaying { get; set; }
+        public string language {  get; set; }
 
         public Account(string username, string lastname, string firstname, string password, 
             int totalxp, int totaltasks, string datejoining, 
-            byte[] profilepic, string theme, bool isPlaying)
+            byte[] profilepic, string theme, bool isPlaying, string language)
         {
             this.username = username;
             this.lastname = lastname;
@@ -28,6 +29,7 @@ namespace PolyglotPal_KimRozenberg
             this.profilepic = profilepic;
             this.theme = theme;
             this.isPlaying = isPlaying;
+            this.language = language;
         }
     }
 }
