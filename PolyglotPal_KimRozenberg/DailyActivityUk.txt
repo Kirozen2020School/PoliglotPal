@@ -1,0 +1,28 @@
+﻿Brush teeth - Чистити зуби
+Take a shower - Приймати душ
+Get dressed - Одягатися
+Have breakfast - Снідати
+Go to work - Іти на роботу
+Take a break - Робити перерву
+Have lunch - Обідати
+Go back to work - Повертатися на роботу
+Finish work - Закінчувати роботу
+Exercise - Вправлятися
+Cook dinner - Готувати вечерю
+Eat dinner - Вечеряти
+Watch TV - Дивитися телевізор
+Relax - Відпочивати
+Read a book - Читати книгу
+Go to bed - Лягати спати
+Fall asleep - Засинати
+Dream - Мріяти
+Set an alarm - Встановлювати будильник
+Hit snooze - Клацати "сном"
+Wake someone up - Розбуджувати когось
+Make the bed - Зстеляти ліжко
+Clean the house - Прибирати будинок
+Vacuum - Пилососити
+Do laundry - Робити прання
+Iron clothes - Прасувати одяг
+Plan the day - Планувати день
+Make a to-do list - Робити список справ

@@ -1,0 +1,32 @@
+﻿Clothing - Одежда
+Shirt - Рубашка
+Blouse - Блузка
+T-shirt - Футболка
+Sweater - Свитер
+Jacket - Куртка
+Coat - Пальто
+Dress - Платье
+Skirt - Юбка
+Pants/Trousers - Брюки
+Jeans - Джинсы
+Shorts - Шорты
+Hat - Шляпа
+Cap - Кепка
+Scarf - Шарф
+Gloves - Перчатки
+Socks - Носки
+Shoes - Обувь
+Boots - Ботинки
+Sandals - Сандалии
+Slippers - Тапочки
+Belt - Ремень
+Tie - Галстук
+Bow tie - Бабочка
+Suit - Костюм
+Tuxedo - Смокинг
+Pajamas - Пижама
+Underwear - Нижнее белье
+Swimsuit - Купальник
+Bikini - Бикини
+Raincoat - Плащ
+Umbrella - Зонт

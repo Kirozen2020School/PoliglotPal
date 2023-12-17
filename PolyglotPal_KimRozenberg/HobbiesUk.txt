@@ -1,0 +1,40 @@
+﻿Hobby - Хобі
+Interest - Інтерес
+Read - Читати
+Write - Писати
+Draw - Малювати
+Paint - Фарбувати
+Cook - Готувати
+Bake - Випікати
+Sew - Шити
+Knit - В'язати
+Garden - Саджати рослини
+Photograph - Фотографувати
+Play an instrument - Грати на інструменті
+Sing - Співати
+Dance - Танцювати
+Exercise - Вправлятися
+Play sports - Грати в спорт
+Play video games - Грати в відеоігри
+Watch movies - Дивитися фільми
+Listen to music - Слухати музику
+Travel - Подорожувати
+Hike - Походження
+Climb - Підніматися вгору
+Camp - Отримувати задоволення від ночівлі на природі
+Fish - Риболовля
+Collect - Збирати
+Sculpt - Ліпити
+Craft - Мистецтво ручної роботи
+Gamble - Грати в азартні ігри
+Play board games - Грати в настільні ігри
+Solve puzzles - Розв'язувати головоломки
+Build models - Збирати моделі
+Do yoga - Займатися йогою
+Meditate - Медитувати
+Read comics - Читати комікси
+Write poetry - Писати поезію
+Learn a new language - Вивчати нову мову
+Play chess - Грати в шахи
+Play cards - Грати в карти
+Surf the internet - Лазити в інтернеті

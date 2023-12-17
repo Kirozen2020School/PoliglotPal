@@ -1,0 +1,29 @@
+﻿Musical Instruments - Музыкальные инструменты
+Piano - Пианино
+Guitar - Гитара
+Violin - Скрипка
+Flute - Флейта
+Trumpet - Труба
+Saxophone - Саксофон
+Drums - Ударные
+Bass guitar - Бас-гитара
+Harp - Арфа
+Clarinet - Кларнет
+Trombone - Тромбон
+Oboe - Валторна
+Cello - Виолончель
+Accordion - Аккордеон
+Banjo - Банджо
+Horn - Рог
+Keyboard - Клавишные
+Organ - Орган
+Bagpipes - Волынка
+Harpsichord - Клавесин
+Mandolin - Мандолина
+Xylophone - Ксилофон
+Triangle - Треугольник
+Castanets - Кастаньеты
+Cymbals - Цимбалы
+Gong - Гонг
+Maracas - Маракасы
+Tambourine - Тамбурин

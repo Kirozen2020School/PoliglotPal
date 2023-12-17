@@ -1,0 +1,40 @@
+﻿Family - Семья
+Parents - Родители
+Mother - Мать
+Father - Отец
+Child - Ребенок
+Son - Сын
+Daughter - Дочь
+Siblings - Братья и сестры
+Brother - Брат
+Sister - Сестра
+Grandparents - Дедушка и бабушка
+Grandfather - Дедушка
+Grandmother - Бабушка
+Uncle - Дядя
+Aunt - Тетя
+Cousin - Двоюродный/двоюродная брат/сестра
+Nephew - Племянник
+Niece - Племянница
+Spouse - Супруг/Супруга
+Husband - Муж
+Wife - Жена
+Fiancé - Помолвленный
+Fiancée - Помолвленная
+Boyfriend - Парень
+Girlfriend - Девушка
+In-laws - Кровные родственники
+Father-in-law - Свекор
+Mother-in-law - Свекровь
+Brother-in-law - Деверь
+Sister-in-law - Невестка
+Son-in-law - Зять
+Daughter-in-law - Невеста
+Stepfather - Отчим
+Stepmother - Мачеха
+Stepson - Пасынок
+Stepdaughter - Падчерица
+Half-brother - Полубрат
+Half-sister - Полусестра
+Adoptive parents - Усыновители
+Foster parents - Приемные родители

@@ -311,6 +311,49 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\sound3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ukraine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\russia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\israel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AnimalsRu.txt" />
+    <EmbeddedResource Include="BuisnessRu.txt" />
+    <EmbeddedResource Include="ClothingRu.txt" />
+    <EmbeddedResource Include="CountriesRu.txt" />
+    <EmbeddedResource Include="DailyActivityRu.txt" />
+    <EmbeddedResource Include="EducationRu.txt" />
+    <EmbeddedResource Include="EmotionsRu.txt" />
+    <EmbeddedResource Include="FamilyRu.txt" />
+    <EmbeddedResource Include="FoodRu.txt" />
+    <EmbeddedResource Include="FurnitureRu.txt" />
+    <EmbeddedResource Include="HealthRu.txt" />
+    <EmbeddedResource Include="HobbiesRu.txt" />
+    <EmbeddedResource Include="MusicRu.txt" />
+    <EmbeddedResource Include="ToolsRu.txt" />
+    <EmbeddedResource Include="TravelRu.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AnimalsUk.txt" />
+    <Content Include="BusinessUk.txt" />
+    <Content Include="ClothingUk.txt" />
+    <Content Include="CountriesUk.txt" />
+    <Content Include="DailyActivityUk.txt" />
+    <Content Include="EducationUk.txt" />
+    <Content Include="EmotionsUk.txt" />
+    <Content Include="FamilyUk.txt" />
+    <Content Include="FoodUk.txt" />
+    <Content Include="FurnitureUk.txt" />
+    <Content Include="HealthUk.txt" />
+    <Content Include="HobbiesUk.txt" />
+    <Content Include="MusicUk.txt" />
+    <Content Include="ToolsUk.txt" />
+    <Content Include="TravelUk.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
     Other similar extension points exist, see Microsoft.Common.targets.

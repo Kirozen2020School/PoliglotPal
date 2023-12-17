@@ -1,0 +1,44 @@
+﻿Business - Бізнес
+Company - Компанія
+Entrepreneur - Підприємець
+Startup - Стартап
+Small business - Маленький бізнес
+Corporation - Корпорація
+CEO (Chief Executive Officer) - Генеральний директор (Гендиректор)
+Manager - Менеджер
+Employee - Працівник
+Team - Команда
+Office - Офіс
+Meeting - Зустріч
+Presentation - Презентація
+Client - Клієнт
+Customer - Клієнт
+Product - Продукт
+Service - Сервіс
+Marketing - Маркетинг
+Sales - Продажі
+Revenue - Дохід
+Profit - Прибуток
+Loss - Збиток
+Budget - Бюджет
+Investment - Інвестиція
+Finance - Фінанси
+Accounting - Облік
+Invoice - Рахунок-фактура
+Payment - Оплата
+Contract - Контракт
+Negotiation - Переговори
+Deal - Угода
+Partnership - Партнерство
+Collaboration - Співпраця
+Strategy - Стратегія
+Planning - Планування
+Market research - Дослідження ринку
+Competition - Конкуренція
+Innovation - Інновації
+Technology - Технології
+Digital - Цифровий
+E-commerce - Електронна комерція
+Networking - Мережа
+Customer service - Обслуговування клієнтів
+Feedback - Зворотний зв'язок

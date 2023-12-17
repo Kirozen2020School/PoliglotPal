@@ -1,0 +1,40 @@
+﻿Hobby - Хобби
+Interest - Интерес
+Read - Читать
+Write - Писать
+Draw - Рисовать
+Paint - Красить
+Cook - Готовить
+Bake - Печь
+Sew - Шить
+Knit - Вязать
+Garden - Заниматься садоводством
+Photograph - Фотографировать
+Play an instrument - Играть на инструменте
+Sing - Петь
+Dance - Танцевать
+Exercise - Заниматься физическими упражнениями
+Play sports - Заниматься спортом
+Play video games - Играть в видеоигры
+Watch movies - Смотреть фильмы
+Listen to music - Слушать музыку
+Travel - Путешествовать
+Hike - Поход в горы
+Climb - Восхождение
+Camp - Кемпинг
+Fish - Рыбачить
+Collect - Коллекционировать
+Sculpt - Лепить
+Craft - Заниматься ремеслом
+Gamble - Азартные игры
+Play board games - Играть в настольные игры
+Solve puzzles - Решать головоломки
+Build models - Собирать модели
+Do yoga - Заниматься йогой
+Meditate - Медитировать
+Read comics - Читать комиксы
+Write poetry - Писать поэзию
+Learn a new language - Учить новый язык
+Play chess - Играть в шахматы
+Play cards - Играть в карты
+Surf the internet - Серфить в интернете

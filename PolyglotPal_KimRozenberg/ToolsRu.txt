@@ -1,0 +1,33 @@
+﻿Tools - Инструменты
+Hammer - Молоток
+Screwdriver - Отвертка
+Wrench - Гаечный ключ
+Pliers - Кусачки
+Tape measure - Лента измерительная
+Drill - Дрель
+Saw - Пила
+Nail - Гвоздь
+Screw - Винт
+Level - Уровень
+Chisel - Зубило
+Trowel - Мастерка
+Sander - Шлифовальная машина
+Saw blade - Пильное полотно
+Clamp - Зажим
+Carpenter's square - Плоскость столяра
+Cordless drill - Беспроводная дрель
+Paintbrush - Кисть для краски
+Roller brush - Валик
+Bucket - Ведро
+Sponge - Губка
+Ladder - Лестница
+Gloves - Перчатки
+Safety glasses - Защитные очки
+Helmet - Шлем
+Sawhorse - Пила-кох
+Stapler - Степлер
+Tape - Лента
+Glue - Клей
+Screwdriver set - Набор отверток
+Wrench set - Набор гаечных ключей
+Toolbox - Ящик для инструментов

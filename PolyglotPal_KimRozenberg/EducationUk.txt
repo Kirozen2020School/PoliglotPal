@@ -1,0 +1,43 @@
+﻿School - Школа
+Classroom - Клас
+Teacher - Вчитель
+Student - Учень
+Principal - Директор
+Curriculum - Навчальна програма
+Subject - Предмет
+Lesson - Урок
+Homework - Домашнє завдання
+Assignment - Завдання
+Exam - Екзамен
+Test - Тест
+Grade - Оцінка
+Report card - Табель
+Textbook - Підручник
+Library - Бібліотека
+Research - Дослідження
+Project - Проект
+Essay - Есе
+Classmate - Однокласник
+Group work - Групова робота
+Lecture - Лекція
+Seminar - Семінар
+Degree - Ступінь
+Diploma - Диплом
+Graduation - Випуск
+College - Коледж
+University - Університет
+Major - Спеціальність
+Minor - Другорядна спеціальність
+Class schedule - Розклад занять
+Student ID - Студентський квиток
+Backpack - Рюкзак
+Notebook - Блокнот
+Pencil - Олівець
+Pen - Ручка
+Paper - Папір
+Projector - Проектор
+Whiteboard - Біла дошка
+Marker - Маркер
+Computer lab - Комп'ютерна лабораторія
+Online learning - Онлайн-навчання
+Distance education - Дистанційна освіта

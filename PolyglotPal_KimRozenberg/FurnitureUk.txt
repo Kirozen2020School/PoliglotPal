@@ -1,0 +1,34 @@
+﻿Furniture - Меблі
+Chair - Стул
+Table - Стіл
+Couch/Sofa - Диван
+Bed - Ліжко
+Wardrobe - Шафа
+Dresser - Комод
+Bookshelf - Книжкова полиця
+Desk - Письмовий стіл
+Shelves - Полиці
+Cabinet - Шафа
+Drawer - Шухляда
+Mirror - Дзеркало
+Lamp - Лампа
+Lighting - Освітлення
+Rug - Килим
+Carpet - Килим
+Curtains - Занавіски
+Blinds - Жалюзі
+Sofa bed - Розкладний диван
+Coffee table - Кавовий стіл
+End table - Кінцевий стіл
+Nightstand - Тумбочка біля ліжка
+Dining table - Обідній стіл
+Dining chairs - Стулья для обіду
+Barstool - Барний стілець
+Benches - Лавки
+Ottoman - Табурет
+Rocking chair - Крісло-качалка
+Cushion - Подушка
+Pouf - Пуф
+Cupboard - Кухонна шафа
+Hanging shelf - Підвісна полиця
+Filing cabinet - Шафа для документів

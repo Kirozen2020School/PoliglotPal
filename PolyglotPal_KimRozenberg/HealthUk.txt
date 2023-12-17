@@ -1,0 +1,44 @@
+﻿Health - Здоров'я
+Wellness - Здоров'я та благополуччя
+Exercise - Тренування
+Workout - Тренування
+Fitness - Фітнес
+Nutrition - Харчування
+Healthy - Здоровий
+Unhealthy - Нездоровий
+Diet - Дієта
+Weight - Вага
+Stress - Стрес
+Relaxation - Відпочинок
+Mental health - Психічне здоров'я
+Physical health - Фізичне здоров'я
+Sleep - Сон
+Rest - Відпочинок
+Energy - Енергія
+Vitamins - Вітаміни
+Hydration - Гідратація
+Medicine - Ліки
+Doctor - Лікар
+Nurse - Медсестра
+Hospital - Лікарня
+Appointment - Зустріч
+Check-up - Медичний огляд
+Therapist - Терапевт
+Massage - Масаж
+Yoga - Йога
+Meditation - Медитація
+Gym - Спортзал
+Sickness - Хвороба
+Pain - Біль
+Allergy - Алергія
+Flu - Грип
+Cold - Простуда
+Headache - Головний біль
+Heart - Серце
+Lungs - Легені
+Stomach - Живіт
+Back - Спина
+Leg - Нога
+Arm - Рука
+Hand - Рука
+Foot - Нога

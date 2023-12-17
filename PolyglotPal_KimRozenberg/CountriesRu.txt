@@ -1,0 +1,45 @@
+﻿Countries - Страны
+United States - Соединенные Штаты
+Canada - Канада
+United Kingdom - Соединенное Королевство
+France - Франция
+Germany - Германия
+Spain - Испания
+Italy - Италия
+Australia - Австралия
+Japan - Япония
+China - Китай
+India - Индия
+Brazil - Бразилия
+Mexico - Мексика
+Argentina - Аргентина
+Russia - Россия
+South Africa - Южная Африка
+Egypt - Египет
+Israel - Израиль
+Saudi Arabia - Саудовская Аравия
+United Arab Emirates - Объединенные Арабские Эмираты
+Turkey - Турция
+Greece - Греция
+South Korea - Южная Корея
+North Korea - Северная Корея
+Canada - Канада
+Colombia - Колумбия
+Chile - Чили
+Peru - Перу
+New Zealand - Новая Зеландия
+Thailand - Таиланд
+Indonesia - Индонезия
+Malaysia - Малайзия
+Vietnam - Вьетнам
+Philippines - Филиппины
+Pakistan - Пакистан
+Nigeria - Нигерия
+South Korea - Южная Корея
+North Korea - Северная Корея
+Morocco - Марокко
+Tunisia - Тунис
+Algeria - Алжир
+Libya - Ливия
+Ethiopia - Эфиопия
+Kenya - Кения

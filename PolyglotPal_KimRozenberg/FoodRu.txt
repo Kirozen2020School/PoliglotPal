@@ -1,0 +1,43 @@
+﻿Food - Еда
+Meal - Еда
+Breakfast - Завтрак
+Lunch - Обед
+Dinner - Ужин
+Snack - Перекус
+Appetizer - Закуска
+Main course - Основное блюдо
+Dessert - Десерт
+Beverage - Напиток
+Water - Вода
+Juice - Сок
+Tea - Чай
+Coffee - Кофе
+Milk - Молоко
+Bread - Хлеб
+Rice - Рис
+Pasta - Паста
+Meat - Мясо
+Chicken - Курица
+Fish - Рыба
+Vegetables - Овощи
+Fruits - Фрукты
+Salad - Салат
+Sandwich - Бутерброд
+Pizza - Пицца
+Burger - Бургер
+Fries - Картошка фри
+Soup - Суп
+Cheese - Сыр
+Eggs - Яйца
+Butter - Масло
+Sugar - Сахар
+Salt - Соль
+Pepper - Перец
+Spices - Специи
+Olive oil - Оливковое масло
+Vinegar - Уксус
+Honey - Мед
+Jam - Варенье
+Ketchup - Кетчуп
+Mustard - Горчица
+Mayonnaise - Майонез

@@ -1,0 +1,40 @@
+﻿Book a flight - Забронювати квиток на літак
+Pack a suitcase - Упакувати валізу
+Check-in at the airport - Реєстрація в аеропорту
+Board the plane - Сісти на літак
+Take off - Злетіти
+Land - Приземлитися
+Collect luggage - Забрати багаж
+Hail a taxi - Замовити таксі
+Book a hotel - Забронювати готель
+Check-in at the hotel - Зареєструватися в готелі
+Unpack - Розпакувати валізу
+Explore the city - Досліджувати місто
+Visit tourist attractions - Відвідати туристичні пам'ятки
+Take photos - Робити фотографії
+Try local food - Спробувати місцеву їжу
+Ask for directions - Спитати дорогу
+Buy souvenirs - Купити сувеніри
+Learn basic phrases - Вивчити основні фрази
+Exchange currency - Обміняти валюту
+Reserve a table - Забронювати стіл
+Enjoy the beach - Насолоджуватися пляжем
+Go for a swim - Попливти
+Relax by the pool - Відпочивати біля басейну
+Go sightseeing - Оглядати визначні місця
+Take a guided tour - Пройти екскурсію з гідом
+Board a cruise - Сісти на круїз
+Visit a museum - Відвідати музей
+Explore the nightlife - Досліджувати нічне життя
+Experience local culture - Відчути місцеву культуру
+Admire the architecture - Захоплюватися архітектурою
+Go on an adventure - Пригоджуватися
+Visit historical sites - Відвідати історичні пам'ятки
+Take a scenic drive - Прокатитися по мальовничим дорогам
+Get a travel guide - Отримати путівник
+Reserve a rental car - Забронювати автомобіль на прокат
+Ask for recommendations - Спитати поради
+Visit a national park - Відвідати національний парк
+Go on a hike - Піти в похід
+Explore local markets - Досліджувати місцеві ринки
+Try street food - Спробувати вуличну їжу

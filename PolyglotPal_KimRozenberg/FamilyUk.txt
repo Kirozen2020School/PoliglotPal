@@ -1,0 +1,39 @@
+﻿Parents - Батьки
+Mother - Мати
+Father - Батько
+Child - Дитина
+Son - Син
+Daughter - Дочка
+Siblings - Брати/Сестри
+Brother - Брат
+Sister - Сестра
+Grandparents - Дідусь та бабуся
+Grandfather - Дідусь
+Grandmother - Бабуся
+Uncle - Дядько
+Aunt - Тітка
+Cousin - Двоюрідний брат/сестра
+Nephew - Племінник
+Niece - Племінниця
+Spouse - Супутник
+Husband - Чоловік
+Wife - Дружина
+Fiancé - Обручений (чоловік)
+Fiancée - Обручена (жінка)
+Boyfriend - Хлопець
+Girlfriend - Дівчина
+In-laws - Тесть та теща
+Father-in-law - Тесть
+Mother-in-law - Теща
+Brother-in-law - Шурин
+Sister-in-law - Свекруха
+Son-in-law - Зять
+Daughter-in-law - Невістка
+Stepfather - Очім
+Stepmother - Мачуха
+Stepson - Пасинок
+Stepdaughter - Падчерка
+Half-brother - Підбрат
+Half-sister - Підсестра
+Adoptive parents - Прийомні батьки
+Foster parents - Батьки-опікун

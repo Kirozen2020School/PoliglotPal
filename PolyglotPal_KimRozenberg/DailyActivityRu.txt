@@ -1,0 +1,50 @@
+﻿Wake up - Пробудиться
+Brush teeth - Чистить зубы
+Take a shower - Принять душ
+Get dressed - Одеться
+Have breakfast - Позавтракать
+Go to work - Идти на работу
+Take a break - Взять перерыв
+Have lunch - Пообедать
+Go back to work - Вернуться на работу
+Finish work - Закончить работу
+Exercise - Заниматься физическими упражнениями
+Cook dinner - Готовить ужин
+Eat dinner - Ужинать
+Watch TV - Смотреть телевизор
+Relax - Отдыхать
+Read a book - Читать книгу
+Go to bed - Идти спать
+Fall asleep - Заснуть
+Dream - Сниться
+Set an alarm - Поставить будильник
+Hit snooze - Поставить на паузу (будильник)
+Wake someone up - Разбудить кого-то
+Make the bed - Застилать постель
+Clean the house - Убирать дом
+Vacuum - Пылесосить
+Do laundry - Стирать белье
+Iron clothes - Гладить одежду
+Plan the day - Планировать день
+Make a to-do list - Составлять список дел
+Go for a walk - Прогуливаться
+Drive to work - Доехать на работу
+Take the bus - Ехать на автобусе
+Ride a bike - Кататься на велосипеде
+Meet friends - Встречаться с друзьями
+Go shopping - Идти за покупками
+Pay bills - Платить счета
+Attend a meeting - Присутствовать на совещании
+Answer emails - Отвечать на электронные письма
+Cook lunch - Готовить обед
+Water plants - Поливать растения
+Feed pets - Кормить домашних животных
+Check messages - Проверять сообщения
+Listen to music - Слушать музыку
+Meditate - Медитировать
+Go for a run - Пробежаться
+Take a nap - Вздремнуть
+Write in a journal - Писать в дневнике
+Study - Учиться
+Learn something new - Учить что-то новое
+Reflect on the day - Рефлексировать о дне

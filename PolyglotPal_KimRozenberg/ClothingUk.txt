@@ -1,0 +1,31 @@
+﻿Shirt - Сорочка
+Blouse - Блуза
+T-shirt - Футболка
+Sweater - Светр
+Jacket - Куртка
+Coat - Пальто
+Dress - Сукня
+Skirt - Спідниця
+Pants/Trousers - Штани
+Jeans - Джинси
+Shorts - Шорти
+Hat - Шапка
+Cap - Кепка
+Scarf - Шарф
+Gloves - Рукавички
+Socks - Шкарпетки
+Shoes - Взуття
+Boots - Черевики
+Sandals - Сандалі
+Slippers - Тапочки
+Belt - Ремінь
+Tie - Краватка
+Bow tie - Бант
+Suit - Костюм
+Tuxedo - Смокінг
+Pajamas - Піжама
+Underwear - Нижній одяг
+Swimsuit - Купальник
+Bikini - Бікіні
+Raincoat - Плащ
+Umbrella - Зонт

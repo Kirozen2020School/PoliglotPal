@@ -1,0 +1,44 @@
+﻿United States - Сполучені Штати
+Canada - Канада
+United Kingdom - Об'єднане Королівство
+France - Франція
+Germany - Німеччина
+Spain - Іспанія
+Italy - Італія
+Australia - Австралія
+Japan - Японія
+China - Китай
+India - Індія
+Brazil - Бразилія
+Mexico - Мексика
+Argentina - Аргентина
+Russia - Росія
+South Africa - Південна Африка
+Egypt - Єгипет
+Israel - Ізраїль
+Saudi Arabia - Саудівська Аравія
+United Arab Emirates - Об'єднані Арабські Емірати
+Turkey - Туреччина
+Greece - Греція
+South Korea - Південна Корея
+North Korea - Північна Корея
+Canada - Канада
+Colombia - Колумбія
+Chile - Чилі
+Peru - Перу
+New Zealand - Нова Зеландія
+Thailand - Таїланд
+Indonesia - Індонезія
+Malaysia - Малайзія
+Vietnam - В'єтнам
+Philippines - Філіппіни
+Pakistan - Пакистан
+Nigeria - Нігерія
+South Korea - Південна Корея
+North Korea - Північна Корея
+Morocco - Марокко
+Tunisia - Туніс
+Algeria - Алжир
+Libya - Лівія
+Ethiopia - Ефіопія
+Kenya - Кенія
