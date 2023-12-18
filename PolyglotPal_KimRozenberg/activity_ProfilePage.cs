@@ -7,6 +7,7 @@ using Android.Graphics;
 using System.IO;
 using Android.Content.PM;
 using Android.Provider;
+using Android.Views;
 
 namespace PolyglotPal_KimRozenberg
 {
@@ -22,6 +23,8 @@ namespace PolyglotPal_KimRozenberg
         string username;
         Account user;
         FirebaseManager firebase;
+
+        PopupWindow popupWindow;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -175,33 +178,68 @@ namespace PolyglotPal_KimRozenberg
         
         private void IvProfilePic_Click(object sender, EventArgs e)
         {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.SetTitle("From where you want to get the new profile pic?");
-            builder.SetPositiveButton("Camera", (sender, args) =>
-            {
-                if(CheckSelfPermission(Android.Manifest.Permission.Camera) == Android.Content.PM.Permission.Granted)
-                {
-                    Intent intent = new Intent(Android.Provider.MediaStore.ActionImageCapture);
-                    StartActivityForResult(intent, 0);
-                }
-                else
-                {
-                    RequestPermissions(new string[] { Android.Manifest.Permission.Camera }, 1001);
-                }
+            View changeProfilePic = LayoutInflater.Inflate(Resource.Layout.activity_ChangeProfilePage, null);
 
-            });
-            builder.SetNeutralButton("Cancel", (sender, args) =>
+            this.popupWindow = new PopupWindow(
+                changeProfilePic,
+                ViewGroup.LayoutParams.WrapContent,
+                ViewGroup.LayoutParams.WrapContent,
+                true
+                );
+
+            ImageView ivProfilePicChangePage = changeProfilePic.FindViewById<ImageView>(Resource.Id.ivProfilePicChangeProfilePicPage);
+            Button btnCameraSelect = changeProfilePic.FindViewById<Button>(Resource.Id.btnSelectCamera);
+            Button btnGalarySelect = changeProfilePic.FindViewById<Button>(Resource.Id.btnSelectGalery);
+            Button btnCancelSelect = changeProfilePic.FindViewById<Button>(Resource.Id.btnSelectCancel);
+
+            btnCameraSelect.Click += BtnCameraSelect_Click;
+            btnGalarySelect.Click += BtnGalarySelect_Click;
+            btnCancelSelect.Click += BtnCancelSelect_Click;
+
+            Bitmap pic = ConvertByteArrayToBitmap(this.user.profilepic);
+            ivProfilePicChangePage.SetImageBitmap(pic);
+
+            popupWindow.ShowAtLocation(this.Window.DecorView.RootView, GravityFlags.Center, 0, 0);
+
+        }
+
+        private void BtnCancelSelect_Click(object sender, EventArgs e)
+        {
+            if (popupWindow != null && popupWindow.IsShowing)
             {
-                Toast.MakeText(this, "You did not change your profile image", ToastLength.Long).Show();
-            });
-            builder.SetNegativeButton("Galary", (sender, args) =>
+                popupWindow.Dismiss();
+            }
+            Toast.MakeText(this, "You did not change your profile image", ToastLength.Long).Show();
+        }
+
+        private void BtnGalarySelect_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(Intent.ActionPick);
+            intent.SetType("image/*");
+            StartActivityForResult(intent, 1);
+
+            if (popupWindow != null && popupWindow.IsShowing)
             {
-                Intent intent = new Intent(Intent.ActionPick);
-                intent.SetType("image/*");
-                StartActivityForResult(intent, 1);
-            });
-            AlertDialog dialog = builder.Create();
-            dialog.Show();
+                popupWindow.Dismiss();
+            }
+        }
+
+        private void BtnCameraSelect_Click(object sender, EventArgs e)
+        {
+            if (CheckSelfPermission(Android.Manifest.Permission.Camera) == Android.Content.PM.Permission.Granted)
+            {
+                Intent intent = new Intent(Android.Provider.MediaStore.ActionImageCapture);
+                StartActivityForResult(intent, 0);
+            }
+            else
+            {
+                RequestPermissions(new string[] { Android.Manifest.Permission.Camera }, 1001);
+            }
+
+            if (popupWindow != null && popupWindow.IsShowing)
+            {
+                popupWindow.Dismiss();
+            }
         }
 
         private void BtnGotToTaskPageFromProfilePage_Click(object sender, EventArgs e)
