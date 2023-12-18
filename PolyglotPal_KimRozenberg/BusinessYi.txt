@@ -1,0 +1,44 @@
+﻿Business - געשעפט
+Company - פֿירמע
+Entrepreneur - אפּשטאַרטער
+Startup - שטאַרט־אַפּ
+Small business - קלײַן געשעפט
+Corporation - קאָרפּאָראַטיאָן
+CEO (Chief Executive Officer) - הויפּט־אַפּטרעפֿ
+Manager - מענעדזשער
+Employee - אַרבעטנעמער
+Team - טים
+Office - ביראָ
+Meeting - מעטינג
+Presentation - פּרעזענטאַציע
+Client - קונטראַקטפֿאַרן
+Customer - קונטראַקטפֿאַר
+Product - פּראָדוקט
+Service - דינסט
+Marketing - מאַרקעטינג
+Sales - פֿערקויפּ
+Revenue - איינקומען
+Profit - געװינ
+Loss - פֿערלירן
+Budget - בילאַנץ
+Investment - פֿאַרקויף
+Finance - פֿינאַנץ
+Accounting - בוך־החשבה
+Invoice - רעכנונג
+Payment - צאָלונג
+Contract - קאָנטראַקט
+Negotiation - פֿאַרהאַנדלונג
+Deal - דיל
+Partnership - פּאַרטנערשיפּ
+Collaboration - צוזאַמענאַרבייט
+Strategy - שטראַטעגיע
+Planning - תכנית
+Market research - מאַרקעט־פֿאָרשונג
+Competition - קאָנקוררענץ
+Innovation - ינואוואַציע
+Technology - טעכנאָלאָגיע
+Digital - דיגיטאַל
+E-commerce - ע-קאָמערס
+Networking - נעטוואָרקינג
+Customer service - קונטראַקטפֿאַר סערוויס
+Feedback - פֿידבעק

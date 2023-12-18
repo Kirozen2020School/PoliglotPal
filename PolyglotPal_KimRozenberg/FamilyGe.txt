@@ -1,0 +1,40 @@
+﻿Family - Familie
+Parents - Eltern
+Mother - Mutter
+Father - Vater
+Child - Kind
+Son - Sohn
+Daughter - Tochter
+Siblings - Geschwister
+Brother - Bruder
+Sister - Schwester
+Grandparents - Großeltern
+Grandfather - Großvater
+Grandmother - Großmutter
+Uncle - Onkel
+Aunt - Tante
+Cousin - Cousin/Cousine
+Nephew - Neffe
+Niece - Nichte
+Spouse - Ehepartner
+Husband - Ehemann
+Wife - Ehefrau
+Fiancé - Verlobter
+Fiancée - Verlobte
+Boyfriend - Freund (männlich)
+Girlfriend - Freundin (weiblich)
+In-laws - Schwiegereltern
+Father-in-law - Schwiegervater
+Mother-in-law - Schwiegermutter
+Brother-in-law - Schwager
+Sister-in-law - Schwägerin
+Son-in-law - Schwiegersohn
+Daughter-in-law - Schwiegertochter
+Stepfather - Stiefvater
+Stepmother - Stiefmutter
+Stepson - Stiefsohn
+Stepdaughter - Stieftochter
+Half-brother - Halbbruder
+Half-sister - Halbschwester
+Adoptive parents - Adoptiveltern
+Foster parents - Pflegeeltern

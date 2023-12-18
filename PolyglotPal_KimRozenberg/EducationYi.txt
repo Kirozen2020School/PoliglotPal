@@ -1,0 +1,44 @@
+﻿Education - חינוך
+School - שול
+Classroom - קלאַסצימער
+Teacher - מורה
+Student - תַלמיד
+Principal - פּרינציפּאַל
+Curriculum - קוריקולום
+Subject - פֿאַך
+Lesson - לעקציע
+Homework - היימ אָפּגאַבע
+Assignment - אַסיינמאַנט
+Exam - פֿראַג
+Test - טעסט
+Grade - נאטל
+Report card - נאטלבלאַט
+Textbook - לערבוך
+Library - ביבליאָטעק
+Research - פֿאָרשונג
+Project - פּרויעקט
+Essay - עסע
+Classmate - קלאַסמעט
+Group work - גרופּע ערבעט
+Lecture - לעקטשער
+Seminar - סעמינאר
+Degree - דעגריי
+Diploma - דיפּלאָמע
+Graduation - אָבזיך
+College - קאָלעגע
+University - אוניווערסיטעט
+Major - הויפּטפֿאַך
+Minor - מינער
+Class schedule - קלאַס שעדולע
+Student ID - שולדינג תעודה
+Backpack - פֿאַרניש
+Notebook - נאטבוך
+Pencil - קרידל
+Pen - פּען
+Paper - פּאַפּיר
+Projector - פּראָיעקטאָר
+Whiteboard - ווייסבאָרד
+Marker - מאַרקער
+Computer lab - קאָמפּיוטער לאַב
+Online learning - אָנליין לערנען
+Distance education - דיסטאַנץ לערנען

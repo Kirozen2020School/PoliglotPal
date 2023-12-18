@@ -321,7 +321,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AnimalsRu.txt" />
-    <EmbeddedResource Include="BuisnessRu.txt" />
+    <AdditionalFiles Include="BusinessRu.txt" />
     <EmbeddedResource Include="ClothingRu.txt" />
     <EmbeddedResource Include="CountriesRu.txt" />
     <EmbeddedResource Include="DailyActivityRu.txt" />
@@ -365,6 +365,65 @@
     <AndroidResource Include="Resources\layout\activity_ChangeProfilePage.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AnimalsYi.txt" />
+    <EmbeddedResource Include="BusinessYi.txt" />
+    <EmbeddedResource Include="ClothingYi.txt" />
+    <EmbeddedResource Include="CountriesYi.txt" />
+    <EmbeddedResource Include="DailyActivityYi.txt" />
+    <EmbeddedResource Include="EducationYi.txt" />
+    <EmbeddedResource Include="EmotionsYi.txt" />
+    <EmbeddedResource Include="FamilyYi.txt" />
+    <EmbeddedResource Include="FoodYi.txt" />
+    <EmbeddedResource Include="FurnitureYi.txt" />
+    <EmbeddedResource Include="HealthYi.txt" />
+    <EmbeddedResource Include="HobbiesYi.txt" />
+    <EmbeddedResource Include="MusicYi.txt" />
+    <EmbeddedResource Include="ToolsYi.txt" />
+    <EmbeddedResource Include="TravelYi.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\poland.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\germany.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Yiddish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AnimalsGe.txt" />
+    <EmbeddedResource Include="BusinessGe.txt" />
+    <EmbeddedResource Include="ClothingGe.txt" />
+    <EmbeddedResource Include="CountriesGe.txt" />
+    <EmbeddedResource Include="DailyActivityGe.txt" />
+    <EmbeddedResource Include="EducationGe.txt" />
+    <EmbeddedResource Include="EmotionsGe.txt" />
+    <EmbeddedResource Include="FamilyGe.txt" />
+    <EmbeddedResource Include="FoodGe.txt" />
+    <EmbeddedResource Include="FurnitureGe.txt" />
+    <EmbeddedResource Include="HobbiesGe.txt" />
+    <EmbeddedResource Include="MusicGe.txt" />
+    <EmbeddedResource Include="ToolsGe.txt" />
+    <EmbeddedResource Include="TravelGe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AnimalsPo.txt" />
+    <EmbeddedResource Include="BusinessPo.txt" />
+    <EmbeddedResource Include="ClothingPo.txt" />
+    <EmbeddedResource Include="CountriesPo.txt" />
+    <EmbeddedResource Include="DailyActivityPo.txt" />
+    <EmbeddedResource Include="EducationPo.txt" />
+    <EmbeddedResource Include="EmotionsPo.txt" />
+    <EmbeddedResource Include="FamilyPo.txt" />
+    <EmbeddedResource Include="FoodPo.txt" />
+    <EmbeddedResource Include="FurniturePo.txt" />
+    <EmbeddedResource Include="HealthPo.txt" />
+    <EmbeddedResource Include="HobbiesPo.txt" />
+    <EmbeddedResource Include="MusicPo.txt" />
+    <EmbeddedResource Include="ToolsPo.txt" />
+    <EmbeddedResource Include="TravelPo.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

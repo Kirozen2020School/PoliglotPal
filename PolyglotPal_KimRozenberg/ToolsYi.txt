@@ -1,0 +1,33 @@
+﻿Tools - גערט
+Hammer - האַמער
+Screwdriver - שראַויבדריווער
+Wrench - שליסל
+Pliers - פּליערס
+Tape measure - מסכּור אַ מעססטער
+Drill - בויער
+Saw - זאָג
+Nail - נאָגל
+Screw - שראַוב
+Level - לעוועל
+Chisel - זיסל
+Trowel - טראָוול
+Sander - שלייפֿער
+Saw blade - זאָג בלאַד
+Clamp - קלאַמפּ
+Carpenter's square - שניידיקער פּלאַט
+Cordless drill - באַטעריה בויער
+Paintbrush - פּויענסבראַש
+Roller brush - ראָלער בראַש
+Bucket - אַימער
+Sponge - שפּאָנזש
+Ladder - לעדער
+Gloves - האַנטשוהס
+Safety glasses - פּראָטעקטיפֿע אויגן
+Helmet - העלמעט
+Sawhorse - זאָג־פּערד
+Stapler - שטעפּלער
+Tape - באַנד
+Glue - קלייַב
+Screwdriver set - שראַויבדריווער סעט
+Wrench set - שליסל סעט
+Toolbox - כלי פּאַק

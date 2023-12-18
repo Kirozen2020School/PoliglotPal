@@ -151,8 +151,13 @@ namespace PolyglotPal_KimRozenberg
             words = new List<ENG_HE>();
 
             var tmp = System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(activity_TaskWordToWord)).Assembly;
+
             if(language == "Russian") { name += "Ru"; }
-            if(language == "Ukrainian") { name += "Uk"; }
+            else if(language == "Ukrainian") { name += "Uk"; }
+            else if (language == "Polish") { name += "Po"; }
+            else if (language == "Germany") { name += "Ge"; }
+            else if (language == "Yiddish") { name += "Yi"; }
+
             System.IO.Stream s = tmp.GetManifestResourceStream($"PolyglotPal_KimRozenberg.{name}.txt");
             System.IO.StreamReader sr = new System.IO.StreamReader(s);
             string[] lines = sr.ReadToEnd().Split('\n');

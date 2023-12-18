@@ -1,0 +1,42 @@
+﻿Countries - לענדער
+United States - פֿאַראײניקטע שטאַטן
+Canada - קאַנאַדע
+United Kingdom - פֿאַראײניקטע קעפּל
+France - פֿראַנקרײַך
+Germany - דײַטשלאַנד
+Spain - שפּאַניע
+Italy - איטאַליע
+Australia - אויסטראַליע
+Japan - יאַפּאַן
+China - כינע
+India - אינדיע
+Brazil - בראַזיל
+Mexico - מעקסיקא
+Argentina - אַרגענטינע
+Russia - רוסלאַנד
+South Africa - דרום־אַפֿריקע
+Egypt - מצרים
+Israel - ישראל
+Saudi Arabia - סאַודי אַראַביע
+United Arab Emirates - פֿאַראײניקטע עמיראַטן אַראַבישע
+Turkey - טערקיי
+Greece - גריכנלאַנד
+South Korea - דרום־קארעע
+North Korea - נארד־קארעע
+Colombia - קאָלאָמביע
+Chile - טשילע
+Peru - פּערו
+New Zealand - ניו זילנד
+Thailand - טהאַילאַנד
+Indonesia - אינדאנעזיע
+Malaysia - מאַלזיע
+Vietnam - וויעטנאַם
+Philippines - די פֿיליפּינען
+Pakistan - פּאַקיסטאַן
+Nigeria - ניגעריע
+Morocco - מאָראָקאָ
+Tunisia - טוניסיע
+Algeria - אַלג'יריע
+Libya - ליביע
+Ethiopia - עטיאפֿיע
+Kenya - קעניע

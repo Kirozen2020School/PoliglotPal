@@ -1,0 +1,38 @@
+﻿Emotions - רעגשות
+Feelings - געפֿיל
+Happy - שמח
+Sad - טרויריק
+Angry - פֿאַרקערט
+Surprised - פֿאַרוואַסן
+Excited - געפֿאָרן אױפֿגערייצט
+Nervous - נערוויז
+Relaxed - אַרויסגערייט
+Content - זאַטיספֿיד
+Bored - אַרן קײן שפּאַץ
+Stressed - פֿאַרשטרעסט
+Confused - פֿאַרוואַרפֿן
+Frustrated - פֿראָסטרירט
+Proud - פֿאַרטריעבן
+Embarrassed - פֿאַרשאַמט
+Grateful - דאַנקבאַר
+Loved - געליבט
+Lonely - אַלײנקייטיק
+Hopeful - האָפּנונגספּראָך
+Calm - געלייכט
+Enthusiastic - אינטוזיאסטיש
+Jealous - קענען ניט פֿון
+Guilt - נדוואַרף
+Shame - שאַמע
+Fear - מיידע
+Anxiety - אַנגסט
+Happiness - האַפּינעס
+Sadness - טרויריקה
+Anger - געלט
+Joy - שפּריץ
+Love - ליבע
+Hate - האַס
+Disgust - פּרעקלץ
+Surprise - פֿאַרוואַסונג
+Pain - ווײ
+Pleasure - געניסן
+Satisfaction - זיאַטיספֿאַקציע

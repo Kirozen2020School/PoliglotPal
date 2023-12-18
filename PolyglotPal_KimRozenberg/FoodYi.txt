@@ -1,0 +1,43 @@
+﻿Food - עסן
+Meal - מאל
+Breakfast - מאל אויף פֿײַר
+Lunch - מאל אויף מיטאָג
+Dinner - מאל אויף עווענט
+Snack - צווישן דער מאל
+Appetizer - פֿארפּעטיזער
+Main course - הויפּט מאל
+Dessert - דעסערט
+Beverage - געטראַנק
+Water - וואסער
+Juice - סאַפּ
+Tea - טיי
+Coffee - קאָפּ
+Milk - מילך
+Bread - ברויט
+Rice - רײַז
+Pasta - פּאַסטע
+Meat - פֿלייש
+Chicken - הינד
+Fish - פֿיש
+Vegetables - געמיזע
+Fruits - פֿרוכט
+Salad - סאַלאַט
+Sandwich - שניטצל
+Pizza - פּיצע
+Burger - בורגער
+Fries - פֿרײַס
+Soup - זופּ
+Cheese - קעז
+Eggs - צייטונג
+Butter - קאַפּל
+Sugar - צוקער
+Salt - זאַלץ
+Pepper - פּעפּער
+Spices - געוואָירצעלעך
+Olive oil - זייטן ווייניג
+Vinegar - וווּרציק
+Honey - האָניק
+Jam - געלי
+Ketchup - קעטשופ
+Mustard - כאַרדל
+Mayonnaise - מייאָנעז

@@ -1,0 +1,40 @@
+﻿Book a flight - בוך אַ פֿלוג
+Pack a suitcase - פּאַק אַ קאַס
+Check-in at the airport - באַשטעטיקן אין אין פֿליאָגהאַפּאָר
+Board the plane - פּאַקקן זיך אויף דעם פֿלוג
+Take off - אויסנעמען
+Land - לענדן
+Collect luggage - קאָלעקטירן דעם פֿליגזאַק
+Hail a taxi - שרײַעַן אַ טאַקסי
+Book a hotel - בוך אַ האָטעל
+Check-in at the hotel - באַשטעטיקן אין אין דעם האָטעל
+Unpack - אויספּאַקן
+Explore the city - אָנטדעקן די שטאָט
+Visit tourist attractions - באַזוכן טוריסטישע אַטראַקציעס
+Take photos - מאַכן פֿאָטאָס
+Try local food - פֿאַרזוכן פּלאַצענדיקע אָפֿן
+Ask for directions - פֿרעגן נאָך דעם וועג
+Buy souvenirs - קויפֿן זיכרונות
+Learn basic phrases - לערן גרונט פֿראַזן
+Exchange currency - טוישן וואלוטע
+Reserve a table - רעזערוויר אַ טיש
+Enjoy the beach - האָבן שפּאַס אַן דעם שטראַנד
+Go for a swim - גיי פֿאַר אַ שוועמ
+Relax by the pool - רוהן ביי דעם פּול
+Go sightseeing - זען זיך די אַטראַקציעס
+Take a guided tour - האָבן אַ פֿירטיקן טור
+Board a cruise - פּאַקקן זיך אויף אַ קרוז
+Visit a museum - באַזוכן אַ מוזיי
+Explore the nightlife - אָנטדעקן דעם נאַכטלעבן
+Experience local culture - הערן די מקום־קודש
+Admire the architecture - באַוואָנדערן די אַרכיטעקטור
+Go on an adventure - גיי אויף אַ אַדווענטשער
+Visit historical sites - באַזוכן היסטאָרישע אָרטן
+Take a scenic drive - האָבן אַ שענישע דרייווע
+Get a travel guide - האָבן אַ רייזן-גוידע
+Reserve a rental car - רעזערוויר אַ מיטאַרבע פֿאַר אַ פֿאַרלאָנג
+Ask for recommendations - פֿרעגן פֿאַר עמפּעהלונג
+Visit a national park - באַזוכן אַ לאַנדס־פּאַרק
+Go on a hike - גיי אויף אַ וואַנדערטאָור
+Explore local markets - אָנטדעקן מקום־מאַרקעטס
+Try street food - פֿאַרזוכן סטריט-פּאָוד

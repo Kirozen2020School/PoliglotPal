@@ -1,0 +1,34 @@
+﻿Furniture - Meble
+Chair - Krzesło
+Table - Stół
+Couch/Sofa - Sofa
+Bed - Łóżko
+Wardrobe - Szafa
+Dresser - Komoda
+Bookshelf - Półka na książki
+Desk - Biurko
+Shelves - Półki
+Cabinet - Szafka
+Drawer - Szuflada
+Mirror - Lustro
+Lamp - Lampa
+Lighting - Oświetlenie
+Rug - Dywanik
+Carpet - Dywan
+Curtains - Zasłony
+Blinds - Rolety
+Sofa bed - Sofa do spania
+Coffee table - Stolik kawowy
+End table - Stolik narożny
+Nightstand - Stolik nocny
+Dining table - Stół do jadalni
+Dining chairs - Krzesła do jadalni
+Barstool - Stołek barowy
+Benches - Ławki
+Ottoman - Pufa
+Rocking chair - Fotel bujany
+Cushion - Poduszka
+Pouf - Podnóżek
+Cupboard - Kredens
+Hanging shelf - Półka wisząca
+Filing cabinet - Szafka na dokumenty

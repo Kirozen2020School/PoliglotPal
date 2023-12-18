@@ -1,0 +1,29 @@
+﻿Musical Instruments - מוזיקאַלישע ינסטרומענטן
+Piano - פיאנא
+Guitar - גיטאר
+Violin - פֿידל
+Flute - פֿלויט
+Trumpet - טרומפּעט
+Saxophone - סאַקסאָפֿאָן
+Drums - טרומל
+Bass guitar - באס גיטאר
+Harp - האַרפּ
+Clarinet - קלערינעט
+Trombone - טראמבאונ
+Oboe - אָבאָע
+Cello - צ'עלא
+Accordion - אַקארדיאן
+Banjo - באנדזשא
+Horn - הוירן
+Keyboard - קעיבאָרד
+Organ - ארגן
+Bagpipes - באגפּיפּס
+Harpsichord - האַרפּסיכאָרד
+Mandolin - מאַנדאָלינע
+Xylophone - קסילאָפּאָן
+Triangle - טריאַנגל
+Castanets - קאַסטאַנעץ
+Cymbals - צימבאַלן
+Gong - גאָנג
+Maracas - מאַראַקאַס
+Tambourine - טאַמבורינע

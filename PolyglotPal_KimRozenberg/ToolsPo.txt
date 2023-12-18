@@ -1,0 +1,33 @@
+﻿Tools - Narzędzia
+Hammer - Młotek
+Screwdriver - Śrubokręt
+Wrench - Klucz
+Pliers - Kombinerki
+Tape measure - Taśma miernicza
+Drill - Wiertarka
+Saw - Piła
+Nail - Gwóźdź
+Screw - Śruba
+Level - Poziomica
+Chisel - Dłuto
+Trowel - Rydel
+Sander - Cykliniarka
+Saw blade - Ostrze piły
+Clamp - Zszywacz
+Carpenter's square - Kątownik
+Cordless drill - Wiertarka akumulatorowa
+Paintbrush - Pędzel
+Roller brush - Wałek malarski
+Bucket - Wiadro
+Sponge - Gąbka
+Ladder - Drabina
+Gloves - Rękawice
+Safety glasses - Okulary ochronne
+Helmet - Kask
+Sawhorse - Koziołki
+Stapler - Zszywacz
+Tape - Taśma klejąca
+Glue - Klej
+Screwdriver set - Zestaw śrubokrętów
+Wrench set - Zestaw kluczy
+Toolbox - Skrzynka narzędziowa

@@ -1,0 +1,44 @@
+﻿Health - געזונטהייט
+Wellness - וועלנעס
+Exercise - אַפּטרענס
+Workout - אימון
+Fitness - פֿיטנעס
+Nutrition - נאַהרונג
+Healthy - געזונט
+Unhealthy - ניט געזונט
+Diet - דיעט
+Weight - געוויכט
+Stress - שטרעס
+Relaxation - רואַך
+Mental health - מענטאַל געזונטהייט
+Physical health - פֿיזיקאַלישע געזונטהייט
+Sleep - שלאפּן
+Rest - רויה
+Energy - ענערגיע
+Vitamins - וויטאַמינים
+Hydration - היידראַציע
+Medicine - מעדיצין
+Doctor - דאָקטאָר
+Nurse - פֿליישסטער
+Hospital - האָספּיטאַל
+Appointment - טערמין
+Check-up - אינפֿאָרמאַציע פֿונקציע
+Therapist - טעראַפּיסט
+Massage - מאסאזש
+Yoga - יאָגע
+Meditation - מעדיטאַציע
+Gym - גימנאסיאום
+Sickness - קראַנקקייט
+Pain - שמערץ
+Allergy - אַלערגיע
+Flu - גריפּע
+Cold - קאָלד
+Headache - העדאַכע
+Heart - הערץ
+Lungs - לונגז
+Stomach - מגה
+Back - רוק
+Leg - בײַן
+Arm - אָרעם
+Hand - האַנט
+Foot - פֿיס

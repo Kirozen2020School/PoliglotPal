@@ -1,0 +1,40 @@
+﻿Hobby - האָבי
+Interest - ענדערונג
+Read - לייעזן
+Write - שרײַבן
+Draw - צייכן
+Paint - פּויענטערן
+Cook - קויכן
+Bake - באַקן
+Sew - נען
+Knit - ברייַען
+Garden - גארטן־הענדיל
+Photograph - פֿאָטאָגראַפֿירן
+Play an instrument - שפּילן אַ ינסטרומענט
+Sing - זינגען
+Dance - טאַנץ
+Exercise - טרעפֿן
+Play sports - שפּילן אין ספּאָרט
+Play video games - שפּילן אין ווידעאָ געמעס
+Watch movies - קוקן קינואַ פֿילם
+Listen to music - הערן מוזיק
+Travel - רייזן
+Hike - היקן
+Climb - גיין קליימן
+Camp - קאַמפּן
+Fish - פֿישן
+Collect - קאָלעקטירן
+Sculpt - סקאַלפּטירן
+Craft - מאַכן
+Gamble - געהעמבל
+Play board games - שפּילן באָרד־שפּילן
+Solve puzzles - לעזן פּאָזלעס
+Build models - בוין מאָדעלן
+Do yoga - מאַכן יאָגע
+Meditate - מעדיטירן
+Read comics - לייעזן קאָמיקס
+Write poetry - שרײַבן פּאָעטריע
+Learn a new language - לערנען אַ נײַע שפּראַך
+Play chess - שפּילן שאַך
+Play cards - שפּילן קאַרטן
+Surf the internet - גליטשן אינטערנעט

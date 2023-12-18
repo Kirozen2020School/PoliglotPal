@@ -1,0 +1,44 @@
+﻿United States - Stany Zjednoczone
+Canada - Kanada
+United Kingdom - Zjednoczone Królestwo
+France - Francja
+Germany - Niemcy
+Spain - Hiszpania
+Italy - Włochy
+Australia - Australia
+Japan - Japonia
+China - Chiny
+India - Indie
+Brazil - Brazylia
+Mexico - Meksyk
+Argentina - Argentyna
+Russia - Rosja
+South Africa - Republika Południowej Afryki
+Egypt - Egipt
+Israel - Izrael
+Saudi Arabia - Arabia Saudyjska
+United Arab Emirates - Zjednoczone Emiraty Arabskie
+Turkey - Turcja
+Greece - Grecja
+South Korea - Korea Południowa
+North Korea - Korea Północna
+Canada - Kanada
+Colombia - Kolumbia
+Chile - Chile
+Peru - Peru
+New Zealand - Nowa Zelandia
+Thailand - Tajlandia
+Indonesia - Indonezja
+Malaysia - Malezja
+Vietnam - Wietnam
+Philippines - Filipiny
+Pakistan - Pakistan
+Nigeria - Nigeria
+South Korea - Korea Południowa
+North Korea - Korea Północna
+Morocco - Maroko
+Tunisia - Tunezja
+Algeria - Algieria
+Libya - Libia
+Ethiopia - Etiopia
+Kenya - Kenia

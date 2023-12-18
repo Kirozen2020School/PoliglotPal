@@ -1,0 +1,29 @@
+﻿Musical Instruments - Musikinstrumente
+Piano - Klavier
+Guitar - Gitarre
+Violin - Geige
+Flute - Flöte
+Trumpet - Trompete
+Saxophone - Saxophon
+Drums - Schlagzeug
+Bass guitar - Bassgitarre
+Harp - Harfe
+Clarinet - Klarinette
+Trombone - Posaune
+Oboe - Oboe
+Cello - Cello
+Accordion - Akkordeon
+Banjo - Banjo
+Horn - Horn
+Keyboard - Keyboard
+Organ - Orgel
+Bagpipes - Dudelsack
+Harpsichord - Cembalo
+Mandolin - Mandoline
+Xylophone - Xylophon
+Triangle - Triangel
+Castanets - Kastagnetten
+Cymbals - Becken
+Gong - Gong
+Maracas - Maracas
+Tambourine - Tamburin

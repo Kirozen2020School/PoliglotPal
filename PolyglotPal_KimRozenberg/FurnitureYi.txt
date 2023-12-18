@@ -1,0 +1,34 @@
+﻿Furniture - מעבֿל
+Chair - קאַץ
+Table - טיש
+Couch/Sofa - זאָפֿאַ
+Bed - בעט
+Wardrobe - שטאַנט
+Dresser - קאַמאָד
+Bookshelf - ביכער געסטעל
+Desk - טיש
+Shelves - געסטעל
+Cabinet - קאַבינעט
+Drawer - טראַווער
+Mirror - שפּיגל
+Lamp - לאַמפּ
+Lighting - ליכטינג
+Rug - טעפֿט
+Carpet - טעפֿט
+Curtains - פֿאָרזינדען
+Blinds - טאָבן
+Sofa bed - סאָפֿאַ-בעט
+Coffee table - טיש קאָף
+End table - טיש סוף
+Nightstand - נאַכטטיש
+Dining table - טיש פֿאַר עסן
+Dining chairs - קאַץ פֿאַר עסן
+Barstool - באַרשטול
+Benches - באַנטשעס
+Ottoman - אָטאַמאַן
+Rocking chair - נעגלקאַץ
+Cushion - קושין
+Pouf - פּויף
+Cupboard - שפּעגל
+Hanging shelf - הענגינג שטאַנט
+Filing cabinet - דאָקומענט אַבלאַג

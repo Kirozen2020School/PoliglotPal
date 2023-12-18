@@ -1,0 +1,40 @@
+﻿Family - משפּחה
+Parents - עלטער
+Mother - מוטער
+Father - טאַטע
+Child - קינד
+Son - זון
+Daughter - טאָכטער
+Siblings - געשוויסטער
+Brother - ברודער
+Sister - שוועסטער
+Grandparents - גרויסעלטער
+Grandfather - זיידע
+Grandmother - בובע
+Uncle - טאַטעס ברודער
+Aunt - מאַמעס שוועסטער
+Cousin - קאוזין
+Nephew - פֿילבן
+Niece - פֿילכע
+Spouse - אזורך
+Husband - מײַן מאַן
+Wife - מײַנע פֿרוי
+Fiancé - שווערט
+Fiancée - שווערטינדיק
+Boyfriend - פֿרענטס
+Girlfriend - פֿרענטין
+In-laws - אין-לאווז
+Father-in-law - שוועיגער פֿאַרטער
+Mother-in-law - שוועיגער מאַמע
+Brother-in-law - שוועיגער ברודער
+Sister-in-law - שוועיגער שוועסטער
+Son-in-law - שוועיגער זון
+Daughter-in-law - שוועיגער טאָכטער
+Stepfather - שטיף-פֿאַרטער
+Stepmother - שטיף-מאַמע
+Stepson - שטיף-זון
+Stepdaughter - שטיף-טאָכטער
+Half-brother - האַלבֿ-ברודער
+Half-sister - האַלבֿ-שוועסטער
+Adoptive parents - אַדאָפּטיוו עלטער
+Foster parents - פֿאָסטער עלטער

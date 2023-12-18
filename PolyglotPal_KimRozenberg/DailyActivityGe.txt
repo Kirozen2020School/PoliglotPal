@@ -1,0 +1,51 @@
+﻿Daily Routine - Tagesablauf
+Wake up - Aufwachen
+Brush teeth - Zähne putzen
+Take a shower - Duschen
+Get dressed - Sich anziehen
+Have breakfast - Frühstücken
+Go to work - Zur Arbeit gehen
+Take a break - Eine Pause machen
+Have lunch - Mittagessen
+Go back to work - Zur Arbeit zurückkehren
+Finish work - Die Arbeit beenden
+Exercise - Sport treiben
+Cook dinner - Abendessen kochen
+Eat dinner - Abendessen
+Watch TV - Fernsehen
+Relax - Entspannen
+Read a book - Ein Buch lesen
+Go to bed - Schlafengehen
+Fall asleep - Einschlafen
+Dream - Träumen
+Set an alarm - Einen Wecker stellen
+Hit snooze - Schlummern
+Wake someone up - Jemanden wecken
+Make the bed - Das Bett machen
+Clean the house - Das Haus putzen
+Vacuum - Staubsaugen
+Do laundry - Wäsche waschen
+Iron clothes - Kleidung bügeln
+Plan the day - Den Tag planen
+Make a to-do list - Eine Aufgabenliste erstellen
+Go for a walk - Spazieren gehen
+Drive to work - Zur Arbeit fahren
+Take the bus - Den Bus nehmen
+Ride a bike - Fahrrad fahren
+Meet friends - Freunde treffen
+Go shopping - Einkaufen gehen
+Pay bills - Rechnungen bezahlen
+Attend a meeting - An einer Besprechung teilnehmen
+Answer emails - E-Mails beantworten
+Cook lunch - Mittagessen kochen
+Water plants - Pflanzen gießen
+Feed pets - Haustiere füttern
+Check messages - Nachrichten überprüfen
+Listen to music - Musik hören
+Meditate - Meditieren
+Go for a run - Joggen gehen
+Take a nap - Ein Nickerchen machen
+Write in a journal - Ins Tagebuch schreiben
+Study - Studieren
+Learn something new - Etwas Neues lernen
+Reflect on the day - Den Tag reflektieren

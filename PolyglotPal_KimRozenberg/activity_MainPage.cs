@@ -100,6 +100,15 @@ namespace PolyglotPal_KimRozenberg
                 case "Hebrew":
                     btnSelectLanguage.SetImageResource(Resource.Drawable.israel);
                     break;
+                case "Polish":
+                    btnSelectLanguage.SetImageResource(Resource.Drawable.poland);
+                    break;
+                case "Yiddish":
+                    btnSelectLanguage.SetImageResource(Resource.Drawable.Yiddish);
+                    break;
+                case "Germany":
+                    btnSelectLanguage.SetImageResource(Resource.Drawable.germany);
+                    break;
             }
         }
         private void UpdateColors()
@@ -249,10 +258,61 @@ namespace PolyglotPal_KimRozenberg
             btnSelectedUkranian.Click += SelectedUkranian;
             tvSelectedUkranian.Click += SelectedUkranian;
 
+            ImageButton btnSelectedGermany = selectLanguage.FindViewById<ImageButton>(Resource.Id.btnSelectGermanyImage);
+            TextView tvSelectedGermany = selectLanguage.FindViewById<TextView>(Resource.Id.btnSelectGermanyText);
+            btnSelectedGermany.Click += SelectedGermany;
+            tvSelectedGermany.Click += SelectedGermany;
+
+            ImageButton btnSelectedPolish = selectLanguage.FindViewById<ImageButton>(Resource.Id.btnSelectPolishImage);
+            TextView tvSelectedPolish = selectLanguage.FindViewById<TextView>(Resource.Id.btnSelectPolishText);
+            btnSelectedPolish.Click += SelectedPolish;
+            tvSelectedPolish.Click += SelectedPolish;
+
+            ImageButton btnSelectedYiddish = selectLanguage.FindViewById<ImageButton>(Resource.Id.btnSelectYiddishImage);
+            TextView tvSelectedYiddish = selectLanguage.FindViewById<TextView>(Resource.Id.btnSelectYiddishText);
+            btnSelectedYiddish.Click += SelectedYiddish;
+            tvSelectedYiddish.Click += SelectedYiddish;
+
             Button btnCancel = selectLanguage.FindViewById<Button>(Resource.Id.btnCancelSelectionLanguage);
             btnCancel.Click += BtnCancel_Click;
 
             popupWindow.ShowAtLocation(this.Window.DecorView.RootView, GravityFlags.Center,0,0);
+        }
+
+        private async void SelectedYiddish(object sender, EventArgs e)
+        {
+            await firebase.UpdateLanguage(username, "Yiddish");
+
+            if (popupWindow != null && popupWindow.IsShowing)
+            {
+                popupWindow.Dismiss();
+            }
+
+            btnSelectLanguage.SetImageResource(Resource.Drawable.Yiddish);
+        }
+
+        private async void SelectedPolish(object sender, EventArgs e)
+        {
+            await firebase.UpdateLanguage(username, "Polish");
+
+            if (popupWindow != null && popupWindow.IsShowing)
+            {
+                popupWindow.Dismiss();
+            }
+
+            btnSelectLanguage.SetImageResource(Resource.Drawable.poland);
+        }
+
+        private async void SelectedGermany(object sender, EventArgs e)
+        {
+            await firebase.UpdateLanguage(username, "Germany");
+
+            if (popupWindow != null && popupWindow.IsShowing)
+            {
+                popupWindow.Dismiss();
+            }
+
+            btnSelectLanguage.SetImageResource(Resource.Drawable.germany);
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)

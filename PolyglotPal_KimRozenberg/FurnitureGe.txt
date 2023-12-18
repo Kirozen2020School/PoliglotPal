@@ -1,0 +1,34 @@
+﻿Furniture - Möbel
+Chair - Stuhl
+Table - Tisch
+Couch/Sofa - Sofa
+Bed - Bett
+Wardrobe - Kleiderschrank
+Dresser - Kommode
+Bookshelf - Bücherregal
+Desk - Schreibtisch
+Shelves - Regale
+Cabinet - Schrank
+Drawer - Schublade
+Mirror - Spiegel
+Lamp - Lampe
+Lighting - Beleuchtung
+Rug - Teppich
+Carpet - Teppichboden
+Curtains - Vorhänge
+Blinds - Jalousien
+Sofa bed - Schlafsofa
+Coffee table - Couchtisch
+End table - Beistelltisch
+Nightstand - Nachttisch
+Dining table - Esstisch
+Dining chairs - Esszimmerstühle
+Barstool - Barhocker
+Benches - Bänke
+Ottoman - Ottomane
+Rocking chair - Schaukelstuhl
+Cushion - Kissen
+Pouf - Pouf
+Cupboard - Geschirrschrank
+Hanging shelf - Hängendes Regal
+Filing cabinet - Aktenschrank

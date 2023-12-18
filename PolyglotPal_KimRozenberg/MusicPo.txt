@@ -1,0 +1,29 @@
+﻿Musical Instruments - Instrumenty muzyczne
+Piano - Fortepian
+Guitar - Gitara
+Violin - Skrzypce
+Flute - Flet
+Trumpet - Trąbka
+Saxophone - Saksofon
+Drums - Perkusja
+Bass guitar - Gitara basowa
+Harp - Harfa
+Clarinet - Klarnet
+Trombone - Puzon
+Oboe - Oboe
+Cello - Wiolonczela
+Accordion - Akordeon
+Banjo - Banjo
+Horn - Róg
+Keyboard - Klawisze
+Organ - Organy
+Bagpipes - Dudki
+Harpsichord - Klawesyn
+Mandolin - Mandolina
+Xylophone - Ksylofon
+Triangle - Trójkąt
+Castanets - Kastaniety
+Cymbals - Cymbały
+Gong - Gong
+Maracas - Marakasy
+Tambourine - Tamburyn

@@ -1,0 +1,50 @@
+﻿Wake up - אויפשטיין
+Brush teeth - פּוציגן צוינט
+Take a shower - נעמען אַ דוש
+Get dressed - זיך אַנציען
+Have breakfast - האָבן פֿרישטיק
+Go to work - גיין צו אַרבעט
+Take a break - נעמען אַ ברעכע
+Have lunch - האָבן מיטאָג
+Go back to work - צוריקקערן צו אַרבעט
+Finish work - פֿאַרפֿאַרן אַרבעט
+Exercise - אויסאָפּאָסן
+Cook dinner - קויכן אַ ערבעטעססן
+Eat dinner - אָפּעסן אַ ערבעט
+Watch TV - קוקן טעלעוויזיע
+Relax - פֿרייַזיך מאַכן
+Read a book - לייעזן אַ בוך
+Go to bed - גיין לייגן
+Fall asleep - אַראָפּפֿאַלן
+Dream - טריימען
+Set an alarm - סעטן אַ אַלאַרם
+Hit snooze - שלאַפֿן די סנוז
+Wake someone up - אויפֿוואַקן אַ מענטש
+Make the bed - מאַכן די מיט
+Clean the house - רייניק מאַכן די הויז
+Vacuum - שטייבן אַבֿעק
+Do laundry - מאַכן קליידינג
+Iron clothes - אַייערן קליידינג
+Plan the day - פֿלען דעם טאָג
+Make a to-do list - מאַכן אַ טוּ-דוּ ליסט
+Go for a walk - גיין פֿאַר אַ שפּאַזיערגאַנג
+Drive to work - פֿאַרפֿאַרן צו אַרבעט
+Take the bus - נעמען דעם בוס
+Ride a bike - פֿאַרפֿאַרן אַ ראַד
+Meet friends - טרעפֿען זיך מיט פֿרענדן
+Go shopping - גיין אינקויפֿן
+Pay bills - באַזאַלטן רעכנונג
+Attend a meeting - באַוואַקן אַ מיטינג
+Answer emails - אַנטוואָרטן אימיילס
+Cook lunch - קויכן אַ מיטאָג
+Water plants - גיסט צו די בלימעלעך
+Feed pets - פֿידערן פּעטס
+Check messages - קוקן נאָך נאָךריכטן
+Listen to music - הערן מוזיק
+Meditate - מעדיטיירן
+Go for a run - גיין פֿאַר אַ ראַן
+Take a nap - טאָן אַ קורץ
+Write in a journal - שרײַבן אין אַ טעגבוך
+Study - לערנען
+Learn something new - לערנען אַזאַ אַנדערש
+Reflect on the day - רעפֿלעקטירן אויף דעם טאָג

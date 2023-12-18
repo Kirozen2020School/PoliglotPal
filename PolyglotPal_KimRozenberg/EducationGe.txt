@@ -1,0 +1,44 @@
+﻿Education - Bildung
+School - Schule
+Classroom - Klassenzimmer
+Teacher - Lehrer
+Student - Schüler
+Principal - Schulleiter
+Curriculum - Lehrplan
+Subject - Fach
+Lesson - Unterrichtsstunde
+Homework - Hausaufgaben
+Assignment - Aufgabe
+Exam - Prüfung
+Test - Test
+Grade - Note
+Report card - Zeugnis
+Textbook - Lehrbuch
+Library - Bibliothek
+Research - Forschung
+Project - Projekt
+Essay - Aufsatz
+Classmate - Klassenkamerad
+Group work - Gruppenarbeit
+Lecture - Vorlesung
+Seminar - Seminar
+Degree - Abschluss
+Diploma - Diplom
+Graduation - Abschlussfeier
+College - Hochschule
+University - Universität
+Major - Hauptfach
+Minor - Nebenfach
+Class schedule - Stundenplan
+Student ID - Studentenausweis
+Backpack - Rucksack
+Notebook - Notizbuch
+Pencil - Bleistift
+Pen - Stift
+Paper - Papier
+Projector - Projektor
+Whiteboard - Whiteboard
+Marker - Marker
+Computer lab - Computerraum
+Online learning - Online-Lernen
+Distance education - Fernunterricht

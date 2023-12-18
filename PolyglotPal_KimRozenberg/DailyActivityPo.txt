@@ -1,0 +1,50 @@
+﻿Wake up - Obudzić się
+Brush teeth - Szczotkować zęby
+Take a shower - Wziąć prysznic
+Get dressed - Ubierać się
+Have breakfast - Jeść śniadanie
+Go to work - Iść do pracy
+Take a break - Zrobić przerwę
+Have lunch - Jeść lunch
+Go back to work - Wrócić do pracy
+Finish work - Skończyć pracę
+Exercise - Ćwiczyć
+Cook dinner - Gotować kolację
+Eat dinner - Jeść kolację
+Watch TV - Oglądać telewizję
+Relax - Odpoczywać
+Read a book - Czytać książkę
+Go to bed - Iść spać
+Fall asleep - Zasnąć
+Dream - Śnić
+Set an alarm - Ustawić budzik
+Hit snooze - Przycisnąć drzemkę
+Wake someone up - Obudzić kogoś
+Make the bed - Ścielić łóżko
+Clean the house - Sprzątać dom
+Vacuum - Odkurzać
+Do laundry - Robić pranie
+Iron clothes - Prasować ubrania
+Plan the day - Planować dzień
+Make a to-do list - Zrobić listę rzeczy do zrobienia
+Go for a walk - Iść na spacer
+Drive to work - Jechać do pracy
+Take the bus - Jechać autobusem
+Ride a bike - Jeździć na rowerze
+Meet friends - Spotykać się z przyjaciółmi
+Go shopping - Iść na zakupy
+Pay bills - Płacić rachunki
+Attend a meeting - Brać udział w spotkaniu
+Answer emails - Odpowiadać na e-maile
+Cook lunch - Gotować obiad
+Water plants - Podlewać rośliny
+Feed pets - Karmić zwierzęta domowe
+Check messages - Sprawdzać wiadomości
+Listen to music - Słuchać muzyki
+Meditate - Medytować
+Go for a run - Biegać
+Take a nap - Zdrzemnąć się
+Write in a journal - Pisać w dzienniku
+Study - Studiować
+Learn something new - Uczyć się czegoś nowego
+Reflect on the day - Rozważać dzień

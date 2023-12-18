@@ -1,0 +1,40 @@
+﻿Book a flight - Zarezerwuj lot
+Pack a suitcase - Zapakuj walizkę
+Check-in at the airport - Zamelduj się na lotnisku
+Board the plane - Wejdź na pokład samolotu
+Take off - Startuj
+Land - Lądowanie
+Collect luggage - Odbierz bagaż
+Hail a taxi - Zawołaj taksówkę
+Book a hotel - Zarezerwuj hotel
+Check-in at the hotel - Zamelduj się w hotelu
+Unpack - Rozpakuj się
+Explore the city - Zwiedzaj miasto
+Visit tourist attractions - Zwiedzaj atrakcje turystyczne
+Take photos - Rób zdjęcia
+Try local food - Spróbuj lokalnej kuchni
+Ask for directions - Zapytaj o drogę
+Buy souvenirs - Kup pamiątki
+Learn basic phrases - Naucz się podstawowych zwrotów
+Exchange currency - Wymień walutę
+Reserve a table - Zarezerwuj stolik
+Enjoy the beach - Ciesz się plażą
+Go for a swim - Popływaj
+Relax by the pool - Relaksuj się przy basenie
+Go sightseeing - Zwiedzaj
+Take a guided tour - Weź udział w wycieczce z przewodnikiem
+Board a cruise - Wsiądź na statek wycieczkowy
+Visit a museum - Odwiedź muzeum
+Explore the nightlife - Odkrywaj nocne życie
+Experience local culture - Doświadcz lokalnej kultury
+Admire the architecture - Podziwiaj architekturę
+Go on an adventure - Wybierz się na przygodę
+Visit historical sites - Zwiedzaj historyczne miejsca
+Take a scenic drive - Zrób malowniczą przejażdżkę
+Get a travel guide - Zdobądź przewodnik turystyczny
+Reserve a rental car - Zarezerwuj wynajem samochodu
+Ask for recommendations - Zapytaj o polecenia
+Visit a national park - Zwiedzaj park narodowy
+Go on a hike - Wędruj po górach
+Explore local markets - Eksploruj lokalne targi
+Try street food - Spróbuj jedzenia ulicznego

@@ -1,0 +1,42 @@
+﻿Countries - Länder
+United States - Vereinigte Staaten
+Canada - Kanada
+United Kingdom - Vereinigtes Königreich
+France - Frankreich
+Germany - Deutschland
+Spain - Spanien
+Italy - Italien
+Australia - Australien
+Japan - Japan
+China - China
+India - Indien
+Brazil - Brasilien
+Mexico - Mexiko
+Argentina - Argentinien
+Russia - Russland
+South Africa - Südafrika
+Egypt - Ägypten
+Israel - Israel
+Saudi Arabia - Saudi-Arabien
+United Arab Emirates - Vereinigte Arabische Emirate
+Turkey - Türkei
+Greece - Griechenland
+South Korea - Südkorea
+North Korea - Nordkorea
+Colombia - Kolumbien
+Chile - Chile
+Peru - Peru
+New Zealand - Neuseeland
+Thailand - Thailand
+Indonesia - Indonesien
+Malaysia - Malaysia
+Vietnam - Vietnam
+Philippines - Philippinen
+Pakistan - Pakistan
+Nigeria - Nigeria
+Morocco - Marokko
+Tunisia - Tunesien
+Algeria - Algerien
+Libya - Libyen
+Ethiopia - Äthiopien
+Kenya - Kenia

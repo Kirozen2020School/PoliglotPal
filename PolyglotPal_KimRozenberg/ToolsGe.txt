@@ -1,0 +1,33 @@
+﻿Tools - Werkzeuge
+Hammer - Hammer
+Screwdriver - Schraubendreher
+Wrench - Schraubenschlüssel
+Pliers - Zange
+Tape measure - Maßband
+Drill - Bohrer
+Saw - Säge
+Nail - Nagel
+Screw - Schraube
+Level - Wasserwaage
+Chisel - Meißel
+Trowel - Kelle
+Sander - Schleifmaschine
+Saw blade - Sägeblatt
+Clamp - Klemme
+Carpenter's square - Zimmermannswinkel
+Cordless drill - Akkuschrauber
+Paintbrush - Pinsel
+Roller brush - Farbroller
+Bucket - Eimer
+Sponge - Schwamm
+Ladder - Leiter
+Gloves - Handschuhe
+Safety glasses - Schutzbrille
+Helmet - Helm
+Sawhorse - Sägebock
+Stapler - Tacker
+Tape - Klebeband
+Glue - Kleber
+Screwdriver set - Schraubendreherset
+Wrench set - Schraubenschlüsselset
+Toolbox - Werkzeugkasten

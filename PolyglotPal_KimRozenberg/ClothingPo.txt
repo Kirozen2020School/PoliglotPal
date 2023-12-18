@@ -1,0 +1,32 @@
+﻿Clothing - Ubrania
+Shirt - Koszula
+Blouse - Bluzka
+T-shirt - Koszulka
+Sweater - Sweter
+Jacket - Kurtka
+Coat - Płaszcz
+Dress - Sukienka
+Skirt - Spódnica
+Pants/Trousers - Spodnie
+Jeans - Jeansy
+Shorts - Szorty
+Hat - Kapelusz
+Cap - Czapka z daszkiem
+Scarf - Szalik
+Gloves - Rękawiczki
+Socks - Skarpetki
+Shoes - Buty
+Boots - Buty (kozaki)
+Sandals - Sandały
+Slippers - Kapcie
+Belt - Pasek
+Tie - Krawat
+Bow tie - Muszka
+Suit - Garnitur
+Tuxedo - Smoking
+Pajamas - Piżama
+Underwear - Bielizna
+Swimsuit - Strój kąpielowy
+Bikini - Bikini
+Raincoat - Płaszcz przeciwdeszczowy
+Umbrella - Parasolka

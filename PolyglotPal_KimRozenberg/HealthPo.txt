@@ -1,0 +1,44 @@
+﻿Health - Zdrowie
+Wellness - Dobrostan
+Exercise - Ćwiczenia
+Workout - Trening
+Fitness - Fitness
+Nutrition - Żywienie
+Healthy - Zdrowy
+Unhealthy - Niezdrowy
+Diet - Dieta
+Weight - Waga
+Stress - Stres
+Relaxation - Relaks
+Mental health - Zdrowie psychiczne
+Physical health - Zdrowie fizyczne
+Sleep - Sen
+Rest - Odpoczynek
+Energy - Energia
+Vitamins - Witaminy
+Hydration - Nawodnienie
+Medicine - Lekarstwo
+Doctor - Lekarz
+Nurse - Pielęgniarka
+Hospital - Szpital
+Appointment - Spotkanie
+Check-up - Badanie kontrolne
+Therapist - Terapeuta
+Massage - Masaż
+Yoga - Joga
+Meditation - Medytacja
+Gym - Siłownia
+Sickness - Choroba
+Pain - Ból
+Allergy - Alergia
+Flu - Grypa
+Cold - Przeziębienie
+Headache - Ból głowy
+Heart - Serce
+Lungs - Płuca
+Stomach - Brzuch
+Back - Plecy
+Leg - Noga
+Arm - Ręka
+Hand - Dłoń
+Foot - Stopa

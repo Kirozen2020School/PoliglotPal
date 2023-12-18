@@ -1,0 +1,44 @@
+﻿Business - Wirtschaft
+Company - Unternehmen
+Entrepreneur - Unternehmer
+Startup - Startup
+Small business - Kleinunternehmen
+Corporation - Konzern/Firma
+CEO (Chief Executive Officer) - Geschäftsführer
+Manager - Manager
+Employee - Mitarbeiter
+Team - Team
+Office - Büro
+Meeting - Besprechung
+Presentation - Präsentation
+Client - Kunde
+Customer - Kunde
+Product - Produkt
+Service - Dienstleistung
+Marketing - Marketing
+Sales - Verkauf
+Revenue - Einnahmen
+Profit - Gewinn
+Loss - Verlust
+Budget - Budget
+Investment - Investition
+Finance - Finanzen
+Accounting - Buchhaltung
+Invoice - Rechnung
+Payment - Zahlung
+Contract - Vertrag
+Negotiation - Verhandlung
+Deal - Geschäft
+Partnership - Partnerschaft
+Collaboration - Zusammenarbeit
+Strategy - Strategie
+Planning - Planung
+Market research - Marktforschung
+Competition - Wettbewerb
+Innovation - Innovation
+Technology - Technologie
+Digital - Digital
+E-commerce - E-Commerce
+Networking - Netzwerken
+Customer service - Kundenservice
+Feedback - Rückmeldung
