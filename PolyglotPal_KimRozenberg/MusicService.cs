@@ -17,7 +17,7 @@ namespace PolyglotPal_KimRozenberg
         public override void OnCreate()
         {
             base.OnCreate();
-            mp = MediaPlayer.Create(this, Resource.Raw.background);
+            mp = MediaPlayer.Create(this, Resource.Raw.background2);
             mp.Looping = true;
             mp.SetVolume(100, 100);
             sp = this.GetSharedPreferences("details",FileCreationMode.Private);
