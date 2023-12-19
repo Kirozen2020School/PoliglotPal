@@ -10,15 +10,25 @@
 		android:orderInCategory="200"
 		
        />
-	<item android:id="@+id/action_logout"
-		android:title="Logout"
-		android:orderInCategory="300"
-		
-       />
+	
 	<item android:id="@+id/action_settings"
 		android:title="Settings"
 		android:orderInCategory="300"
 		
        />
-
+	<item android:id="@+id/action_getNFC"
+		android:title="Read NFC"
+		android:orderInCategory="300"
+		
+       />
+	<item android:id="@+id/action_shareNFC"
+	   android:title="Share NFC"
+	   android:orderInCategory="300"
+		
+       />
+	<item android:id="@+id/action_logout"
+			android:title="Logout"
+			android:orderInCategory="300"
+		
+       />
 </menu>

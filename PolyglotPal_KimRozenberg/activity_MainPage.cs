@@ -8,6 +8,10 @@ using System;
 using System.Collections.Generic;
 using Android.Content.PM;
 using static Android.Views.View;
+using Android.Nfc.Tech;
+using Android.Nfc;
+using Newtonsoft.Json;
+using System.Text;
 
 namespace PolyglotPal_KimRozenberg
 {
@@ -33,6 +37,9 @@ namespace PolyglotPal_KimRozenberg
         Intent music;
 
         PopupWindow popupWindow;
+
+        NfcAdapter nfcAdapter;
+        bool hasNFC = false; 
 
         int xpAdded = -1;
         protected override async void OnCreate(Bundle savedInstanceState)
@@ -68,6 +75,12 @@ namespace PolyglotPal_KimRozenberg
             {
                 UpdateColors();
                 InitMusic();
+            }
+
+            nfcAdapter = NfcAdapter.GetDefaultAdapter(this);
+            if (nfcAdapter == null || !nfcAdapter.IsEnabled)
+            {
+                hasNFC = false;
             }
         }
 
@@ -191,7 +204,7 @@ namespace PolyglotPal_KimRozenberg
             btnGoToLeaderboard = FindViewById<ImageButton>(Resource.Id.btnGoToLeaderBoardPageFromTaskPage);
             btnGoToLeaderboard.Click += BtnGoToLeaderboard_Click;
             btnSelectLanguage = FindViewById<ImageButton>(Resource.Id.btnSelecteLanguage);
-            btnSelectLanguage.Click += BtnGoToLeaderboard_Click1;
+            btnSelectLanguage.Click += BtnChangeLanguageLearning;
 
             buttons = new List<Tuple<ImageButton, string>>();
             btnDailyActivity = FindViewById<ImageButton>(Resource.Id.btnDailyActivity);
@@ -232,7 +245,7 @@ namespace PolyglotPal_KimRozenberg
             }
         }
 
-        private void BtnGoToLeaderboard_Click1(object sender, EventArgs e)
+        private void BtnChangeLanguageLearning(object sender, EventArgs e)
         {
             View selectLanguage = LayoutInflater.Inflate(Resource.Layout.activity_SelectLanguage, null);
 
@@ -291,7 +304,6 @@ namespace PolyglotPal_KimRozenberg
 
             btnSelectLanguage.SetImageResource(Resource.Drawable.Yiddish);
         }
-
         private async void SelectedPolish(object sender, EventArgs e)
         {
             this.user.language = "Polish";
@@ -304,7 +316,6 @@ namespace PolyglotPal_KimRozenberg
 
             btnSelectLanguage.SetImageResource(Resource.Drawable.poland);
         }
-
         private async void SelectedGermany(object sender, EventArgs e)
         {
             this.user.language = "Germany";
@@ -317,15 +328,6 @@ namespace PolyglotPal_KimRozenberg
 
             btnSelectLanguage.SetImageResource(Resource.Drawable.germany);
         }
-
-        private void BtnCancel_Click(object sender, EventArgs e)
-        {
-            if(popupWindow != null && popupWindow.IsShowing)
-            {
-                popupWindow.Dismiss();
-            }
-        }
-
         private async void SelectedUkranian(object sender, EventArgs e)
         {
             this.user.language = "Ukrainian";
@@ -338,7 +340,6 @@ namespace PolyglotPal_KimRozenberg
 
             btnSelectLanguage.SetImageResource(Resource.Drawable.ukraine);
         }
-
         private async void SelectedRussian(object sender, EventArgs e)
         {
             this.user.language = "Russian";
@@ -351,7 +352,6 @@ namespace PolyglotPal_KimRozenberg
 
             btnSelectLanguage.SetImageResource(Resource.Drawable.russia);
         }
-
         private async void SelectedHebrow(object sender, EventArgs e)
         {
             this.user.language = "Hebrew";
@@ -363,6 +363,13 @@ namespace PolyglotPal_KimRozenberg
             }
 
             btnSelectLanguage.SetImageResource(Resource.Drawable.israel);
+        }
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            if (popupWindow != null && popupWindow.IsShowing)
+            {
+                popupWindow.Dismiss();
+            }
         }
 
         private void BtnGoToLeaderboard_Click(object sender, EventArgs e)
@@ -454,7 +461,26 @@ namespace PolyglotPal_KimRozenberg
                 Finish();
                 return true;
             }
+            if(item.ItemId == Resource.Id.action_getNFC)
+            {
+                if (!hasNFC)
+                {
+                    Toast.MakeText(this, "Your phone does not have NFC", ToastLength.Short).Show();
+                    return true;
+                }
 
+                return true;
+            }
+            if(item.ItemId == Resource.Id.action_shareNFC)
+            {
+                if (!hasNFC)
+                {
+                    Toast.MakeText(this, "Your phone does not have NFC", ToastLength.Short).Show();
+                    return true;
+                }
+
+                return true;
+            }
             return false;
         }
     }
