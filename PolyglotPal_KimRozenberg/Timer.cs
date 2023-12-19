@@ -69,7 +69,6 @@ namespace PolyglotPal_KimRozenberg
         public string GetCurrentTimeString()
         {
             return $"{_currentTime.Minutes:D2}:{_currentTime.Seconds:D2}";
-            //return $"{(int)_currentTime.TotalHours:D2}:{_currentTime.Minutes:D2}:{_currentTime.Seconds:D2}";
         }
     }
 }

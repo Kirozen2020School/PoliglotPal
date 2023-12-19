@@ -46,58 +46,58 @@ namespace PolyglotPal_KimRozenberg
             switch (this.user.theme.ToString())
             {
                 case "softBlue":
-                    lyProfilePageBackgroundColor.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[2]));
-                    ivProfilePic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[2]));
-                    btnSettings.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[2]));
-                    lyButtom.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[3]));
-                    lybackground.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[1]));
+                    lyProfilePageBackgroundColor.SetBackgroundColor(Color.ParseColor(colors.softBlue[2]));
+                    ivProfilePic.SetBackgroundColor(Color.ParseColor(colors.softBlue[2]));
+                    btnSettings.SetBackgroundColor(Color.ParseColor(colors.softBlue[2]));
+                    lyButtom.SetBackgroundColor(Color.ParseColor(colors.softBlue[3]));
+                    lybackground.SetBackgroundColor(Color.ParseColor(colors.softBlue[1]));
 
-                    btnGotToTaskPageFromProfilePage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[3]));
-                    btnProfile.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[3]));
-                    btnGoToLeaderboardPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[3]));
+                    btnGotToTaskPageFromProfilePage.SetBackgroundColor(Color.ParseColor(colors.softBlue[3]));
+                    btnProfile.SetBackgroundColor(Color.ParseColor(colors.softBlue[3]));
+                    btnGoToLeaderboardPage.SetBackgroundColor(Color.ParseColor(colors.softBlue[3]));
                     break;
 
                 case "softPink":
-                    lyProfilePageBackgroundColor.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[0]));
-                    btnSettings.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[0]));
-                    ivProfilePic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[0]));
-                    lyButtom.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[1]));
-                    lybackground.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[2]));
+                    lyProfilePageBackgroundColor.SetBackgroundColor(Color.ParseColor(colors.softPink[0]));
+                    btnSettings.SetBackgroundColor(Color.ParseColor(colors.softPink[0]));
+                    ivProfilePic.SetBackgroundColor(Color.ParseColor(colors.softPink[0]));
+                    lyButtom.SetBackgroundColor(Color.ParseColor(colors.softPink[1]));
+                    lybackground.SetBackgroundColor(Color.ParseColor(colors.softPink[2]));
 
-                    btnGotToTaskPageFromProfilePage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[1]));
-                    btnProfile.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[1]));
-                    btnGoToLeaderboardPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[1]));
+                    btnGotToTaskPageFromProfilePage.SetBackgroundColor(Color.ParseColor(colors.softPink[1]));
+                    btnProfile.SetBackgroundColor(Color.ParseColor(colors.softPink[1]));
+                    btnGoToLeaderboardPage.SetBackgroundColor(Color.ParseColor(colors.softPink[1]));
 
                     /*----------------*/
-                    tvUserName.SetTextColor(Android.Graphics.Color.ParseColor("#000000"));
-                    tvFullUserName.SetTextColor(Android.Graphics.Color.ParseColor("#000000"));
-                    tvJoiningDate.SetTextColor(Android.Graphics.Color.ParseColor("#000000"));
-                    tvTotalEX.SetTextColor(Android.Graphics.Color.ParseColor("#000000"));
-                    tvTotalTaskDone.SetTextColor(Android.Graphics.Color.ParseColor("#000000"));
+                    tvUserName.SetTextColor(Color.ParseColor("#000000"));
+                    tvFullUserName.SetTextColor(Color.ParseColor("#000000"));
+                    tvJoiningDate.SetTextColor(Color.ParseColor("#000000"));
+                    tvTotalEX.SetTextColor(Color.ParseColor("#000000"));
+                    tvTotalTaskDone.SetTextColor(Color.ParseColor("#000000"));
                     break;
 
                 case "blackRed":
-                    lyProfilePageBackgroundColor.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[1]));
-                    btnSettings.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[1]));
-                    ivProfilePic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[1]));
-                    lyButtom.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[2]));
-                    lybackground.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[0]));
+                    lyProfilePageBackgroundColor.SetBackgroundColor(Color.ParseColor(colors.blackRed[1]));
+                    btnSettings.SetBackgroundColor(Color.ParseColor(colors.blackRed[1]));
+                    ivProfilePic.SetBackgroundColor(Color.ParseColor(colors.blackRed[1]));
+                    lyButtom.SetBackgroundColor(Color.ParseColor(colors.blackRed[2]));
+                    lybackground.SetBackgroundColor(Color.ParseColor(colors.blackRed[0]));
 
-                    btnGotToTaskPageFromProfilePage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[2]));
-                    btnProfile.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[2]));
-                    btnGoToLeaderboardPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[2]));
+                    btnGotToTaskPageFromProfilePage.SetBackgroundColor(Color.ParseColor(colors.blackRed[2]));
+                    btnProfile.SetBackgroundColor(Color.ParseColor(colors.blackRed[2]));
+                    btnGoToLeaderboardPage.SetBackgroundColor(Color.ParseColor(colors.blackRed[2]));
                     break;
 
                 case "navy":
-                    lyProfilePageBackgroundColor.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[1]));
-                    btnSettings.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[1]));
-                    ivProfilePic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[1]));
-                    lyButtom.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[2]));
-                    lybackground.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[0]));
+                    lyProfilePageBackgroundColor.SetBackgroundColor(Color.ParseColor(colors.navy[1]));
+                    btnSettings.SetBackgroundColor(Color.ParseColor(colors.navy[1]));
+                    ivProfilePic.SetBackgroundColor(Color.ParseColor(colors.navy[1]));
+                    lyButtom.SetBackgroundColor(Color.ParseColor(colors.navy[2]));
+                    lybackground.SetBackgroundColor(Color.ParseColor(colors.navy[0]));
 
-                    btnGotToTaskPageFromProfilePage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[2]));
-                    btnProfile.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[2]));
-                    btnGoToLeaderboardPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[2]));
+                    btnGotToTaskPageFromProfilePage.SetBackgroundColor(Color.ParseColor(colors.navy[2]));
+                    btnProfile.SetBackgroundColor(Color.ParseColor(colors.navy[2]));
+                    btnGoToLeaderboardPage.SetBackgroundColor(Color.ParseColor(colors.navy[2]));
                     break;
 
                 default:
@@ -268,7 +268,6 @@ namespace PolyglotPal_KimRozenberg
         }
 
         [Obsolete]
-#pragma warning disable CS0809 // Obsolete member overrides non-obsolete member
         protected override async void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);

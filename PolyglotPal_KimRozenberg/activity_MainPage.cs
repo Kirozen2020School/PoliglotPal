@@ -281,6 +281,7 @@ namespace PolyglotPal_KimRozenberg
 
         private async void SelectedYiddish(object sender, EventArgs e)
         {
+            this.user.language = "Yiddish";
             await firebase.UpdateLanguage(username, "Yiddish");
 
             if (popupWindow != null && popupWindow.IsShowing)
@@ -293,6 +294,7 @@ namespace PolyglotPal_KimRozenberg
 
         private async void SelectedPolish(object sender, EventArgs e)
         {
+            this.user.language = "Polish";
             await firebase.UpdateLanguage(username, "Polish");
 
             if (popupWindow != null && popupWindow.IsShowing)
@@ -305,6 +307,7 @@ namespace PolyglotPal_KimRozenberg
 
         private async void SelectedGermany(object sender, EventArgs e)
         {
+            this.user.language = "Germany";
             await firebase.UpdateLanguage(username, "Germany");
 
             if (popupWindow != null && popupWindow.IsShowing)
@@ -325,6 +328,7 @@ namespace PolyglotPal_KimRozenberg
 
         private async void SelectedUkranian(object sender, EventArgs e)
         {
+            this.user.language = "Ukrainian";
             await firebase.UpdateLanguage(username, "Ukrainian");
 
             if (popupWindow != null && popupWindow.IsShowing)
@@ -337,6 +341,7 @@ namespace PolyglotPal_KimRozenberg
 
         private async void SelectedRussian(object sender, EventArgs e)
         {
+            this.user.language = "Russian";
             await firebase.UpdateLanguage(username, "Russian");
 
             if (popupWindow != null && popupWindow.IsShowing)
@@ -349,6 +354,7 @@ namespace PolyglotPal_KimRozenberg
 
         private async void SelectedHebrow(object sender, EventArgs e)
         {
+            this.user.language = "Hebrew";
             await firebase.UpdateLanguage(username, "Hebrew");
 
             if (popupWindow != null && popupWindow.IsShowing)

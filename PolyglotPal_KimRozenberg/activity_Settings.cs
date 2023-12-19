@@ -128,8 +128,8 @@ namespace PolyglotPal_KimRozenberg
             {
                 case "LIGHT PINK":
                     await firebase.UpdateTheme(this.user.username, "softPink");
-                    lyTopic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[0]));
-                    ly.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[2]));
+                    lyTopic.SetBackgroundColor(Color.ParseColor(colors.softPink[0]));
+                    ly.SetBackgroundColor(Color.ParseColor(colors.softPink[2]));
 
                     swMusicBackground.SetTextColor(Color.ParseColor("#000000"));
                     btnChangeUsername.SetTextColor(Color.ParseColor("#000000"));
@@ -139,8 +139,8 @@ namespace PolyglotPal_KimRozenberg
                     break;
                 case "LIGHT BLUE":
                     await firebase.UpdateTheme(this.user.username, "softBlue");
-                    lyTopic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[2]));
-                    ly.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[1]));
+                    lyTopic.SetBackgroundColor(Color.ParseColor(colors.softBlue[2]));
+                    ly.SetBackgroundColor(Color.ParseColor(colors.softBlue[1]));
 
                     swMusicBackground.SetTextColor(Color.ParseColor("#ffffff"));
                     btnChangeUsername.SetTextColor(Color.ParseColor("#ffffff"));
@@ -149,8 +149,8 @@ namespace PolyglotPal_KimRozenberg
                 case "BLACKRED":
                 case "RED AND BLACK":
                     await firebase.UpdateTheme(this.user.username, "blackRed");
-                    lyTopic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[1]));
-                    ly.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[0]));
+                    lyTopic.SetBackgroundColor(Color.ParseColor(colors.blackRed[1]));
+                    ly.SetBackgroundColor(Color.ParseColor(colors.blackRed[0]));
 
                     swMusicBackground.SetTextColor(Color.ParseColor("#ffffff"));
                     btnChangeUsername.SetTextColor(Color.ParseColor("#ffffff"));
@@ -158,8 +158,8 @@ namespace PolyglotPal_KimRozenberg
                     break;
                 case "NAVY":
                     await firebase.UpdateTheme(this.user.username, "navy");
-                    lyTopic.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[1]));
-                    ly.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[0]));
+                    lyTopic.SetBackgroundColor(Color.ParseColor(colors.navy[1]));
+                    ly.SetBackgroundColor(Color.ParseColor(colors.navy[0]));
 
                     swMusicBackground.SetTextColor(Color.ParseColor("#ffffff"));
                     btnChangeUsername.SetTextColor(Color.ParseColor("#ffffff"));
@@ -167,8 +167,8 @@ namespace PolyglotPal_KimRozenberg
                     break;
                 case "DARK":
                     await firebase.UpdateTheme(this.user.username, "");
-                    lyTopic.SetBackgroundColor(Android.Graphics.Color.ParseColor("#000000"));
-                    ly.SetBackgroundColor(Android.Graphics.Color.ParseColor("#000000"));
+                    lyTopic.SetBackgroundColor(Color.ParseColor("#000000"));
+                    ly.SetBackgroundColor(Color.ParseColor("#000000"));
 
                     swMusicBackground.SetTextColor(Color.ParseColor("#ffffff"));
                     btnChangeUsername.SetTextColor(Color.ParseColor("#ffffff"));
@@ -252,7 +252,6 @@ namespace PolyglotPal_KimRozenberg
 
         private void BtnExitFromSettingPage_Click(object sender, EventArgs e)
         {
-            //StopService(music);
             Intent intent = new Intent(this, typeof(activity_MainPage));
             intent.PutExtra("Username", this.username);
             StartActivity(intent);

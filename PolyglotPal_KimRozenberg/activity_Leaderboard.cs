@@ -2,11 +2,9 @@
 using Android.Content;
 using Android.Graphics;
 using Android.OS;
-using Android.Views;
 using Android.Widget;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using Android.Content.PM;
 
@@ -170,14 +168,6 @@ namespace PolyglotPal_KimRozenberg
             intent.PutExtra("Username", this.username);
             StartActivity(intent);
             Finish();
-        }
-
-        private Bitmap ConvertByteArrayToBitmap(byte[] bytes)
-        {
-            using (MemoryStream stream = new MemoryStream(bytes))
-            {
-                return BitmapFactory.DecodeStream(stream);
-            }
         }
 
         private List<Account> SortByXP(List<Account> accounts)

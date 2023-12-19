@@ -1,13 +1,11 @@
 ﻿using Android.App;
 using Android.Content;
-using Android.Content.Res;
 using Android.Graphics;
 using Android.OS;
 using Android.Widget;
 using System;
 using System.Collections.Generic;
 using Android.Content.PM;
-using Xamarin.Essentials;
 
 namespace PolyglotPal_KimRozenberg
 {
@@ -221,7 +219,6 @@ namespace PolyglotPal_KimRozenberg
         private void BtnENG_Click(object sender, EventArgs e)
         {
             Button clickedButton = (Button)sender;
-            TextToSpeak(clickedButton.Text);
             bool flag = true;
             if(lastClickedButtonEng != null)
             {
@@ -237,7 +234,6 @@ namespace PolyglotPal_KimRozenberg
                     if(item.ENG.Equals(clickedButton.Text) && item.HE.Equals(lastClickedButtonHeb.Text))
                     {
                         flag = false;
-                        //Toast.MakeText(this, "Translations match!", ToastLength.Short).Show();
                         foreach (Button button in buttons)
                         {
                             if (button.Equals(clickedButton))
@@ -282,11 +278,6 @@ namespace PolyglotPal_KimRozenberg
             }
         }
 
-        private async void TextToSpeak(string text)
-        {
-            await TextToSpeech.SpeakAsync(text);
-        }
-
         private void BtnHE_Click(object sender, EventArgs e)
         {
             Button clickedButton = (Button)sender;
@@ -305,7 +296,6 @@ namespace PolyglotPal_KimRozenberg
                     if (item.ENG.Equals(lastClickedButtonEng.Text) && item.HE.Equals(clickedButton.Text))
                     {
                         flag = false;
-                        //Toast.MakeText(this, "Translations match!", ToastLength.Short).Show();
                         foreach (Button button in buttons)
                         {
                             if (button.Equals(clickedButton))
@@ -442,8 +432,6 @@ namespace PolyglotPal_KimRozenberg
             {
                 btnNextLevel.Enabled = true;
                 btnNextLevel.SetBackgroundResource(Resource.Drawable.active_round_buttons);
-                //ColorStateList colorStateList = ColorStateList.ValueOf(Color.ParseColor(goodColor));
-                //btnNextLevel.BackgroundTintList = colorStateList;
                 btnNextLevel.SetTextColor(Color.ParseColor("#000000"));
             }
         }

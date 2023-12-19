@@ -70,8 +70,6 @@ namespace PolyglotPal_KimRozenberg
             }
         }
 
-        
-
         public async Task UpdateUsername(string username, string newname)
         {
             var account = await GetAccount(username);
