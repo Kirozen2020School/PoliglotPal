@@ -18,7 +18,7 @@ namespace PolyglotPal_KimRozenberg
 
         FirebaseManager firebase;
         List<Account> accounts;
-
+        
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -49,7 +49,6 @@ namespace PolyglotPal_KimRozenberg
                 var dialog = d.Create();
                 dialog.Show();
             }
-            
 
             etUserName = FindViewById<EditText>(Resource.Id.etUsername);
             etPassword = FindViewById<EditText>(Resource.Id.etPassword);

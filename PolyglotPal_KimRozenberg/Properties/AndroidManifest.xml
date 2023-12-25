@@ -12,4 +12,5 @@
 	<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 	<uses-permission android:name="android.permission.GET_TASKS" />
 	<uses-permission android:name="android.permission.NFC" />
+	<uses-permission android:name="android.permission.USE_FINGERPRINT" />
 </manifest>

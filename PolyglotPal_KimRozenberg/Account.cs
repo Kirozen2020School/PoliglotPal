@@ -1,6 +1,4 @@
 ﻿
-using Newtonsoft.Json;
-
 namespace PolyglotPal_KimRozenberg
 {
     public class Account
@@ -32,19 +30,6 @@ namespace PolyglotPal_KimRozenberg
             this.theme = theme;
             this.isPlaying = isPlaying;
             this.language = language;
-        }
-
-        public string SerializeForNFC()
-        {
-            var dataToShare = new
-            {
-                username,
-                firstname,
-                lastname,
-                totalxp
-            };
-
-            return JsonConvert.SerializeObject(dataToShare);
         }
     }
 }

@@ -73,6 +73,7 @@
                 android:textColor="#fff"
                 android:layout_marginLeft="5sp"
                 android:textStyle="bold"
+                android:id="@+id/tvFromEnglish"
                 />
         </LinearLayout>
         

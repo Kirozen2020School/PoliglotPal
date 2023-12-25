@@ -89,7 +89,7 @@ namespace PolyglotPal_KimRozenberg
                     Bitmap bitmap = ((BitmapDrawable)drawable).Bitmap;
                     string date = DateTime.Now.ToString("d MMMM yyyy");
                     byte[] pic = ConvertBitmapToByteArray(bitmap);
-
+                    
                     Account user = new Account(etUserName.Text,
                         etLastName.Text,
                         etFirstName.Text,

@@ -8,10 +8,6 @@ using System;
 using System.Collections.Generic;
 using Android.Content.PM;
 using static Android.Views.View;
-using Android.Nfc.Tech;
-using Android.Nfc;
-using Newtonsoft.Json;
-using System.Text;
 
 namespace PolyglotPal_KimRozenberg
 {
@@ -23,7 +19,7 @@ namespace PolyglotPal_KimRozenberg
             btnFood, btnMusic, btnAnimals, btnFurniture, btnEmotions, btnCountries, btnTools, btnClothing;
         List<Tuple<ImageButton, string>> buttons;
         ImageButton btnPopupMenu;
-        TextView tvHiUsernameHomePage, tvTotalPointsHomePage;
+        TextView tvHiUsernameHomePage, tvTotalPointsHomePage, tvFromEnglish;
         LinearLayout lyInfoMainPage, lyButtomMenuMainPage, lyBackgroundMainPage;
 
         string username;
@@ -37,9 +33,6 @@ namespace PolyglotPal_KimRozenberg
         Intent music;
 
         PopupWindow popupWindow;
-
-        NfcAdapter nfcAdapter;
-        bool hasNFC = false; 
 
         int xpAdded = -1;
         protected override async void OnCreate(Bundle savedInstanceState)
@@ -75,12 +68,6 @@ namespace PolyglotPal_KimRozenberg
             {
                 UpdateColors();
                 InitMusic();
-            }
-
-            nfcAdapter = NfcAdapter.GetDefaultAdapter(this);
-            if (nfcAdapter == null || !nfcAdapter.IsEnabled)
-            {
-                hasNFC = false;
             }
         }
 
@@ -140,6 +127,7 @@ namespace PolyglotPal_KimRozenberg
                     {
                         btn.Item1.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[1]));
                     }
+                    tvFromEnglish.SetTextColor(Android.Graphics.Color.ParseColor("#000000"));
                     break;
                 case "softPink":
                     lyInfoMainPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[0]));
@@ -153,6 +141,7 @@ namespace PolyglotPal_KimRozenberg
                     {
                         btn.Item1.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softPink[2]));
                     }
+                    tvFromEnglish.SetTextColor(Android.Graphics.Color.ParseColor("#000000"));
                     break;
                 case "blackRed":
                     lyInfoMainPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[1]));
@@ -166,6 +155,7 @@ namespace PolyglotPal_KimRozenberg
                     {
                         btn.Item1.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.blackRed[0]));
                     }
+                    tvFromEnglish.SetTextColor(Android.Graphics.Color.ParseColor("#ffffff"));
                     break;
                 case "navy":
                     lyInfoMainPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[1]));
@@ -179,6 +169,7 @@ namespace PolyglotPal_KimRozenberg
                     {
                         btn.Item1.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.navy[0]));
                     }
+                    tvFromEnglish.SetTextColor(Android.Graphics.Color.ParseColor("#ffffff"));
                     break;
                 default:
 
@@ -194,6 +185,7 @@ namespace PolyglotPal_KimRozenberg
 
             tvHiUsernameHomePage = FindViewById<TextView>(Resource.Id.tvHiUsernameHomePage);
             tvTotalPointsHomePage = FindViewById<TextView>(Resource.Id.tvTotalPointsHomePage);
+            tvFromEnglish = FindViewById<TextView>(Resource.Id.tvFromEnglish);
 
             btnTask = FindViewById<ImageButton>(Resource.Id.btnGoToTaskPageFromTaskPage);
             btnPopupMenu = FindViewById<ImageButton>(Resource.Id.btnPopMenu);
@@ -459,26 +451,6 @@ namespace PolyglotPal_KimRozenberg
                 intent.PutExtra("Username", this.username);
                 StartActivity(intent);
                 Finish();
-                return true;
-            }
-            if(item.ItemId == Resource.Id.action_getNFC)
-            {
-                if (!hasNFC)
-                {
-                    Toast.MakeText(this, "Your phone does not have NFC", ToastLength.Short).Show();
-                    return true;
-                }
-
-                return true;
-            }
-            if(item.ItemId == Resource.Id.action_shareNFC)
-            {
-                if (!hasNFC)
-                {
-                    Toast.MakeText(this, "Your phone does not have NFC", ToastLength.Short).Show();
-                    return true;
-                }
-
                 return true;
             }
             return false;
