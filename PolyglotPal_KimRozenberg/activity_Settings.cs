@@ -31,7 +31,7 @@ namespace PolyglotPal_KimRozenberg
         FirebaseManager firebase;
 
         [Obsolete]
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected override async void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_Settings);
@@ -41,13 +41,11 @@ namespace PolyglotPal_KimRozenberg
                 this.username = Intent.GetStringExtra("Username");
             }
 
+            firebase = new FirebaseManager();
+            this.user = await firebase.GetAccount(this.username);
 
             InitViews();
-            if(this.user != null)
-            {
-                this.theme = this.user.theme;
-            }
-            SetColor();
+            UpdateColors();
         }
         private void InitMusic()
         {
@@ -58,11 +56,8 @@ namespace PolyglotPal_KimRozenberg
         }
 
         [Obsolete]
-        private async void InitViews()
+        private void InitViews()
         {
-            firebase = new FirebaseManager();
-            user = await firebase.GetAccount(this.username);
-
             btnExitFromSettingPage = FindViewById<Button>(Resource.Id.btnExitFromSettingsPage);
             btnChangeUsername = FindViewById<Button>(Resource.Id.btnChangeUsername);
             btnDeleteAccount = FindViewById<Button>(Resource.Id.btnDeleteAccountSettings);
@@ -88,16 +83,13 @@ namespace PolyglotPal_KimRozenberg
 
         private void UpdateSpinnerSelection()
         {
-            string temp = "";
-            if (this.theme != null)
+            switch (this.user.theme.ToString().ToUpper())
             {
-                temp = this.theme.ToUpper();
-            }
-            switch (temp)
-            {
+                case "SOFTPINK":
                 case "LIGHT PINK":
                     spThemeSelector.SetSelection(1);
                     break;
+                case "SOFTBLUE":
                 case "LIGHT BLUE":
                     spThemeSelector.SetSelection(2);
                     break;
@@ -119,12 +111,7 @@ namespace PolyglotPal_KimRozenberg
 
         private async void UpdateColors()
         {
-            string temp = "";
-            if(this.theme != null)
-            {
-                temp = this.theme.ToUpper();
-            }
-            switch (temp)
+            switch (this.user.theme.ToString().ToUpper())
             {
                 case "LIGHT PINK":
                     await firebase.UpdateTheme(this.user.username, "softPink");
@@ -180,35 +167,17 @@ namespace PolyglotPal_KimRozenberg
         }
 
         [Obsolete]
-        private async void SetColor()
-        {
-            ProgressDialog p = new ProgressDialog(this);
-            p.SetTitle("Updating Data");
-            p.SetMessage("Please wait...");
-            p.SetCancelable(false);
-            p.Show();
-            UpdateColors();
-            await Task.Delay(1000);
-            p.Dismiss();
-        }
-
-        [Obsolete]
         private void SpThemeSelector_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
             var sp = (Spinner)sender;
             string temp = sp.GetItemAtPosition(e.Position).ToString();
             if(temp.Length > 0)
             {
-                this.theme = temp;
+                this.user.theme = temp;
+                
             }
-            else
-            {
-                if(this.user != null)
-                {
-                    this.theme = this.user.theme;
-                }
-            }
-            SetColor();
+            
+            UpdateColors();
         }
 
         private void BtnDeleteAccount_Click(object sender, EventArgs e)
