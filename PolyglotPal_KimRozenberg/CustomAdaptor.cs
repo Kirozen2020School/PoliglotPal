@@ -1,4 +1,5 @@
-﻿using Android.Content;
+﻿using Android.Accounts;
+using Android.Content;
 using Android.Graphics;
 using Android.Views;
 using Android.Widget;
@@ -14,6 +15,8 @@ namespace PolyglotPal_KimRozenberg
         private LinearLayout lyBackground;
         private TextView textViewIndex, textViewUsername, textViewTotalXP;
         private readonly string theme;
+        private PopupWindow popupWindow;
+        private Account acc;
 
         public CustomAdapter(Context context, List<Account> accounts, string theme)
         {
@@ -33,8 +36,10 @@ namespace PolyglotPal_KimRozenberg
             var account = accounts[position];
             var view = LayoutInflater.From(context).Inflate(Resource.Layout.customLayout, null);
 
+            view.Tag = position;
+
             // Customize the view using the account data
-            
+
             lyBackground = view.FindViewById<LinearLayout>(Resource.Id.lyBackgroundCustomLayout);
             textViewIndex = view.FindViewById<TextView>(Resource.Id.textViewIndex);
             textViewUsername = view.FindViewById<TextView>(Resource.Id.textViewUsername);
@@ -47,12 +52,65 @@ namespace PolyglotPal_KimRozenberg
 
             // Set the profile pic (replace this with your logic)
             Bitmap bitmap = ConvertByteArrayToBitmap(account.profilepic);
+            this.acc = account;
             imageViewProfilePic.SetImageBitmap(bitmap);
             imageViewProfilePic.SetScaleType(ImageView.ScaleType.FitXy);
+
+            lyBackground.Click += ViewProfile;
+            //textViewIndex.Click += ViewProfile;
+            //textViewUsername.Click += ViewProfile;
+            //textViewTotalXP.Click += ViewProfile;
+            //imageViewProfilePic.Click += ViewProfile;
 
             UpdateColors();
 
             return view;
+        }
+
+        private void ViewProfile(object sender, System.EventArgs e)
+        {
+            var clickedView = sender as View;
+
+            var position = (int)clickedView.Tag;
+            var clickedAccount = accounts[position];
+
+
+            LayoutInflater inflater = (LayoutInflater)context.GetSystemService(Context.LayoutInflaterService);
+            View viewProfile = inflater.Inflate(Resource.Layout.activity_ViewProfileLeaderboard, null);
+
+            this.popupWindow = new PopupWindow(
+                viewProfile,
+                ViewGroup.LayoutParams.WrapContent,
+                ViewGroup.LayoutParams.WrapContent,
+                true
+            );
+
+            ImageView ivProfilePicViewProfile = viewProfile.FindViewById<ImageView>(Resource.Id.ivProfilePicViewProfile);
+            TextView tvUsername = viewProfile.FindViewById<TextView>(Resource.Id.tvUsernameViewProfile);
+            TextView tvFirstName = viewProfile.FindViewById<TextView>(Resource.Id.tvFirstNameViewProfile);
+            TextView tvLastName = viewProfile.FindViewById<TextView>(Resource.Id.tvLastNameViewProfile);
+            TextView tvXp = viewProfile.FindViewById<TextView>(Resource.Id.tvXpViewProfile);
+            Button btnExit = viewProfile.FindViewById<Button>(Resource.Id.btnExitFromProfileView);
+
+            tvUsername.Text = "Username: " + clickedAccount.username;
+            tvFirstName.Text = "First name: " + clickedAccount.firstname;
+            tvLastName.Text = "Last name: " + clickedAccount.lastname;
+            tvXp.Text = "Xp: " + clickedAccount.totalxp;
+            btnExit.Click += BtnCloseProfileView;
+
+            Bitmap pic = ConvertByteArrayToBitmap(clickedAccount.profilepic);
+            ivProfilePicViewProfile.SetImageBitmap(pic);
+            
+            // Use clickedView to anchor the PopupWindow
+            popupWindow.ShowAsDropDown(clickedView,200,-(position*150));
+        }
+
+        private void BtnCloseProfileView(object sender, System.EventArgs e)
+        {
+            if (popupWindow != null && popupWindow.IsShowing)
+            {
+                popupWindow.Dismiss();
+            }
         }
 
         private void UpdateColors()

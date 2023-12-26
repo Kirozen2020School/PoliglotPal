@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3f3f3f"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="10sp"
+        android:text="View Profile"
+        android:textColor="#fff"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        />
+
+    <ImageView
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        android:background="#5a5a5a"
+        android:src="@drawable/blackprofile"
+        android:id="@+id/ivProfilePicViewProfile"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username: ______"
+        android:textColor="#fff"
+        android:layout_margin="20sp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:id="@+id/tvUsernameViewProfile"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_margin="5sp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="First name: ___"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:id="@+id/tvFirstNameViewProfile"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Last name: ___"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:id="@+id/tvLastNameViewProfile"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Xp: ___"
+        android:textColor="#fff"
+        android:layout_margin="20sp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:id="@+id/tvXpViewProfile"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exit"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="10sp"
+        android:id="@+id/btnExitFromProfileView"
+        />
+
+</LinearLayout>

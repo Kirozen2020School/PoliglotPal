@@ -5,7 +5,6 @@ using Android.OS;
 using Android.Runtime;
 using Android.Widget;
 using System;
-using System.Threading.Tasks;
 using Android.Content.PM;
 
 namespace PolyglotPal_KimRozenberg
@@ -278,13 +277,6 @@ namespace PolyglotPal_KimRozenberg
             dialog.Show();
         }
 
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
-        {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode,
-            permissions, grantResults);
-            base.OnRequestPermissionsResult(requestCode,
-            permissions, grantResults);
-        }
         protected override void OnDestroy()
         {
             ISharedPreferencesEditor editor = sp.Edit();
