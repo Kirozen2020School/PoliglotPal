@@ -80,7 +80,7 @@ namespace PolyglotPal_KimRozenberg
 
             this.popupWindow = new PopupWindow(
                 viewProfile,
-                ViewGroup.LayoutParams.WrapContent,
+                900,
                 ViewGroup.LayoutParams.WrapContent,
                 true
             );
@@ -100,9 +100,9 @@ namespace PolyglotPal_KimRozenberg
 
             Bitmap pic = ConvertByteArrayToBitmap(clickedAccount.profilepic);
             ivProfilePicViewProfile.SetImageBitmap(pic);
-            
+
             // Use clickedView to anchor the PopupWindow
-            popupWindow.ShowAsDropDown(clickedView,200,-(position*150));
+            popupWindow.ShowAsDropDown(clickedView,50,-(position*150));
         }
 
         private void BtnCloseProfileView(object sender, System.EventArgs e)
