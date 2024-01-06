@@ -2,7 +2,7 @@
 Wellness - טובת הבריאות
 Exercise - תרגול
 Workout - אימון
-Fitness - לוחמה גופנית
+Fitness - כושר גופני
 Nutrition - תזונה
 Healthy - בריא
 Unhealthy - לא בריא
@@ -23,7 +23,7 @@ Nurse - אחות
 Hospital - בית חולים
 Appointment - פגישה
 Check-up - בדיקה רפואית
-Therapist - טיפולן
+Therapist - מטפל / תרפיסט
 Massage - מסאז'
 Yoga - יוגה
 Meditation - מדיטציה

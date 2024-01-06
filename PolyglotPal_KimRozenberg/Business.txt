@@ -22,12 +22,12 @@ Profit - רווח
 Loss - הפסד
 Budget - תקציב
 Investment - השקעה
-Finance - כלכלה
+Finance - מימון
 Accounting - חשבונאות
 Invoice - חשבונית
 Payment - תשלום
 Contract - חוזה
-Negotiation - מו"מ
+Negotiation - משא ומתן
 Deal - עסקה
 Partnership - שותפות
 Collaboration - שיתוף פעולה

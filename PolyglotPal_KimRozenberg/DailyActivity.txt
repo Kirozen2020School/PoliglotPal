@@ -1,14 +1,14 @@
 ﻿Wake up - להתעורר
-Brush teeth - לשטוף שיניים
-Take a shower - לקחת מקלחת
+Brush teeth - לצחצח שיניים
+Take a shower - להתקלח
 Get dressed - להתלבש
 Have breakfast - לאכול ארוחת בוקר
 Go to work - ללכת לעבודה
 Take a break - לקחת הפסקה
-Have lunch - לאכול צהרון
+Have lunch - לאכול צהריים
 Go back to work - לחזור לעבודה
 Finish work - לסיים את העבודה
-Exercise - להתעמל
+Exercise - התעמלות
 Cook dinner - לבשל ארוחת ערב
 Eat dinner - לאכול ארוחת ערב
 Watch TV - לצפות בטלוויזיה
@@ -24,7 +24,7 @@ Make the bed - לסדר את המיטה
 Clean the house - לנקות את הבית
 Vacuum - לשאוב אבק
 Do laundry - לכבס כביסה
-Iron clothes - לגלגל בגדים
+Iron clothes - לגהץ בגדים
 Plan the day - לתכנן את היום
 Make a to-do list - לכתוב רשימת משימות
 Go for a walk - לצאת לטיול רגלי
@@ -41,10 +41,10 @@ Water plants - להשקות צמחים
 Feed pets - להאכיל בעלי חיים
 Check messages - לבדוק הודעות
 Listen to music - להקשיב למוזיקה
-Meditate - להתבודד
+Meditate - מדיטציה
 Go for a run - לרוץ
-Take a nap - לישון נאה
+Take a nap - שנ"צ
 Write in a journal - לכתוב ביומן
 Study - ללמוד
 Learn something new - ללמוד משהו חדש
-Reflect on the day - להתבונן ביום
+Reflect on the day - לחשוב על היום

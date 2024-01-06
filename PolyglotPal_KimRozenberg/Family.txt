@@ -14,27 +14,26 @@ Grandmother - סבתא
 Uncle - דוד
 Aunt - דודה
 Cousin - דוד/דודה דרג ראשון
-Nephew - בן-אח של אח
-Niece - בת-אח של אח
+Nephew - בן-אח של אח / אחין
+Niece - בת-אח של אח / אחינית
 Spouse - בן/בת זוג
-Husband - חבר/בעל
-Wife - חברה/אישה
-Fiancé - פוסט-פיענסה
-Fiancée - פוסט-פיענסה
-Boyfriend - חבר זכר
-Girlfriend - חברה נקבה
-In-laws - משפחת הזויים
-Father-in-law - חמי
+Husband - בעל
+Wife - אישה
+Fiancé - ארוס / חתן
+Boyfriend - חבר
+Girlfriend - חברה 
+In-laws - מחותן
+Father-in-law - חותן / חם
 Mother-in-law - חמות
-Brother-in-law - גידול
-Sister-in-law - גידולה
+Brother-in-law - גיס
+Sister-in-law - גיסה
 Son-in-law - חתן
 Daughter-in-law - כלה
 Stepfather - אב חורג
 Stepmother - אם חורגת
 Stepson - בן חורג
 Stepdaughter - בת חורגת
-Half-brother - אח חצי
-Half-sister - אחות חצי
-Adoptive parents - הורים אומנים
-Foster parents - הורים מאומנים
+Half-brother - אח למחצה
+Half-sister - אחות למחצה
+Adoptive parents - הורים מאמצים
+Foster parents - משפחה אומנת

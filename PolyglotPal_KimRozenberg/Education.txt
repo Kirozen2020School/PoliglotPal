@@ -4,7 +4,7 @@ Classroom - כיתה
 Teacher - מורה
 Student - תלמיד
 Principal - מנהל
-Curriculum - מגמה
+Curriculum - תוכנית לימודים
 Subject - נושא
 Lesson - שיעור
 Homework - שעות בית
@@ -24,8 +24,8 @@ Lecture - הרצאה
 Seminar - סמינר
 Degree - תואר
 Diploma - תעודה
-Graduation - טקס סיום
-College - תואר ראשון
+Graduation - סיום לימודים
+College - בולג' / מיכללה
 University - אוניברסיטה
 Major - מגמה ראשית
 Minor - מגמה משנית
@@ -38,7 +38,7 @@ Pen - עט
 Paper - נייר
 Projector - מקרן
 Whiteboard - לוח לבן
-Marker - מחיק
+Marker - מרקר / מדגש
 Computer lab - מעבדה מחשבים
 Online learning - למידה מקוונת
-Distance education - למידה חוץ קמפוס
+Distance education - למידה מרחוק

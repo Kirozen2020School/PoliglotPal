@@ -4,7 +4,7 @@ Breakfast - ארוחת בוקר
 Lunch - ארוחת צהריים
 Dinner - ארוחת ערב
 Snack - נשנוש
-Appetizer - מנה קטנה
+Appetizer - מתאבן
 Main course - מנה עיקרית
 Dessert - קינוח
 Beverage - משקה
@@ -22,7 +22,7 @@ Fish - דג
 Vegetables - ירקות
 Fruits - פירות
 Salad - סלט
-Sandwich - כרטיס עם רכיבים
+Sandwich - כריך
 Pizza - פיצה
 Burger - המבורגר
 Fries - צ'יפס
@@ -35,7 +35,7 @@ Salt - מלח
 Pepper - פלפל
 Spices - תבלינים
 Olive oil - שמן זית
-Vinegar - חומר חומצי
+Vinegar - חומר חומצי / חמץ
 Honey - דבש
 Jam - ריבה
 Ketchup - קטשופ

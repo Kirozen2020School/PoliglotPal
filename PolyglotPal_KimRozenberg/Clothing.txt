@@ -9,24 +9,24 @@ Dress - שמלה
 Skirt - חצאית
 Pants/Trousers - מכנסיים
 Jeans - ג'ינס
-Shorts - חצאות
+Shorts - שורט
 Hat - כובע
-Cap - קסקט
+Cap - כובע
 Scarf - צעיף
 Gloves - כפפות
 Socks - גרביים
 Shoes - נעליים
 Boots - מגפיים
 Sandals - סנדלים
-Slippers - פנימיות
+Slippers - כפכפים
 Belt - חגורה
 Tie - עניבה
 Bow tie - עניבת קשת
 Suit - חליפה
 Tuxedo - חליפת ערב
 Pajamas - פיג'מות
-Underwear - בגדי תחתון
-Swimsuit - מציאות
+Underwear - הלבשה תחתונה
+Swimsuit - בגד ים
 Bikini - ביקיני
 Raincoat - מעיל גשם
 Umbrella - מטריה

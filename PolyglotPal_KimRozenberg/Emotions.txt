@@ -5,11 +5,10 @@ Sad - עצוב
 Angry - כועס
 Surprised - מפתיע
 Excited - מתרגש
-Nervous - עצבני
-Relaxed - מרגיע
-Content - מרוצה
-Bored - כסוסה
-Stressed - מדוכא
+Nervous - עצבני / מתוח / לחוץ
+Relaxed - רגוע
+Bored - משועמם
+Stressed - לחוץ
 Confused - מבולבל
 Frustrated - מתוסכל
 Proud - גאה
@@ -17,7 +16,7 @@ Embarrassed - מבושה
 Grateful - אסיר תודה
 Loved - אהוב
 Lonely - בודד
-Hopeful - מתקווה
+Hopeful - מלא תקווה
 Calm - רגוע
 Enthusiastic - מתרגש
 Jealous - קנאי
@@ -31,7 +30,7 @@ Anger - כעס
 Joy - שמחה
 Love - אהבה
 Hate - שנאה
-Disgust - געגוע
+Disgust - געל
 Surprise - הפתעה
 Pain - כאב
 Pleasure - הנאה

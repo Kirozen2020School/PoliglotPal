@@ -16,18 +16,18 @@ Lighting - תאורה
 Rug - שטיח
 Carpet - שטיח
 Curtains - וילונות
-Blinds - תריסים
+Blinds - תריסים / וילונות
 Sofa bed - ספה-מיטה
 Coffee table - שולחן קפה
-End table - שולחן סופה
+End table - שולחן קטן
 Nightstand - שידת ליד מיטה
 Dining table - שולחן אוכל
 Dining chairs - כסאות אוכל
 Barstool - כסא בר
-Benches - מזרנים
-Ottoman - אוטומן
+Benches - ספסל
+Ottoman - מושב חסר משענת
 Rocking chair - כיסא נדנדה
-Cushion - כר
+Cushion - כרית / כר
 Pouf - פוף
 Cupboard - ארון ספלים
 Hanging shelf - מדף תלוי

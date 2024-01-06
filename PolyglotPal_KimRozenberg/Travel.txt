@@ -9,7 +9,7 @@ Hail a taxi - לקרוא למונית
 Book a hotel - להזמין מלון
 Check-in at the hotel - לערוך צ'ק-אין במלון
 Unpack - לפנות את המזוודות
-Explore the city - לסיור בעיר
+Explore the city - לחקור את העיר
 Visit tourist attractions - לבקר באתרי תיירות
 Take photos - לצלם תמונות
 Try local food - לטעום אוכל מקומי
@@ -21,20 +21,20 @@ Reserve a table - להזמין שולחן
 Enjoy the beach - ליהנות בחוף הים
 Go for a swim - לשחות
 Relax by the pool - להירגע ליד הבריכה
-Go sightseeing - לראות את האתרים
+Go sightseeing - צא לסיור
 Take a guided tour - לקחת סיור מודרך
 Board a cruise - לעלות לספינת תיירות
 Visit a museum - לבקר במוזיאון
 Explore the nightlife - לפגוש את החיי לילה
 Experience local culture - לחוות את התרבות המקומית
-Admire the architecture - להעריך את האדריכלות
+Admire the architecture - להתפעם מהארכיטקטורה
 Go on an adventure - לצאת להרפתקה
 Visit historical sites - לבקר באתרים היסטוריים
-Take a scenic drive - לטפס בנסיעה עם נופים
+Take a scenic drive - צאו לנסיעה נופית
 Get a travel guide - לקבל מדריך תיירות
 Reserve a rental car - להזמין רכב להשכרה
 Ask for recommendations - לשאול ליועץ
 Visit a national park - לבקר בפארק לאומי
 Go on a hike - ללכת לטיול רגלי
-Explore local markets - לסיור בשווקים מקומיים
+Explore local markets - גלה שווקים מקומיים
 Try street food - לטעום אוכל רחוב

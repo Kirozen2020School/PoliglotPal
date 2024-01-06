@@ -3,7 +3,7 @@ Mammal - יונק
 Reptile - זוחל
 Bird - עוף
 Fish - דג
-Amphibian - יוצא מן הכלל
+Amphibian - דו חי
 Insect - חרק
 Mammals - יונקים
 Elephant - פיל
@@ -14,7 +14,7 @@ Bear - דב
 Monkey - קוף
 Dog - כלב
 Cat - חתול
-Rabbit - ארנבון
+Rabbit - ארנב
 Mouse - עכבר
 Snake - נחש
 Turtle - צב
@@ -22,17 +22,17 @@ Frog - צפרדע
 Butterfly - פרפר
 Bee - דבורה
 Ant - נמלה
-Spider - עכבר עצם
+Spider - עכביש
 Shark - כריש
 Dolphin - דולפין
 Whale - לוויתן
 Octopus - תמנון
 Penguin - פנגווין
-Ostrich - יער
+Ostrich - יען
 Kangaroo - קנגרו
 Horse - סוס
-Cow - פר
-Sheep - כבש
+Cow - פרה
+Sheep - כבשה
 Goat - עז
-Chicken - תרנגול
+Chicken - תרנגולת
 Duck - ברווז

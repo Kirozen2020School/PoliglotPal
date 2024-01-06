@@ -15,15 +15,15 @@ Cello - צ'לו
 Accordion - אקורדיון
 Banjo - בנג'ו
 Horn - קרן
-Keyboard - מקלדות
+Keyboard - פסנתר
 Organ - אורגן
-Bagpipes - חמישה
-Harpischord - הרפסיך
+Bagpipes - חמת חלילים
+Harpischord - צמבלו
 Mandolin - מנדולינה
 Xylophone - קסילופון
 Triangle - משולש
-Castanets - קסטניואטות
-Cymbals - נבלים
+Castanets - קסטניטה
+Cymbals - מצילה
 Gong - גונג
 Maracas - מרקס
-Tambourine - תוף עגל
+Tambourine - תוף מרים
