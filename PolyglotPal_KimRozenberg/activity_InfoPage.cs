@@ -31,7 +31,7 @@ namespace PolyglotPal_KimRozenberg
             InitViews();
             
         }
-
+        //מוסיף את המידע על התוכנה
         private async void UpdateInfoText()
         {
             tvInfo.Text = "# About PolyglotPal - Your Language Learning Game\r\n\r\n" +
@@ -45,6 +45,7 @@ namespace PolyglotPal_KimRozenberg
             this.user = await firebase.GetAccount(this.username);
             UpdateColors();
         }
+        //משנה את צבעי המערכת לפי בחירת המשמש
         private void UpdateColors()
         {
             ColorsClass colors = new ColorsClass();
@@ -75,6 +76,7 @@ namespace PolyglotPal_KimRozenberg
                     break;
             }
         }
+        //מאתחל את הפקדים בדף
         private void InitViews()
         {
             btnExitInfoPage = FindViewById<Button>(Resource.Id.btnExitFromInfoPage);
@@ -87,7 +89,7 @@ namespace PolyglotPal_KimRozenberg
             lyTop = FindViewById<LinearLayout>(Resource.Id.lyTopLineInfoPage);
 
         }
-
+        //כפתור יציאה ממסך המידע על התוכנה 
         private void BtnExitInfoPage_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(activity_MainPage));

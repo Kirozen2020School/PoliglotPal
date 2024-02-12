@@ -94,7 +94,7 @@ namespace PolyglotPal_KimRozenberg
             btnENG5.Text = selectedCouples[0].ENG;
             btnHE5.Text = selectedCouples[4].HE;
         }
-
+        //מוריד ושומר את כל המילים הרלוונטיים למשימה
         private void InitWords()
         {
             string name = "";
@@ -174,7 +174,7 @@ namespace PolyglotPal_KimRozenberg
                 }
             }
         }
-
+        //מאתחל את כל הפקדים שיש במסך
         [Obsolete]
         private void InitViews()
         {
@@ -215,7 +215,7 @@ namespace PolyglotPal_KimRozenberg
             int progress = ((Intent.GetIntExtra("Round", -1)-1)*100);
             progressBar.Progress = progress;
         }
-
+        //כפתור המחזיק את המילה באנגלית
         private void BtnENG_Click(object sender, EventArgs e)
         {
             Button clickedButton = (Button)sender;
@@ -277,7 +277,7 @@ namespace PolyglotPal_KimRozenberg
                 lastClickedButtonEng = clickedButton;
             }
         }
-
+        //כפתור המחזיק את המילה בשפה הנלמדת
         private void BtnHE_Click(object sender, EventArgs e)
         {
             Button clickedButton = (Button)sender;
@@ -338,7 +338,7 @@ namespace PolyglotPal_KimRozenberg
                 lastClickedButtonHeb = clickedButton;
             }
         }
-
+        //כפתור יציאה מהמשימה בלי שמירה של הנקודות
         private void BtnExitLevel_Click(object sender, EventArgs e)
         {
             var builder = new AlertDialog.Builder(this);
@@ -364,7 +364,7 @@ namespace PolyglotPal_KimRozenberg
             StartActivity(intent);
             Finish();
         }
-
+        //כפתור מעבר למשימה הבאה
         [Obsolete]
         private void BtnNextLevel_Click(object sender, EventArgs e)
         {
@@ -417,7 +417,7 @@ namespace PolyglotPal_KimRozenberg
                 }
             }
         }
-
+        //בודק אם המשתמש התאים את כל המילים, בתנאי שכן הכפתור למעבר למשימה הבאה "ניפתח"
         private void CheckIfEndLevel()
         {
             bool flag = true;

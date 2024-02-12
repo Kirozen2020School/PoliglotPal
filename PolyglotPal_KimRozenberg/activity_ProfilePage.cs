@@ -40,6 +40,7 @@ namespace PolyglotPal_KimRozenberg
             }
             UpdateViews();
         }
+        //משנה את הצבעים של הדך לפי הבחירה של המשתמש
         private void UpdateColors()
         {
             ColorsClass colors = new ColorsClass();
@@ -105,7 +106,7 @@ namespace PolyglotPal_KimRozenberg
                     break;
             }
         }
-
+        //מוסיף מידע רלוונטי למשתמש במסך
         async private void UpdateViews()
         {
             try
@@ -131,7 +132,7 @@ namespace PolyglotPal_KimRozenberg
                 UpdateColors();
             }
         }
-
+        //מאתחל את הפקדים שיש במסך
         private void InitViews()
         {
             btnGotToTaskPageFromProfilePage = FindViewById<ImageButton>(Resource.Id.btnGoToTaskPageFromProfilePage);
@@ -158,7 +159,7 @@ namespace PolyglotPal_KimRozenberg
             lybackground = FindViewById<LinearLayout>(Resource.Id.lyBackgroundProfilePage);
             lyButtom = FindViewById<LinearLayout>(Resource.Id.lyButtomProfilePage);
         }
-
+        //כפתור הפותח את מסך טלאת השיאים
         private void BtnGoToLeaderboardPage_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(activity_Leaderboard));
@@ -166,7 +167,7 @@ namespace PolyglotPal_KimRozenberg
             StartActivity(intent);
             Finish();
         }
-
+        //כפתור הפותח את מסך ההגדרות
         private void BtnSettings_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(activity_Settings));
@@ -174,8 +175,7 @@ namespace PolyglotPal_KimRozenberg
             StartActivity(intent);
             Finish();
         }
-
-        
+        //פותח מסך בשביל בחירה של תמונת פרופיל חדשה
         private void IvProfilePic_Click(object sender, EventArgs e)
         {
             View changeProfilePic = LayoutInflater.Inflate(Resource.Layout.activity_ChangeProfilePage, null);
@@ -202,7 +202,7 @@ namespace PolyglotPal_KimRozenberg
             popupWindow.ShowAtLocation(this.Window.DecorView.RootView, GravityFlags.Center, 0, 0);
 
         }
-
+        //כפתור ביטול של שינוי תמונת פרופיל
         private void BtnCancelSelect_Click(object sender, EventArgs e)
         {
             if (popupWindow != null && popupWindow.IsShowing)
@@ -211,7 +211,7 @@ namespace PolyglotPal_KimRozenberg
             }
             Toast.MakeText(this, "You did not change your profile image", ToastLength.Long).Show();
         }
-
+        //כפתור הפותח גלריה בשביל בחירת התמונת פרופיל
         private void BtnGalarySelect_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(Intent.ActionPick);
@@ -223,7 +223,7 @@ namespace PolyglotPal_KimRozenberg
                 popupWindow.Dismiss();
             }
         }
-
+        //כפתור הפותח את המצלמה בשביל בחירת תמונת פרופיל
         private void BtnCameraSelect_Click(object sender, EventArgs e)
         {
             if (CheckSelfPermission(Android.Manifest.Permission.Camera) == Android.Content.PM.Permission.Granted)
@@ -241,7 +241,7 @@ namespace PolyglotPal_KimRozenberg
                 popupWindow.Dismiss();
             }
         }
-
+        //כפתור מעבר למסך טבלת השיאים
         private void BtnGotToTaskPageFromProfilePage_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(activity_MainPage));
@@ -249,7 +249,7 @@ namespace PolyglotPal_KimRozenberg
             StartActivity(intent);
             Finish();
         }
-
+        //מעביר את תמונת הפרופיל ל byte[]
         public byte[] ConvertBitmapToByteArray(Bitmap bm)
         {
             using (MemoryStream stream = new MemoryStream())
@@ -258,7 +258,7 @@ namespace PolyglotPal_KimRozenberg
                 return stream.ToArray();
             }
         }
-
+        //מעביר []byte לתמונה
         public Bitmap ConvertByteArrayToBitmap(byte[] bytes)
         {
             using (MemoryStream stream = new MemoryStream(bytes))

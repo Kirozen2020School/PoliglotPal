@@ -23,7 +23,8 @@ namespace PolyglotPal_KimRozenberg
             sp = this.GetSharedPreferences("details",FileCreationMode.Private);
         }
 
-        public override StartCommandResult OnStartCommand(Intent intent,[GeneratedEnum] StartCommandFlags flags, int startId)
+        public override StartCommandResult OnStartCommand(Intent intent,
+            [GeneratedEnum] StartCommandFlags flags, int startId)
         {
             int position = sp.GetInt("position", 0);
             mp.SeekTo(position);

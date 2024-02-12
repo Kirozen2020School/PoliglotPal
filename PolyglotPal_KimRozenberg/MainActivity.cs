@@ -28,7 +28,7 @@ namespace PolyglotPal_KimRozenberg
             RequestedOrientation = ScreenOrientation.Portrait;
             InitViews();
         }
-        
+        //מאתחל את כל הפקדים השימושיים בשביל אינטרקציה עם המשתמש
         async private void InitViews()
         {
             firebase = new FirebaseManager();
@@ -59,14 +59,14 @@ namespace PolyglotPal_KimRozenberg
             btnStart.Click += BtnStart_Click;
             btnCreateAccount.Click += BtnCreateAccount_Click;
         }
-
+        //כפתור מעבר למסך של יצירת משתמש חדש
         private void BtnCreateAccount_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(activity_Register));
             StartActivity(intent);
             Finish();
         }
-
+        //כפתור כניסה לאפליקציה אם כל המידע מתאים לאח המשתמשים השמורים
         private void BtnStart_Click(object sender, EventArgs e)
         {
             
@@ -101,12 +101,12 @@ namespace PolyglotPal_KimRozenberg
             }
             
         }
-
+        //בפתור ניסיון נוסף במיקרא של הכנסת מידע לא מתאים
         private void TryAgain(object sender, DialogClickEventArgs e)
         {
             etPassword.Text = "";
         }
-
+        //מעבר למסך יצירת משתמש חדש במקרא של הכנסת מידע לא מתאים
         private void Register(object sender, DialogClickEventArgs e)
         {
             Intent intent = new Intent(this, typeof(activity_Register));

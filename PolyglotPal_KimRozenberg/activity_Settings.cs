@@ -19,7 +19,6 @@ namespace PolyglotPal_KimRozenberg
 
         Account user;
         string username;
-        string theme;
 
         bool isPlaying;
         ISharedPreferences sp;
@@ -46,6 +45,7 @@ namespace PolyglotPal_KimRozenberg
             InitViews();
             UpdateColors();
         }
+        //מתחיל את מוזיקת הרקע לפי ההגדרות של המשתמש
         private void InitMusic()
         {
             this.music = new Intent(this, typeof(MusicService));
@@ -53,7 +53,6 @@ namespace PolyglotPal_KimRozenberg
             this.isPlaying = this.user.isPlaying;
             swMusicBackground.Checked = isPlaying;
         }
-
         [Obsolete]
         private void InitViews()
         {
@@ -79,7 +78,7 @@ namespace PolyglotPal_KimRozenberg
             ly = FindViewById<LinearLayout>(Resource.Id.lyBackgroundSettingsPage);
             lyTopic = FindViewById<LinearLayout>(Resource.Id.lySettingsTopic);
         }
-
+        //מעדכן את הבחירה של צבעי המערכת לפי המידע על המשתמש
         private void UpdateSpinnerSelection()
         {
             switch (this.user.theme.ToString().ToUpper())
@@ -107,7 +106,7 @@ namespace PolyglotPal_KimRozenberg
                     break;
             }
         }
-
+        //שינוי צבעי מערכת לפי הבחירה של המשתמש
         private async void UpdateColors()
         {
             switch (this.user.theme.ToString().ToUpper())
@@ -178,7 +177,7 @@ namespace PolyglotPal_KimRozenberg
             
             UpdateColors();
         }
-
+        //כפתור מחיקה של המשתמש
         private void BtnDeleteAccount_Click(object sender, EventArgs e)
         {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -199,7 +198,7 @@ namespace PolyglotPal_KimRozenberg
             AlertDialog dialog = builder.Create();
             dialog.Show();
         }
-
+        //כפתור האחרי על הדלקת מוזיקת רקע
         private async void SwMusicBackground_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
         {
             Switch sw = (Switch)sender;
@@ -217,7 +216,7 @@ namespace PolyglotPal_KimRozenberg
             editor.Commit();
             await firebase.UpdateMusicValue(this.user.username, isPlaying);
         }
-
+        //כפתור יציאה ממסך ההגדרות למסך המשימות
         private void BtnExitFromSettingPage_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(activity_MainPage));
@@ -225,7 +224,7 @@ namespace PolyglotPal_KimRozenberg
             StartActivity(intent);
             Finish();
         }
-
+        //כפתור לשינוי שם המשתמש
         private void BtnChangeUsername_Click(object sender, EventArgs e)
         {
             EditText userinput;

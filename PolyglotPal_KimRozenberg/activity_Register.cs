@@ -40,7 +40,7 @@ namespace PolyglotPal_KimRozenberg
                 Toast.MakeText(this, "Reading data from firebase error", ToastLength.Long);
             }
         }
-
+        //מאתחל את הפקדים במסך
         [Obsolete]
         private void InitViews()
         {
@@ -57,14 +57,14 @@ namespace PolyglotPal_KimRozenberg
             btnCreatNewAccount.Click += BtnCreatNewAccount_Click;
             btnCencle.Click += BtnCencle_Click;
         }
-
+        //כפתור מעבר למסך הכניסה
         private void BtnCencle_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(MainActivity));
             StartActivity(intent);
             Finish();
         }
-
+        //כפתור ליצירה של המשתמש ושמירה שלו ב Firebase
         [Obsolete]
         async private void BtnCreatNewAccount_Click(object sender, EventArgs e)
         {
@@ -119,7 +119,7 @@ namespace PolyglotPal_KimRozenberg
         }
 
         private void OkAction(object sender, DialogClickEventArgs e) { }
-
+        //מעביר את התמונה של המשתמש ל byte[]
         private static byte[] ConvertBitmapToByteArray(Bitmap bm)
         {
             using (MemoryStream stream = new MemoryStream())

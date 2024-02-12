@@ -70,7 +70,7 @@ namespace PolyglotPal_KimRozenberg
                 InitMusic();
             }
         }
-
+        //מאתחל את השרת של המוזיקה ומדליק אותה לפי הצורך
         private void InitMusic()
         {
             this.music = new Intent(this, typeof(MusicService));
@@ -84,6 +84,7 @@ namespace PolyglotPal_KimRozenberg
                 }
             }
         }
+        //משנה את הערכים של הטקסט בשביל להתאים למידע של המשתמש
         private void UpdateViews()
         {
             UpdateColors();
@@ -111,6 +112,7 @@ namespace PolyglotPal_KimRozenberg
                     break;
             }
         }
+        //משנה את צבעי התוכנה בהתאם להגדרות של המשתמש
         private void UpdateColors()
         {
             switch (this.user.theme.ToString())
@@ -176,7 +178,7 @@ namespace PolyglotPal_KimRozenberg
                     break;
             }
         }
-
+        //פעולה האחראית על איתחול הפקדים
         private void InitViews()
         {
             lyButtomMenuMainPage = FindViewById<LinearLayout>(Resource.Id.lyBottomLine);
@@ -236,7 +238,7 @@ namespace PolyglotPal_KimRozenberg
                 button.Item1.Click += BtnClick;
             }
         }
-
+        //פותח חלון בחירה של שפות לימוד בשביל הגדרה של המשתמש
         private void BtnChangeLanguageLearning(object sender, EventArgs e)
         {
             View selectLanguage = LayoutInflater.Inflate(Resource.Layout.activity_SelectLanguage, null);
@@ -283,7 +285,7 @@ namespace PolyglotPal_KimRozenberg
 
             popupWindow.ShowAtLocation(this.Window.DecorView.RootView, GravityFlags.Center,0,0);
         }
-
+        //בחירת שפת לימוד יידיש
         private async void SelectedYiddish(object sender, EventArgs e)
         {
             this.user.language = "Yiddish";
@@ -296,6 +298,7 @@ namespace PolyglotPal_KimRozenberg
 
             btnSelectLanguage.SetImageResource(Resource.Drawable.Yiddish);
         }
+        //בחירת שפת לימוד פולנית
         private async void SelectedPolish(object sender, EventArgs e)
         {
             this.user.language = "Polish";
@@ -308,6 +311,7 @@ namespace PolyglotPal_KimRozenberg
 
             btnSelectLanguage.SetImageResource(Resource.Drawable.poland);
         }
+        //בחירת שפת לימוד גרמנית
         private async void SelectedGermany(object sender, EventArgs e)
         {
             this.user.language = "Germany";
@@ -320,6 +324,7 @@ namespace PolyglotPal_KimRozenberg
 
             btnSelectLanguage.SetImageResource(Resource.Drawable.germany);
         }
+        //בחירת שפת לימוד אוקראינית
         private async void SelectedUkranian(object sender, EventArgs e)
         {
             this.user.language = "Ukrainian";
@@ -332,6 +337,7 @@ namespace PolyglotPal_KimRozenberg
 
             btnSelectLanguage.SetImageResource(Resource.Drawable.ukraine);
         }
+        //בחירת שפת לימוד רוסית
         private async void SelectedRussian(object sender, EventArgs e)
         {
             this.user.language = "Russian";
@@ -344,6 +350,7 @@ namespace PolyglotPal_KimRozenberg
 
             btnSelectLanguage.SetImageResource(Resource.Drawable.russia);
         }
+        //בחירת שפת לימוד עברית
         private async void SelectedHebrow(object sender, EventArgs e)
         {
             this.user.language = "Hebrew";
@@ -356,6 +363,7 @@ namespace PolyglotPal_KimRozenberg
 
             btnSelectLanguage.SetImageResource(Resource.Drawable.israel);
         }
+        //כפתור יציאה ואי שמירה של שינויים מהמסך של בחירת שפת לימוד
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             if (popupWindow != null && popupWindow.IsShowing)
@@ -363,7 +371,7 @@ namespace PolyglotPal_KimRozenberg
                 popupWindow.Dismiss();
             }
         }
-
+        //כפתור המעביר את המשתמש למסך טבלת השיאים
         private void BtnGoToLeaderboard_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(activity_Leaderboard));
@@ -371,7 +379,7 @@ namespace PolyglotPal_KimRozenberg
             StartActivity(intent);
             Finish();
         }
-
+        //כפתור המעבי את המשתמש למשימות בנושא שהוא בחר
         private void BtnClick(object sender, EventArgs e)
         {
             ImageButton button = (ImageButton)sender;
@@ -396,7 +404,7 @@ namespace PolyglotPal_KimRozenberg
             StopService(this.music);
             Finish();
         }
-
+        //כפתור המעביר את המשתמש למסך הפרופיל
         private void BtnGoToProfilePageFromTaskPage_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(activity_ProfilePage));
@@ -404,7 +412,7 @@ namespace PolyglotPal_KimRozenberg
             StartActivity(intent);
             Finish();
         }
-
+        
         public void OnClick(View v)
         {
             if(v.Id == btnPopupMenu.Id)
@@ -419,7 +427,7 @@ namespace PolyglotPal_KimRozenberg
             }
             
         }
-
+        
         public bool OnMenuItemClick(IMenuItem item)
         {
             if (item.ItemId == Resource.Id.action_about)

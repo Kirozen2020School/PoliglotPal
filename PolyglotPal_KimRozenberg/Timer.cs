@@ -26,7 +26,8 @@ namespace PolyglotPal_KimRozenberg
         public void Start()
         {
             _isRunning = true;
-            _timer = new System.Threading.Timer(TimerCallback, null, 0, (int)_interval.TotalMilliseconds);
+            _timer = new System.Threading.Timer(TimerCallback, null, 
+                0, (int)_interval.TotalMilliseconds);
         }
 
         public void Start(TimeSpan startTime)

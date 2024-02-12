@@ -16,7 +16,6 @@ namespace PolyglotPal_KimRozenberg
         private TextView textViewIndex, textViewUsername, textViewTotalXP;
         private readonly string theme;
         private PopupWindow popupWindow;
-        private Account acc;
 
         public CustomAdapter(Context context, List<Account> accounts, string theme)
         {
@@ -30,7 +29,7 @@ namespace PolyglotPal_KimRozenberg
         public override long GetItemId(int position) => position;
 
         public override Account this[int position] => accounts[position];
-
+        //יצירה של מסך מעל בשביל להראות מידע המשתמש הנבחר
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             var account = accounts[position];
@@ -52,21 +51,15 @@ namespace PolyglotPal_KimRozenberg
 
             // Set the profile pic (replace this with your logic)
             Bitmap bitmap = ConvertByteArrayToBitmap(account.profilepic);
-            this.acc = account;
             imageViewProfilePic.SetImageBitmap(bitmap);
             imageViewProfilePic.SetScaleType(ImageView.ScaleType.FitXy);
 
             lyBackground.Click += ViewProfile;
-            //textViewIndex.Click += ViewProfile;
-            //textViewUsername.Click += ViewProfile;
-            //textViewTotalXP.Click += ViewProfile;
-            //imageViewProfilePic.Click += ViewProfile;
 
             UpdateColors();
 
             return view;
         }
-
         private void ViewProfile(object sender, System.EventArgs e)
         {
             var clickedView = sender as View;
@@ -104,7 +97,7 @@ namespace PolyglotPal_KimRozenberg
             // Use clickedView to anchor the PopupWindow
             popupWindow.ShowAsDropDown(clickedView,50,-(position*150));
         }
-
+        //כפתור לסגירה של החלון עם המידע על המשתמש
         private void BtnCloseProfileView(object sender, System.EventArgs e)
         {
             if (popupWindow != null && popupWindow.IsShowing)
@@ -112,7 +105,7 @@ namespace PolyglotPal_KimRozenberg
                 popupWindow.Dismiss();
             }
         }
-
+        //משנה את הצבעים לפי הגדות של המשתמש
         private void UpdateColors()
         {
             ColorsClass colors = new ColorsClass();
@@ -140,14 +133,14 @@ namespace PolyglotPal_KimRozenberg
                     break;
             }
         }
-
+        //משנה את הצבע של פקדי הטסטס
         private void SetTextColor(string color)
         {
             textViewIndex.SetTextColor(Color.ParseColor(color));
             textViewUsername.SetTextColor(Color.ParseColor(color));
             textViewTotalXP.SetTextColor(Color.ParseColor(color));
         }
-
+        //מוציא את התמונה מהפייר בייס לשימוש בהמשך
         public Bitmap ConvertByteArrayToBitmap(byte[] bytes)
         {
             using (MemoryStream stream = new MemoryStream(bytes))

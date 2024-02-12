@@ -10,7 +10,7 @@ namespace PolyglotPal_KimRozenberg
         FirebaseClient firebase = new FirebaseClient("https://polyglotpal-firebase-default-rtdb.europe-west1.firebasedatabase.app");
 
         private string name = "Account";
-
+        //מוסיף משתמש חדש וריק לפייר בייס
         public async Task AddAccount(Account account)
         {
             await firebase.Child(name).Child(account.username).PutAsync<Account>(account);
@@ -20,7 +20,7 @@ namespace PolyglotPal_KimRozenberg
         {
             return await firebase.Child(name).Child(username).OnceSingleAsync<Account>();
         }
-
+        //מחזיר את כל המשתמשים השמורים בפייר בייס
         public async Task<List<Account>> GetAllUsers()
         {
             var response = await firebase.Child(name).OnceAsync<Account>();
@@ -34,17 +34,12 @@ namespace PolyglotPal_KimRozenberg
 
             return accounts;
         }
-
+        //מחיקת המשתמש וכל המידע עליו מהפייר בייס
         public async Task DeleteAccount(string username)
         {
             await firebase.Child(name).Child(username).DeleteAsync();
         }
-
-        public async Task ReplaceAccount(string username, Account updatedAccount)
-        {
-            await firebase.Child(name).Child(username).PutAsync(updatedAccount);
-        }
-
+        //שינוי נקודות שיש למשתמש
         public async Task UpdateXP(string username, int xp)
         {
             var account = await GetAccount(username);
@@ -57,7 +52,7 @@ namespace PolyglotPal_KimRozenberg
                 await firebase.Child(name).Child(username).PutAsync(account);
             }
         }
-
+        //שינוי תמונת הפרופיל
         public async Task UpdateProfilePic(string username, byte[] prifePic)
         {
             var account = await GetAccount(username);
@@ -69,7 +64,7 @@ namespace PolyglotPal_KimRozenberg
                 await firebase.Child(name).Child(username).PutAsync(account);
             }
         }
-
+        //שינוי השם משתשתמש
         public async Task UpdateUsername(string username, string newname)
         {
             var account = await GetAccount(username);
@@ -83,7 +78,7 @@ namespace PolyglotPal_KimRozenberg
                 await firebase.Child(name).Child(account.username).PutAsync(account);
             }
         }
-
+        //שינוי צבעי התוכנה לפי בחירת המשתמש
         public async Task UpdateTheme(string username, string theme)
         {
             var account = await GetAccount(username);
@@ -97,7 +92,7 @@ namespace PolyglotPal_KimRozenberg
                 await firebase.Child(name).Child(account.username).PutAsync(account);
             }
         }
-
+        //שוני השפה המלומדת של המשתמש 
         public async Task UpdateLanguage(string username, string language)
         {
             var account = await GetAccount(username);
@@ -111,7 +106,7 @@ namespace PolyglotPal_KimRozenberg
                 await firebase.Child(name).Child(account.username).PutAsync(account);
             }
         }
-
+        //שינוי פרמטר המוזיקה של המשתמש
         public async Task UpdateMusicValue(string username, bool isPlaying)
         {
             var account = await GetAccount(username);

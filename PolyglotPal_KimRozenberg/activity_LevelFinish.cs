@@ -34,7 +34,7 @@ namespace PolyglotPal_KimRozenberg
             timer.Start(savedTime);
             InitViews();
         }
-
+        //מאתחל את הפקדים בדף
         private void InitViews()
         {
             InitVideo();
@@ -53,7 +53,7 @@ namespace PolyglotPal_KimRozenberg
             tvAccuracy.Text = $"Accuracy:\n{temp}%";
 
         }
-
+        //מאתחל את הוידאו המנוגן ברקע
         private void InitVideo()
         {
             videoBackground = FindViewById<VideoView>(Resource.Id.vvBackground);
@@ -72,7 +72,7 @@ namespace PolyglotPal_KimRozenberg
             videoBackground.SetOnPreparedListener(onPreparedListener);
 
         }
-
+        //כפתור יציאה מהמסך למסך המשימות
         private void BtnExitFromFinishLevelPage_Click(object sender, EventArgs e)
         {
             var intent = new Intent(this, typeof(activity_MainPage));

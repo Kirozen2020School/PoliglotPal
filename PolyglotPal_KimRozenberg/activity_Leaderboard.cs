@@ -36,7 +36,7 @@ namespace PolyglotPal_KimRozenberg
             InitViews();
             UpdateViews();
         }
-
+        //מוסיך את כל המידע הרלונתי למסך
         private async void UpdateViews()
         {
             try
@@ -74,7 +74,7 @@ namespace PolyglotPal_KimRozenberg
                 }
             }
         }
-
+        //משנה את צבעי המערכת לפי בחירת המשמש
         private void UpdateColors()
         {
             ColorsClass colors = new ColorsClass();
@@ -134,7 +134,7 @@ namespace PolyglotPal_KimRozenberg
                     break;
             }
         }
-
+        //מאתחל את הפקדים בדף
         private void InitViews()
         {
             btnGoToProfilePage = FindViewById<ImageButton>(Resource.Id.btnGoToProfilePageFromLeaderBoardsPage);
@@ -153,7 +153,7 @@ namespace PolyglotPal_KimRozenberg
 
             lsLeaderboard = FindViewById<ListView>(Resource.Id.lsLeaderboard);
         }
-
+        //כפתור מעבר למסך הפרופיל
         private void BtnGoToProfilePage_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(activity_ProfilePage));
@@ -161,7 +161,7 @@ namespace PolyglotPal_KimRozenberg
             StartActivity(intent);
             Finish();
         }
-
+        //כפתור מעבר למסך טבלת השיאים
         private void BtnGoToTaskPage_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(activity_MainPage));
@@ -169,7 +169,7 @@ namespace PolyglotPal_KimRozenberg
             StartActivity(intent);
             Finish();
         }
-
+        //מחזיר את רשימת המשתמשים לפי הסדר של הנקודות שיש למשתמש
         private List<Account> SortByXP(List<Account> accounts)
         {
             List<Account> sortedList = accounts.OrderByDescending(account => account.totalxp).ToList();
