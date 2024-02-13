@@ -23,7 +23,9 @@ namespace PolyglotPal_KimRozenberg
         List<Account> accounts;
 
         [Obsolete]
+#pragma warning disable CS0809 // Obsolete member overrides non-obsolete member
         protected override async void OnCreate(Bundle savedInstanceState)
+#pragma warning restore CS0809 // Obsolete member overrides non-obsolete member
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_RegisterPage);

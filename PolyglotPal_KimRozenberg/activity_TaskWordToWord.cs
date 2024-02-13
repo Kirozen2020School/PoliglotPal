@@ -31,7 +31,9 @@ namespace PolyglotPal_KimRozenberg
         Timer time;
         
         [Obsolete]
+#pragma warning disable CS0809 // Obsolete member overrides non-obsolete member
         protected override void OnCreate(Bundle savedInstanceState)
+#pragma warning restore CS0809 // Obsolete member overrides non-obsolete member
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_TaskWordToWord);

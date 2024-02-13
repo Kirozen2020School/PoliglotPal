@@ -268,7 +268,9 @@ namespace PolyglotPal_KimRozenberg
         }
 
         [Obsolete]
+#pragma warning disable CS0809 // Obsolete member overrides non-obsolete member
         protected override async void OnActivityResult(int requestCode, Result resultCode, Intent data)
+#pragma warning restore CS0809 // Obsolete member overrides non-obsolete member
         {
             base.OnActivityResult(requestCode, resultCode, data);
 

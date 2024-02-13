@@ -29,7 +29,9 @@ namespace PolyglotPal_KimRozenberg
         FirebaseManager firebase;
 
         [Obsolete]
+#pragma warning disable CS0809 // Obsolete member overrides non-obsolete member
         protected override async void OnCreate(Bundle savedInstanceState)
+#pragma warning restore CS0809 // Obsolete member overrides non-obsolete member
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_Settings);
@@ -235,7 +237,7 @@ namespace PolyglotPal_KimRozenberg
             userinput = new EditText(this);
             userinput.InputType = Android.Text.InputTypes.NumberVariationPassword;
             builder.SetView(userinput);
-            builder.SetPositiveButton("OK", async (sender, args) =>
+            builder.SetPositiveButton("OK", (sender, args) =>
             {
                 string inputText = userinput.Text;
                 string pas = user.password;
