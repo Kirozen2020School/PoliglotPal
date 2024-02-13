@@ -53,6 +53,7 @@ namespace PolyglotPal_KimRozenberg
             this.isPlaying = this.user.isPlaying;
             swMusicBackground.Checked = isPlaying;
         }
+        //מאחל את כל הפקדים במסך
         [Obsolete]
         private void InitViews()
         {

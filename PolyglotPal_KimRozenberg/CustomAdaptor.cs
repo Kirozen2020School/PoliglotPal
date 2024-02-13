@@ -60,6 +60,7 @@ namespace PolyglotPal_KimRozenberg
 
             return view;
         }
+        //מאתחל את הפקדים של כל שורה ברשימה של המשתמשים
         private void ViewProfile(object sender, System.EventArgs e)
         {
             var clickedView = sender as View;

@@ -38,7 +38,10 @@ namespace PolyglotPal_KimRozenberg
 
         private Timer time;
 
+        [Obsolete]
+#pragma warning disable CS0809 // Obsolete member overrides non-obsolete member
         protected override void OnCreate(Bundle savedInstanceState)
+#pragma warning restore CS0809 // Obsolete member overrides non-obsolete member
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_TaskWordToWordSound);
@@ -70,7 +73,9 @@ namespace PolyglotPal_KimRozenberg
                 time.Start(savedTime);
             }
         }
+
         //מאתחל את כל הפקדים שיש במסך
+        [Obsolete]
         private void InitViews()
         {
             btnENG1 = FindViewById<ImageButton>(Resource.Id.btnENG1Sound);
@@ -116,7 +121,9 @@ namespace PolyglotPal_KimRozenberg
         {
             ImageButton clickedButton = (ImageButton)sender;
             TextToSpeak(clickedButton.Tag.ToString());
+#pragma warning disable CS0612 // Type or member is obsolete
             StartImageChange(clickedButton);
+#pragma warning restore CS0612 // Type or member is obsolete
             bool flag = true;
             if (lastClickedButtonEng != null)
             {
@@ -238,10 +245,12 @@ namespace PolyglotPal_KimRozenberg
             d = builder.Create();
             d.Show();
         }
+        //ביטול יציאה מהמשימה
         private void CancelAction(object sender, DialogClickEventArgs e)
         {
             Toast.MakeText(this, "Task continues", ToastLength.Short).Show();
         }
+        //אישור יציאה מהמשימה
         private void OkAction(object sender, DialogClickEventArgs e)
         {
             Intent intent = new Intent(this, typeof(activity_MainPage));
@@ -250,7 +259,9 @@ namespace PolyglotPal_KimRozenberg
             StartActivity(intent);
             Finish();
         }
+
         //כפתור מעבר למשימה הבאה
+        [Obsolete]
         private void BtnNextLevel_Click(object sender, EventArgs e)
         {
             Vibrator vibrator = (Vibrator)GetSystemService(VibratorService);
@@ -382,7 +393,7 @@ namespace PolyglotPal_KimRozenberg
                 }
             }
         }
-
+        //משנה את הטקסט של הכפתורים למילים שנבחרו
         private void InitButtons()
         {
             Random random = new Random();
@@ -413,7 +424,9 @@ namespace PolyglotPal_KimRozenberg
             btnENG5.Tag = selectedCouples[0].ENG;
             btnHE5.Text = selectedCouples[4].HE;
         }
+
         //מתחיל את ה"אנימציה" של תמונת הרמקול
+        [Obsolete]
         private void StartImageChange(ImageButton temp)
         {
             handler = new Handler();

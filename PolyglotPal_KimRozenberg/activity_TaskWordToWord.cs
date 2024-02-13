@@ -63,7 +63,7 @@ namespace PolyglotPal_KimRozenberg
                 time.Start(savedTime);
             }
         }
-
+        //משנה את הטקסט של הכפתורים למילים שנבחרו
         private void InitButtons()
         {
             Random random = new Random();
@@ -350,12 +350,12 @@ namespace PolyglotPal_KimRozenberg
             d = builder.Create();
             d.Show();
         }
-
+        //ביטול יציאה מהשלב
         private void CancelAction(object sender, DialogClickEventArgs e)
         {
             Toast.MakeText(this, "Task continues", ToastLength.Long).Show();
         }
-
+        //יציאה מהשלב
         private void OkAction(object sender, DialogClickEventArgs e)
         {
             Intent intent = new Intent(this, typeof(activity_MainPage));
