@@ -51,9 +51,9 @@ namespace PolyglotPal_KimRozenberg
 
             if (this.user != null)
             {
-                tvUsername.Text = this.user.username;
-                tvTotalPonts.Text = "Total Points: " + this.user.totalxp;
-                this.theme = this.user.theme;
+                tvUsername.Text = this.user.Username;
+                tvTotalPonts.Text = "Total Points: " + this.user.TotalXP;
+                this.theme = this.user.Theme;
                 UpdateColors();
                 if (this.accounts.Count > 0)
                 {
@@ -61,7 +61,7 @@ namespace PolyglotPal_KimRozenberg
 
                     foreach (var account in this.accounts)
                     {
-                        if (account.username.Equals(this.username))
+                        if (account.Username.Equals(this.username))
                         {
                             tvCurrentPosition.Text = "You'r current position: "+(this.accounts.IndexOf(account)+1);
                         }
@@ -78,7 +78,7 @@ namespace PolyglotPal_KimRozenberg
         private void UpdateColors()
         {
             ColorsClass colors = new ColorsClass();
-            switch (this.user.theme.ToString())
+            switch (this.user.Theme.ToString())
             {
                 case "softBlue":
                     lyTopLine.SetBackgroundColor(Color.ParseColor(colors.softBlue[2]));
@@ -172,7 +172,7 @@ namespace PolyglotPal_KimRozenberg
         //מחזיר את רשימת המשתמשים לפי הסדר של הנקודות שיש למשתמש
         private List<Account> SortByXP(List<Account> accounts)
         {
-            List<Account> sortedList = accounts.OrderByDescending(account => account.totalxp).ToList();
+            List<Account> sortedList = accounts.OrderByDescending(account => account.TotalXP).ToList();
 
             return sortedList;
         }

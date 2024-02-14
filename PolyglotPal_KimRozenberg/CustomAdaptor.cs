@@ -46,11 +46,11 @@ namespace PolyglotPal_KimRozenberg
             var imageViewProfilePic = view.FindViewById<ImageView>(Resource.Id.imageViewProfilePic);
 
             textViewIndex.Text = (position+1).ToString();
-            textViewUsername.Text = account.username;
-            textViewTotalXP.Text = $"Total XP: {account.totalxp}";
+            textViewUsername.Text = account.Username;
+            textViewTotalXP.Text = $"Total XP: {account.TotalXP}";
 
             // Set the profile pic (replace this with your logic)
-            Bitmap bitmap = ConvertByteArrayToBitmap(account.profilepic);
+            Bitmap bitmap = ConvertByteArrayToBitmap(account.ProfilePicture);
             imageViewProfilePic.SetImageBitmap(bitmap);
             imageViewProfilePic.SetScaleType(ImageView.ScaleType.FitXy);
 
@@ -86,13 +86,13 @@ namespace PolyglotPal_KimRozenberg
             TextView tvXp = viewProfile.FindViewById<TextView>(Resource.Id.tvXpViewProfile);
             Button btnExit = viewProfile.FindViewById<Button>(Resource.Id.btnExitFromProfileView);
 
-            tvUsername.Text = "Username: " + clickedAccount.username;
-            tvFirstName.Text = "First name: " + clickedAccount.firstname;
-            tvLastName.Text = "Last name: " + clickedAccount.lastname;
-            tvXp.Text = "Xp: " + clickedAccount.totalxp;
+            tvUsername.Text = "Username: " + clickedAccount.Username;
+            tvFirstName.Text = "First name: " + clickedAccount.Firstname;
+            tvLastName.Text = "Last name: " + clickedAccount.Lastname;
+            tvXp.Text = "Xp: " + clickedAccount.TotalXP;
             btnExit.Click += BtnCloseProfileView;
 
-            Bitmap pic = ConvertByteArrayToBitmap(clickedAccount.profilepic);
+            Bitmap pic = ConvertByteArrayToBitmap(clickedAccount.ProfilePicture);
             ivProfilePicViewProfile.SetImageBitmap(pic);
 
             // Use clickedView to anchor the PopupWindow

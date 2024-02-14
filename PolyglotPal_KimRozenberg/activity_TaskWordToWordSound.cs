@@ -375,7 +375,7 @@ namespace PolyglotPal_KimRozenberg
             else if (language == "Germany") { name += "Ge"; }
             else if (language == "Yiddish") { name += "Yi"; }
 
-            System.IO.Stream s = tmp.GetManifestResourceStream($"PolyglotPal_KimRozenberg.{name}.txt");
+            System.IO.Stream s = tmp.GetManifestResourceStream($"PolyglotPal_KimRozenberg.TextFiles.{name}.txt");
             System.IO.StreamReader sr = new System.IO.StreamReader(s);
             string[] lines = sr.ReadToEnd().Split('\n');
 

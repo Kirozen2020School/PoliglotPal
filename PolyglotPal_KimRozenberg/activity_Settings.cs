@@ -52,7 +52,7 @@ namespace PolyglotPal_KimRozenberg
         {
             this.music = new Intent(this, typeof(MusicService));
             this.sp = this.GetSharedPreferences("details", FileCreationMode.Private);
-            this.isPlaying = this.user.isPlaying;
+            this.isPlaying = this.user.IsPlaying;
             swMusicBackground.Checked = isPlaying;
         }
         //מאחל את כל הפקדים במסך
@@ -84,7 +84,7 @@ namespace PolyglotPal_KimRozenberg
         //מעדכן את הבחירה של צבעי המערכת לפי המידע על המשתמש
         private void UpdateSpinnerSelection()
         {
-            switch (this.user.theme.ToString().ToUpper())
+            switch (this.user.Theme.ToString().ToUpper())
             {
                 case "SOFTPINK":
                 case "LIGHT PINK":
@@ -112,10 +112,10 @@ namespace PolyglotPal_KimRozenberg
         //שינוי צבעי מערכת לפי הבחירה של המשתמש
         private async void UpdateColors()
         {
-            switch (this.user.theme.ToString().ToUpper())
+            switch (this.user.Theme.ToString().ToUpper())
             {
                 case "LIGHT PINK":
-                    await firebase.UpdateTheme(this.user.username, "softPink");
+                    await firebase.UpdateTheme(this.user.Username, "softPink");
                     lyTopic.SetBackgroundColor(Color.ParseColor(colors.softPink[0]));
                     ly.SetBackgroundColor(Color.ParseColor(colors.softPink[2]));
 
@@ -126,7 +126,7 @@ namespace PolyglotPal_KimRozenberg
                     spThemeSelector.SetSelection(1);
                     break;
                 case "LIGHT BLUE":
-                    await firebase.UpdateTheme(this.user.username, "softBlue");
+                    await firebase.UpdateTheme(this.user.Username, "softBlue");
                     lyTopic.SetBackgroundColor(Color.ParseColor(colors.softBlue[2]));
                     ly.SetBackgroundColor(Color.ParseColor(colors.softBlue[1]));
 
@@ -136,7 +136,7 @@ namespace PolyglotPal_KimRozenberg
                     break;
                 case "BLACKRED":
                 case "RED AND BLACK":
-                    await firebase.UpdateTheme(this.user.username, "blackRed");
+                    await firebase.UpdateTheme(this.user.Username, "blackRed");
                     lyTopic.SetBackgroundColor(Color.ParseColor(colors.blackRed[1]));
                     ly.SetBackgroundColor(Color.ParseColor(colors.blackRed[0]));
 
@@ -145,7 +145,7 @@ namespace PolyglotPal_KimRozenberg
                     btnDeleteAccount.SetTextColor(Color.ParseColor("#ffffff"));
                     break;
                 case "NAVY":
-                    await firebase.UpdateTheme(this.user.username, "navy");
+                    await firebase.UpdateTheme(this.user.Username, "navy");
                     lyTopic.SetBackgroundColor(Color.ParseColor(colors.navy[1]));
                     ly.SetBackgroundColor(Color.ParseColor(colors.navy[0]));
 
@@ -154,7 +154,7 @@ namespace PolyglotPal_KimRozenberg
                     btnDeleteAccount.SetTextColor(Color.ParseColor("#ffffff"));
                     break;
                 case "DARK":
-                    await firebase.UpdateTheme(this.user.username, "");
+                    await firebase.UpdateTheme(this.user.Username, "");
                     lyTopic.SetBackgroundColor(Color.ParseColor("#000000"));
                     ly.SetBackgroundColor(Color.ParseColor("#000000"));
 
@@ -174,7 +174,7 @@ namespace PolyglotPal_KimRozenberg
             string temp = sp.GetItemAtPosition(e.Position).ToString();
             if(temp.Length > 0)
             {
-                this.user.theme = temp;
+                this.user.Theme = temp;
                 
             }
             
@@ -217,7 +217,7 @@ namespace PolyglotPal_KimRozenberg
             ISharedPreferencesEditor editor = sp.Edit();
             editor.PutBoolean("IsPlaying", isPlaying);
             editor.Commit();
-            await firebase.UpdateMusicValue(this.user.username, isPlaying);
+            await firebase.UpdateMusicValue(this.user.Username, isPlaying);
         }
         //כפתור יציאה ממסך ההגדרות למסך המשימות
         private void BtnExitFromSettingPage_Click(object sender, EventArgs e)
@@ -240,7 +240,7 @@ namespace PolyglotPal_KimRozenberg
             builder.SetPositiveButton("OK", (sender, args) =>
             {
                 string inputText = userinput.Text;
-                string pas = user.password;
+                string pas = user.Password;
                 if (inputText.Equals(pas))
                 {
                     EditText userinput1;
@@ -253,7 +253,7 @@ namespace PolyglotPal_KimRozenberg
                     builder1.SetPositiveButton("OK", async (sender, args) =>
                     {
                         string inputText = userinput1.Text;
-                        await firebase.UpdateUsername(user.username, inputText);
+                        await firebase.UpdateUsername(user.Username, inputText);
                         Toast.MakeText(this, $"Username change to {inputText}", ToastLength.Short).Show();
 
                         this.username = inputText;

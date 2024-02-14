@@ -75,7 +75,7 @@ namespace PolyglotPal_KimRozenberg
         {
             this.music = new Intent(this, typeof(MusicService));
             this.sp = this.GetSharedPreferences("details", FileCreationMode.Private);
-            this.isPlaying = this.user.isPlaying;
+            this.isPlaying = this.user.IsPlaying;
             if (isPlaying)
             {
                 if(this.first)
@@ -88,9 +88,9 @@ namespace PolyglotPal_KimRozenberg
         private void UpdateViews()
         {
             UpdateColors();
-            tvHiUsernameHomePage.Text = "Hi " + this.user.username;
-            tvTotalPointsHomePage.Text = "Total points: " + this.user.totalxp;
-            switch (this.user.language)
+            tvHiUsernameHomePage.Text = "Hi " + this.user.Username;
+            tvTotalPointsHomePage.Text = "Total points: " + this.user.TotalXP;
+            switch (this.user.Lastname)
             {
                 case "Ukrainian":
                     btnSelectLanguage.SetImageResource(Resource.Drawable.ukraine);
@@ -115,7 +115,7 @@ namespace PolyglotPal_KimRozenberg
         //משנה את צבעי התוכנה בהתאם להגדרות של המשתמש
         private void UpdateColors()
         {
-            switch (this.user.theme.ToString())
+            switch (this.user.Theme.ToString())
             {
                 case "softBlue":
                     lyInfoMainPage.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[2]));
@@ -288,7 +288,7 @@ namespace PolyglotPal_KimRozenberg
         //בחירת שפת לימוד יידיש
         private async void SelectedYiddish(object sender, EventArgs e)
         {
-            this.user.language = "Yiddish";
+            this.user.Lastname = "Yiddish";
             await firebase.UpdateLanguage(username, "Yiddish");
 
             if (popupWindow != null && popupWindow.IsShowing)
@@ -301,7 +301,7 @@ namespace PolyglotPal_KimRozenberg
         //בחירת שפת לימוד פולנית
         private async void SelectedPolish(object sender, EventArgs e)
         {
-            this.user.language = "Polish";
+            this.user.Lastname = "Polish";
             await firebase.UpdateLanguage(username, "Polish");
 
             if (popupWindow != null && popupWindow.IsShowing)
@@ -314,7 +314,7 @@ namespace PolyglotPal_KimRozenberg
         //בחירת שפת לימוד גרמנית
         private async void SelectedGermany(object sender, EventArgs e)
         {
-            this.user.language = "Germany";
+            this.user.Lastname = "Germany";
             await firebase.UpdateLanguage(username, "Germany");
 
             if (popupWindow != null && popupWindow.IsShowing)
@@ -327,7 +327,7 @@ namespace PolyglotPal_KimRozenberg
         //בחירת שפת לימוד אוקראינית
         private async void SelectedUkranian(object sender, EventArgs e)
         {
-            this.user.language = "Ukrainian";
+            this.user.Lastname = "Ukrainian";
             await firebase.UpdateLanguage(username, "Ukrainian");
 
             if (popupWindow != null && popupWindow.IsShowing)
@@ -340,7 +340,7 @@ namespace PolyglotPal_KimRozenberg
         //בחירת שפת לימוד רוסית
         private async void SelectedRussian(object sender, EventArgs e)
         {
-            this.user.language = "Russian";
+            this.user.Lastname = "Russian";
             await firebase.UpdateLanguage(username, "Russian");
 
             if (popupWindow != null && popupWindow.IsShowing)
@@ -353,7 +353,7 @@ namespace PolyglotPal_KimRozenberg
         //בחירת שפת לימוד עברית
         private async void SelectedHebrow(object sender, EventArgs e)
         {
-            this.user.language = "Hebrew";
+            this.user.Lastname = "Hebrew";
             await firebase.UpdateLanguage(username, "Hebrew");
 
             if (popupWindow != null && popupWindow.IsShowing)
@@ -399,7 +399,7 @@ namespace PolyglotPal_KimRozenberg
             intent.PutExtra("XP", 0);
             intent.PutExtra("Round", 1);
             intent.PutExtra("Mood", mood);
-            intent.PutExtra("Language", this.user.language);
+            intent.PutExtra("Language", this.user.Lastname);
             StartActivity(intent);
             StopService(this.music);
             Finish();

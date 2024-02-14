@@ -49,7 +49,7 @@ namespace PolyglotPal_KimRozenberg
         private void UpdateColors()
         {
             ColorsClass colors = new ColorsClass();
-            switch (this.user.theme.ToString())
+            switch (this.user.Theme.ToString())
             {
                 case "softBlue":
                     lyTop.SetBackgroundColor(Android.Graphics.Color.ParseColor(colors.softBlue[2]));

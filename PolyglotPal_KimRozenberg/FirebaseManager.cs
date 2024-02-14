@@ -13,7 +13,7 @@ namespace PolyglotPal_KimRozenberg
         //מוסיף משתמש חדש וריק לפייר בייס
         public async Task AddAccount(Account account)
         {
-            await firebase.Child(name).Child(account.username).PutAsync<Account>(account);
+            await firebase.Child(name).Child(account.Username).PutAsync<Account>(account);
         }
 
         public async Task<Account> GetAccount(string username)
@@ -46,8 +46,8 @@ namespace PolyglotPal_KimRozenberg
 
             if(account != null)
             {
-                account.totalxp += xp;
-                account.totaltasks++;
+                account.TotalXP += xp;
+                account.TotalTasks++;
 
                 await firebase.Child(name).Child(username).PutAsync(account);
             }
@@ -59,7 +59,7 @@ namespace PolyglotPal_KimRozenberg
 
             if (account != null)
             {
-                account.profilepic = prifePic;
+                account.ProfilePicture = prifePic;
 
                 await firebase.Child(name).Child(username).PutAsync(account);
             }
@@ -71,11 +71,11 @@ namespace PolyglotPal_KimRozenberg
 
             if (account != null)
             {
-                account.username = newname;
+                account.Username = newname;
 
                 await DeleteAccount(username);
 
-                await firebase.Child(name).Child(account.username).PutAsync(account);
+                await firebase.Child(name).Child(account.Username).PutAsync(account);
             }
         }
         //שינוי צבעי התוכנה לפי בחירת המשתמש
@@ -85,11 +85,11 @@ namespace PolyglotPal_KimRozenberg
 
             if (account != null)
             {
-                account.theme = theme;
+                account.Theme = theme;
 
                 await DeleteAccount(username);
 
-                await firebase.Child(name).Child(account.username).PutAsync(account);
+                await firebase.Child(name).Child(account.Username).PutAsync(account);
             }
         }
         //שוני השפה המלומדת של המשתמש 
@@ -99,11 +99,11 @@ namespace PolyglotPal_KimRozenberg
 
             if(account != null)
             {
-                account.language = language;
+                account.Lastname = language;
                 
                 await DeleteAccount(username);
 
-                await firebase.Child(name).Child(account.username).PutAsync(account);
+                await firebase.Child(name).Child(account.Username).PutAsync(account);
             }
         }
         //שינוי פרמטר המוזיקה של המשתמש
@@ -113,11 +113,11 @@ namespace PolyglotPal_KimRozenberg
 
             if (account != null)
             {
-                account.isPlaying = isPlaying;
+                account.IsPlaying = isPlaying;
                 
                 await DeleteAccount(username);
 
-                await firebase.Child(name).Child(account.username).PutAsync(account);
+                await firebase.Child(name).Child(account.Username).PutAsync(account);
             }
         }
     }

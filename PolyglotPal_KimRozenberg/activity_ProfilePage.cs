@@ -44,7 +44,7 @@ namespace PolyglotPal_KimRozenberg
         private void UpdateColors()
         {
             ColorsClass colors = new ColorsClass();
-            switch (this.user.theme.ToString())
+            switch (this.user.Theme.ToString())
             {
                 case "softBlue":
                     lyProfilePageBackgroundColor.SetBackgroundColor(Color.ParseColor(colors.softBlue[2]));
@@ -121,12 +121,12 @@ namespace PolyglotPal_KimRozenberg
             if(this.user != null)
             {
                 tvUserName.Text = this.username;
-                tvFullUserName.Text = this.user.firstname + " " + this.user.lastname;
-                tvJoiningDate.Text = this.user.datejoining;
-                tvTotalEX.Text = "Total points:\n" + this.user.totalxp;
-                tvTotalTaskDone.Text = "Total tasks:\n" + this.user.totaltasks;
+                tvFullUserName.Text = this.user.Firstname + " " + this.user.Lastname;
+                tvJoiningDate.Text = this.user.DataOfJoin;
+                tvTotalEX.Text = "Total points:\n" + this.user.TotalXP;
+                tvTotalTaskDone.Text = "Total tasks:\n" + this.user.TotalTasks;
 
-                Bitmap bitmap = ConvertByteArrayToBitmap(this.user.profilepic);
+                Bitmap bitmap = ConvertByteArrayToBitmap(this.user.ProfilePicture);
                 ivProfilePic.SetImageBitmap(bitmap);
 
                 UpdateColors();
@@ -196,7 +196,7 @@ namespace PolyglotPal_KimRozenberg
             btnGalarySelect.Click += BtnGalarySelect_Click;
             btnCancelSelect.Click += BtnCancelSelect_Click;
 
-            Bitmap pic = ConvertByteArrayToBitmap(this.user.profilepic);
+            Bitmap pic = ConvertByteArrayToBitmap(this.user.ProfilePicture);
             ivProfilePicChangePage.SetImageBitmap(pic);
 
             popupWindow.ShowAtLocation(this.Window.DecorView.RootView, GravityFlags.Center, 0, 0);
@@ -279,8 +279,8 @@ namespace PolyglotPal_KimRozenberg
                 Bitmap bitmap = (Bitmap)data.Extras.Get("data");
 
                 ivProfilePic.SetImageBitmap(bitmap);
-                this.user.profilepic = ConvertBitmapToByteArray(bitmap);
-                await firebase.UpdateProfilePic(this.user.username, this.user.profilepic);
+                this.user.ProfilePicture = ConvertBitmapToByteArray(bitmap);
+                await firebase.UpdateProfilePic(this.user.Username, this.user.ProfilePicture);
             }
 
             if (resultCode == Result.Ok && requestCode == 1)
@@ -291,8 +291,8 @@ namespace PolyglotPal_KimRozenberg
                 Bitmap bitmap = MediaStore.Images.Media.GetBitmap(ContentResolver, uri);
 
                 ivProfilePic.SetImageBitmap(bitmap);
-                this.user.profilepic = ConvertBitmapToByteArray(bitmap);
-                await firebase.UpdateProfilePic(this.user.username, this.user.profilepic);
+                this.user.ProfilePicture = ConvertBitmapToByteArray(bitmap);
+                await firebase.UpdateProfilePic(this.user.Username, this.user.ProfilePicture);
             }
         }
 

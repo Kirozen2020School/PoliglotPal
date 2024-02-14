@@ -75,6 +75,7 @@
     <Compile Include="activity_Settings.cs" />
     <Compile Include="activity_TaskWordToWord.cs" />
     <Compile Include="activity_TaskWordToWordSound.cs" />
+    <Compile Include="BasicAccount.cs" />
     <Compile Include="ColorsClass.cs" />
     <Compile Include="CustomAdaptor.cs" />
     <Compile Include="ENG_HE.cs" />
@@ -166,35 +167,35 @@
     <AndroidResource Include="Resources\drawable\blackprofile.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DailyActivity.txt" />
-    <EmbeddedResource Include="Family.txt" />
-    <EmbeddedResource Include="Health.txt" />
-    <EmbeddedResource Include="Hobbies.txt" />
-    <EmbeddedResource Include="Travel.txt" />
+    <EmbeddedResource Include="TextFiles\DailyActivity.txt" />
+    <EmbeddedResource Include="TextFiles\Family.txt" />
+    <EmbeddedResource Include="TextFiles\Health.txt" />
+    <EmbeddedResource Include="TextFiles\Hobbies.txt" />
+    <EmbeddedResource Include="TextFiles\Travel.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Business.txt" />
-    <EmbeddedResource Include="Education.txt" />
-    <EmbeddedResource Include="Food.txt" />
-    <EmbeddedResource Include="Music.txt" />
+    <EmbeddedResource Include="TextFiles\Business.txt" />
+    <EmbeddedResource Include="TextFiles\Education.txt" />
+    <EmbeddedResource Include="TextFiles\Food.txt" />
+    <EmbeddedResource Include="TextFiles\Music.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Animals.txt" />
+    <EmbeddedResource Include="TextFiles\Animals.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Furniture.txt" />
+    <EmbeddedResource Include="TextFiles\Furniture.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Emotions.txt" />
+    <EmbeddedResource Include="TextFiles\Emotions.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Countries.txt" />
+    <EmbeddedResource Include="TextFiles\Countries.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tools.txt" />
+    <EmbeddedResource Include="TextFiles\Tools.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Clothing.txt" />
+    <EmbeddedResource Include="TextFiles\Clothing.txt" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\whiteaid.png" />
@@ -316,38 +317,38 @@
     <AndroidResource Include="Resources\drawable\israel.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AnimalsRu.txt" />
-    <AdditionalFiles Include="BusinessRu.txt" />
-    <EmbeddedResource Include="ClothingRu.txt" />
-    <EmbeddedResource Include="CountriesRu.txt" />
-    <EmbeddedResource Include="DailyActivityRu.txt" />
-    <EmbeddedResource Include="EducationRu.txt" />
-    <EmbeddedResource Include="EmotionsRu.txt" />
-    <EmbeddedResource Include="FamilyRu.txt" />
-    <EmbeddedResource Include="FoodRu.txt" />
-    <EmbeddedResource Include="FurnitureRu.txt" />
-    <EmbeddedResource Include="HealthRu.txt" />
-    <EmbeddedResource Include="HobbiesRu.txt" />
-    <EmbeddedResource Include="MusicRu.txt" />
-    <EmbeddedResource Include="ToolsRu.txt" />
-    <EmbeddedResource Include="TravelRu.txt" />
+    <EmbeddedResource Include="TextFiles\AnimalsRu.txt" />
+    <AdditionalFiles Include="TextFiles\BusinessRu.txt" />
+    <EmbeddedResource Include="TextFiles\ClothingRu.txt" />
+    <EmbeddedResource Include="TextFiles\CountriesRu.txt" />
+    <EmbeddedResource Include="TextFiles\DailyActivityRu.txt" />
+    <EmbeddedResource Include="TextFiles\EducationRu.txt" />
+    <EmbeddedResource Include="TextFiles\EmotionsRu.txt" />
+    <EmbeddedResource Include="TextFiles\FamilyRu.txt" />
+    <EmbeddedResource Include="TextFiles\FoodRu.txt" />
+    <EmbeddedResource Include="TextFiles\FurnitureRu.txt" />
+    <EmbeddedResource Include="TextFiles\HealthRu.txt" />
+    <EmbeddedResource Include="TextFiles\HobbiesRu.txt" />
+    <EmbeddedResource Include="TextFiles\MusicRu.txt" />
+    <EmbeddedResource Include="TextFiles\ToolsRu.txt" />
+    <EmbeddedResource Include="TextFiles\TravelRu.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AnimalsUk.txt" />
-    <EmbeddedResource Include="BusinessUk.txt" />
-    <EmbeddedResource Include="ClothingUk.txt" />
-    <EmbeddedResource Include="CountriesUk.txt" />
-    <EmbeddedResource Include="DailyActivityUk.txt" />
-    <EmbeddedResource Include="EducationUk.txt" />
-    <EmbeddedResource Include="EmotionsUk.txt" />
-    <EmbeddedResource Include="FamilyUk.txt" />
-    <EmbeddedResource Include="FoodUk.txt" />
-    <EmbeddedResource Include="FurnitureUk.txt" />
-    <EmbeddedResource Include="HealthUk.txt" />
-    <EmbeddedResource Include="HobbiesUk.txt" />
-    <EmbeddedResource Include="MusicUk.txt" />
-    <EmbeddedResource Include="ToolsUk.txt" />
-    <EmbeddedResource Include="TravelUk.txt" />
+    <EmbeddedResource Include="TextFiles\AnimalsUk.txt" />
+    <EmbeddedResource Include="TextFiles\BusinessUk.txt" />
+    <EmbeddedResource Include="TextFiles\ClothingUk.txt" />
+    <EmbeddedResource Include="TextFiles\CountriesUk.txt" />
+    <EmbeddedResource Include="TextFiles\DailyActivityUk.txt" />
+    <EmbeddedResource Include="TextFiles\EducationUk.txt" />
+    <EmbeddedResource Include="TextFiles\EmotionsUk.txt" />
+    <EmbeddedResource Include="TextFiles\FamilyUk.txt" />
+    <EmbeddedResource Include="TextFiles\FoodUk.txt" />
+    <EmbeddedResource Include="TextFiles\FurnitureUk.txt" />
+    <EmbeddedResource Include="TextFiles\HealthUk.txt" />
+    <EmbeddedResource Include="TextFiles\HobbiesUk.txt" />
+    <EmbeddedResource Include="TextFiles\MusicUk.txt" />
+    <EmbeddedResource Include="TextFiles\ToolsUk.txt" />
+    <EmbeddedResource Include="TextFiles\TravelUk.txt" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_SelectLanguage.xml">
@@ -363,21 +364,21 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AnimalsYi.txt" />
-    <EmbeddedResource Include="BusinessYi.txt" />
-    <EmbeddedResource Include="ClothingYi.txt" />
-    <EmbeddedResource Include="CountriesYi.txt" />
-    <EmbeddedResource Include="DailyActivityYi.txt" />
-    <EmbeddedResource Include="EducationYi.txt" />
-    <EmbeddedResource Include="EmotionsYi.txt" />
-    <EmbeddedResource Include="FamilyYi.txt" />
-    <EmbeddedResource Include="FoodYi.txt" />
-    <EmbeddedResource Include="FurnitureYi.txt" />
-    <EmbeddedResource Include="HealthYi.txt" />
-    <EmbeddedResource Include="HobbiesYi.txt" />
-    <EmbeddedResource Include="MusicYi.txt" />
-    <EmbeddedResource Include="ToolsYi.txt" />
-    <EmbeddedResource Include="TravelYi.txt" />
+    <EmbeddedResource Include="TextFiles\AnimalsYi.txt" />
+    <EmbeddedResource Include="TextFiles\BusinessYi.txt" />
+    <EmbeddedResource Include="TextFiles\ClothingYi.txt" />
+    <EmbeddedResource Include="TextFiles\CountriesYi.txt" />
+    <EmbeddedResource Include="TextFiles\DailyActivityYi.txt" />
+    <EmbeddedResource Include="TextFiles\EducationYi.txt" />
+    <EmbeddedResource Include="TextFiles\EmotionsYi.txt" />
+    <EmbeddedResource Include="TextFiles\FamilyYi.txt" />
+    <EmbeddedResource Include="TextFiles\FoodYi.txt" />
+    <EmbeddedResource Include="TextFiles\FurnitureYi.txt" />
+    <EmbeddedResource Include="TextFiles\HealthYi.txt" />
+    <EmbeddedResource Include="TextFiles\HobbiesYi.txt" />
+    <EmbeddedResource Include="TextFiles\MusicYi.txt" />
+    <EmbeddedResource Include="TextFiles\ToolsYi.txt" />
+    <EmbeddedResource Include="TextFiles\TravelYi.txt" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\poland.png" />
@@ -389,37 +390,37 @@
     <AndroidResource Include="Resources\drawable\Yiddish.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AnimalsGe.txt" />
-    <EmbeddedResource Include="BusinessGe.txt" />
-    <EmbeddedResource Include="ClothingGe.txt" />
-    <EmbeddedResource Include="CountriesGe.txt" />
-    <EmbeddedResource Include="DailyActivityGe.txt" />
-    <EmbeddedResource Include="EducationGe.txt" />
-    <EmbeddedResource Include="EmotionsGe.txt" />
-    <EmbeddedResource Include="FamilyGe.txt" />
-    <EmbeddedResource Include="FoodGe.txt" />
-    <EmbeddedResource Include="FurnitureGe.txt" />
-    <EmbeddedResource Include="HobbiesGe.txt" />
-    <EmbeddedResource Include="MusicGe.txt" />
-    <EmbeddedResource Include="ToolsGe.txt" />
-    <EmbeddedResource Include="TravelGe.txt" />
+    <EmbeddedResource Include="TextFiles\AnimalsGe.txt" />
+    <EmbeddedResource Include="TextFiles\BusinessGe.txt" />
+    <EmbeddedResource Include="TextFiles\ClothingGe.txt" />
+    <EmbeddedResource Include="TextFiles\CountriesGe.txt" />
+    <EmbeddedResource Include="TextFiles\DailyActivityGe.txt" />
+    <EmbeddedResource Include="TextFiles\EducationGe.txt" />
+    <EmbeddedResource Include="TextFiles\EmotionsGe.txt" />
+    <EmbeddedResource Include="TextFiles\FamilyGe.txt" />
+    <EmbeddedResource Include="TextFiles\FoodGe.txt" />
+    <EmbeddedResource Include="TextFiles\FurnitureGe.txt" />
+    <EmbeddedResource Include="TextFiles\HobbiesGe.txt" />
+    <EmbeddedResource Include="TextFiles\MusicGe.txt" />
+    <EmbeddedResource Include="TextFiles\ToolsGe.txt" />
+    <EmbeddedResource Include="TextFiles\TravelGe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AnimalsPo.txt" />
-    <EmbeddedResource Include="BusinessPo.txt" />
-    <EmbeddedResource Include="ClothingPo.txt" />
-    <EmbeddedResource Include="CountriesPo.txt" />
-    <EmbeddedResource Include="DailyActivityPo.txt" />
-    <EmbeddedResource Include="EducationPo.txt" />
-    <EmbeddedResource Include="EmotionsPo.txt" />
-    <EmbeddedResource Include="FamilyPo.txt" />
-    <EmbeddedResource Include="FoodPo.txt" />
-    <EmbeddedResource Include="FurniturePo.txt" />
-    <EmbeddedResource Include="HealthPo.txt" />
-    <EmbeddedResource Include="HobbiesPo.txt" />
-    <EmbeddedResource Include="MusicPo.txt" />
-    <EmbeddedResource Include="ToolsPo.txt" />
-    <EmbeddedResource Include="TravelPo.txt" />
+    <EmbeddedResource Include="TextFiles\AnimalsPo.txt" />
+    <EmbeddedResource Include="TextFiles\BusinessPo.txt" />
+    <EmbeddedResource Include="TextFiles\ClothingPo.txt" />
+    <EmbeddedResource Include="TextFiles\CountriesPo.txt" />
+    <EmbeddedResource Include="TextFiles\DailyActivityPo.txt" />
+    <EmbeddedResource Include="TextFiles\EducationPo.txt" />
+    <EmbeddedResource Include="TextFiles\EmotionsPo.txt" />
+    <EmbeddedResource Include="TextFiles\FamilyPo.txt" />
+    <EmbeddedResource Include="TextFiles\FoodPo.txt" />
+    <EmbeddedResource Include="TextFiles\FurniturePo.txt" />
+    <EmbeddedResource Include="TextFiles\HealthPo.txt" />
+    <EmbeddedResource Include="TextFiles\HobbiesPo.txt" />
+    <EmbeddedResource Include="TextFiles\MusicPo.txt" />
+    <EmbeddedResource Include="TextFiles\ToolsPo.txt" />
+    <EmbeddedResource Include="TextFiles\TravelPo.txt" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_ViewProfileLeaderboard.xml">
@@ -427,7 +428,7 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="HealthGe.txt" />
+    <EmbeddedResource Include="TextFiles\HealthGe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

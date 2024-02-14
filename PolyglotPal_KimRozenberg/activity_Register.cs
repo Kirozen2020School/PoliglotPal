@@ -78,7 +78,7 @@ namespace PolyglotPal_KimRozenberg
                 {
                     foreach (Account account in accounts)
                     {
-                        if (account.username.Equals(etUserName.Text))
+                        if (account.Username.Equals(etUserName.Text))
                         {
                             Toast.MakeText(this, "The username is already in use, choose another one", ToastLength.Long).Show();
                             flag = false;

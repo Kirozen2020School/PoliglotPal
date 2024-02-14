@@ -76,7 +76,7 @@ namespace PolyglotPal_KimRozenberg
             {
                 foreach (var account in accounts)
                 {
-                    if (etUserName.Text.Equals(account.username) && etPassword.Text.Equals(account.password))
+                    if (etUserName.Text.Equals(account.Username) && etPassword.Text.Equals(account.Password))
                     {
                         flag = true;
                         Intent intent = new Intent(this, typeof(activity_MainPage));
