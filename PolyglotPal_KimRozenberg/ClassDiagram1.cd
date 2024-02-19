@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PolyglotPal_KimRozenberg.Account" Collapsed="true">
+    <Position X="8" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAACBAAAAhQIAAAAEAAAAUAAAAEBAgAAAAIAAA=</HashCode>
+      <FileName>Account.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolyglotPal_KimRozenberg.BasicAccount" Collapsed="true">
+    <Position X="10" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAhAAAAIAQAAAAEAAAAAAAACAAAAAgAAAAA=</HashCode>
+      <FileName>BasicAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolyglotPal_KimRozenberg.ColorsClass" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAIBAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>ColorsClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolyglotPal_KimRozenberg.MusicService" Collapsed="true">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAIAAAAAAEAAAACAAAAAAAAACgAAAAAA=</HashCode>
+      <FileName>MusicService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolyglotPal_KimRozenberg.ENG_HE" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ENG_HE.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolyglotPal_KimRozenberg.Timer" Collapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAwAAAAACAgBAAAAIAAAAAAAQAAAAIAAQAAAAgAAAg=</HashCode>
+      <FileName>Timer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolyglotPal_KimRozenberg.FirebaseManager" Collapsed="true">
+    <Position X="12" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAEAAAAAAAEAAAQAAAAUABAAACACAUEAAAA=</HashCode>
+      <FileName>FirebaseManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolyglotPal_KimRozenberg.CustomAdapter" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIGAICAgBAAiAAACAAAAAQAAIAAAIAABAABAAAAABI=</HashCode>
+      <FileName>CustomAdaptor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolyglotPal_KimRozenberg.activity_InfoPage" Collapsed="true">
+    <Position X="5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAARAABggIAgAAAAAAAAAEAACAAAJAAAAAAAAAAAQA=</HashCode>
+      <FileName>activity_InfoPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolyglotPal_KimRozenberg.activity_Leaderboard" Collapsed="true">
+    <Position X="5.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAAggBCAgAAAAAAAAAMCAKAAAIAAgAAEAAAggQg=</HashCode>
+      <FileName>activity_Leaderboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolyglotPal_KimRozenberg.activity_LevelFinish" Collapsed="true">
+    <Position X="5" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AQQAAAFQAAAAgAAAAAACAAAAACAAAAAAAAAAAEAACQA=</HashCode>
+      <FileName>activity_LevelFinish.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolyglotPal_KimRozenberg.OnPreparedListener" Collapsed="true">
+    <Position X="1" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>activity_LevelFinish.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PolyglotPal_KimRozenberg.activity_MainPage" Collapsed="true">
+    <Position X="6.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CYEGBQAQAgAxriAAIAUAIoECAGoAApiEACIUgEACxSI=</HashCode>
+      <FileName>activity_MainPage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PolyglotPal_KimRozenberg.activity_ProfilePage" Collapsed="true">
+    <Position X="3" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAhEgABAmAAQiDAQAAAAAAEMACBAAJAAEAAoFABAgwA=</HashCode>
+      <FileName>activity_ProfilePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolyglotPal_KimRozenberg.activity_Register" Collapsed="true">
+    <Position X="3.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAIAAgggAAAAAAAAAAKCCAJAEAABAAAAAAIE=</HashCode>
+      <FileName>activity_Register.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolyglotPal_KimRozenberg.activity_Settings" Collapsed="true">
+    <Position X="3.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAABACAAAQgBxAAAAQwAgQEAACAAQJCEBAAAgAAAARA=</HashCode>
+      <FileName>activity_Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolyglotPal_KimRozenberg.activity_TaskWordToWord" Collapsed="true">
+    <Position X="1" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIABIAAQAAABgAhAIAFAEEDANGAAAAAEACRCAEBACAA=</HashCode>
+      <FileName>activity_TaskWordToWord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolyglotPal_KimRozenberg.activity_TaskWordToWordSound" Collapsed="true">
+    <Position X="1" Y="3" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AIABIQgQAAABgAhAAAlBEMDANGQAAAAEACRCAERACAI=</HashCode>
+      <FileName>activity_TaskWordToWordSound.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
