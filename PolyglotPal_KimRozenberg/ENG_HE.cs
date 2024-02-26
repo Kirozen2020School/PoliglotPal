@@ -4,14 +4,17 @@ namespace PolyglotPal_KimRozenberg
     internal class ENG_HE
     {
         //מחזיק את התרגום של המילה בשפה השנייה
-        public string HE { get; set; }
+        private string other { get; set; }
         //מחזיק את המילה באנגלית
-        public string ENG { get; set; }
+        private string english { get; set; }
 
-        public ENG_HE(string hE, string eNG)
+        public string ENGLISH { get => english; set => english = value; }
+        public string OTHER { get => other; set => other = value; }
+
+        public ENG_HE(string other, string english)
         {
-            HE = hE;
-            ENG = eNG;
+            this.other = other;
+            this.english = english;
         }
     }
 }

@@ -85,16 +85,16 @@ namespace PolyglotPal_KimRozenberg
                 }
             }
 
-            btnENG1.Text = selectedCouples[4].ENG;
-            btnHE1.Text = selectedCouples[2].HE;
-            btnENG2.Text = selectedCouples[1].ENG;
-            btnHE2.Text = selectedCouples[0].HE;
-            btnENG3.Text = selectedCouples[2].ENG;
-            btnHE3.Text = selectedCouples[3].HE;
-            btnENG4.Text = selectedCouples[3].ENG;
-            btnHE4.Text = selectedCouples[1].HE;
-            btnENG5.Text = selectedCouples[0].ENG;
-            btnHE5.Text = selectedCouples[4].HE;
+            btnENG1.Text = selectedCouples[4].ENGLISH;
+            btnHE1.Text = selectedCouples[2].OTHER;
+            btnENG2.Text = selectedCouples[1].ENGLISH;
+            btnHE2.Text = selectedCouples[0].OTHER;
+            btnENG3.Text = selectedCouples[2].ENGLISH;
+            btnHE3.Text = selectedCouples[3].OTHER;
+            btnENG4.Text = selectedCouples[3].ENGLISH;
+            btnHE4.Text = selectedCouples[1].OTHER;
+            btnENG5.Text = selectedCouples[0].ENGLISH;
+            btnHE5.Text = selectedCouples[4].OTHER;
         }
         //מוריד ושומר את כל המילים הרלוונטיים למשימה
         private void InitWords()
@@ -233,7 +233,7 @@ namespace PolyglotPal_KimRozenberg
             {
                 foreach (var item in words)
                 {
-                    if(item.ENG.Equals(clickedButton.Text) && item.HE.Equals(lastClickedButtonHeb.Text))
+                    if(item.ENGLISH.Equals(clickedButton.Text) && item.OTHER.Equals(lastClickedButtonHeb.Text))
                     {
                         flag = false;
                         foreach (Button button in buttons)
@@ -295,7 +295,7 @@ namespace PolyglotPal_KimRozenberg
             {
                 foreach (var item in words)
                 {
-                    if (item.ENG.Equals(lastClickedButtonEng.Text) && item.HE.Equals(clickedButton.Text))
+                    if (item.ENGLISH.Equals(lastClickedButtonEng.Text) && item.OTHER.Equals(clickedButton.Text))
                     {
                         flag = false;
                         foreach (Button button in buttons)

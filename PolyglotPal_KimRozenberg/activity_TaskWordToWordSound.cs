@@ -136,7 +136,7 @@ namespace PolyglotPal_KimRozenberg
             {
                 foreach (var item in words)
                 {
-                    if (item.ENG.Equals(clickedButton.Tag.ToString()) && item.HE.Equals(lastClickedButtonHeb.Text))
+                    if (item.ENGLISH.Equals(clickedButton.Tag.ToString()) && item.OTHER.Equals(lastClickedButtonHeb.Text))
                     {
                         flag = false;
                         foreach (var button in engButtons)
@@ -193,7 +193,7 @@ namespace PolyglotPal_KimRozenberg
             {
                 foreach (var item in words)
                 {
-                    if (item.ENG.Equals(lastClickedButtonEng.Tag.ToString()) && item.HE.Equals(clickedButton.Text))
+                    if (item.ENGLISH.Equals(lastClickedButtonEng.Tag.ToString()) && item.OTHER.Equals(clickedButton.Text))
                     {
                         flag = false;
                         foreach (Button button in heButtons)
@@ -413,16 +413,16 @@ namespace PolyglotPal_KimRozenberg
                 }
             }
 
-            btnENG1.Tag = selectedCouples[4].ENG;
-            btnHE1.Text = selectedCouples[2].HE;
-            btnENG2.Tag = selectedCouples[1].ENG;
-            btnHE2.Text = selectedCouples[0].HE;
-            btnENG3.Tag = selectedCouples[2].ENG;
-            btnHE3.Text = selectedCouples[3].HE;
-            btnENG4.Tag = selectedCouples[3].ENG;
-            btnHE4.Text = selectedCouples[1].HE;
-            btnENG5.Tag = selectedCouples[0].ENG;
-            btnHE5.Text = selectedCouples[4].HE;
+            btnENG1.Tag = selectedCouples[4].ENGLISH;
+            btnHE1.Text = selectedCouples[2].OTHER;
+            btnENG2.Tag = selectedCouples[1].ENGLISH;
+            btnHE2.Text = selectedCouples[0].OTHER;
+            btnENG3.Tag = selectedCouples[2].ENGLISH;
+            btnHE3.Text = selectedCouples[3].OTHER;
+            btnENG4.Tag = selectedCouples[3].ENGLISH;
+            btnHE4.Text = selectedCouples[1].OTHER;
+            btnENG5.Tag = selectedCouples[0].ENGLISH;
+            btnHE5.Text = selectedCouples[4].OTHER;
         }
 
         //מתחיל את ה"אנימציה" של תמונת הרמקול

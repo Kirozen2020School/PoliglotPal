@@ -38,18 +38,25 @@
             android:layout_gravity="end"
             />
     </LinearLayout>
-
-
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Every time..."
-        android:textColor="#fff"
-        android:textStyle="bold"
-        android:id="@+id/tvInfo"
-        tools:ignore="HardcodedText" 
-        android:layout_marginTop="5sp"
-        android:layout_marginLeft="5sp"
-    />
-
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Every time..."
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:id="@+id/tvInfo"
+                tools:ignore="HardcodedText" 
+                android:layout_marginTop="5sp"
+                android:layout_marginLeft="5sp"
+            />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
