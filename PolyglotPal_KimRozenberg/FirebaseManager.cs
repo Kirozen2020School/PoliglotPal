@@ -7,9 +7,18 @@ namespace PolyglotPal_KimRozenberg
 {
     internal class FirebaseManager
     {
-        FirebaseClient firebase = new FirebaseClient("https://polyglotpal-firebase-default-rtdb.europe-west1.firebasedatabase.app");
+        private FirebaseClient firebase = new FirebaseClient("https://polyglotpal-firebase-default-rtdb.europe-west1.firebasedatabase.app");
 
         private string name = "Account";
+        public enum Fields
+        {
+            Username,
+            Theme,
+            Language,
+            ProfilePic,
+            Xp,
+            MusicStatus
+        }
         //מוסיף משתמש חדש וריק לפייר בייס
         public async Task AddAccount(Account account)
         {
@@ -39,86 +48,57 @@ namespace PolyglotPal_KimRozenberg
         {
             await firebase.Child(name).Child(username).DeleteAsync();
         }
-        //שינוי נקודות שיש למשתמש
-        public async Task UpdateXP(string username, int xp)
+        //מעדכנת ערכים של המשתמש ומעלה אוצם לפייר בייס
+        public async Task UpdateValue(string username, Fields type, object value)
         {
             var account = await GetAccount(username);
 
-            if(account != null)
+            if (account == null)
             {
-                account.TotalXP += xp;
-                account.TotalTasks++;
-
-                await firebase.Child(name).Child(username).PutAsync(account);
+                return;
             }
-        }
-        //שינוי תמונת הפרופיל
-        public async Task UpdateProfilePic(string username, byte[] prifePic)
-        {
-            var account = await GetAccount(username);
-
-            if (account != null)
+            
+            switch (type)
             {
-                account.ProfilePicture = prifePic;
+                case Fields.Username:
 
-                await firebase.Child(name).Child(username).PutAsync(account);
+                    account.Username = (string)value;
+                    await DeleteAccount(username);
+
+                    break;
+                case Fields.Xp:
+
+                    account.TotalXP += (int)value;
+                    account.TotalTasks++;
+                    await DeleteAccount(username);
+
+                    break;
+                case Fields.MusicStatus:
+
+                    account.IsPlaying = (bool)value;
+                    await DeleteAccount(username);
+
+                    break;
+                case Fields.Theme:
+
+                    account.Theme = (string)value;
+                    await DeleteAccount(username);
+
+                    break;
+                case Fields.Language:
+
+                    account.Language = (string)value;
+                    await DeleteAccount(username);
+
+                    break;
+                case Fields.ProfilePic:
+
+                    account.ProfilePicture = (byte[])value;
+                    await DeleteAccount(username);
+
+                    break;
             }
-        }
-        //שינוי השם משתשתמש
-        public async Task UpdateUsername(string username, string newname)
-        {
-            var account = await GetAccount(username);
-
-            if (account != null)
-            {
-                account.Username = newname;
-
-                await DeleteAccount(username);
-
-                await firebase.Child(name).Child(account.Username).PutAsync(account);
-            }
-        }
-        //שינוי צבעי התוכנה לפי בחירת המשתמש
-        public async Task UpdateTheme(string username, string theme)
-        {
-            var account = await GetAccount(username);
-
-            if (account != null)
-            {
-                account.Theme = theme;
-
-                await DeleteAccount(username);
-
-                await firebase.Child(name).Child(account.Username).PutAsync(account);
-            }
-        }
-        //שוני השפה המלומדת של המשתמש 
-        public async Task UpdateLanguage(string username, string language)
-        {
-            var account = await GetAccount(username);
-
-            if(account != null)
-            {
-                account.Lastname = language;
-                
-                await DeleteAccount(username);
-
-                await firebase.Child(name).Child(account.Username).PutAsync(account);
-            }
-        }
-        //שינוי פרמטר המוזיקה של המשתמש
-        public async Task UpdateMusicValue(string username, bool isPlaying)
-        {
-            var account = await GetAccount(username);
-
-            if (account != null)
-            {
-                account.IsPlaying = isPlaying;
-                
-                await DeleteAccount(username);
-
-                await firebase.Child(name).Child(account.Username).PutAsync(account);
-            }
+            await firebase.Child(name).Child(username).PutAsync(account);
         }
     }
 }

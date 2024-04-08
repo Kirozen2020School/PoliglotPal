@@ -280,7 +280,7 @@ namespace PolyglotPal_KimRozenberg
 
                 ivProfilePic.SetImageBitmap(bitmap);
                 this.user.ProfilePicture = ConvertBitmapToByteArray(bitmap);
-                await firebase.UpdateProfilePic(this.user.Username, this.user.ProfilePicture);
+                await firebase.UpdateValue(this.user.Username, FirebaseManager.Fields.ProfilePic, this.user.ProfilePicture);
             }
 
             if (resultCode == Result.Ok && requestCode == 1)
@@ -292,7 +292,7 @@ namespace PolyglotPal_KimRozenberg
 
                 ivProfilePic.SetImageBitmap(bitmap);
                 this.user.ProfilePicture = ConvertBitmapToByteArray(bitmap);
-                await firebase.UpdateProfilePic(this.user.Username, this.user.ProfilePicture);
+                await firebase.UpdateValue(this.user.Username, FirebaseManager.Fields.ProfilePic, this.user.ProfilePicture);
             }
         }
 

@@ -58,7 +58,7 @@ namespace PolyglotPal_KimRozenberg
             firebase = new FirebaseManager();
             if(this.xpAdded != -1)
             {
-                await firebase.UpdateXP(username, this.xpAdded);
+                await firebase.UpdateValue(username, FirebaseManager.Fields.Xp, xpAdded);
             }
             user = await firebase.GetAccount(this.username);
             
@@ -288,8 +288,8 @@ namespace PolyglotPal_KimRozenberg
         //בחירת שפת לימוד יידיש
         private async void SelectedYiddish(object sender, EventArgs e)
         {
-            this.user.Lastname = "Yiddish";
-            await firebase.UpdateLanguage(username, "Yiddish");
+            this.user.Language = "Yiddish";
+            await firebase.UpdateValue(username, FirebaseManager.Fields.Language, this.user.Language);
 
             if (popupWindow != null && popupWindow.IsShowing)
             {
@@ -301,8 +301,8 @@ namespace PolyglotPal_KimRozenberg
         //בחירת שפת לימוד פולנית
         private async void SelectedPolish(object sender, EventArgs e)
         {
-            this.user.Lastname = "Polish";
-            await firebase.UpdateLanguage(username, "Polish");
+            this.user.Language = "Polish";
+            await firebase.UpdateValue(username, FirebaseManager.Fields.Language, this.user.Language);
 
             if (popupWindow != null && popupWindow.IsShowing)
             {
@@ -314,8 +314,8 @@ namespace PolyglotPal_KimRozenberg
         //בחירת שפת לימוד גרמנית
         private async void SelectedGermany(object sender, EventArgs e)
         {
-            this.user.Lastname = "Germany";
-            await firebase.UpdateLanguage(username, "Germany");
+            this.user.Language = "Germany";
+            await firebase.UpdateValue(username, FirebaseManager.Fields.Language, this.user.Language);
 
             if (popupWindow != null && popupWindow.IsShowing)
             {
@@ -327,8 +327,8 @@ namespace PolyglotPal_KimRozenberg
         //בחירת שפת לימוד אוקראינית
         private async void SelectedUkranian(object sender, EventArgs e)
         {
-            this.user.Lastname = "Ukrainian";
-            await firebase.UpdateLanguage(username, "Ukrainian");
+            this.user.Language = "Ukrainian";
+            await firebase.UpdateValue(username, FirebaseManager.Fields.Language, this.user.Language);
 
             if (popupWindow != null && popupWindow.IsShowing)
             {
@@ -340,8 +340,8 @@ namespace PolyglotPal_KimRozenberg
         //בחירת שפת לימוד רוסית
         private async void SelectedRussian(object sender, EventArgs e)
         {
-            this.user.Lastname = "Russian";
-            await firebase.UpdateLanguage(username, "Russian");
+            this.user.Language = "Russian";
+            await firebase.UpdateValue(username, FirebaseManager.Fields.Language, this.user.Language);
 
             if (popupWindow != null && popupWindow.IsShowing)
             {
@@ -353,8 +353,8 @@ namespace PolyglotPal_KimRozenberg
         //בחירת שפת לימוד עברית
         private async void SelectedHebrow(object sender, EventArgs e)
         {
-            this.user.Lastname = "Hebrew";
-            await firebase.UpdateLanguage(username, "Hebrew");
+            this.user.Language = "Hebrew";
+            await firebase.UpdateValue(username, FirebaseManager.Fields.Language, this.user.Language);
 
             if (popupWindow != null && popupWindow.IsShowing)
             {

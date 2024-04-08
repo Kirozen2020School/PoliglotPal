@@ -45,6 +45,12 @@ namespace PolyglotPal_KimRozenberg
             textViewTotalXP = view.FindViewById<TextView>(Resource.Id.textViewTotalXP);
             var imageViewProfilePic = view.FindViewById<ImageView>(Resource.Id.imageViewProfilePic);
 
+            lyBackground.Tag = position;
+            textViewIndex.Tag = position;
+            textViewUsername.Tag = position;
+            textViewTotalXP.Tag = position;
+            imageViewProfilePic.Tag = position;
+
             textViewIndex.Text = (position+1).ToString();
             textViewUsername.Text = account.Username;
             textViewTotalXP.Text = $"Total XP: {account.TotalXP}";
@@ -55,6 +61,10 @@ namespace PolyglotPal_KimRozenberg
             imageViewProfilePic.SetScaleType(ImageView.ScaleType.FitXy);
 
             lyBackground.Click += ViewProfile;
+            textViewIndex.Click += ViewProfile;
+            textViewTotalXP.Click += ViewProfile;
+            textViewUsername.Click += ViewProfile;
+            imageViewProfilePic.Click += ViewProfile;
 
             UpdateColors();
 

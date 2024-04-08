@@ -72,7 +72,7 @@ namespace PolyglotPal_KimRozenberg
         {
             bool flag = true;
 
-            if (etUserName.Text.Length > 0 && etFirstName.Text.Length > 0 && etLastName.Text.Length > 0 && etPassword.Text.Length > 0)
+            if (IsInputValid(etUserName.Text) && IsInputValid(etFirstName.Text) && IsInputValid(etLastName.Text))
             {
                 if (accounts != null && accounts.Count > 0)
                 {
@@ -112,7 +112,7 @@ namespace PolyglotPal_KimRozenberg
             {
                 Android.App.AlertDialog.Builder builder = new Android.App.AlertDialog.Builder(this);
                 builder.SetTitle("Account creation");
-                builder.SetMessage("For creating account you need to fill every parametar");
+                builder.SetMessage("For creating account you need to fill every parametar using only letters (a -> z or A -> Z including \" \")");
                 builder.SetCancelable(true);
                 builder.SetPositiveButton("Ok", OkAction);
                 d = builder.Create();
@@ -129,6 +129,23 @@ namespace PolyglotPal_KimRozenberg
                 bm.Compress(Bitmap.CompressFormat.Png, 0, stream); // PNG format, quality 0 (max compression)
                 return stream.ToArray();
             }
+        }
+        //בודק עם הערכים שהמשתמש הכניס נכונים
+        private bool IsInputValid(string input)
+        {
+            input = input.ToLower();
+            if(input.Length == 0)
+            {
+                return false;
+            }
+            foreach(char tav in input)
+            {
+                if((tav < 'a' || tav > 'z') && tav != ' ')
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

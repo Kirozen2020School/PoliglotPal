@@ -115,7 +115,7 @@ namespace PolyglotPal_KimRozenberg
             switch (this.user.Theme.ToString().ToUpper())
             {
                 case "LIGHT PINK":
-                    await firebase.UpdateTheme(this.user.Username, "softPink");
+                    await firebase.UpdateValue(this.user.Username, FirebaseManager.Fields.Theme, "softPink");
                     lyTopic.SetBackgroundColor(Color.ParseColor(colors.softPink[0]));
                     ly.SetBackgroundColor(Color.ParseColor(colors.softPink[2]));
 
@@ -126,7 +126,7 @@ namespace PolyglotPal_KimRozenberg
                     spThemeSelector.SetSelection(1);
                     break;
                 case "LIGHT BLUE":
-                    await firebase.UpdateTheme(this.user.Username, "softBlue");
+                    await firebase.UpdateValue(this.user.Username, FirebaseManager.Fields.Theme, "softBlue");
                     lyTopic.SetBackgroundColor(Color.ParseColor(colors.softBlue[2]));
                     ly.SetBackgroundColor(Color.ParseColor(colors.softBlue[1]));
 
@@ -136,7 +136,7 @@ namespace PolyglotPal_KimRozenberg
                     break;
                 case "BLACKRED":
                 case "RED AND BLACK":
-                    await firebase.UpdateTheme(this.user.Username, "blackRed");
+                    await firebase.UpdateValue(this.user.Username, FirebaseManager.Fields.Theme, "blackRed");
                     lyTopic.SetBackgroundColor(Color.ParseColor(colors.blackRed[1]));
                     ly.SetBackgroundColor(Color.ParseColor(colors.blackRed[0]));
 
@@ -145,7 +145,7 @@ namespace PolyglotPal_KimRozenberg
                     btnDeleteAccount.SetTextColor(Color.ParseColor("#ffffff"));
                     break;
                 case "NAVY":
-                    await firebase.UpdateTheme(this.user.Username, "navy");
+                    await firebase.UpdateValue(this.user.Username, FirebaseManager.Fields.Theme, "navy");
                     lyTopic.SetBackgroundColor(Color.ParseColor(colors.navy[1]));
                     ly.SetBackgroundColor(Color.ParseColor(colors.navy[0]));
 
@@ -154,7 +154,7 @@ namespace PolyglotPal_KimRozenberg
                     btnDeleteAccount.SetTextColor(Color.ParseColor("#ffffff"));
                     break;
                 case "DARK":
-                    await firebase.UpdateTheme(this.user.Username, "");
+                    await firebase.UpdateValue(this.user.Username, FirebaseManager.Fields.Theme, "");
                     lyTopic.SetBackgroundColor(Color.ParseColor("#000000"));
                     ly.SetBackgroundColor(Color.ParseColor("#000000"));
 
@@ -217,7 +217,7 @@ namespace PolyglotPal_KimRozenberg
             ISharedPreferencesEditor editor = sp.Edit();
             editor.PutBoolean("IsPlaying", isPlaying);
             editor.Commit();
-            await firebase.UpdateMusicValue(this.user.Username, isPlaying);
+            await firebase.UpdateValue(this.user.Username, FirebaseManager.Fields.MusicStatus, isPlaying);
         }
         //כפתור יציאה ממסך ההגדרות למסך המשימות
         private void BtnExitFromSettingPage_Click(object sender, EventArgs e)
@@ -253,7 +253,7 @@ namespace PolyglotPal_KimRozenberg
                     builder1.SetPositiveButton("OK", async (sender, args) =>
                     {
                         string inputText = userinput1.Text;
-                        await firebase.UpdateUsername(user.Username, inputText);
+                        await firebase.UpdateValue(this.user.Username, FirebaseManager.Fields.Username, inputText);
                         Toast.MakeText(this, $"Username change to {inputText}", ToastLength.Short).Show();
 
                         this.username = inputText;
