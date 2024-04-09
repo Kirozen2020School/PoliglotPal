@@ -90,7 +90,7 @@ namespace PolyglotPal_KimRozenberg
             UpdateColors();
             tvHiUsernameHomePage.Text = "Hi " + this.user.Username;
             tvTotalPointsHomePage.Text = "Total points: " + this.user.TotalXP;
-            switch (this.user.Lastname)
+            switch (this.user.Language)
             {
                 case "Ukrainian":
                     btnSelectLanguage.SetImageResource(Resource.Drawable.ukraine);
@@ -399,7 +399,7 @@ namespace PolyglotPal_KimRozenberg
             intent.PutExtra("XP", 0);
             intent.PutExtra("Round", 1);
             intent.PutExtra("Mood", mood);
-            intent.PutExtra("Language", this.user.Lastname);
+            intent.PutExtra("Language", this.user.Language);
             StartActivity(intent);
             StopService(this.music);
             Finish();
