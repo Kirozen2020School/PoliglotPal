@@ -84,7 +84,30 @@ namespace PolyglotPal_KimRozenberg
                     selectedCouples.Add(selectedCouple);
                 }
             }
+            int n = selectedCouples.Count;
 
+            // Fisher-Yates shuffle
+            for (int i = n - 1; i > 0; i--)
+            {
+                int j = random.Next(i + 1);
+                var temp = selectedCouples[i];
+                selectedCouples[i] = selectedCouples[j];
+                selectedCouples[j] = temp;
+            }
+
+            // Assign shuffled values to buttons
+            btnENG1.Text = selectedCouples[0].ENGLISH;
+            btnHE1.Text = selectedCouples[0].OTHER;
+            btnENG2.Text = selectedCouples[1].ENGLISH;
+            btnHE2.Text = selectedCouples[1].OTHER;
+            btnENG3.Text = selectedCouples[2].ENGLISH;
+            btnHE3.Text = selectedCouples[2].OTHER;
+            btnENG4.Text = selectedCouples[3].ENGLISH;
+            btnHE4.Text = selectedCouples[3].OTHER;
+            btnENG5.Text = selectedCouples[4].ENGLISH;
+            btnHE5.Text = selectedCouples[4].OTHER;
+
+            /*
             btnENG1.Text = selectedCouples[4].ENGLISH;
             btnHE1.Text = selectedCouples[2].OTHER;
             btnENG2.Text = selectedCouples[1].ENGLISH;
@@ -95,6 +118,7 @@ namespace PolyglotPal_KimRozenberg
             btnHE4.Text = selectedCouples[1].OTHER;
             btnENG5.Text = selectedCouples[0].ENGLISH;
             btnHE5.Text = selectedCouples[4].OTHER;
+            */
         }
         //מוריד ושומר את כל המילים הרלוונטיים למשימה
         private void InitWords()

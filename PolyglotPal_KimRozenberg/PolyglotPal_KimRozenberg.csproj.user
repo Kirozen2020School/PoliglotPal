@@ -4,7 +4,7 @@
     <SelectedDevice>Xiaomi M2007J17G</SelectedDevice>
     <SelectedPlatformGroup>PhysicalDevice</SelectedPlatformGroup>
     <ActiveDebugProfile>Xiaomi M2007J17G %28Android 12.0 - API 31%29</ActiveDebugProfile>
-    <DefaultDevice>nexus_4_-_api_30</DefaultDevice>
+    <DefaultDevice>nexus_4_-_api_29</DefaultDevice>
     <AndroidDesignerPreferredTheme>AppTheme</AndroidDesignerPreferredTheme>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
   </PropertyGroup>

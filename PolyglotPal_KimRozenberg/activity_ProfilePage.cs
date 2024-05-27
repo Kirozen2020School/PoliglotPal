@@ -214,9 +214,16 @@ namespace PolyglotPal_KimRozenberg
         //כפתור הפותח גלריה בשביל בחירת התמונת פרופיל
         private void BtnGalarySelect_Click(object sender, EventArgs e)
         {
-            Intent intent = new Intent(Intent.ActionPick);
-            intent.SetType("image/*");
-            StartActivityForResult(intent, 1);
+            if (CheckSelfPermission(Android.Manifest.Permission.ReadExternalStorage) == Android.Content.PM.Permission.Granted)
+            {
+                Intent intent = new Intent(Intent.ActionPick);
+                intent.SetType("image/*");
+                StartActivityForResult(intent, 1);
+            }
+            else
+            {
+                RequestPermissions(new string[] { Android.Manifest.Permission.ReadExternalStorage }, 1002);
+            }
 
             if (popupWindow != null && popupWindow.IsShowing)
             {
