@@ -63,38 +63,32 @@ namespace PolyglotPal_KimRozenberg
                 case Fields.Username:
 
                     account.Username = (string)value;
-                    await DeleteAccount(username);
 
                     break;
                 case Fields.Xp:
 
                     account.TotalXP += (int)value;
                     account.TotalTasks++;
-                    await DeleteAccount(username);
 
                     break;
                 case Fields.MusicStatus:
 
                     account.IsPlaying = (bool)value;
-                    await DeleteAccount(username);
 
                     break;
                 case Fields.Theme:
 
                     account.Theme = (string)value;
-                    await DeleteAccount(username);
 
                     break;
                 case Fields.Language:
 
                     account.Language = (string)value;
-                    await DeleteAccount(username);
 
                     break;
                 case Fields.ProfilePic:
 
                     account.ProfilePicture = (byte[])value;
-                    await DeleteAccount(username);
 
                     break;
             }

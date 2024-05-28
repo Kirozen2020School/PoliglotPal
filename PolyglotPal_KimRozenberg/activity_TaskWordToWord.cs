@@ -12,7 +12,7 @@ namespace PolyglotPal_KimRozenberg
     [Activity(Label = "PolyglotPal")]
     public class activity_TaskWordToWord : Activity
     {
-        Button btnENG1, btnENG2, btnENG3, btnENG4, btnENG5, btnHE1, btnHE2, btnHE3, btnHE4, btnHE5;
+        Button btnENG1, btnENG2, btnENG3, btnENG4, btnENG5, btnOTHER1, btnOTHER2, btnOTHER3, btnOTHER4, btnOTHER5;
         Button btnNextLevel;
         ImageButton btnExitLevel;
         AlertDialog d;
@@ -84,41 +84,29 @@ namespace PolyglotPal_KimRozenberg
                     selectedCouples.Add(selectedCouple);
                 }
             }
-            int n = selectedCouples.Count;
 
-            // Fisher-Yates shuffle
-            for (int i = n - 1; i > 0; i--)
+            List<Button> btnENGList = new List<Button>
             {
-                int j = random.Next(i + 1);
-                var temp = selectedCouples[i];
-                selectedCouples[i] = selectedCouples[j];
-                selectedCouples[j] = temp;
+                btnENG1, btnENG2, btnENG3, btnENG4, btnENG5
+            };
+
+            List<Button> btnOTHERList = new List<Button>
+            {
+                btnOTHER1, btnOTHER2, btnOTHER3, btnOTHER4, btnOTHER5
+            };
+
+
+            for (int i = 0; i < selectedCouples.Count; i++)
+            {
+                int random1 = random.Next(btnENGList.Count);
+                btnENGList[random1].Text = selectedCouples[i].ENGLISH;
+                int random2 = random.Next(btnOTHERList.Count);
+                btnOTHERList[random2].Text = selectedCouples[i].OTHER;
+
+                btnENGList.RemoveAt(random1);
+                btnOTHERList.RemoveAt(random2);
             }
 
-            // Assign shuffled values to buttons
-            btnENG1.Text = selectedCouples[0].ENGLISH;
-            btnHE1.Text = selectedCouples[0].OTHER;
-            btnENG2.Text = selectedCouples[1].ENGLISH;
-            btnHE2.Text = selectedCouples[1].OTHER;
-            btnENG3.Text = selectedCouples[2].ENGLISH;
-            btnHE3.Text = selectedCouples[2].OTHER;
-            btnENG4.Text = selectedCouples[3].ENGLISH;
-            btnHE4.Text = selectedCouples[3].OTHER;
-            btnENG5.Text = selectedCouples[4].ENGLISH;
-            btnHE5.Text = selectedCouples[4].OTHER;
-
-            /*
-            btnENG1.Text = selectedCouples[4].ENGLISH;
-            btnHE1.Text = selectedCouples[2].OTHER;
-            btnENG2.Text = selectedCouples[1].ENGLISH;
-            btnHE2.Text = selectedCouples[0].OTHER;
-            btnENG3.Text = selectedCouples[2].ENGLISH;
-            btnHE3.Text = selectedCouples[3].OTHER;
-            btnENG4.Text = selectedCouples[3].ENGLISH;
-            btnHE4.Text = selectedCouples[1].OTHER;
-            btnENG5.Text = selectedCouples[0].ENGLISH;
-            btnHE5.Text = selectedCouples[4].OTHER;
-            */
         }
         //מוריד ושומר את כל המילים הרלוונטיים למשימה
         private void InitWords()
@@ -209,15 +197,15 @@ namespace PolyglotPal_KimRozenberg
             btnENG3 = FindViewById<Button>(Resource.Id.btnENG3);
             btnENG4 = FindViewById<Button>(Resource.Id.btnENG4);
             btnENG5 = FindViewById<Button>(Resource.Id.btnENG5);
-            btnHE1 = FindViewById<Button>(Resource.Id.btnHE1);
-            btnHE2 = FindViewById<Button>(Resource.Id.btnHE2);
-            btnHE3 = FindViewById<Button>(Resource.Id.btnHE3);
-            btnHE4 = FindViewById<Button>(Resource.Id.btnHE4);
-            btnHE5 = FindViewById<Button>(Resource.Id.btnHE5);
+            btnOTHER1 = FindViewById<Button>(Resource.Id.btnHE1);
+            btnOTHER2 = FindViewById<Button>(Resource.Id.btnHE2);
+            btnOTHER3 = FindViewById<Button>(Resource.Id.btnHE3);
+            btnOTHER4 = FindViewById<Button>(Resource.Id.btnHE4);
+            btnOTHER5 = FindViewById<Button>(Resource.Id.btnHE5);
 
             buttons = new List<Button>();
             this.buttons.Add(btnENG1); this.buttons.Add(btnENG2); this.buttons.Add(btnENG3); this.buttons.Add(btnENG4); this.buttons.Add(btnENG5);
-            this.buttons.Add(btnHE1); this.buttons.Add(btnHE2); this.buttons.Add(btnHE3); this.buttons.Add(btnHE4); this.buttons.Add(btnHE5);
+            this.buttons.Add(btnOTHER1); this.buttons.Add(btnOTHER2); this.buttons.Add(btnOTHER3); this.buttons.Add(btnOTHER4); this.buttons.Add(btnOTHER5);
 
             btnNextLevel = FindViewById<Button>(Resource.Id.btnNextLevel);
             btnNextLevel.Click += BtnNextLevel_Click;
@@ -231,11 +219,11 @@ namespace PolyglotPal_KimRozenberg
             btnENG4.Click += BtnENG_Click;
             btnENG5.Click += BtnENG_Click;
 
-            btnHE1.Click += BtnHE_Click;
-            btnHE2.Click += BtnHE_Click;
-            btnHE3.Click += BtnHE_Click;
-            btnHE4.Click += BtnHE_Click;
-            btnHE5.Click += BtnHE_Click;
+            btnOTHER1.Click += BtnHE_Click;
+            btnOTHER2.Click += BtnHE_Click;
+            btnOTHER3.Click += BtnHE_Click;
+            btnOTHER4.Click += BtnHE_Click;
+            btnOTHER5.Click += BtnHE_Click;
 
             progressBar = FindViewById<ProgressBar>(Resource.Id.progress);
             int progress = ((Intent.GetIntExtra("Round", -1)-1)*100);
